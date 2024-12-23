@@ -76,6 +76,7 @@ This floating design enables:
   - Essential for cardiac emergency situations
 
 Under normal operating conditions, the multiple isolation barriers and floating design work together to completely isolate the patient circuit from any electrical sources. The floating design maintains extremely low leakage current (10µA) and high isolation voltage (>4000V), ensuring safe direct cardiac contact. If any fault occurs, the system's independent isolation layers provide redundant protection: even if one barrier fails, the remaining isolation systems maintain patient safety by keeping leakage current below 50µA. Additionally, if a defibrillator discharge occurs during cardiac emergency, the high isolation voltage and floating design protect both the patient and the equipment by absorbing and dispersing the high-voltage pulse without compromising the isolation system.
+
 Think of it like a chain of protection:
 ```
 Floating Design
