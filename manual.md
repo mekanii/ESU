@@ -1,6 +1,7 @@
 # ESU
 Generate RF current
 
+Mode:
 - Monopolar
   - Cut
     - Pure (Unmodulated Sine Wave)
@@ -20,7 +21,7 @@ Generate RF current
       - Operates with low output peak voltage.
 - Bipolar
 
-Automatically monitor 
+Automatically monitor:
 - the existence of Return Electrode
 - the connection between Generator and Contact area
 
