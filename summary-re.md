@@ -2,8 +2,8 @@
 ### A. Monopolar
 #### A.1 Cut
 ##### A.1.1 Pure Cut
-###### • Input
-###### • Output
+- Input
+- Output
 The image illustrates the output scope for the Pure Cut operation. It provides a detailed view of the waveform characteristics and performance metrics associated with the pure cut process, highlighting the key features and behavior of the signal during this operation.
 
 <p align="center">
