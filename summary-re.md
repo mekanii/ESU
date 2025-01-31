@@ -23,7 +23,6 @@ f = 500kHz
 Maximum Voltage Peak (Vp-max)
 
 | Power | Blend 1 | Blend 2 |
------------------------------
 |    5W |         |         |
 |   10W |         |         |
 |   20W |         |         |
