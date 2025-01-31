@@ -12,7 +12,7 @@
 
 ```
 Signal Frequency:
-T = 5µs ÷ 2.5
+T = 5µs ÷ 2.5 wave
 T = 2µs
 
 f = 1 ÷ 2µs
@@ -42,11 +42,19 @@ f = 1 ÷ 2µs
 f = 500kHz
 
 Modulation Frequency:
-T = 4.2 * 10µs
+T = 10µs * 4.2 DIV
 T = 42µs
 
 f = 1 ÷ 42µs
 f = 23.8kHz
+
+Blend Cut 1 Modulation Duty Cycle:
+Duty Cycle = 3.4 DIV ÷ 4.2 DIV x 100%
+Duty Cycle = 80.95%
+
+Blend Cut 2 Modulation Duty Cycle:
+Duty Cycle = 3.0 DIV ÷ 4.2 DIV x 100%
+Duty Cycle = 71.42%
 ```
 
 #### A.2 Coag
