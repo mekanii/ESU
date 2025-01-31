@@ -20,8 +20,11 @@ The image displays two output scopes for cut blend operations:
 #### Coag
 The image displays two output scopes for coagulation operations:
 1. **Left Scope**:<br>This represents the output for the Coag Spray operation. It illustrates the waveform characteristics and performance metrics associated with the coag spray process, highlighting its unique features.
-
 2. **Right Scope**:<br>This represents the output for the Coag Forced operation. It showcases the waveform details and performance metrics related to the coag forced process, allowing for a comparative analysis between the two coagulation methods.
+
+<p align="center">
+  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20coag%20spray%20and%20forced.png" alt="cut blend">
+</p>
 
 ### Bipolar
 #### bipolar pure cut ???
