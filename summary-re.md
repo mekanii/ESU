@@ -10,12 +10,14 @@
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20pure%20cut.png" alt="pure-cut">
 </p>
 
+```
 Signal Frequency:
 T = 5µs ÷ 2.5
 T = 2µs
 
 f = 1 ÷ 2µs
 f = 500kHz
+```
 
 ##### A.1.2 Blend Cut
 - Input
@@ -31,6 +33,7 @@ f = 500kHz
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20cut%20blend.png" alt="cut-blend">
 </p>
 
+```
 Signal Frequency:
 T = 10µs ÷ 5
 T = 2µs
@@ -44,6 +47,7 @@ T = 42µs
 
 f = 1 ÷ 42µs
 f = 23.8kHz
+```
 
 #### A.2 Coag
 ##### A.2.1 Spray & Forced
