@@ -84,9 +84,18 @@ Duty Cycle = 71.42%
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/bipolar%20coag%20standard.png" alt="coag-standard">
 </p>
 
+```
+Spray Coag Modulation Frequency:
+T = 20µs * 2 DIV
+T = 40µs
 
-#### bipolar pure cut ???
-T = 10µs/DIV * 8DIV ÷ 20 = 4µs
-f = 1 ÷ 4µs = 250kHz
+f = 1 ÷ 40µs
+f = 25kHz
 
-V = 50mV/DIV * 0.6DIV * 100 = 3V
+Forced Coag Modulation Frequency:
+T = 20µs * 2.2 DIV
+T = 44µs
+
+f = 1 ÷ 44µs
+f = 22.72kHz
+```
