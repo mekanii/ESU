@@ -1,5 +1,8 @@
 ## Performance Test
 ### Monopolar
+#### Pure Cut
+The image illustrates the output scope for the Pure Cut operation. It provides a detailed view of the waveform characteristics and performance metrics associated with the pure cut process, highlighting the key features and behavior of the signal during this operation.
+![pure cut](pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20pure%20cut.png)
 #### Cut Blend
 The image displays two output scopes for cut blend operations:
 1. **Left Scope**:<br>This represents the output for Cut Blend 1. It illustrates the waveform characteristics and performance metrics associated with the first cut blend operation.
