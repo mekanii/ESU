@@ -72,18 +72,6 @@ Duty Cycle = 71.42%
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20coag%20spray%20and%20forced.png" alt="coag-spray-forced">
 </p>
 
-### B. Bipolar Standard Coag
-- Input
-- Output
-<br>The image illustrates the output scope for the Bipolar Standard Coagulation operation at the power stage output. It provides a detailed view of the waveform characteristics and performance metrics associated with the bipolar coagulation process, highlighting the key features and behavior of the signal during this operation.
-
-> [!NOTE]
-> The oscilloscope setup uses a passive probe with a 10x attenuation factor and a voltage divider of 1/10, resulting in a total measurement factor of 100.
-
-<p align="center">
-  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/bipolar%20coag%20standard.png" alt="coag-standard">
-</p>
-
 ```
 Spray Coag Modulation Frequency:
 T = 20µs * 2 DIV
@@ -99,3 +87,15 @@ T = 44µs
 f = 1 ÷ 44µs
 f = 22.72kHz
 ```
+
+### B. Bipolar Standard Coag
+- Input
+- Output
+<br>The image illustrates the output scope for the Bipolar Standard Coagulation operation at the power stage output. It provides a detailed view of the waveform characteristics and performance metrics associated with the bipolar coagulation process, highlighting the key features and behavior of the signal during this operation.
+
+> [!NOTE]
+> The oscilloscope setup uses a passive probe with a 10x attenuation factor and a voltage divider of 1/10, resulting in a total measurement factor of 100.
+
+<p align="center">
+  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/bipolar%20coag%20standard.png" alt="coag-standard">
+</p>
