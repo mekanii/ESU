@@ -19,21 +19,20 @@ f = 1 ÷ 2µs
 f = 500kHz
 ```
 
-
 Maximum Voltage Peak (Vp-max)
-| Power | Blend 1 | Blend 2 |
-| ----- | ------- | ------- |
-|    5W |         |         |
-|   10W |         |         |
-|   20W |         |         |
-|   30W |         |         |
-|   40W |         |         |
-|   50W |         |         |
-|   60W |         |         |
-|   70W |         |         |
-|   80W |         |         |
-|   90W |         |         |
-|  100W |         |         |
+| Power | Vp-max |
+| ----- | ------ |
+|    5W |        |
+|   10W |        |
+|   20W |        |
+|   30W |        |
+|   40W |        |
+|   50W |        |
+|   60W |        |
+|   70W |        |
+|   80W |        |
+|   90W |        |
+|  100W |        |
 
 ##### A.1.2 Blend Cut
 - Input
@@ -73,6 +72,20 @@ Duty Cycle = 3.0 DIV ÷ 4.2 DIV x 100%
 Duty Cycle = 71.42%
 ```
 
+Maximum Voltage Peak (Vp-max)
+| Power | Blend 1 | Blend 2 |
+| ----- | ------- | ------- |
+|   10W |         |         |
+|   20W |         |         |
+|   30W |         |         |
+|   40W |         |         |
+|   50W |         |         |
+|   60W |         |         |
+|   70W |         |         |
+|   80W |         |         |
+|   90W |         |         |
+|  100W |         |         |
+
 #### A.2 Coag
 ##### A.2.1 Spray & Forced
 - Input
@@ -104,6 +117,17 @@ f = 1 ÷ 44µs
 f = 22.72kHz
 ```
 
+Maximum Voltage Peak (Vp-max)
+| Power | Spray  | Forced |
+| ----- | ------ | ------ |
+|    5W |        |        |
+|   10W |        |        |
+|   20W |        |        |
+|   30W |        |        |
+|   40W |        |        |
+|   50W |        |        |
+|   60W |        |        |
+
 ### B. Bipolar Standard Coag
 - Input
 - Output
@@ -115,3 +139,14 @@ f = 22.72kHz
 <p align="center">
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/bipolar%20coag%20standard.png" alt="coag-standard">
 </p>
+
+Maximum Voltage Peak (Vp-max)
+| Power | Vp-max |
+| ----- | ------ |
+|    5W |        |
+|   10W |        |
+|   20W |        |
+|   30W |        |
+|   40W |        |
+|   50W |        |
+|   60W |        |
