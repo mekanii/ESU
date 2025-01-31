@@ -43,8 +43,8 @@ _Maximum Voltage Peak (Vp-max)_
 - Input
 - Output
 <br>The image displays two output scopes for Blend Cut operations at the power stage output:
-  - **Left Scope**:<br>This represents the output for Blend Cut 1. It illustrates the waveform characteristics and performance metrics associated with the first cut blend operation.
-  - **Right Scope**:<br>This represents the output for Blend Cut 2. It showcases the waveform details and performance metrics related to the second cut blend operation, allowing for a comparative analysis between the two blends.
+  - Left Scope:<br>This represents the output for Blend Cut 1. It illustrates the waveform characteristics and performance metrics associated with the first cut blend operation.
+  - Right Scope:<br>This represents the output for Blend Cut 2. It showcases the waveform details and performance metrics related to the second cut blend operation, allowing for a comparative analysis between the two blends.
 
 > [!NOTE]
 > The oscilloscope setup uses a passive probe with a 10x attenuation factor and a voltage divider of 1/10, resulting in a total measurement factor of 100.
@@ -103,8 +103,8 @@ _Maximum Voltage Peak (Vp-max)_
 - Input
 - Output
 <br>The image displays two output scopes for Coagulation operations at the power stage output:
-  - **Left Scope**:<br>This represents the output for the Spray Coagulation operation. It illustrates the waveform characteristics and performance metrics associated with the coag spray process, highlighting its unique features.
-  - **Right Scope**:<br>This represents the output for the Forced Coagulation operation. It showcases the waveform details and performance metrics related to the coag forced process, allowing for a comparative analysis between the two coagulation methods.
+  - Left Scope:<br>This represents the output for the Spray Coagulation operation. It illustrates the waveform characteristics and performance metrics associated with the coag spray process, highlighting its unique features.
+  - Right Scope:<br>This represents the output for the Forced Coagulation operation. It showcases the waveform details and performance metrics related to the coag forced process, allowing for a comparative analysis between the two coagulation methods.
 
 > [!NOTE]
 > The oscilloscope setup uses a passive probe with a 10x attenuation factor and a voltage divider of 1/10, resulting in a total measurement factor of 100.
@@ -130,7 +130,7 @@ f = 1 ÷ 44µs
 f = 22.72kHz
 ```
 
-Maximum Voltage Peak (Vp-max)
+_Maximum Voltage Peak (Vp-max):_
 <br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
 
 | Power | Spray  | Forced |
