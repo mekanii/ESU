@@ -13,7 +13,7 @@
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20pure%20cut.png" alt="pure-cut">
 </p>
 
-**_Signal Frequency:_**
+_Signal Frequency:_
 ```
 T = 5µs ÷ 2.5 wave
 T = 2µs
@@ -22,7 +22,7 @@ f = 1 ÷ 2µs
 f = 500kHz
 ```
 
-**_Maximum Voltage Peak (Vp-max)_**
+_Maximum Voltage Peak (Vp-max)_
 <br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
 
 | Power | Vp-max |
@@ -53,31 +53,38 @@ f = 500kHz
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20cut%20blend.png" alt="cut-blend">
 </p>
 
+_Signal Frequency:_
 ```
-Signal Frequency:
 T = 10µs ÷ 5
 T = 2µs
 
 f = 1 ÷ 2µs
 f = 500kHz
-
-Modulation Frequency:
+```
+_Modulation Frequency:_
+```
 T = 10µs * 4.2 DIV
 T = 42µs
 
 f = 1 ÷ 42µs
 f = 23.8kHz
+```
 
-Blend Cut 1 Modulation Duty Cycle:
+_Blend Cut 1 Modulation Duty Cycle:_
+```
 Duty Cycle = 3.4 DIV ÷ 4.2 DIV x 100%
 Duty Cycle = 80.95%
+```
 
-Blend Cut 2 Modulation Duty Cycle:
+_Blend Cut 2 Modulation Duty Cycle:_
+```
 Duty Cycle = 3.0 DIV ÷ 4.2 DIV x 100%
 Duty Cycle = 71.42%
 ```
 
-Maximum Voltage Peak (Vp-max)
+_Maximum Voltage Peak (Vp-max)_
+<br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
+
 | Power | Blend 1 | Blend 2 |
 | ----- | ------- | ------- |
 |   10W |         |         |
@@ -106,15 +113,16 @@ Maximum Voltage Peak (Vp-max)
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20coag%20spray%20and%20forced.png" alt="coag-spray-forced">
 </p>
 
+_Spray Coag Modulation Frequency:_
 ```
-Spray Coag Modulation Frequency:
 T = 20µs * 2 DIV
 T = 40µs
 
 f = 1 ÷ 40µs
 f = 25kHz
-
-Forced Coag Modulation Frequency:
+```
+_Forced Coag Modulation Frequency:_
+```
 T = 20µs * 2.2 DIV
 T = 44µs
 
@@ -123,6 +131,8 @@ f = 22.72kHz
 ```
 
 Maximum Voltage Peak (Vp-max)
+<br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
+
 | Power | Spray  | Forced |
 | ----- | ------ | ------ |
 |    5W |        |        |
@@ -146,6 +156,8 @@ Maximum Voltage Peak (Vp-max)
 </p>
 
 Maximum Voltage Peak (Vp-max)
+<br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 500mV per division (500mV/div).
+
 | Power | Vp-max |
 | ----- | ------ |
 |    5W |        |
