@@ -1,5 +1,7 @@
 ## Performance Test
 ### Monopolar
+#### Cut Blend
+![cut blend](monopolar cut blend.png)
 ### Bipolar
 #### bipolar pure cut ???
 T = 10µs/DIV * 8DIV ÷ 20 = 4µs
