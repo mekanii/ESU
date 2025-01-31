@@ -11,11 +11,13 @@
 </p>
 
 ##### A.1.2 Cut Blend
-* Input
-* Output
+- Input
+- Output
 <br>The image displays two output scopes for cut blend operations at the power stage output:
-..* **Left Scope**:<br>This represents the output for Cut Blend 1. It illustrates the waveform characteristics and performance metrics associated with the first cut blend operation.
-..* **Right Scope**:<br>This represents the output for Cut Blend 2. It showcases the waveform details and performance metrics related to the second cut blend operation, allowing for a comparative analysis between the two blends.
+  - **Left Scope**:<br>This represents the output for Cut Blend 1. It illustrates the waveform characteristics and performance metrics associated with the first cut blend operation.
+  - **Right Scope**:<br>This represents the output for Cut Blend 2. It showcases the waveform details and performance metrics related to the second cut blend operation, allowing for a comparative analysis between the two blends.
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
 
 <p align="center">
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20cut%20blend.png" alt="cut-blend">
