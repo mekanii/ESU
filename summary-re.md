@@ -6,6 +6,9 @@
 - Output
 <br>The image illustrates the output scope for the Pure Cut operation at the power stage output. It provides a detailed view of the waveform characteristics and performance metrics associated with the pure cut process, highlighting the key features and behavior of the signal during this operation.
 
+> [!NOTE]
+> The oscilloscope setup uses a passive probe with a 10x attenuation factor and a voltage divider of 1/10, resulting in a total measurement factor of 100.
+
 <p align="center">
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20pure%20cut.png" alt="pure-cut">
 </p>
@@ -20,6 +23,8 @@ f = 500kHz
 ```
 
 Maximum Voltage Peak (Vp-max)
+The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
+
 | Power | Vp-max |
 | ----- | ------ |
 |    5W |  50V   | 0.5
