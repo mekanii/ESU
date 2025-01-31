@@ -13,8 +13,8 @@
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20pure%20cut.png" alt="pure-cut">
 </p>
 
+**_Signal Frequency:_**
 ```
-Signal Frequency:
 T = 5µs ÷ 2.5 wave
 T = 2µs
 
@@ -22,8 +22,8 @@ f = 1 ÷ 2µs
 f = 500kHz
 ```
 
-Maximum Voltage Peak (Vp-max)
-The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
+**_Maximum Voltage Peak (Vp-max)_**
+<br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
 
 | Power | Vp-max |
 | ----- | ------ |
