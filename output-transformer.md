@@ -22,3 +22,8 @@ Tes rangkaian mainboard ESU:
 • Rekam sinyal output - Bipolar standard [Done]
 • Rekam sinyal output - Monopolar cut (pure, blend1, blend2) [Done]
 • Rekam sinyal output - Monopolar coag (spray, forced) [Done]
+
+Menulis Document Testing ESU: Measurement Report
+• Menyusun gambar untuk komparasi [Done]
+• Hitung frekuensi modulasi [Need Review]
+• Hitung tegangan maksimum [In Progress]
