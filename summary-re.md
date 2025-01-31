@@ -11,7 +11,9 @@
 </p>
 
 ##### A.1.2 Cut Blend
-The image displays two output scopes for cut blend operations:
+- Input
+- Output
+<br>The image displays two output scopes for cut blend operations:
 1. **Left Scope**:<br>This represents the output for Cut Blend 1. It illustrates the waveform characteristics and performance metrics associated with the first cut blend operation.
 2. **Right Scope**:<br>This represents the output for Cut Blend 2. It showcases the waveform details and performance metrics related to the second cut blend operation, allowing for a comparative analysis between the two blends.
 
