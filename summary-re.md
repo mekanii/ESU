@@ -19,6 +19,21 @@ f = 1 ÷ 2µs
 f = 500kHz
 ```
 
+Maximum Voltage Peak (Vp-max)
+| Power | Blend 1 | Blend 2 |
+-----------------------------
+|    5W |         |         |
+|   10W |         |         |
+|   20W |         |         |
+|   30W |         |         |
+|   40W |         |         |
+|   50W |         |         |
+|   60W |         |         |
+|   70W |         |         |
+|   80W |         |         |
+|   90W |         |         |
+|  100W |         |         |
+
 ##### A.1.2 Blend Cut
 - Input
 - Output
