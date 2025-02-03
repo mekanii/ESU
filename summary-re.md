@@ -33,28 +33,66 @@ _Maximum Voltage Peak (Vp-max)_
     </tr>
   </thead>
   <tbody>
-    <tr width="600px">
-      <td>
-      </td>
-      <td>
-      </td>
+    <tr>
+      <td>5W</td>
+      <td>50V</td>
+    </tr>
+    <tr>
+      <td>10W</td>
+      <td>75V</td>
+    </tr>
+    <tr>
+      <td>20W</td>
+      <td>100V</td>
+    </tr>
+    <tr>
+      <td>30W</td>
+      <td>115V</td>
+    </tr>
+    <tr>
+      <td>40W</td>
+      <td>130V</td>
+    </tr>
+    <tr>
+      <td>50W</td>
+      <td>150V</td>
+    </tr>
+    <tr>
+      <td>60W</td>
+      <td>160V</td>
+    </tr>
+    <tr>
+      <td>70W</td>
+      <td>165V</td>
+    </tr>
+    <tr>
+      <td>80W</td>
+      <td>175V</td>
+    </tr>
+    <tr>
+      <td>90W</td>
+      <td>180V</td>
+    </tr>
+    <tr>
+      <td>100W</td>
+      <td>185V</td>
     </tr>
   </tbody>
 </table>
 
-| Power | Vp-max |
+<!-- | Power | Vp-max |
 | ----- | ------ |
-|    5W |  50V   | 0.5
-|   10W |  75V   | 0.75
-|   20W | 100V   | 1
-|   30W | 115V   | 1.15
-|   40W | 130V   | 1.3
-|   50W | 150V   | 1.5
-|   60W | 160V   | 1.6
-|   70W | 165V   | 1.65
-|   80W | 175V   | 1.75
-|   90W | 180V   | 1.8
-|  100W | 185V   | 1.85
+| 0.5
+| 0.75
+| 1
+| 1.15
+| 1.3
+| 1.5
+| 1.6
+| 1.65
+| 1.75
+| 1.8
+| 1.85 -->
 
 ##### A.1.2 Blend Cut
 - Input
