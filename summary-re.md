@@ -22,7 +22,7 @@ f = 1 ÷ 2µs
 f = 500kHz
 ```
 
-_Voltage Peak (Vp):_
+_Peak Voltage (Vp):_
 <br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
 
 > [!NOTE]
@@ -86,7 +86,7 @@ Duty Cycle = 3.0 DIV ÷ 4.2 DIV x 100%
 Duty Cycle = 71.42%
 ```
 
-_Voltage Peak (Vp):_
+_Peak Voltage (Vp):_
 <br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
 
 > [!NOTE]
@@ -138,7 +138,7 @@ f = 1 ÷ 44µs
 f = 22.72kHz
 ```
 
-_Voltage Peak (Vp):_
+_Peak Voltage (Vp):_
 <br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
 
 > [!NOTE]
@@ -166,7 +166,7 @@ _Voltage Peak (Vp):_
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/bipolar%20coag%20standard.png" alt="coag-standard">
 </p>
 
-_Voltage Peak (Vp):_
+_Peak Voltage (Vp):_
 <br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 500mV per division (500mV/div).
 
 | Power | Vp     |
