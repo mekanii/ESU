@@ -25,6 +25,23 @@ f = 500kHz
 _Maximum Voltage Peak (Vp-max)_
 <br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
 
+<table>
+  <thead>
+    <tr>
+      <th width="50%">Power</th>
+      <th width="50%">Vp-max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr width="600px">
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 | Power | Vp-max |
 | ----- | ------ |
 |    5W |  50V   | 0.5
@@ -61,6 +78,7 @@ T = 2µs
 f = 1 ÷ 2µs
 f = 500kHz
 ```
+
 _Modulation Frequency:_
 ```
 T = 10µs * 4.2 DIV
@@ -121,6 +139,7 @@ T = 40µs
 f = 1 ÷ 40µs
 f = 25kHz
 ```
+
 _Forced Coag Modulation Frequency:_
 ```
 T = 20µs * 2.2 DIV
@@ -155,7 +174,7 @@ _Maximum Voltage Peak (Vp-max):_
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/bipolar%20coag%20standard.png" alt="coag-standard">
 </p>
 
-Maximum Voltage Peak (Vp-max)
+_Maximum Voltage Peak (Vp-max)_
 <br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 500mV per division (500mV/div).
 
 | Power | Vp-max |
