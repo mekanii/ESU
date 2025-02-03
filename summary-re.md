@@ -30,17 +30,19 @@ _Peak Voltage (Vp):_
 
 | Power | Vp     |
 | ----: | -----: |
-|    5W |  50V   | 0.5
-|   10W |  75V   | 0.75
-|   20W | 100V   | 1
-|   30W | 115V   | 1.15
-|   40W | 130V   | 1.3
-|   50W | 150V   | 1.5
-|   60W | 160V   | 1.6
-|   70W | 165V   | 1.65
-|   80W | 175V   | 1.75
-|   90W | 180V   | 1.8
-|  100W | 185V   | 1.85
+|    5W |    50V | 0.5
+|   10W |    75V | 0.75
+|   20W |   100V | 1
+|   30W |   115V | 1.15
+|   40W |   130V | 1.3
+|   50W |   150V | 1.5
+|   60W |   160V | 1.6
+|   70W |   165V | 1.65
+|   80W |   175V | 1.75
+|   90W |   180V | 1.8
+|  100W |   185V | 1.85
+
+_Current:_
 
 ##### A.1.2 Blend Cut
 - Input
@@ -105,6 +107,8 @@ _Peak Voltage (Vp):_
 |   90W |    195V |    195V | 1.95, 1.95
 |  100W |    200V |    200V | 2   , 2
 
+_Current:_
+
 #### A.2 Coag
 ##### A.2.1 Spray & Forced
 - Input
@@ -145,7 +149,7 @@ _Peak Voltage (Vp):_
 > In this analysis, the peak voltage (Vp) is calculated using a simple method that involves measuring the vertical divisions of the peak-to-peak voltage (Vpp) on the oscilloscope. To begin, one observes the oscilloscope display and counts the total number of vertical divisions that the waveform spans from the maximum positive peak to the maximum negative peak, which provides the peak-to-peak voltage (Vpp). The peak voltage (Vp) is then determined by dividing the Vpp by two, expressed mathematically as `Vp = Vpp ÷ 2`.<br><br>While this method is straightforward and convenient, it is important to recognize its limitations, particularly when dealing with asymmetric signals. In an asymmetric waveform, the positive and negative peaks may not be equal in magnitude. Consequently, simply dividing the Vpp by two assumes that the waveform is symmetrical around the zero voltage line, which is often not the case. This approach can lead to significant errors in the calculated peak voltage, as it does not account for the actual heights of the individual peaks. For instance, if the positive peak is much higher than the negative peak, the calculated Vp will not accurately reflect the true maximum voltage deviation from zero.
 
 | Power | Spray  | Forced |
-| ----- | ------ | ------ |
+| ----: | -----: | -----: |
 |    5W |        |        |
 |   10W |        |        |
 |   20W |        |        |
@@ -153,6 +157,8 @@ _Peak Voltage (Vp):_
 |   40W |        |        |
 |   50W |        |        |
 |   60W |        |        |
+
+_Current:_
 
 ### B. Bipolar Standard Coag
 - Input
@@ -170,7 +176,7 @@ _Peak Voltage (Vp):_
 <br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 500mV per division (500mV/div).
 
 | Power | Vp     |
-| ----- | ------ |
+| ----: | -----: |
 |    5W |        |
 |   10W |        |
 |   20W |        |
@@ -178,3 +184,5 @@ _Peak Voltage (Vp):_
 |   40W |        |
 |   50W |        |
 |   60W |        |
+
+_Current:_
