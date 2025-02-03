@@ -22,10 +22,15 @@ f = 1 ÷ 2µs
 f = 500kHz
 ```
 
-_Maximum Voltage Peak (Vp-max)_
-<br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
+_Voltage Peak (Vp)_
+<br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
 
-| Power | Vp-max |
+In this analysis, the peak voltage (Vp) is calculated using a simple method that involves measuring the vertical divisions of the peak-to-peak voltage (Vpp) on the oscilloscope. To begin, one observes the oscilloscope display and counts the total number of vertical divisions that the waveform spans from the maximum positive peak to the maximum negative peak, which provides the peak-to-peak voltage (Vpp). The peak voltage (Vp) is then determined by dividing the Vpp by two, expressed mathematically as 
+`Vp = Vpp ÷ 2`
+
+While this method is straightforward and convenient, it is important to recognize its limitations, particularly when dealing with asymmetric signals. In an asymmetric waveform, the positive and negative peaks may not be equal in magnitude. Consequently, simply dividing the Vpp by two assumes that the waveform is symmetrical around the zero voltage line, which is often not the case. This approach can lead to significant errors in the calculated peak voltage, as it does not account for the actual heights of the individual peaks. For instance, if the positive peak is much higher than the negative peak, the calculated Vp will not accurately reflect the true maximum voltage deviation from zero.
+
+| Power | Vp     |
 | ----: | -----: |
 |    5W |  50V   | 0.5
 |   10W |  75V   | 0.75
@@ -83,8 +88,8 @@ Duty Cycle = 3.0 DIV ÷ 4.2 DIV x 100%
 Duty Cycle = 71.42%
 ```
 
-_Maximum Voltage Peak (Vp-max)_
-<br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
+_Voltage Peak (Vp)_
+<br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
 
 | Power | Blend 1 | Blend 2 |
 | ----- | ------- | ------- |
@@ -132,8 +137,8 @@ f = 1 ÷ 44µs
 f = 22.72kHz
 ```
 
-_Maximum Voltage Peak (Vp-max):_
-<br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
+_Maximum Voltage Peak (Vp):_
+<br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
 
 | Power | Spray  | Forced |
 | ----- | ------ | ------ |
@@ -157,10 +162,10 @@ _Maximum Voltage Peak (Vp-max):_
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/bipolar%20coag%20standard.png" alt="coag-standard">
 </p>
 
-_Maximum Voltage Peak (Vp-max)_
-<br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 500mV per division (500mV/div).
+_Voltage Peak (Vp)_
+<br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 500mV per division (500mV/div).
 
-| Power | Vp-max |
+| Power | Vp     |
 | ----- | ------ |
 |    5W |        |
 |   10W |        |
