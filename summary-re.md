@@ -25,7 +25,7 @@ f = 500kHz
 _Maximum Voltage Peak (Vp-max)_
 <br>The Vp-max is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
 
-<table>
+<table width="100%">
   <thead>
     <tr>
       <th width="50%">Power</th>
