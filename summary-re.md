@@ -27,7 +27,6 @@ _Voltage Peak (Vp)_
 
 > [!NOTE]
 > In this analysis, the peak voltage (Vp) is calculated using a simple method that involves measuring the vertical divisions of the peak-to-peak voltage (Vpp) on the oscilloscope. To begin, one observes the oscilloscope display and counts the total number of vertical divisions that the waveform spans from the maximum positive peak to the maximum negative peak, which provides the peak-to-peak voltage (Vpp). The peak voltage (Vp) is then determined by dividing the Vpp by two, expressed mathematically as `Vp = Vpp ÷ 2`.
-
 > While this method is straightforward and convenient, it is important to recognize its limitations, particularly when dealing with asymmetric signals. In an asymmetric waveform, the positive and negative peaks may not be equal in magnitude. Consequently, simply dividing the Vpp by two assumes that the waveform is symmetrical around the zero voltage line, which is often not the case. This approach can lead to significant errors in the calculated peak voltage, as it does not account for the actual heights of the individual peaks. For instance, if the positive peak is much higher than the negative peak, the calculated Vp will not accurately reflect the true maximum voltage deviation from zero.
 
 | Power | Vp     |
