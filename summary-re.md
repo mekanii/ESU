@@ -33,12 +33,12 @@ _Maximum Voltage Peak (Vp-max)_
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr align="right">
       <td>5W</td>
       <td>50V</td>
     </tr>
     <tr>
-      <td>10W</td>
+      <td align="right">10W</td>
       <td>75V</td>
     </tr>
     <tr>
