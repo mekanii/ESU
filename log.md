@@ -1,3 +1,6 @@
+2025-02-07
+  https://yopiediy.xyz/esp32-mcpwm-as-spwm-generator/
+
 2025-02-06
   Perancangan hardware PWM generator:
   • coding untuk generate PWM 10MHz that simulates a sine wave 500kHz [In Progress]
