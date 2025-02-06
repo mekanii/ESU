@@ -1,0 +1,8 @@
+# Ignore backup files
+*.bak
+
+# Ignore DWL files
+*.dwl
+
+# Ignore DWL2 files
+*.dwl2
