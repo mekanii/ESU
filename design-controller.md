@@ -3,5 +3,5 @@
 </p>
 
 <p align="center">
-  <img src="pic/Table/SPWM%20table%20-%scaling%20calculation.png" alt="pure-cut">
+  <img src="pic/Table/SPWM%20table%20-%20scaling%20calculation.png" alt="pure-cut">
 </p>
