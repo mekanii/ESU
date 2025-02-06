@@ -8,19 +8,19 @@ The image below presents two graphs that illustrate the relationship between a s
 <br>This graph shows the PWM output generated from the same 500 kHz sine wave, also sampled at 20 MHz. The PWM output is derived from the sampling of the sine wave using the sawtooth waveform, effectively converting the continuous sine wave into a discrete signal that can be used for various applications, such as motor control or audio signal generation.
 
 The graphs include five distinct rows, each representing a different amplitude level of the sine wave:
-- 100% Amplitude
+- Amplitude 100%
 <br>This row illustrates the full-scale representation of the sine wave, where the peak values reach the maximum output level.
 
-- 50% Amplitude
+- Amplitude 50%
 <br>This row shows the sine wave scaled down to half of its maximum amplitude, demonstrating how the waveform's height is reduced while maintaining its shape.
 
-- 25% Amplitude
+- Amplitude 25%
 <br>In this row, the sine wave is further scaled down to a quarter of its maximum amplitude, highlighting the diminishing height of the waveform.
 
-- 10% Amplitude
+- Amplitude 10%
 <br>This row depicts the sine wave at a significantly reduced amplitude, showcasing the waveform's ability to represent very low signal levels while still retaining its sinusoidal characteristics.
 
-- 2% Amplitude
+- Amplitude 2%
 <br>The final row illustrates the sine wave at just 2% of its maximum amplitude, emphasizing the precision of the PWM output even at minimal signal levels.
 
 The comparison between the left and right graphs provides valuable insights into how the sine wave is transformed into a PWM signal. The varying amplitude levels across the five rows demonstrate the flexibility and accuracy of PWM in representing different signal strengths, making it a crucial technique in in various electronic applications.
