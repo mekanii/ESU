@@ -9,7 +9,7 @@
 2025-02-05
   Perancangan hardware PWM generator:
   • coding untuk generate PWM 10MHz that simulates a sine wave 500kHz [In Progress]
-  • Buat grafik SPWM 20MHz untuk amplitude 100%, 50%, 25%, 10%, 2% sebagai acuan [Done]
+  • Buat grafik SPWM 10MHz untuk amplitude 100%, 50%, 25%, 10%, 2% sebagai acuan [Done]
   • Mengukur Duty Cycle dari grafik SPWM [Done]
 
 2025-02-04

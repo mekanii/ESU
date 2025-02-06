@@ -2,10 +2,10 @@
 #### 1.1. Graph
 The image below presents two graphs that illustrate the relationship between a sine wave and its PWM (Pulse Width Modulation) representation:
 - Left Graph
-<br>This graph displays a sine wave with a frequency of 500 kHz, sampled using a sawtooth waveform at a sampling frequency of 20 MHz. The sawtooth waveform serves as a reference for capturing the sine wave's shape, allowing for a detailed representation of its amplitude variations over time.
+<br>This graph displays a sine wave with a frequency of 500 kHz, sampled using a sawtooth waveform at a sampling frequency of 10 MHz. The sawtooth waveform serves as a reference for capturing the sine wave's shape, allowing for a detailed representation of its amplitude variations over time.
 
 - Right Graph
-<br>This graph shows the PWM output generated from the same 500 kHz sine wave, also sampled at 20 MHz. The PWM output is derived from the sampling of the sine wave using the sawtooth waveform, effectively converting the continuous sine wave into a discrete signal that can be used for various applications, such as motor control or audio signal generation.
+<br>This graph shows the PWM output generated from the same 500 kHz sine wave, also sampled at 10 MHz. The PWM output is derived from the sampling of the sine wave using the sawtooth waveform, effectively converting the continuous sine wave into a discrete signal that can be used for various applications, such as motor control or audio signal generation.
 
 The graphs include five distinct rows, each representing a different amplitude level of the sine wave:
 - Amplitude 100%
