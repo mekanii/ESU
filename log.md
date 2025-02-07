@@ -7,7 +7,7 @@
   • Uji fungsi scaling SPWM menggunakan oscilloscope [To Do]
 
   Alternatif PWM generator menggunakan MCPWM sebagai PWM generator
-  • Mathematical Modeling dan Implementasi code
+  • Mathematical Modeling dan implementation code
 
 2025-02-06
   Perancangan hardware PWM generator:
