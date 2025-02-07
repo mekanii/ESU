@@ -33,7 +33,7 @@ const float sineTable[SINE_TABLE_SIZE] = {
   151.22, 194.57, 228.23, 248.37, 255.00, 249.14, 232.56, 208.34, 178.25, 144.84, 110.16, 76.76, 46.67, 22.44, 5.86, 0.00, 6.63, 26.78, 60.44, 103.79
 };
 
-volatile uint32_t index = 0;
+volatile uint32_t idx = 0;
 
 // Set amplitude scale to 100%
 float scaleFactor = 0.0;
@@ -65,13 +65,13 @@ void setupPWM() {
 
 void IRAM_ATTR onTimer(void* arg) {
   // Scale the duty cycle based on the scale factor
-  uint8_t scaledDuty = (( sineTable[index] - 127.5 ) * scaleFactor / 100 ) + 127.5;
+  uint8_t scaledDuty = (( sineTable[idx] - 127.5 ) * scaleFactor / 100 ) + 127.5;
   
   ledc_set_duty(LEDC_TIMER_CFG_SPEED_MODE, LEDC_CHANNEL_CFG_CHANNEL, scaledDuty);
   ledc_update_duty(LEDC_TIMER_CFG_SPEED_MODE, LEDC_CHANNEL_CFG_CHANNEL);
 
   // Loop through the sine table
-  index = (index + 1) % SINE_TABLE_SIZE; // Updated to use 20 points
+  idx = (idx + 1) % SINE_TABLE_SIZE; // Updated to use 20 points
 }
 
 void setup() {
