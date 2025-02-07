@@ -104,12 +104,12 @@ float scaleFactor = 0.0;
 
 ###### PWM Setup Function
 This function configures the LEDC (LED Controller) for PWM output. It sets the timer, resolution, frequency, and the output pin.
-- `ledc_timer_config_t timerConfig`: This structure holds the configuration for the PWM timer.
-  - `speed_mode`: Sets the speed mode to high-speed, allowing for higher frequency PWM.
-  - `timer_num`: Specifies which timer to use (in this case, timer 0).
-  - `duty_resolution`: Sets the resolution of the PWM signal to 8 bits (0-255).
-  - `freq_hz`: Sets the frequency of the PWM signal to the defined PWM_FREQUENCY.
-  - `clk_cfg`: Configures the clock source for the timer.
+- `ledc_timer_config_t timerConfig`:<br>This structure holds the configuration for the PWM timer.
+  - `speed_mode`:<br>Sets the speed mode to high-speed, allowing for higher frequency PWM.
+  - `timer_num`:<br>Specifies which timer to use (in this case, timer 0).
+  - `duty_resolution`:<br>Sets the resolution of the PWM signal to 8 bits (0-255).
+  - `freq_hz`:<br>Sets the frequency of the PWM signal to the defined PWM_FREQUENCY.
+  - `clk_cfg`:<br>Configures the clock source for the timer.
 - `ledc_channel_config_t channelConfig`: This structure holds the configuration for the PWM channel.
   - `channel`: Specifies which channel to use (channel 0).
   - `intr_type`: Disables interrupts for this channel.
