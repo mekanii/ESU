@@ -1,4 +1,4 @@
-### 1. Sine PWM (SPWM): lookup table, timer interrupt, and LEDC timer
+### 1. Sine PWM (SPWM): lookup table, timer interrupt, and LEDC
 #### 1.1. Graph
 The image below presents two graphs that illustrate the relationship between a sine wave and its PWM (Pulse Width Modulation) representation:
 - Left Graph
@@ -387,8 +387,3 @@ void loop() {
 
 ### 2. Sine PWM (SPWM): MCPWM
 #### 2.1 Overview
-When creating software related to the hardware in the SPWM generation process, we need to consider several factors, such as project specifications, and the appropriate use of I/O ports, timers, interrupts, and operators in the MCPWM module.
-
-<p align="center">
-  <img src="pic/MCPWM-module.jpg" alt="mcpwm-module">
-</p>
