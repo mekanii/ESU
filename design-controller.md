@@ -390,5 +390,5 @@ void loop() {
 When creating software related to the hardware in the SPWM generation process, we need to consider several factors, such as project specifications, and the appropriate use of I/O ports, timers, interrupts, and operators in the MCPWM module.
 
 <p align="center">
-  <img src="pic/MCPWM%20module.jpg" alt="mcpwm-module">
+  <img src="pic/MCPWM-module.jpg" alt="mcpwm-module">
 </p>
