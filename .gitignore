@@ -9,3 +9,46 @@
 
 # Ignore temporary Excel files
 ~$*.xlsx
+
+# PlatformIO specific files
+.pio/
+.vscode/
+.platformio/
+lib_deps/
+*.pioenvs/
+*.pio/
+*.bin
+*.elf
+*.hex
+*.map
+*.d
+*.o
+*.a
+*.dSYM/
+*.lst
+
+# Build output
+/build/
+*.out
+*.exe
+
+# IDE specific files
+*.swp
+*.swo
+*.user
+*.sublime-workspace
+*.sublime-project
+
+# MacOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

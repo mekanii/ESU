@@ -1,5 +1,13 @@
 2025-02-07
   https://yopiediy.xyz/esp32-mcpwm-as-spwm-generator/
+  Perancangan hardware PWM generator:
+  • coding untuk generate PWM 10MHz that simulates a sine wave 500kHz menggunakan metode lookup table, timer interrupt, dan LEDC timer [Need Review]
+  • Implementasi scaling SPWM calculation formula ke code menggunakan controller BPI-Leaf-S3 [Need Review]
+  • Menulis dokumentasi design-controller: SPWM generator code [Need Review]
+  • Uji fungsi scaling SPWM menggunakan oscilloscope [To Do]
+
+  Alternatif PWM generator menggunakan MCPWM sebagai PWM generator
+  • Mathematical Modeling dan Implementasi code
 
 2025-02-06
   Perancangan hardware PWM generator:

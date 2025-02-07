@@ -72,15 +72,70 @@ This code is intended for an embedded system (like an ESP32) that generates a PW
   <br>Defines the GPIO pin number (GPIO 18) that will be used to output the PWM signal. You can change this to any other pin as needed.
 - `SINE_TABLE_SIZE`
   <br>Defines the number of points in the sine wave lookup table. In this case, it is set to 20, meaning there are 20 pre-calculated values in the sine wave array.
-- `PWM_FREQUENCY`
-  <br>Sets the frequency of the PWM signal to 10 MHz. This is the rate at which the PWM signal will toggle on and off.
 - `SINE_WAVE_FREQUENCY`
   <br>This sets the frequency of the sine wave to 500 kHz. This is the rate at which the sine wave will be sampled and output.
 ```cpp
 #define OUTPUT_PIN GPIO_NUM_18
 #define SINE_TABLE_SIZE 20
-#define PWM_FREQUENCY 10000000
 #define SINE_WAVE_FREQUENCY 500000
+```
+
+- LEDC Timer Configuration Constants:
+  - `LEDC_TIMER_CFG_SPEED_MODE`
+    <br>Sets the speed mode for the LEDC timer to low speed.
+  - `LEDC_TIMER_CFG_TIMER_NUM`
+    <br>Specifies which timer to use (timer 0).
+  - `LEDC_TIMER_CFG_DUTY_RESOLUTION`
+    <br>Sets the resolution of the PWM signal to 8 bits (0-255).
+  - `LEDC_TIMER_CFG_FREQ_HZ`
+    <br>Sets the PWM frequency to 10 MHz.
+  - `LEDC_TIMER_CFG_CLK_CFG`
+    <br>Configures the clock source for the timer.
+```cpp
+#define LEDC_TIMER_CFG_SPEED_MODE LEDC_LOW_SPEED_MODE
+#define LEDC_TIMER_CFG_TIMER_NUM LEDC_TIMER_0
+#define LEDC_TIMER_CFG_DUTY_RESOLUTION LEDC_TIMER_8_BIT
+#define LEDC_TIMER_CFG_FREQ_HZ 10000000
+#define LEDC_TIMER_CFG_CLK_CFG LEDC_AUTO_CLK
+```
+
+- LEDC Channel Configuration Constants:
+  - `LEDC_CHANNEL_CFG_CHANNEL`
+    <br>Specifies which channel to use (channel 0).
+  - `LEDC_CHANNEL_CFG_INTR_TYPE`
+    <br>Disables interrupts for this channel.
+```cpp
+#define LEDC_CHANNEL_CFG_CHANNEL LEDC_CHANNEL_0
+#define LEDC_CHANNEL_CFG_INTR_TYPE LEDC_INTR_DISABLE
+```
+
+- Timer Configuration Constants:
+  - `TIMER_CFG_ALARM_EN`
+    <br>Enables the timer alarm.
+  - `TIMER_CFG_AUTO_RELOAD`
+    <br>Allows the timer to automatically reload after reaching the alarm value.
+  - `TIMER_CFG_COUNTER_DIR`
+    <br>Sets the timer to count up.
+  - `TIMER_CFG_COUNTER_EN`
+    <br>Starts the timer.
+  - `TIMER_CFG_INTR_TYPE`
+    <br>Sets the interrupt type to level-triggered.
+```cpp
+#define TIMER_CFG_ALARM_EN TIMER_ALARM_EN
+#define TIMER_CFG_AUTO_RELOAD TIMER_AUTORELOAD_EN
+#define TIMER_CFG_COUNTER_DIR TIMER_COUNT_UP
+#define TIMER_CFG_COUNTER_EN TIMER_START
+#define TIMER_CFG_INTR_TYPE TIMER_INTR_LEVEL
+```
+
+- Timer Group and Index Constants:
+  - `TIMER_GROUP`
+    <br>Specifies the timer group to use (group 0).
+  - `TIMER_IDX`
+    <br>Specifies the timer index to use (timer 0).
+```cpp
+#define TIMER_GROUP TIMER_GROUP_0
+#define TIMER_IDX TIMER_0
 ```
 
 ###### Sine Wave Lookup Table
@@ -105,49 +160,29 @@ float scaleFactor = 0.0;
 ###### PWM Setup Function
 This function configures the LEDC (LED Controller) for PWM output. It sets the timer, resolution, frequency, and the output pin.
 - `ledc_timer_config_t timerConfig`
-  <br>This structure holds the configuration for the PWM timer.
-  - `speed_mode`
-    <br>Sets the speed mode to high-speed, allowing for higher frequency PWM.
-  - `timer_num`
-    <br>Specifies which timer to use (in this case, timer 0).
-  - `duty_resolution`
-    <br>Sets the resolution of the PWM signal to 8 bits (0-255).
-  - `freq_hz`
-    <br>Sets the frequency of the PWM signal to the defined PWM_FREQUENCY.
-  - `clk_cfg`
-    <br>Configures the clock source for the timer.
+  <br>This structure holds the configuration for the PWM timer. The various fields are set using the defined constants for speed mode, timer number, duty resolution, frequency, and clock configuration.
 - `ledc_channel_config_t channelConfig`
-  <br>This structure holds the configuration for the PWM channel.
-  - `channel`
-    <br>Specifies which channel to use (channel 0).
-  - `intr_type`
-    <br>Disables interrupts for this channel.
-  - `timer_sel`
-    <br>Selects the timer to use for this channel.
-  - `duty`
-    <br>Initializes the duty cycle to 0 (no output).
-  - `gpio_num`
-    <br>Sets the GPIO pin for output.
+  <br>This structure holds the configuration for the PWM channel. The fields are set using the defined constants for speed mode, channel, interrupt type, timer selection, initial duty cycle, and GPIO pin.
 The function calls `ledc_timer_config()` and `ledc_channel_config()` to apply the configurations.
 ```cpp
 void setupPWM() {
-  ledc_timer_config_t timerConfig;
-  timerConfig.speed_mode = LEDC_HIGH_SPEED_MODE;
-  timerConfig.timer_num = LEDC_TIMER_0;
-  timerConfig.duty_resolution = LEDC_TIMER_8_BIT;
-  timerConfig.freq_hz = PWM_FREQUENCY;
-  timerConfig.clk_cfg = LEDC_AUTO_CLK;
-  ledc_timer_config(&timerConfig);
+  ledc_timer_config_t timerCfg;
+  timerCfg.speed_mode = LEDC_TIMER_CFG_SPEED_MODE;
+  timerCfg.timer_num = LEDC_TIMER_CFG_TIMER_NUM;
+  timerCfg.duty_resolution = LEDC_TIMER_CFG_DUTY_RESOLUTION;
+  timerCfg.freq_hz = LEDC_TIMER_CFG_FREQ_HZ;
+  timerCfg.clk_cfg = LEDC_TIMER_CFG_CLK_CFG;
+  ledc_timer_config(&timerCfg);
 
-  ledc_channel_config_t channelConfig;
-  channelConfig.speed_mode = LEDC_HIGH_SPEED_MODE;
-  channelConfig.channel = LEDC_CHANNEL_0;
-  channelConfig.intr_type = LEDC_INTR_DISABLE;
-  channelConfig.timer_sel = LEDC_TIMER_0;
-  channelConfig.duty = 0;
-  channelConfig.gpio_num = OUTPUT_PIN;
-  channelConfig.hpoint = 0;
-  ledc_channel_config(&channelConfig);
+  ledc_channel_config_t channelCfg;
+  channelCfg.speed_mode = LEDC_TIMER_CFG_SPEED_MODE;
+  channelCfg.channel = LEDC_CHANNEL_CFG_CHANNEL;
+  channelCfg.intr_type = LEDC_CHANNEL_CFG_INTR_TYPE;
+  channelCfg.timer_sel = LEDC_TIMER_CFG_TIMER_NUM;
+  channelCfg.duty = 0; // Start with 0 duty
+  channelCfg.gpio_num = OUTPUT_PIN; // Set the output pin
+  channelCfg.hpoint = 0;
+  ledc_channel_config(&channelCfg);
 }
 ```
 
@@ -163,10 +198,11 @@ This function is called every time the timer interrupt occurs. It updates the PW
 - `index = (index + 1) % SINE_TABLE_SIZE`
   <br>This line increments the index to move to the next value in the sine wave table. The modulo operation ensures that the index wraps around to 0 when it reaches the end of the table, creating a continuous loop.
 ```cpp
-void IRAM_ATTR onTimer() {
+void IRAM_ATTR onTimer(void* arg) {
   uint8_t scaledDuty = ((sineTable[index] - 127.5) * scaleFactor / 100) + 127.5;
-  ledc_set_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0, scaledDuty);
-  ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0);
+  
+  ledc_set_duty(LEDC_TIMER_CFG_SPEED_MODE, LEDC_CHANNEL_CFG_CHANNEL, scaledDuty);
+  ledc_update_duty(LEDC_TIMER_CFG_SPEED_MODE, LEDC_CHANNEL_CFG_CHANNEL);
 
   index = (index + 1) % SINE_TABLE_SIZE;
 }
@@ -183,21 +219,19 @@ void setup() {
   setupPWM();
 
   timer_config_t config;
-  config.alarm_en = TIMER_ALARM_EN;
-  config.auto_reload = true;
-  config.counter_dir = TIMER_COUNT_UP;
-  config.counter_en = TIMER_START;
-  config.divider = 80; // 80 MHz / 80 = 1 MHz
-  config.intr_type = TIMER_INTR_LEVEL;
-  config.timer_group = TIMER_GROUP_0;
-  config.timer_idx = TIMER_0;
+  config.alarm_en = TIMER_CFG_ALARM_EN;
+  config.auto_reload = TIMER_CFG_AUTO_RELOAD;
+  config.counter_dir = TIMER_CFG_COUNTER_DIR;
+  config.counter_en = TIMER_CFG_COUNTER_EN;
+  config.divider = 80;
+  config.intr_type = TIMER_CFG_INTR_TYPE;
 
-  timer_init(config.timer_group, config.timer_idx, &config);
+  timer_init(TIMER_GROUP, TIMER_IDX, &config);
   
-  timer_set_alarm_value(config.timer_group, config.timer_idx, (80e6 / SINE_WAVE_FREQUENCY) / SINE_TABLE_SIZE);
+  timer_set_alarm_value(TIMER_GROUP, TIMER_IDX, (80e6 / SINE_WAVE_FREQUENCY) / SINE_TABLE_SIZE);
   
-  timer_enable_intr(config.timer_group, config.timer_idx);
-  timer_isr_register(config.timer_group, config.timer_idx, onTimer, NULL, 0, NULL);
+  timer_enable_intr(TIMER_GROUP, TIMER_IDX);
+  timer_isr_register(TIMER_GROUP, TIMER_IDX, onTimer, NULL, 0, NULL);
 }
 ```
 
@@ -226,6 +260,8 @@ void loop() {
 
 ##### Full Code
 ```cpp
+#include <Arduino.h>
+
 #include <driver/gpio.h>
 #include <driver/ledc.h>
 #include <driver/timer.h>
@@ -234,10 +270,25 @@ void loop() {
 // Change to your desired GPIO pin
 #define OUTPUT_PIN GPIO_NUM_18
 #define SINE_TABLE_SIZE 20
-// 10 MHz
-#define PWM_FREQUENCY 10000000
-// 500 kHz
 #define SINE_WAVE_FREQUENCY 500000
+
+#define LEDC_TIMER_CFG_SPEED_MODE LEDC_LOW_SPEED_MODE
+#define LEDC_TIMER_CFG_TIMER_NUM LEDC_TIMER_0
+#define LEDC_TIMER_CFG_DUTY_RESOLUTION LEDC_TIMER_8_BIT
+#define LEDC_TIMER_CFG_FREQ_HZ 10000000
+#define LEDC_TIMER_CFG_CLK_CFG LEDC_AUTO_CLK
+
+#define LEDC_CHANNEL_CFG_CHANNEL LEDC_CHANNEL_0
+#define LEDC_CHANNEL_CFG_INTR_TYPE LEDC_INTR_DISABLE
+
+#define TIMER_CFG_ALARM_EN TIMER_ALARM_EN
+#define TIMER_CFG_AUTO_RELOAD TIMER_AUTORELOAD_EN
+#define TIMER_CFG_COUNTER_DIR TIMER_COUNT_UP
+#define TIMER_CFG_COUNTER_EN TIMER_START
+#define TIMER_CFG_INTR_TYPE TIMER_INTR_LEVEL
+
+#define TIMER_GROUP TIMER_GROUP_0
+#define TIMER_IDX TIMER_0
 
 // Predefined sine wave lookup table (scaled to 0-255)
 const float sineTable[SINE_TABLE_SIZE] = {
@@ -251,35 +302,35 @@ float scaleFactor = 0.0;
 
 void setupPWM() {
   // Configure the LEDC for PWM
-  ledc_timer_config_t timerConfig;
-  timerConfig.speed_mode = LEDC_HIGH_SPEED_MODE;
-  timerConfig.timer_num = LEDC_TIMER_0;
+  ledc_timer_config_t timerCfg;
+  timerCfg.speed_mode = LEDC_TIMER_CFG_SPEED_MODE;
+  timerCfg.timer_num = LEDC_TIMER_CFG_TIMER_NUM;
   // 8-bit resolution
-  timerConfig.duty_resolution = LEDC_TIMER_8_BIT;
+  timerCfg.duty_resolution = LEDC_TIMER_CFG_DUTY_RESOLUTION;
   // Set PWM frequency to 10 MHz
-  timerConfig.freq_hz = PWM_FREQUENCY;
-  timerConfig.clk_cfg = LEDC_AUTO_CLK;
-  ledc_timer_config(&timerConfig);
+  timerCfg.freq_hz = LEDC_TIMER_CFG_FREQ_HZ;
+  timerCfg.clk_cfg = LEDC_TIMER_CFG_CLK_CFG;
+  ledc_timer_config(&timerCfg);
 
-  ledc_channel_config_t channelConfig;
-  channelConfig.speed_mode = LEDC_HIGH_SPEED_MODE;
-  channelConfig.channel = LEDC_CHANNEL_0;
-  channelConfig.intr_type = LEDC_INTR_DISABLE;
-  channelConfig.timer_sel = LEDC_TIMER_0;
+  ledc_channel_config_t channelCfg;
+  channelCfg.speed_mode = LEDC_TIMER_CFG_SPEED_MODE;
+  channelCfg.channel = LEDC_CHANNEL_CFG_CHANNEL;
+  channelCfg.intr_type = LEDC_CHANNEL_CFG_INTR_TYPE;
+  channelCfg.timer_sel = LEDC_TIMER_CFG_TIMER_NUM;
   // Start with 0 duty
-  channelConfig.duty = 0;
+  channelCfg.duty = 0;
   // Set the output pin
-  channelConfig.gpio_num = OUTPUT_PIN;
-  channelConfig.hpoint = 0;
-  ledc_channel_config(&channelConfig);
+  channelCfg.gpio_num = OUTPUT_PIN;
+  channelCfg.hpoint = 0;
+  ledc_channel_config(&channelCfg);
 }
 
-void IRAM_ATTR onTimer() {
+void IRAM_ATTR onTimer(void* arg) {
   // Scale the duty cycle based on the scale factor
-  uint8_t scaledDuty = (( sineTable[index] - 127.5 ) * scaleFactor / 100 ) + 127.5
+  uint8_t scaledDuty = (( sineTable[index] - 127.5 ) * scaleFactor / 100 ) + 127.5;
   
-  ledc_set_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0, scaledDuty);
-  ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0);
+  ledc_set_duty(LEDC_TIMER_CFG_SPEED_MODE, LEDC_CHANNEL_CFG_CHANNEL, scaledDuty);
+  ledc_update_duty(LEDC_TIMER_CFG_SPEED_MODE, LEDC_CHANNEL_CFG_CHANNEL);
 
   // Loop through the sine table
   index = (index + 1) % SINE_TABLE_SIZE; // Updated to use 20 points
@@ -296,24 +347,22 @@ void setup() {
 
   // Configure the timer
   timer_config_t config;
-  config.alarm_en = TIMER_ALARM_EN;
-  config.auto_reload = true;
-  config.counter_dir = TIMER_COUNT_UP;
-  config.counter_en = TIMER_START;
+  config.alarm_en = TIMER_CFG_ALARM_EN;
+  config.auto_reload = TIMER_CFG_AUTO_RELOAD;
+  config.counter_dir = TIMER_CFG_COUNTER_DIR;
+  config.counter_en = TIMER_CFG_COUNTER_EN;
   // Set the timer divider for 1 MHz
   config.divider = 80; // 80 MHz / 80 = 1 MHz
-  config.intr_type = TIMER_INTR_LEVEL;
-  config.timer_group = TIMER_GROUP_0;
-  config.timer_idx = TIMER_0;
+  config.intr_type = TIMER_CFG_INTR_TYPE;
 
-  timer_init(config.timer_group, config.timer_idx, &config);
+  timer_init(TIMER_GROUP, TIMER_IDX, &config);
   
   // Set the timer alarm value for 500 kHz
-  timer_set_alarm_value(config.timer_group, config.timer_idx, (80e6 / SINE_WAVE_FREQUENCY) / SINE_TABLE_SIZE);
+  timer_set_alarm_value(TIMER_GROUP, TIMER_IDX, (80e6 / SINE_WAVE_FREQUENCY) / SINE_TABLE_SIZE);
   
   // Enable the timer interrupt
-  timer_enable_intr(config.timer_group, config.timer_idx);
-  timer_isr_register(config.timer_group, config.timer_idx, onTimer, NULL, 0, NULL);
+  timer_enable_intr(TIMER_GROUP, TIMER_IDX);
+  timer_isr_register(TIMER_GROUP, TIMER_IDX, onTimer, NULL, 0, NULL);
 }
 
 void loop() {

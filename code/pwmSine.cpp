@@ -48,7 +48,7 @@ void setupPWM() {
 
 void IRAM_ATTR onTimer() {
   // Scale the duty cycle based on the scale factor
-  uint8_t scaledDuty = (( sineTable[index] - 127.5 ) * scaleFactor / 100 ) + 127.5
+  uint8_t scaledDuty = (( sineTable[index] - 127.5 ) * scaleFactor / 100 ) + 127.5;
   
   ledc_set_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0, scaledDuty);
   ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0);
@@ -59,7 +59,7 @@ void IRAM_ATTR onTimer() {
 
 void setup() {
   Serial.begin(115200);
-  
+
   // Initialize GPIO
   gpio_set_direction(OUTPUT_PIN, GPIO_MODE_OUTPUT);
 
