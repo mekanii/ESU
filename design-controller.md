@@ -105,11 +105,11 @@ float scaleFactor = 0.0;
 ###### PWM Setup Function
 This function configures the LEDC (LED Controller) for PWM output. It sets the timer, resolution, frequency, and the output pin.
 - `ledc_timer_config_t timerConfig`:<br>This structure holds the configuration for the PWM timer.
-  - `speed_mode`:<br>Sets the speed mode to high-speed, allowing for higher frequency PWM.
-  - `timer_num`:<br>Specifies which timer to use (in this case, timer 0).
-  - `duty_resolution`:<br>Sets the resolution of the PWM signal to 8 bits (0-255).
-  - `freq_hz`:<br>Sets the frequency of the PWM signal to the defined PWM_FREQUENCY.
-  - `clk_cfg`:<br>Configures the clock source for the timer.
+  <br>`speed_mode`:<br>Sets the speed mode to high-speed, allowing for higher frequency PWM.
+  <br>`timer_num`:<br>Specifies which timer to use (in this case, timer 0).
+  <br>`duty_resolution`:<br>Sets the resolution of the PWM signal to 8 bits (0-255).
+  <br>`freq_hz`:<br>Sets the frequency of the PWM signal to the defined PWM_FREQUENCY.
+  <br>`clk_cfg`:<br>Configures the clock source for the timer.
 - `ledc_channel_config_t channelConfig`:<br>This structure holds the configuration for the PWM channel.
   - `channel`:<br>Specifies which channel to use (channel 0).
   - `intr_type`:<br>Disables interrupts for this channel.
@@ -132,8 +132,8 @@ void setupPWM() {
   channelConfig.channel = LEDC_CHANNEL_0;
   channelConfig.intr_type = LEDC_INTR_DISABLE;
   channelConfig.timer_sel = LEDC_TIMER_0;
-  channelConfig.duty = 0; // Start with 0 duty
-  channelConfig.gpio_num = OUTPUT_PIN; // Set the output pin
+  channelConfig.duty = 0;
+  channelConfig.gpio_num = OUTPUT_PIN;
   channelConfig.hpoint = 0;
   ledc_channel_config(&channelConfig);
 }
@@ -143,8 +143,11 @@ void setupPWM() {
 This function is called every time the timer interrupt occurs. It calculates the PWM duty cycle based on the current sine wave value and the `scaleFactor`. The duty cycle is then updated to the PWM channel.
 ```cpp
 void IRAM_ATTR onTimer() {
-  uint8_t scaledDuty = (( sineTable[index] - 127.5 ) * scaleFactor / 100 ) + 127.5;
-  ...
+  uint8_t scaledDuty = ((sineTable[index] - 127.5) * scaleFactor / 100) + 127.5;
+  ledc_set_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0, scaledDuty);
+  ledc_update_duty(LEDC_HIGH_SPEED_MODE, LEDC_CHANNEL_0);
+
+  index = (index + 1) % SINE_TABLE_SIZE;
 }
 ```
 
