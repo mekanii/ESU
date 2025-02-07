@@ -110,12 +110,12 @@ This function configures the LEDC (LED Controller) for PWM output. It sets the t
   - `duty_resolution`:<br>Sets the resolution of the PWM signal to 8 bits (0-255).
   - `freq_hz`:<br>Sets the frequency of the PWM signal to the defined PWM_FREQUENCY.
   - `clk_cfg`:<br>Configures the clock source for the timer.
-- `ledc_channel_config_t channelConfig`: This structure holds the configuration for the PWM channel.
-  - `channel`: Specifies which channel to use (channel 0).
-  - `intr_type`: Disables interrupts for this channel.
-  - `timer_sel`: Selects the timer to use for this channel.
-  - `duty`: Initializes the duty cycle to 0 (no output).
-  - `gpio_num`: Sets the GPIO pin for output.
+- `ledc_channel_config_t channelConfig`:<br>This structure holds the configuration for the PWM channel.
+  - `channel`:<br>Specifies which channel to use (channel 0).
+  - `intr_type`:<br>Disables interrupts for this channel.
+  - `timer_sel`:<br>Selects the timer to use for this channel.
+  - `duty`:<br>Initializes the duty cycle to 0 (no output).
+  - `gpio_num`:<br>Sets the GPIO pin for output.
 The function calls `ledc_timer_config()` and `ledc_channel_config()` to apply the configurations.
 ```cpp
 void setupPWM() {
