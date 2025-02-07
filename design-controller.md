@@ -68,13 +68,13 @@ This code is intended for an embedded system (like an ESP32) that generates a PW
 #include <math.h>
 ```
 
-- `OUTPUT_PIN`:
+- `OUTPUT_PIN`
   <br>Defines the GPIO pin number (GPIO 18) that will be used to output the PWM signal. You can change this to any other pin as needed.
-- `SINE_TABLE_SIZE`:
+- `SINE_TABLE_SIZE`
   <br>Defines the number of points in the sine wave lookup table. In this case, it is set to 20, meaning there are 20 pre-calculated values in the sine wave array.
-- `PWM_FREQUENCY`:
+- `PWM_FREQUENCY`
   <br>Sets the frequency of the PWM signal to 10 MHz. This is the rate at which the PWM signal will toggle on and off.
-- `SINE_WAVE_FREQUENCY`:
+- `SINE_WAVE_FREQUENCY`
   <br>This sets the frequency of the sine wave to 500 kHz. This is the rate at which the sine wave will be sampled and output.
 ```cpp
 #define OUTPUT_PIN GPIO_NUM_18
@@ -152,7 +152,16 @@ void setupPWM() {
 ```
 
 ###### Timer Interrupt Handler
-This function is called every time the timer interrupt occurs. It calculates the PWM duty cycle based on the current sine wave value and the `scaleFactor`. The duty cycle is then updated to the PWM channel.
+This function is called every time the timer interrupt occurs. It updates the PWM signal based on the current sine wave value.
+- `uint8_t scaledDuty`
+  <br>This variable calculates the duty cycle for the PWM signal.
+  <br>The formula adjusts the sine wave value to fit within the 0-255 range, scaled by the scaleFactor. The sine wave values are centered around 127.5 to ensure they fit within the PWM range.
+- `ledc_set_duty()`
+  <br>This function sets the duty cycle for the specified PWM channel.
+- `ledc_update_duty()`
+  <br>This function updates the PWM output with the new duty cycle.
+- `index = (index + 1) % SINE_TABLE_SIZE`
+  <br>This line increments the index to move to the next value in the sine wave table. The modulo operation ensures that the index wraps around to 0 when it reaches the end of the table, creating a continuous loop.
 ```cpp
 void IRAM_ATTR onTimer() {
   uint8_t scaledDuty = ((sineTable[index] - 127.5) * scaleFactor / 100) + 127.5;
@@ -168,7 +177,27 @@ Initializes serial communication for input, sets up GPIO, configures PWM, and in
 ```cpp
 void setup() {
   Serial.begin(115200);
-  ...
+  
+  gpio_set_direction(OUTPUT_PIN, GPIO_MODE_OUTPUT);
+
+  setupPWM();
+
+  timer_config_t config;
+  config.alarm_en = TIMER_ALARM_EN;
+  config.auto_reload = true;
+  config.counter_dir = TIMER_COUNT_UP;
+  config.counter_en = TIMER_START;
+  config.divider = 80; // 80 MHz / 80 = 1 MHz
+  config.intr_type = TIMER_INTR_LEVEL;
+  config.timer_group = TIMER_GROUP_0;
+  config.timer_idx = TIMER_0;
+
+  timer_init(config.timer_group, config.timer_idx, &config);
+  
+  timer_set_alarm_value(config.timer_group, config.timer_idx, (80e6 / SINE_WAVE_FREQUENCY) / SINE_TABLE_SIZE);
+  
+  timer_enable_intr(config.timer_group, config.timer_idx);
+  timer_isr_register(config.timer_group, config.timer_idx, onTimer, NULL, 0, NULL);
 }
 ```
 
@@ -178,7 +207,14 @@ Continuously checks for serial input. If 's' is received, it stops the PWM by se
 void loop() {
   if (Serial.available()) {
     String input = Serial.readStringUntil('\n');
-    ...
+    if (input == "s") {
+      scaleFactor = 0.0;
+    } else {
+      int value = input.toInt();
+      if (value >= 1 && value <= 100) {
+        scaleFactor = value / 100.0;
+      }
+    }
   }
 }
 ```
