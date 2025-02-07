@@ -69,13 +69,13 @@ This code is intended for an embedded system (like an ESP32) that generates a PW
 ```
 
 - `OUTPUT_PIN`:
-<br>Defines the GPIO pin number (GPIO 18) that will be used to output the PWM signal. You can change this to any other pin as needed.
+  <br>Defines the GPIO pin number (GPIO 18) that will be used to output the PWM signal. You can change this to any other pin as needed.
 - `SINE_TABLE_SIZE`:
-<br>Defines the number of points in the sine wave lookup table. In this case, it is set to 20, meaning there are 20 pre-calculated values in the sine wave array.
+  <br>Defines the number of points in the sine wave lookup table. In this case, it is set to 20, meaning there are 20 pre-calculated values in the sine wave array.
 - `PWM_FREQUENCY`:
-<br>Sets the frequency of the PWM signal to 10 MHz. This is the rate at which the PWM signal will toggle on and off.
+  <br>Sets the frequency of the PWM signal to 10 MHz. This is the rate at which the PWM signal will toggle on and off.
 - `SINE_WAVE_FREQUENCY`:
-<br>This sets the frequency of the sine wave to 500 kHz. This is the rate at which the sine wave will be sampled and output.
+  <br>This sets the frequency of the sine wave to 500 kHz. This is the rate at which the sine wave will be sampled and output.
 ```cpp
 #define OUTPUT_PIN GPIO_NUM_18
 #define SINE_TABLE_SIZE 20
@@ -93,10 +93,10 @@ const float sineTable[SINE_TABLE_SIZE] = {
 ```
 
 ###### Global Variables
-- `volatile uint32_t index`:
-<br>This variable keeps track of the current index in the sine wave lookup table. It is marked as `volatile` because it is modified within an interrupt service routine (ISR), ensuring the compiler does not optimize it away.
-- `float scaleFactor`:
-<br>This variable determines the amplitude of the PWM signal. It is initialized to 0, meaning the PWM output will be off until changed by user input.
+- `volatile uint32_t index`
+  <br>This variable keeps track of the current index in the sine wave lookup table. It is marked as `volatile` because it is modified within an interrupt service routine (ISR), ensuring the compiler does not optimize it away.
+- `float scaleFactor`
+  <br>This variable determines the amplitude of the PWM signal. It is initialized to 0, meaning the PWM output will be off until changed by user input.
 ```cpp
 volatile uint32_t index = 0;
 float scaleFactor = 0.0;
@@ -104,18 +104,30 @@ float scaleFactor = 0.0;
 
 ###### PWM Setup Function
 This function configures the LEDC (LED Controller) for PWM output. It sets the timer, resolution, frequency, and the output pin.
-- `ledc_timer_config_t timerConfig`:<br>This structure holds the configuration for the PWM timer.
-  <br>`speed_mode`:<br>Sets the speed mode to high-speed, allowing for higher frequency PWM.
-  <br>`timer_num`:<br>Specifies which timer to use (in this case, timer 0).
-  <br>`duty_resolution`:<br>Sets the resolution of the PWM signal to 8 bits (0-255).
-  <br>`freq_hz`:<br>Sets the frequency of the PWM signal to the defined PWM_FREQUENCY.
-  <br>`clk_cfg`:<br>Configures the clock source for the timer.
-- `ledc_channel_config_t channelConfig`:<br>This structure holds the configuration for the PWM channel.
-  - `channel`:<br>Specifies which channel to use (channel 0).
-  - `intr_type`:<br>Disables interrupts for this channel.
-  - `timer_sel`:<br>Selects the timer to use for this channel.
-  - `duty`:<br>Initializes the duty cycle to 0 (no output).
-  - `gpio_num`:<br>Sets the GPIO pin for output.
+- `ledc_timer_config_t timerConfig`
+  <br>This structure holds the configuration for the PWM timer.
+  - `speed_mode`
+    <br>Sets the speed mode to high-speed, allowing for higher frequency PWM.
+  - `timer_num`
+    <br>Specifies which timer to use (in this case, timer 0).
+  - `duty_resolution`
+    <br>Sets the resolution of the PWM signal to 8 bits (0-255).
+  - `freq_hz`
+    <br>Sets the frequency of the PWM signal to the defined PWM_FREQUENCY.
+  - `clk_cfg`
+    <br>Configures the clock source for the timer.
+- `ledc_channel_config_t channelConfig`
+  <br>This structure holds the configuration for the PWM channel.
+  - `channel`
+    <br>Specifies which channel to use (channel 0).
+  - `intr_type`
+    <br>Disables interrupts for this channel.
+  - `timer_sel`
+    <br>Selects the timer to use for this channel.
+  - `duty`
+    <br>Initializes the duty cycle to 0 (no output).
+  - `gpio_num`
+    <br>Sets the GPIO pin for output.
 The function calls `ledc_timer_config()` and `ledc_channel_config()` to apply the configurations.
 ```cpp
 void setupPWM() {
