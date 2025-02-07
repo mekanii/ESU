@@ -12,14 +12,14 @@
 #define SINE_WAVE_FREQUENCY 500000
 
 // Predefined sine wave lookup table (scaled to 0-255)
-const uint8_t sineTable[SINE_TABLE_SIZE] = {
-  151, 195, 228, 248, 255, 249, 233, 208, 178, 145, 110, 77, 47, 22, 6, 0, 7, 27, 60, 104
+const float sineTable[SINE_TABLE_SIZE] = {
+  151.22, 194.57, 228.23, 248.37, 255.00, 249.14, 232.56, 208.34, 178.25, 144.84, 110.16, 76.76, 46.67, 22.44, 5.86, 0.00, 6.63, 26.78, 60.44, 103.79
 };
 
 volatile uint32_t index = 0;
 
-// Set amplitude scale to 50%
-float scaleFactor = 0.5;
+// Set amplitude scale to 100%
+float scaleFactor = 0.0;
 
 void setupPWM() {
   // Configure the LEDC for PWM
@@ -58,6 +58,8 @@ void IRAM_ATTR onTimer() {
 }
 
 void setup() {
+  Serial.begin(115200);
+  
   // Initialize GPIO
   gpio_set_direction(OUTPUT_PIN, GPIO_MODE_OUTPUT);
 
@@ -88,4 +90,17 @@ void setup() {
 
 void loop() {
   // Main loop can be empty or used for other tasks
+  if (Serial.available()) {
+    String input = Serial.readStringUntil('\n'); // Read until newline
+    if (input == "s") {
+      // Stop PWM
+      scaleFactor = 0.0; // Set scaleFactor to 0 to stop PWM
+    } else {
+      // Convert input to scaleFactor
+      int value = input.toInt(); // Convert string to integer
+      if (value >= 1 && value <= 100) {
+        scaleFactor = value / 100.0; // Set scaleFactor as a decimal
+      }
+    }
+  }
 }
