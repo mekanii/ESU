@@ -53,7 +53,14 @@ The alignment of values in the colored rows reinforces the reliability of the cu
 This code is intended for an embedded system (like an ESP32) that generates a PWM signal based on a sine wave. The PWM signal can be adjusted in amplitude using a scale factor that can be set via serial input. The code also allows stopping the PWM signal.
 ##### Key Components
 ###### Libraries and Definitions
-These libraries provide functions to control GPIO pins, configure PWM, and manage timers:
+- `<driver/gpio.h>`:
+<br>Provides functions to control General Purpose Input/Output (GPIO) pins. It allows you to set pin modes (input/output) and read/write values to/from the pins.
+- `<driver/ledc.h>`:
+<br>Used for configuring the LED Controller (LEDC) for PWM (Pulse Width Modulation) output. It allows you to set up timers and channels for PWM signals.
+- `<driver/timer.h>`:
+<br>Provides functions to configure and manage hardware timers. Timers are essential for generating periodic interrupts, which are used to update the PWM signal.
+- `<math.h>`:
+<br>Includes mathematical functions. Although not explicitly used in this snippet, it is often included for mathematical operations.
 ```cpp
 #include <driver/gpio.h>
 #include <driver/ledc.h>
@@ -61,11 +68,14 @@ These libraries provide functions to control GPIO pins, configure PWM, and manag
 #include <math.h>
 ```
 
-- `OUTPUT_PIN`:<br>Defines the GPIO pin used for outputting the PWM signal.
-- `SINE_TABLE_SIZE`:<br>The number of points in the sine wave lookup table.
-- `PWM_FREQUENCY`:<br>The frequency of the PWM signal.
-- `SINE_WAVE_FREQUENCY`:<br>The frequency of the sine wave.
-
+- `OUTPUT_PIN`:
+<br>Defines the GPIO pin number (GPIO 18) that will be used to output the PWM signal. You can change this to any other pin as needed.
+- `SINE_TABLE_SIZE`:
+<br>Defines the number of points in the sine wave lookup table. In this case, it is set to 20, meaning there are 20 pre-calculated values in the sine wave array.
+- `PWM_FREQUENCY`:
+<br>Sets the frequency of the PWM signal to 10 MHz. This is the rate at which the PWM signal will toggle on and off.
+- `SINE_WAVE_FREQUENCY`:
+<br>This sets the frequency of the sine wave to 500 kHz. This is the rate at which the sine wave will be sampled and output.
 ```cpp
 #define OUTPUT_PIN GPIO_NUM_18
 #define SINE_TABLE_SIZE 20
@@ -74,11 +84,96 @@ These libraries provide functions to control GPIO pins, configure PWM, and manag
 ```
 
 ###### Sine Wave Lookup Table
+This array contains 20 pre-calculated values of a sine wave, scaled to fit within the range of 0-255. Each value corresponds to a point in the sine wave, allowing for smooth PWM output. The values are derived from the sine function and scaled to match the 8-bit resolution of the PWM signal (0-255).
+
+```cpp
+const float sineTable[SINE_TABLE_SIZE] = {
+  151.22, 194.57, 228.23, 248.37, 255.00, 249.14, 232.56, 208.34, 178.25, 144.84, 110.16, 76.76, 46.67, 22.44, 5.86, 0.00, 6.63, 26.78, 60.44, 103.79
+};
+```
+
 ###### Global Variables
+- `volatile uint32_t index`:
+<br>This variable keeps track of the current index in the sine wave lookup table. It is marked as `volatile` because it is modified within an interrupt service routine (ISR), ensuring the compiler does not optimize it away.
+- `float scaleFactor`:
+<br>This variable determines the amplitude of the PWM signal. It is initialized to 0, meaning the PWM output will be off until changed by user input.
+```cpp
+volatile uint32_t index = 0;
+float scaleFactor = 0.0;
+```
+
 ###### PWM Setup Function
+This function configures the LEDC (LED Controller) for PWM output. It sets the timer, resolution, frequency, and the output pin.
+- `ledc_timer_config_t timerConfig`: This structure holds the configuration for the PWM timer.
+  - `speed_mode`: Sets the speed mode to high-speed, allowing for higher frequency PWM.
+  - `timer_num`: Specifies which timer to use (in this case, timer 0).
+  - `duty_resolution`: Sets the resolution of the PWM signal to 8 bits (0-255).
+  - `freq_hz`: Sets the frequency of the PWM signal to the defined PWM_FREQUENCY.
+  - `clk_cfg`: Configures the clock source for the timer.
+- `ledc_channel_config_t channelConfig`: This structure holds the configuration for the PWM channel.
+  - `channel`: Specifies which channel to use (channel 0).
+  - `intr_type`: Disables interrupts for this channel.
+  - `timer_sel`: Selects the timer to use for this channel.
+  - `duty`: Initializes the duty cycle to 0 (no output).
+  - `gpio_num`: Sets the GPIO pin for output.
+The function calls `ledc_timer_config()` and `ledc_channel_config()` to apply the configurations.
+```cpp
+void setupPWM() {
+  ledc_timer_config_t timerConfig;
+  timerConfig.speed_mode = LEDC_HIGH_SPEED_MODE;
+  timerConfig.timer_num = LEDC_TIMER_0;
+  timerConfig.duty_resolution = LEDC_TIMER_8_BIT;
+  timerConfig.freq_hz = PWM_FREQUENCY;
+  timerConfig.clk_cfg = LEDC_AUTO_CLK;
+  ledc_timer_config(&timerConfig);
+
+  ledc_channel_config_t channelConfig;
+  channelConfig.speed_mode = LEDC_HIGH_SPEED_MODE;
+  channelConfig.channel = LEDC_CHANNEL_0;
+  channelConfig.intr_type = LEDC_INTR_DISABLE;
+  channelConfig.timer_sel = LEDC_TIMER_0;
+  channelConfig.duty = 0; // Start with 0 duty
+  channelConfig.gpio_num = OUTPUT_PIN; // Set the output pin
+  channelConfig.hpoint = 0;
+  ledc_channel_config(&channelConfig);
+}
+```
+
 ###### Timer Interrupt Handler
+This function is called every time the timer interrupt occurs. It calculates the PWM duty cycle based on the current sine wave value and the `scaleFactor`. The duty cycle is then updated to the PWM channel.
+```cpp
+void IRAM_ATTR onTimer() {
+  uint8_t scaledDuty = (( sineTable[index] - 127.5 ) * scaleFactor / 100 ) + 127.5;
+  ...
+}
+```
+
 ###### Setup Function
+Initializes serial communication for input, sets up GPIO, configures PWM, and initializes the timer.
+```cpp
+void setup() {
+  Serial.begin(115200);
+  ...
+}
+```
+
 ###### Main Loop
+Continuously checks for serial input. If 's' is received, it stops the PWM by setting `scaleFactor` to 0. If a number between 1 and 100 is received, it sets the `scaleFactor` to that value divided by 100, allowing for a range of 0.01 to 1.00.
+```cpp
+void loop() {
+  if (Serial.available()) {
+    String input = Serial.readStringUntil('\n');
+    ...
+  }
+}
+```
+
+##### How It Works
+- When the program starts, it initializes the PWM and timer.
+- The timer generates interrupts at a specified frequency, calling the `onTimer()` function to update the PWM signal based on the sine wave lookup table.
+- The user can send commands via serial input to adjust the amplitude of the PWM signal or stop it entirely.
+
+##### Full Code
 ```cpp
 #include <driver/gpio.h>
 #include <driver/ledc.h>
