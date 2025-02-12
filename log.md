@@ -1,3 +1,11 @@
+2025-02-11
+  Tes rangkaian mainboard ESU menggunakan osiloskop digital:
+  • Rekam sinyal output - Monopolar cut (pure, blend1, blend2) [In Progress]
+  • Rekam sinyal output - Monopolar coag (spray, forced) [To Do]
+  • Rekam sinyal output - Bipolar standard [To Do]
+
+2025-02-10
+
 2025-02-07
   https://yopiediy.xyz/esp32-mcpwm-as-spwm-generator/
   Perancangan hardware PWM generator:
