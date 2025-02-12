@@ -1,3 +1,9 @@
+2025-02-12
+  Tes rangkaian mainboard ESU menggunakan osiloskop digital:
+  • Rekam sinyal output - Monopolar cut (pure, blend1, blend2) [Done]
+  • Rekam sinyal output - Monopolar coag (spray, forced) [Done]
+  • Rekam sinyal output - Bipolar standard [Done]
+
 2025-02-11
   Tes rangkaian mainboard ESU menggunakan osiloskop digital:
   • Rekam sinyal output - Monopolar cut (pure, blend1, blend2) [In Progress]
