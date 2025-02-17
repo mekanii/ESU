@@ -1,3 +1,9 @@
+2025-02-17
+  Tes rangkaian controller ESU:
+  • Rekam sinyal input - Monopolar cut (pure, blend1, blend2) [Done]
+  • Rekam sinyal input - Monopolar coag (spray, forced) [Done]
+  • Rekam sinyal input - Bipolar standard [Done]
+
 2025-02-12
   Tes rangkaian mainboard ESU menggunakan osiloskop digital:
   • Rekam sinyal output - Monopolar cut (pure, blend1, blend2) [Done]
@@ -11,6 +17,10 @@
   • Rekam sinyal output - Bipolar standard [To Do]
 
 2025-02-10
+  Alternatif PWM generator menggunakan MCPWM sebagai SPWM generator:
+  • Membuat model matematis sinewave berdasarkan variable amplitude, ƒ mod, ƒ carrier [Need Review]
+  • coding MCPWM sebagai SPWM generator menggunakan fungsi timer interrupt [Need Review]
+  • Uji fungsi MCPWM sebagai SPWM generator menggunakan oscilloscope [To Do]
 
 2025-02-07
   https://yopiediy.xyz/esp32-mcpwm-as-spwm-generator/
