@@ -1,4 +1,11 @@
 2025-02-17
+Tes rangkaian controller dan mainboard ESU:
+• Rekam sinyal input vs output driver MOSFET [Need Review]
+• Rekam sinyal output driver MOSFET vs output power stage [Need Review]
+• Analisa cara kerja generator ESU berdasarkan sinyal input-output power stage dan gambar reverse Engineering mainboard ESU [Need Review]
+• Revisi gambar reverse engineering mainboard ESU [Need Review]
+
+2025-02-17
   Tes rangkaian controller ESU:
   • Rekam sinyal input - Monopolar cut (pure, blend1, blend2) [Done]
   • Rekam sinyal input - Monopolar coag (spray, forced) [Done]
