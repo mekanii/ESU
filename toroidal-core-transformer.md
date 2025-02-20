@@ -20,8 +20,8 @@ To find the turns ratio, we can rearrange the formula:
 This means that for every 1.5 turns on the primary, there should be 1 turn on the secondary.
 
 ## 3. Core Selection
-Choosing the right core is crucial for transformer efficiency and performance. For a small transformer, a toroidal core is a good choice due to its compact size and low electromagnetic interference.
-- Core Material:<br>Ferrite or silicon steel are common materials. Ferrite is suitable for high-frequency applications, while silicon steel is better for low-frequency applications.
+For high-frequency applications like 81.3 kHz, a suitable core material is essential. Ferrite cores are typically used for high-frequency transformers due to their low losses at high frequencies.
+- Core Material:<br>Ferrite is preferred for high-frequency applications.
 - Core Size:<br>The core size will depend on the power rating of the transformer. For small applications, a core with a cross-sectional area of around 1-2 cm² is often sufficient.
 
 
@@ -52,16 +52,16 @@ Asuming:
 - $V_s = 8V$
 - $f = 81.3kHz$
 - $B_{max} = 0.3T$
-- Core cross-sectional area $A = 1.5 \text{ cm}^2 = 1.5 \times 10^{-4} \text{ m}^2$
+- Core cross-sectional area $A = 64 \text{ mm}^2 = 64 \times 10^{-6} \text{ m}^2$
 
 ### 5.a. Calculate Maximum Flux
 ```math
-\Phi_{max} = B_{max} • A = 0.3 \, T \times 1.5 \times 10^{-4} \, m^2 = 4.5 \times 10^{-5} \, Wb
+\Phi_{max} = B_{max} • A = 0.3 \, T \times 64 \times 10^{-6} \, m^2 = 19.2 \times 10^{-6} \, Wb
 ```
 
 ### 5.b. Calculate Number of Turns:
 ```math
-N_p = \frac{12V}{4.44 • 81.3kHz • 4.5 \times 10^{-5} Wb} \approx  10 \text{ turns}
+N_p = \frac{12V}{4.44 • 81.3kHz • 19.2 \times 10^{-6} Wb} \approx  10 \text{ turns}
 ```
 
 ### 5.c. Calculate Secondary Turns:
