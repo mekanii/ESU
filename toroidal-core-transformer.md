@@ -50,28 +50,28 @@ N_p = \frac{V_p}{4.44 • f • \Phi_{max}}
 Asuming:
 - $V_p = 12V$
 - $V_s = 8V$
-- $f = 81.3kHz$
+- $f = 81.3kHz = 81300$
 - $B_{max} = 0.3T$
 - Core cross-sectional area $A = 64 \text{ mm}^2 = 64 \times 10^{-6} \text{ m}^2$
 
 ### 5.a. Calculate Maximum Flux
 ```math
-\Phi_{max} = B_{max} • A = 0.3 \, T \times 64 \times 10^{-6} \, m^2 = 19.2 \times 10^{-6} \, Wb
+\Phi_{max} = B_{max} • A = 0.3 \, T • 64 \times 10^{-6} \, m^2 = 19.2 \times 10^{-6} \, Wb
 ```
 
 ### 5.b. Calculate Number of Turns:
 ```math
-N_p = \frac{12V}{4.44 • 81.3kHz • 19.2 \times 10^{-6} \, Wb} \approx  10 \text{ turns}
+N_p = \frac{12V}{4.44 • 81300 Hz • 19.2 \times 10^{-6} \, Wb} \approx  7 \text{ turns}
 ```
 
 ### 5.c. Calculate Secondary Turns:
 ```math
-N_s = \frac{N_p}{1.5} \approx \frac{10}{1.5} \approx 6 \text{ turns}
+N_s = \frac{N_p}{1.5} \approx \frac{7}{1.5} \approx 4 \text{ turns}
 ```
 
 ## 6. Winding the Transformer
-- Primary Winding:<br>Wind approximately 10 turns of insulated copper wire (e.g., 22 AWG) around the toroidal core.
-- Secondary Winding:<br>Wind approximately 6 turns of insulated copper wire on top of the primary winding.
+- Primary Winding:<br>Wind approximately 7 turns of insulated copper wire (e.g., 22 AWG) around the toroidal core.
+- Secondary Winding:<br>Wind approximately 4 turns of insulated copper wire on top of the primary winding.
 
 ## 7. Connections
 - Connect the primary winding to our 12V AC source.
