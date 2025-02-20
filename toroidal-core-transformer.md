@@ -7,7 +7,9 @@ A transformer operates on the principle of electromagnetic induction. The voltag
 ```
 
 Where:
-- $V_p$ : Primary voltage (12V)
-- $V_s$ : Secondary voltage (8V)
-- $N_p$ : Number of turns in the primary winding
-- $N_s$ : Number of turns in the secondary winding
+```math
+• V_p : Primary voltage (12V)
+• V_s : Secondary voltage (8V)
+• N_p : Number of turns in the primary winding
+• N_s : Number of turns in the secondary winding
+```
