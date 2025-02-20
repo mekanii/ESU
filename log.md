@@ -1,4 +1,19 @@
-2025-02-17
+2025-02-20
+  Tes rangkaian controller dan mainboard ESU:
+  • Rekam sinyal input vs output transformer Return Electrode detection [Done]
+  • Analisa cara kerja rangkaian Return Electrode detection berdasarkan sinyal input-output transformer dan gambar reverse Engineering mainboard ESU [Need Review]
+  • Revisi gambar reverse engineering mainboard ESU [Need Review]
+
+  Menulis dokumentasi reverse engineering ESU
+  • Penghitungan toroidal core transformer monopolar probe switch [Need Review]
+
+2025-02-19
+  Tes rangkaian mainboard ESU:
+  • Rekam sinyal input vs output transformer monopolar probe switch detection [Done]
+  • Analisa cara kerja rangkaian monopolar probe switch detection berdasarkan sinyal timer 555, input-output transformer dan gambar reverse Engineering mainboard ESU [Need Review]
+  • Revisi gambar reverse engineering mainboard ESU [Need Review]
+
+2025-02-18
   Tes rangkaian controller dan mainboard ESU:
   • Rekam sinyal input vs output driver MOSFET [In Progress]
   • Rekam sinyal output driver MOSFET vs output power stage [In Progress]
