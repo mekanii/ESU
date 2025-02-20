@@ -51,4 +51,4 @@ Asuming:
 - $V_s = 8V$
 - $f = 81.3kHz$
 - $B_{max} = 0.3T$
-- Core cross-sectional area $A = 1.5 \, \text{cm}^2 = 1.5 \times 10^{-4} \, \text{m}^2$
+- Core cross-sectional area $A = 1.5 \text{cm}^2 = 1.5 \times 10^{-4} \text{m}^2$
