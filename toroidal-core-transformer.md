@@ -30,6 +30,6 @@ To determine the number of turns for each winding, you need to know the core's m
 
 ### 4.a. Calculate the Maximum Flux $\( \Phi_{max} \)$:
 ```math
-\Phi_{max} = \frac{V_p}{4.44 \• f \• N_p}
+\Phi_{max} = \frac{V_p}{4.44 • f • N_p}
 ```
 
