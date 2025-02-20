@@ -1,4 +1,4 @@
-Building a small toroidal core transformer to step down a 12V sine wave input to an 8V sine wave output involves several design considerations, including core selection, winding calculations, and safety precautions. Below is a detailed guide to help you design and build your transformer.
+Building a small toroidal core transformer to step down a 12V sine wave input to an 8V sine wave output involves several design considerations, including core selection, winding calculations, and safety precautions. Below is a detailed guide to help we design and build our transformer.
 
 ## 1. Understanding Transformer Basics
 A transformer operates on the principle of electromagnetic induction. The voltage ratio between the primary (input) and secondary (output) windings is proportional to the number of turns in each winding:
@@ -26,7 +26,7 @@ Choosing the right core is crucial for transformer efficiency and performance. F
 
 
 ## 4. Winding Calculations
-To determine the number of turns for each winding, you need to know the core's magnetic properties, specifically the maximum flux density $\(B_{max}\)$​ and the core's cross-sectional area $\(A\)$.
+To determine the number of turns for each winding, we need to know the core's magnetic properties, specifically the maximum flux density $\(B_{max}\)$​ and the core's cross-sectional area $\(A\)$.
 
 ### 4.a. Calculate the Maximum Flux $\( \Phi_{max} \)$
 ```math
@@ -45,10 +45,45 @@ Rearranging the formula gives:
 ```math
 N_p = \frac{V_p}{4.44 • f • \Phi_{max}}
 ```
-Asuming:
 
+## 5. Calculation
+Asuming:
 - $V_p = 12V$
 - $V_s = 8V$
 - $f = 81.3kHz$
 - $B_{max} = 0.3T$
 - Core cross-sectional area $A = 1.5 \text{ cm}^2 = 1.5 \times 10^{-4} \text{ m}^2$
+
+### 5.a. Calculate Maximum Flux
+```math
+\Phi_{max} = B_{max} • A = 0.3 \, T \times 1.5 \times 10^{-4} \, m^2 = 4.5 \times 10^{-5} \, Wb
+```
+
+### 5.b. Calculate Number of Turns:
+```math
+N_p = \frac{12V}{4.44 • 81.3kHz • 4.5 \times 10^{-5} Wb} \approx  10 \text{ turns}
+```
+
+### 5.c. Calculate Secondary Turns:
+```math
+N_s = \frac{N_p}{1.5} \approx \frac{10}{1.5} \approx 6 \text{ turns}
+```
+
+## 6. Winding the Transformer
+- Primary Winding:<br>Wind approximately 10 turns of insulated copper wire (e.g., 22 AWG) around the toroidal core.
+- Secondary Winding:<br>Wind approximately 6 turns of insulated copper wire on top of the primary winding.
+
+## 7. Connections
+- Connect the primary winding to our 12V AC source.
+- Connect the secondary winding to our load, which will receive the 8V AC output.
+
+## 8. Testing the Transformer
+- Use a multimeter to check the output voltage before connecting a load.
+- Ensure that the transformer does not overheat during operation.
+
+## 9. Safety Precautions
+- Ensure proper insulation of the windings to prevent short circuits.
+- Use a fuse or circuit breaker on the primary side to protect against overload.
+- Be cautious when working with AC voltages.
+
+By following these steps, we can design and build a small toroidal core transformer to step down a 12V sine wave input to an 8V sine wave output. Ensure to consider the core material, winding techniques, and safety precautions during the construction process.
