@@ -26,4 +26,4 @@ Choosing the right core is crucial for transformer efficiency and performance. F
 
 
 ### 4. Winding Calculations
-To determine the number of turns for each winding, you need to know the core's magnetic properties, specifically the maximum flux density ${B_max}$​ and the core's cross-sectional area ${A}$.
+To determine the number of turns for each winding, you need to know the core's magnetic properties, specifically the maximum flux density $\(B_{max}\)$​ and the core's cross-sectional area $\(A\)$.
