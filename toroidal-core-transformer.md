@@ -28,8 +28,27 @@ Choosing the right core is crucial for transformer efficiency and performance. F
 ## 4. Winding Calculations
 To determine the number of turns for each winding, you need to know the core's magnetic properties, specifically the maximum flux density $\(B_{max}\)$​ and the core's cross-sectional area $\(A\)$.
 
-### 4.a. Calculate the Maximum Flux $\( \Phi_{max} \)$:
+### 4.a. Calculate the Maximum Flux $\( \Phi_{max} \)$
 ```math
-\Phi_{max} = \frac{V_p}{4.44 \dot f \dot N_p}
+\Phi_{max} = \frac{V_p}{4.44 • f • N_p}
 ```
+Where:
+- $f$ = Frequency of the sine wave (81.3kHz)
+- $N_p$ = Number of turns in the primary winding (to be determined)
 
+### 4.b. Determine $\(B_{max}\)$
+- For typical ferrite cores, $B_{max}$ is around 0.3T to 0.5T.
+- For silicon steel, it can be around 1.5T.
+
+### 4.c. Calculate the Number of Turns
+Rearranging the formula gives:
+```math
+N_p = \frac{V_p}{4.44 • f • \Phi_{max}}
+```
+Asuming:
+
+- $V_p = 12V$
+- $V_s = 8V$
+- $f = 81.3kHz$
+- $B_{max} = 0.3T$
+- Core cross-sectional area $A = 1.5 \, \text{cm}^2 = 1.5 \times 10^{-4} \, \text{m}^2$
