@@ -50,7 +50,7 @@ N_p = \frac{V_p}{4.44 • f • \Phi_{max}}
 Asuming:
 - $V_p = 12V$
 - $V_s = 8V$
-- $f = 81.3kHz = 81300$
+- $f = 81.3kHz = 81300Hz$
 - $B_{max} = 0.3T$
 - Core cross-sectional area $A = 64 \text{ mm}^2 = 64 \times 10^{-6} \text{ m}^2$
 
