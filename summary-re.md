@@ -178,3 +178,16 @@ _Peak Voltage (Vp) and Current (I):_
 |   40W |        |        |
 |   50W |        |        |
 |   60W |        |        |
+
+
+
+
+
+
+0: drain mosfet
+1: output 555
+2: output T (ref J3-4)
+3: output T (ref J3-4)
+
+CTL-18 | btn coag | active LOW
+CTL-19 | btn cut  | active LOW
