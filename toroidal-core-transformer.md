@@ -61,7 +61,7 @@ Asuming:
 
 ### 5.b. Calculate Number of Turns:
 ```math
-N_p = \frac{12V}{4.44 • 81.3kHz • 19.2 \times 10^{-6} Wb} \approx  10 \text{ turns}
+N_p = \frac{12V}{4.44 • 81.3kHz • 19.2 \times 10^{-6} \, Wb} \approx  10 \text{ turns}
 ```
 
 ### 5.c. Calculate Secondary Turns:
