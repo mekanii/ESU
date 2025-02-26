@@ -1,8 +1,10 @@
 2025-02-26
   • List BoM PCB ESU-REM [In Progress]
   • List BoM PCB ESU-MSD [In Progress]
+  • Penyesuaian layout PCB ESU-REM dengan komponen tersedia [In Progress]
   • Penyesuaian layout PCB ESU-MSD dengan komponen tersedia [In Progress]
-  • Penyesuaian layout PCB ESU-MSD dengan komponen tersedia [In Progress]
+  • Menulis dokumentasi desain toroidal core isolation transformer ESU-MSD [Need Review]
+
 2025-02-25
   Layout PCB ESU-MSD [Done]
 
