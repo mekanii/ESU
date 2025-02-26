@@ -72,10 +72,84 @@ N_s = \frac{N_p}{1.5} \approx \frac{1.05}{1.5} \approx 0.7 \text{ turns}
 ### 5.d. Multiply Turns by 10:
 - Primary $N_p = 1.05 • 10 ≈ 11 { turns}$
 - Secondary $N_s = 0.7 • 10 ≈ 7 { turns}$
+This is much more practical because:
+- The turns ratio remains 11:7 (approximately 1.5:1)
+- The number of turns is feasible to wind
+- Still maintains the voltage ratio (12V:8V)
+- Works with the given core size (OD=36mm, ID=22mm, H=15mm)
+- Suitable for high frequency operation (81.3kHz)
+
+### 5.e. Notes
+When we multiply the number of turns by 10 (changing from Np=1.05 to Np=10.5 ≈ 11 turns), several important effects occur:
+#### Inductance Effect
+- Inductance is proportional to the square of the number of turns (L ∝ N²)
+- When N increases by 10×, inductance increases by 100×
+- This means the transformer's ability to store magnetic energy increases significantly
+#### Voltage/Current Relationship
+- The voltage ratio remains the same (12V:8V) because we multiply both primary and secondary turns by the same factor
+- However, the current handling capacity changes due to the increased number of turns:
+  - More turns = longer wire = higher resistance
+  - This can affect efficiency and heat generation
+#### Core Saturation
+- The magnetic flux density (B) is inversely proportional to the number of turns
+- With 10× more turns, the flux density decreases by 10×
+- This reduces the risk of core saturation
+- Makes the transformer more stable and linear in operation
+#### Practical Benefits
+- Makes the transformer physically buildable (1.05 turns is not practical)
+- Provides better coupling between primary and secondary
+- Improves regulation and efficiency
+- Reduces core losses due to lower flux density
+5. Trade-offs
+- Increased copper losses due to longer wire length
+- Higher parasitic capacitance between turns
+- The multiplication by 10 transforms a theoretical calculation into a practical design while maintaining the basic voltage transformation ratio.
 
 ## 6. Winding the Transformer
-- Primary Winding:<br>Wind approximately 7 turns of insulated copper wire (e.g., 22 AWG) around the toroidal core.
-- Secondary Winding:<br>Wind approximately 4 turns of insulated copper wire on top of the primary winding.
+### 6.a. MPL Calculation
+This is the Mean Path Length that the magnetic flux follows through the core. 
+```math
+\text{MPL} = 2(\frac{36 - 22}{2} + 15) = 2(7 + 15) = 2(22) = 44 \text{ mm}
+```
+
+### 6.b. Wire Length Calculations
+- Primary Winding:
+  - Turns: 11
+  - Length needed: 11 × 44mm = 484mm ≈ 0.5 meters
+  - Add 20% for leads and connections: 0.6 meters
+- Secondary Windings:
+  - Turns: 7
+  - Length needed: 7 × 44mm = 308mm ≈ 0.31 meters
+  - Add 20% for leads and connections: 0.37 meters
+
+### 6.c Wire Specifications
+- Primary: AWG 22 (0.644mm diameter)
+  - Current capacity: ~1.1A
+  - Diameter with insulation: ~0.7mm
+- Secondary: AWG 20 (0.812mm diameter)
+  - Current capacity: ~1.5A
+  - Diameter with insulation: ~0.9mm
+
+### 6.d. Final Specifications
+```
+Primary Winding:
+- Turns: 11
+- Wire: AWG 22 (0.644mm)
+- Length: 0.6 meters (including leads)
+- Current: 0.83A max
+
+Secondary Winding:
+- Turns: 7
+- Wire: AWG 20 (0.812mm)
+- Length: 0.37 meters (including leads)
+- Current: 1.25A max
+
+Core Dimensions:
+- OD: 36mm
+- ID: 22mm
+- Height: 15mm
+- MPL: 44mm
+```
 
 ## 7. Connections
 - Connect the primary winding to our 12V AC source.
