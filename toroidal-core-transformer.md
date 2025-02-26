@@ -52,7 +52,7 @@ Asuming:
 - $V_s = 8V$
 - $f = 81.3kHz = 81300Hz$
 - $B_{max} = 0.3T$
-- Core cross-sectional area $A = 64 \text{ mm}^2 = 64 \times 10^{-6} \text{ m}^2$
+- Core cross-sectional area $A = \frac{OD - ID}{2} • H = \frac{36 \text{ mm} - 22 \text{ mm}}{2} • 15 \text{ mm} = 105 \text{ mm}^2 = 105 \times 10^{-6} \text{ m}^2$
 
 ### 5.a. Calculate Maximum Flux
 ```math
@@ -87,3 +87,20 @@ N_s = \frac{N_p}{1.5} \approx \frac{7}{1.5} \approx 4 \text{ turns}
 - Be cautious when working with AC voltages.
 
 By following these steps, we can design and build a small toroidal core transformer to step down a 12V sine wave input to an 8V sine wave output. Ensure to consider the core material, winding techniques, and safety precautions during the construction process.
+
+
+
+
+
+
+√P = A
+√1 = 1
+
+(OD - ID) * H / 2
+(30 - 10) * 10 / 2
+20 * 10 / 2
+100
+
+42 / A = NT*V
+42 / 1 = 42 T*V
+42 * 12 = 504 N

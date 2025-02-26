@@ -1,3 +1,13 @@
+2025-02-25
+  Layout PCB ESU-MSD [Done]
+
+2025-02-24
+  • Layout PCB ESU-REM [Done]
+  • Layout PCB ESU-MSD [In Progress]
+
+2025-02-21
+  Layout PCB ESU-REM [In Progress]
+
 2025-02-20
   Tes rangkaian controller dan mainboard ESU:
   • Rekam sinyal input vs output transformer Return Electrode detection [Done]
