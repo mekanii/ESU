@@ -165,20 +165,3 @@ Core Dimensions:
 - Be cautious when working with AC voltages.
 
 By following these steps, we can design and build a small toroidal core transformer to step down a 12V sine wave input to an 8V sine wave output. Ensure to consider the core material, winding techniques, and safety precautions during the construction process.
-
-
-
-
-
-
-√P = A
-√1 = 1
-
-(OD - ID) * H / 2
-(30 - 10) * 10 / 2
-20 * 10 / 2
-100
-
-42 / A = NT*V
-42 / 1 = 42 T*V
-42 * 12 = 504 N
