@@ -56,18 +56,22 @@ Asuming:
 
 ### 5.a. Calculate Maximum Flux
 ```math
-\Phi_{max} = B_{max} • A = 0.3 \, T • 64 \times 10^{-6} \, m^2 = 19.2 \times 10^{-6} \, Wb
+\Phi_{max} = B_{max} • A = 0.3 \, T • 105 \times 10^{-6} \, m^2 = 3.15 \times 10^{-5} \, Wb
 ```
 
 ### 5.b. Calculate Number of Turns:
 ```math
-N_p = \frac{12V}{4.44 • 81300 Hz • 19.2 \times 10^{-6} \, Wb} \approx  7 \text{ turns}
+N_p = \frac{12V}{4.44 • 81300 Hz • 3.15 \times 10^{-5} \, Wb} \approx  1.05 \text{ turns}
 ```
 
 ### 5.c. Calculate Secondary Turns:
 ```math
-N_s = \frac{N_p}{1.5} \approx \frac{7}{1.5} \approx 4 \text{ turns}
+N_s = \frac{N_p}{1.5} \approx \frac{1.05}{1.5} \approx 0.7 \text{ turns}
 ```
+
+### 5.d. Multiply Turns by 10:
+- Primary $N_p = 1.05 × 10 ≈ 11 /text{ turns}$
+- Secondary $N_s = 0.7 × 10 ≈ 7 /text{ turns}$
 
 ## 6. Winding the Transformer
 - Primary Winding:<br>Wind approximately 7 turns of insulated copper wire (e.g., 22 AWG) around the toroidal core.
