@@ -3247,7 +3247,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRF840N"
+		(property "Value" "IRF840"
 			(at 124.46 55.88 0)
 			(effects
 				(font
@@ -3840,13 +3840,12 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "HER208"
 			(at 177.8 34.036 0)
 			(effects
 				(font
 					(size 1 1)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal"
@@ -4078,7 +4077,6 @@
 					(size 1 1)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm"
@@ -4206,13 +4204,12 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "HER208"
 			(at 177.8 99.314 0)
 			(effects
 				(font
 					(size 1 1)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal"
@@ -4300,7 +4297,6 @@
 					(size 1 1)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm"
@@ -4446,7 +4442,6 @@
 				(font
 					(size 1 1)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
@@ -4587,7 +4582,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "L_Coupled"
+		(property "Value" "Isolation Transformer (Custom)"
 			(at 137.414 44.958 90)
 			(effects
 				(font
@@ -4662,13 +4657,12 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "330Ω"
 			(at 165.1 103.886 90)
 			(effects
 				(font
 					(size 1 1)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
