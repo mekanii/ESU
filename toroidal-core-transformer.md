@@ -70,8 +70,8 @@ N_s = \frac{N_p}{1.5} \approx \frac{1.05}{1.5} \approx 0.7 \text{ turns}
 ```
 
 ### 5.d. Multiply Turns by 10:
-- Primary $N_p = 1.05 × 10 ≈ 11 turns$
-- Secondary $N_s = 0.7 × 10 ≈ 7 turns$
+- Primary $N_p = 1.05 × 10 ≈ 11 \, turns$
+- Secondary $N_s = 0.7 × 10 ≈ 7 \, turns$
 
 ## 6. Winding the Transformer
 - Primary Winding:<br>Wind approximately 7 turns of insulated copper wire (e.g., 22 AWG) around the toroidal core.
