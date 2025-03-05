@@ -1,3 +1,25 @@
+2025-03-05
+  • List BoM PCB ESU-REM [Done]
+  • Revisi PCB ESU-REM [Done]
+  • Design Rule Check berdasarkan standar spectra + Rev [Done]
+  • Order cetak PCB [Done]
+
+2025-03-03
+  • List BoM PCB ESU-REM [In Progress]
+  • Revisi PCB ESU-REM [In Progress]
+
+2025-02-28
+  • List BoM PCB ESU-REM [In Progress]
+  • List BoM PCB ESU-MSD [Done]
+  • Revisi PCB ESU-REM [In Progress]
+  • Penyesuaian layout PCB ESU-MSD dengan komponen tersedia [Done]
+
+2025-02-27
+  • List BoM PCB ESU-REM [In Progress]
+  • List BoM PCB ESU-MSD [In Progress]
+  • Penyesuaian layout PCB ESU-REM dengan komponen tersedia [In Progress]
+  • Penyesuaian layout PCB ESU-MSD dengan komponen tersedia [In Progress]
+
 2025-02-26
   • List BoM PCB ESU-REM [In Progress]
   • List BoM PCB ESU-MSD [In Progress]
