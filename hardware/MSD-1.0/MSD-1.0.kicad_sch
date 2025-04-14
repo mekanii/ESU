@@ -608,6 +608,164 @@
 				)
 			)
 		)
+		(symbol "Device:C_Polarized"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Polarized_0_1"
+				(rectangle
+					(start -2.286 0.508)
+					(end 2.286 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286) (xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.794) (xy -1.27 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.286 -0.508)
+					(end -2.286 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "C_Polarized_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:D"
 			(pin_numbers hide)
 			(pin_names
@@ -771,7 +929,7 @@
 				)
 			)
 		)
-		(symbol "Device:L_Coupled_1243"
+		(symbol "Device:L_Ferrite_Coupled_1243"
 			(pin_names
 				(offset 0.254) hide)
 			(exclude_from_sim no)
@@ -785,7 +943,7 @@
 					)
 				)
 			)
-			(property "Value" "L_Coupled_1243"
+			(property "Value" "L_Ferrite_Coupled_1243"
 				(at 0 -4.445 0)
 				(effects
 					(font
@@ -811,7 +969,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Coupled inductor"
+			(property "Description" "Coupled inductor with ferrite core"
 				(at 0 0 0)
 				(effects
 					(font
@@ -838,7 +996,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "L_Coupled_1243_0_1"
+			(symbol "L_Ferrite_Coupled_1243_0_1"
 				(circle
 					(center -3.048 -1.27)
 					(radius 0.254)
@@ -923,6 +1081,30 @@
 				)
 				(polyline
 					(pts
+						(xy -2.794 -0.508) (xy -2.286 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.794 0.508) (xy -2.286 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy -2.54 -2.032) (xy -2.54 -2.54)
 					)
 					(stroke
@@ -936,6 +1118,126 @@
 				(polyline
 					(pts
 						(xy -2.54 2.032) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.508) (xy -1.27 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 0.508) (xy -1.27 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 -0.508) (xy -0.254 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 0.508) (xy -0.254 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 -0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0.508) (xy 0.762 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -0.508) (xy 1.778 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0.508) (xy 1.778 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -0.508) (xy 2.794 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0.508) (xy 2.794 0.508)
 					)
 					(stroke
 						(width 0)
@@ -1030,7 +1332,7 @@
 					)
 				)
 			)
-			(symbol "L_Coupled_1243_1_1"
+			(symbol "L_Ferrite_Coupled_1243_1_1"
 				(pin passive line
 					(at -5.08 2.54 0)
 					(length 2.54)
@@ -2279,22 +2581,10 @@
 		(uuid "026e9f16-0fae-4059-adc0-757a63b2f6ab")
 	)
 	(junction
-		(at 50.8 31.75)
+		(at 138.43 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0c06187d-3fc9-435e-91ce-f155f75b455e")
-	)
-	(junction
-		(at 146.05 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0f6e543a-f35f-482c-ae4d-4450afa50090")
-	)
-	(junction
-		(at 140.97 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "11d1ac45-d1f8-4bf4-a242-e8531eb2054a")
+		(uuid "14258c47-6aea-4b77-b247-c9129f69df4c")
 	)
 	(junction
 		(at 54.61 31.75)
@@ -2303,16 +2593,40 @@
 		(uuid "165a228a-86d5-43e7-9b73-969f513543f1")
 	)
 	(junction
+		(at 46.99 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "19fdaeaf-05d2-4228-b719-af11c1c33d73")
+	)
+	(junction
 		(at 153.67 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1dcdc4a5-f09c-4d47-af80-4a17f8f6f8ca")
 	)
 	(junction
+		(at 138.43 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "205ae8a1-8dd9-4548-b201-f794333293a0")
+	)
+	(junction
 		(at 158.75 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "31209f60-e68a-4ca0-b2ee-abdd43c9b8b9")
+	)
+	(junction
+		(at 148.59 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3519e29c-75d5-40b7-94d7-6b1dca432460")
+	)
+	(junction
+		(at 34.29 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "38af8a44-75d4-4256-bc11-639fb614c449")
 	)
 	(junction
 		(at 46.99 31.75)
@@ -2339,12 +2653,6 @@
 		(uuid "585108a4-092b-4680-b429-bb98e5f81907")
 	)
 	(junction
-		(at 41.91 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5b7e20d6-aa3b-4f7a-b38a-d6c8c7e3e258")
-	)
-	(junction
 		(at 133.35 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2355,18 +2663,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6f583415-9933-4c18-bd12-23d506bf5bdd")
-	)
-	(junction
-		(at 146.05 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "729cbf0e-7043-4933-95a0-33a80c03fc9d")
-	)
-	(junction
-		(at 140.97 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "76218969-7176-43a1-9c99-42a8b35c2d5b")
 	)
 	(junction
 		(at 115.57 69.85)
@@ -2435,6 +2731,12 @@
 		(uuid "ee4756a0-25e3-4ec3-be1a-a3236bbd69ac")
 	)
 	(junction
+		(at 148.59 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f16378ab-d2d7-4e3c-aed4-7b97271a5d88")
+	)
+	(junction
 		(at 171.45 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2494,7 +2796,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 85.09) (xy 41.91 53.34)
+			(xy 34.29 85.09) (xy 34.29 53.34)
 		)
 		(stroke
 			(width 0)
@@ -2574,7 +2876,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 96.52) (xy 36.83 55.88)
+			(xy 29.21 96.52) (xy 29.21 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2644,7 +2946,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 31.75) (xy 140.97 31.75)
+			(xy 133.35 31.75) (xy 138.43 31.75)
 		)
 		(stroke
 			(width 0)
@@ -2671,16 +2973,6 @@
 			(type default)
 		)
 		(uuid "3c37a4c2-ef41-4146-ae26-7853f24219e1")
-	)
-	(wire
-		(pts
-			(xy 41.91 31.75) (xy 46.99 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c6cd719-1b86-4a84-8c31-30cee4808944")
 	)
 	(wire
 		(pts
@@ -2711,6 +3003,16 @@
 			(type default)
 		)
 		(uuid "4751f78c-3350-4101-a6f6-251c9015c926")
+	)
+	(wire
+		(pts
+			(xy 146.05 44.45) (xy 148.59 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48542dd7-8fc8-4711-a301-1bdda089da2e")
 	)
 	(wire
 		(pts
@@ -2834,16 +3136,6 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 44.45) (xy 189.23 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "645fa6c1-78a0-4649-aa24-eb7b2d2633b8")
-	)
-	(wire
-		(pts
 			(xy 62.23 77.47) (xy 69.85 77.47)
 		)
 		(stroke
@@ -2861,6 +3153,16 @@
 			(type default)
 		)
 		(uuid "667a35cd-3aa6-46a3-8177-5fb70d617d20")
+	)
+	(wire
+		(pts
+			(xy 46.99 31.75) (xy 46.99 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6757c659-8481-4478-b74f-d31da6625857")
 	)
 	(wire
 		(pts
@@ -2894,13 +3196,23 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 29.21) (xy 41.91 31.75)
+			(xy 34.29 29.21) (xy 34.29 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6e0c14bc-8317-4ca6-93dc-897278a8ab4d")
+	)
+	(wire
+		(pts
+			(xy 34.29 31.75) (xy 46.99 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e124f76-e7ac-487c-ada2-93b7b3e54f38")
 	)
 	(wire
 		(pts
@@ -2911,6 +3223,16 @@
 			(type default)
 		)
 		(uuid "700e8e48-aa44-4784-ab6c-3d9472221217")
+	)
+	(wire
+		(pts
+			(xy 140.97 31.75) (xy 138.43 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "711ee497-008c-44ed-ab43-91aee9c00ce0")
 	)
 	(wire
 		(pts
@@ -2984,7 +3306,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 85.09) (xy 41.91 85.09)
+			(xy 135.89 85.09) (xy 34.29 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3014,7 +3336,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 31.75) (xy 146.05 31.75)
+			(xy 153.67 31.75) (xy 148.59 31.75)
 		)
 		(stroke
 			(width 0)
@@ -3031,6 +3353,16 @@
 			(type default)
 		)
 		(uuid "8ba7bb32-071e-4969-b9f7-b1b48e729153")
+	)
+	(wire
+		(pts
+			(xy 148.59 44.45) (xy 189.23 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96ec2d67-9e29-4d06-a9a2-b47ae50fe95a")
 	)
 	(wire
 		(pts
@@ -3074,13 +3406,23 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 55.88) (xy 31.75 55.88)
+			(xy 29.21 55.88) (xy 24.13 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a456a610-a576-457d-8e39-bad950c41eff")
+	)
+	(wire
+		(pts
+			(xy 46.99 67.31) (xy 46.99 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5559559-855f-408c-9ce5-8b45659f2bce")
 	)
 	(wire
 		(pts
@@ -3094,7 +3436,17 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 50.8) (xy 46.99 77.47)
+			(xy 46.99 77.47) (xy 54.61 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "accf5747-db35-404f-9009-7270c82f6ae1")
+	)
+	(wire
+		(pts
+			(xy 39.37 50.8) (xy 39.37 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3114,7 +3466,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 50.8) (xy 46.99 50.8)
+			(xy 24.13 50.8) (xy 39.37 50.8)
 		)
 		(stroke
 			(width 0)
@@ -3124,7 +3476,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 48.26) (xy 41.91 48.26)
+			(xy 24.13 48.26) (xy 34.29 48.26)
 		)
 		(stroke
 			(width 0)
@@ -3134,7 +3486,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 44.45) (xy 140.97 44.45)
+			(xy 133.35 44.45) (xy 138.43 44.45)
 		)
 		(stroke
 			(width 0)
@@ -3164,7 +3516,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 96.52) (xy 36.83 96.52)
+			(xy 135.89 96.52) (xy 29.21 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3194,6 +3546,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.05 31.75) (xy 148.59 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c19a7da1-0852-466c-b071-7de5a4d584bd")
+	)
+	(wire
+		(pts
 			(xy 133.35 101.6) (xy 133.35 104.14)
 		)
 		(stroke
@@ -3214,7 +3576,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 77.47) (xy 54.61 77.47)
+			(xy 39.37 77.47) (xy 46.99 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3234,7 +3596,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 31.75) (xy 41.91 48.26)
+			(xy 34.29 31.75) (xy 34.29 48.26)
 		)
 		(stroke
 			(width 0)
@@ -3244,7 +3606,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 53.34) (xy 41.91 53.34)
+			(xy 24.13 53.34) (xy 34.29 53.34)
 		)
 		(stroke
 			(width 0)
@@ -3264,7 +3626,17 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 29.21) (xy 50.8 31.75)
+			(xy 140.97 44.45) (xy 138.43 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5658933-6971-417f-8afd-e8562c535c37")
+	)
+	(wire
+		(pts
+			(xy 54.61 29.21) (xy 54.61 31.75)
 		)
 		(stroke
 			(width 0)
@@ -3294,17 +3666,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 31.75) (xy 54.61 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd52a8cb-3c62-489d-9ef4-78dfd8986382")
-	)
-	(wire
-		(pts
-			(xy 46.99 31.75) (xy 50.8 31.75)
+			(xy 46.99 31.75) (xy 54.61 31.75)
 		)
 		(stroke
 			(width 0)
@@ -3496,6 +3858,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:L_Ferrite_Coupled_1243")
+		(at 143.51 38.1 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "28e58316-065c-4f52-8c89-c9a5a3ede254")
+		(property "Reference" "L1"
+			(at 144.526 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "L_Ferrite_Coupled"
+			(at 139.7 37.0841 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Inductor_THT:L_CommonMode_Toroid_Horizontal_OD23mm_ID14mm_H8mm"
+			(at 143.51 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 143.51 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Coupled inductor with ferrite core"
+			(at 143.51 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e35530bd-3b1f-4ecc-aa27-4eec12daf03d")
+		)
+		(pin "4"
+			(uuid "92827d21-3b9b-4382-bba3-875bd966978c")
+		)
+		(pin "3"
+			(uuid "ea1058da-0caf-4451-b03f-9a71b00dc74a")
+		)
+		(pin "2"
+			(uuid "24fda94e-895e-4b6b-95cd-4203a25c4835")
+		)
+		(instances
+			(project ""
+				(path "/c4b28516-96bf-4ad5-83fa-fa81b3e93272"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 133.35 38.1 0)
 		(unit 1)
@@ -3567,7 +4005,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 140.97 31.75 0)
+		(at 138.43 31.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3575,7 +4013,7 @@
 		(dnp no)
 		(uuid "3ee3f39d-8688-4bfe-ba95-be06bda93464")
 		(property "Reference" "TP1"
-			(at 139.446 28.194 0)
+			(at 136.906 28.194 0)
 			(effects
 				(font
 					(size 1 1)
@@ -3584,7 +4022,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 143.51 30.9879 0)
+			(at 140.97 30.9879 0)
 			(effects
 				(font
 					(size 1 1)
@@ -3594,7 +4032,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.54mm_Drill1.0mm"
-			(at 146.05 31.75 0)
+			(at 143.51 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3603,7 +4041,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 146.05 31.75 0)
+			(at 143.51 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3612,7 +4050,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 140.97 31.75 0)
+			(at 138.43 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3627,6 +4065,76 @@
 			(project ""
 				(path "/c4b28516-96bf-4ad5-83fa-fa81b3e93272"
 					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 46.99 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4168ed08-11bb-46b6-8372-d9e49070171b")
+		(property "Reference" "C6"
+			(at 47.244 61.468 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "470µF 35V"
+			(at 47.244 65.532 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm"
+			(at 47.9552 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 46.99 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 46.99 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "71df78d8-9d1f-4fb0-bf44-5d613244fd47")
+		)
+		(pin "1"
+			(uuid "3c493083-ac90-4f41-b838-e4d6d361b5b6")
+		)
+		(instances
+			(project ""
+				(path "/c4b28516-96bf-4ad5-83fa-fa81b3e93272"
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -3815,7 +4323,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P5.08mm_Horizontal_Custom"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P5.08mm_Horizontal_2"
 			(at 194.31 46.99 0)
 			(effects
 				(font
@@ -3862,7 +4370,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 50.8 29.21 0)
+		(at 54.61 29.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3870,7 +4378,7 @@
 		(dnp no)
 		(uuid "6bc16e35-a1f4-48c4-8085-ab316d61e5bf")
 		(property "Reference" "TP6"
-			(at 49.022 25.4 0)
+			(at 52.832 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3879,7 +4387,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 53.34 28.4479 0)
+			(at 57.15 28.4479 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3889,7 +4397,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm_NoSilkscreen"
-			(at 55.88 29.21 0)
+			(at 59.69 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3898,7 +4406,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 55.88 29.21 0)
+			(at 59.69 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3907,7 +4415,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 50.8 29.21 0)
+			(at 54.61 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3929,7 +4437,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 140.97 44.45 180)
+		(at 138.43 44.45 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3937,7 +4445,7 @@
 		(dnp no)
 		(uuid "6e72e792-504f-496e-b3f7-09b96b7ede44")
 		(property "Reference" "TP2"
-			(at 142.494 48.006 0)
+			(at 139.954 48.006 0)
 			(effects
 				(font
 					(size 1 1)
@@ -3946,7 +4454,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 138.43 45.2121 0)
+			(at 135.89 45.2121 0)
 			(effects
 				(font
 					(size 1 1)
@@ -3956,7 +4464,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.54mm_Drill1.0mm"
-			(at 135.89 44.45 0)
+			(at 133.35 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3965,7 +4473,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.89 44.45 0)
+			(at 133.35 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3974,7 +4482,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 140.97 44.45 0)
+			(at 138.43 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4019,7 +4527,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 115.57 63.5 0)
 			(effects
 				(font
@@ -4301,7 +4809,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 26.67 53.34 180)
+		(at 19.05 53.34 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4309,7 +4817,7 @@
 		(dnp no)
 		(uuid "8d3342a1-9ace-4b25-9700-921fafbde6bf")
 		(property "Reference" "J1"
-			(at 26.67 45.72 0)
+			(at 19.05 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4317,7 +4825,7 @@
 			)
 		)
 		(property "Value" "Conn_01x05"
-			(at 26.67 44.45 0)
+			(at 19.05 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4325,8 +4833,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal_Custom"
-			(at 26.67 53.34 0)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal_2"
+			(at 19.05 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4335,7 +4843,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 26.67 53.34 0)
+			(at 19.05 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4344,7 +4852,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 26.67 53.34 0)
+			(at 19.05 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4375,7 +4883,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 146.05 44.45 180)
+		(at 148.59 44.45 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4383,7 +4891,7 @@
 		(dnp no)
 		(uuid "8d79ea21-a198-48fd-933f-a1d806ec0080")
 		(property "Reference" "TP4"
-			(at 147.574 48.006 0)
+			(at 150.114 48.006 0)
 			(effects
 				(font
 					(size 1 1)
@@ -4392,7 +4900,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 143.51 45.2121 0)
+			(at 146.05 45.2121 0)
 			(effects
 				(font
 					(size 1 1)
@@ -4402,7 +4910,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.54mm_Drill1.0mm"
-			(at 140.97 44.45 0)
+			(at 143.51 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4411,7 +4919,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 140.97 44.45 0)
+			(at 143.51 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4420,7 +4928,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 146.05 44.45 0)
+			(at 148.59 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4578,7 +5086,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 41.91 29.21 0)
+		(at 34.29 29.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4587,7 +5095,7 @@
 		(fields_autoplaced yes)
 		(uuid "adbeaf28-3761-4178-913c-d2de3962ea8e")
 		(property "Reference" "#PWR01"
-			(at 41.91 33.02 0)
+			(at 34.29 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4596,7 +5104,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 41.91 24.13 0)
+			(at 34.29 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4604,7 +5112,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.91 29.21 0)
+			(at 34.29 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4613,7 +5121,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 41.91 29.21 0)
+			(at 34.29 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4622,7 +5130,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 41.91 29.21 0)
+			(at 34.29 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5021,7 +5529,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 146.05 31.75 0)
+		(at 148.59 31.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5029,7 +5537,7 @@
 		(dnp no)
 		(uuid "e1631838-4ce8-406d-b3de-3ad68da527ab")
 		(property "Reference" "TP3"
-			(at 144.526 28.194 0)
+			(at 147.066 28.194 0)
 			(effects
 				(font
 					(size 1 1)
@@ -5038,7 +5546,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 148.59 30.9879 0)
+			(at 151.13 30.9879 0)
 			(effects
 				(font
 					(size 1 1)
@@ -5048,7 +5556,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.54mm_Drill1.0mm"
-			(at 151.13 31.75 0)
+			(at 153.67 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5057,7 +5565,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 151.13 31.75 0)
+			(at 153.67 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5066,7 +5574,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 146.05 31.75 0)
+			(at 148.59 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5081,82 +5589,6 @@
 			(project "MSD-1.0"
 				(path "/c4b28516-96bf-4ad5-83fa-fa81b3e93272"
 					(reference "TP3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:L_Coupled_1243")
-		(at 143.51 38.1 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ea99dd47-6a26-49a5-a078-92fb9162b35c")
-		(property "Reference" "L1"
-			(at 142.494 31.496 90)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Isolation Transformer (Custom)"
-			(at 137.414 44.958 90)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Inductor_THT:L_CommonMode_Toroid_Vertical_L30.5mm_W15.2mm_Px10.16mm_Py20.32mm_Bourns_8100"
-			(at 143.51 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 143.51 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Coupled inductor"
-			(at 143.51 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8bfd4032-148e-4755-b8ec-361b3a19a1a3")
-		)
-		(pin "4"
-			(uuid "2a940d6e-4bb4-496e-9da0-3be71aa25de2")
-		)
-		(pin "3"
-			(uuid "2fa9cf57-0fc7-41ca-8a47-80786ce85971")
-		)
-		(pin "2"
-			(uuid "7dd6395a-6cbe-4fbd-ad37-1a0442d4f016")
-		)
-		(instances
-			(project ""
-				(path "/c4b28516-96bf-4ad5-83fa-fa81b3e93272"
-					(reference "L1")
 					(unit 1)
 				)
 			)

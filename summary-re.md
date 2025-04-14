@@ -10,7 +10,7 @@
 > The oscilloscope setup uses a passive probe with a 10x attenuation factor and a voltage divider of 1/10, resulting in a total measurement factor of 100.
 
 <p align="center">
-  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20pure%20cut.png" alt="pure-cut">
+  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output%20-%20new/monopolar/cut/pure.png" alt="pure-cut">
 </p>
 
 _Signal Frequency:_

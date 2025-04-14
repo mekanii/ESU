@@ -1,3 +1,45 @@
+2025-04-11
+
+2025-04-10
+  • Revisi PCB ESU-MSD (coil horizontal) [Done]
+  • Revisi PCB ESU-REM (coil horizontal + LM358) [Need Review]
+
+2025-04-09
+  • Coil winding (model horizontal) [In Progress]
+  • Tes op amp ESU-REM [In Progress]
+
+2025-03-26
+  • Coil winding [In Progress]
+
+2025-03-25
+  • PCBA ESU-MSD [In Progress]
+  • PCBA ESU-REM [In Progress]
+  • Tes osilasi [Done]
+
+2025-03-24
+  • NVeCam: improve booting performance [Done]
+  • Clonning Image [Done]
+  • PCBA ESU-MSD [In Progress]
+  • PCBA ESU-REM [In Progress]
+
+2025-03-21
+  • NVeCam rework/settings-set-prompt [Need Review]
+  • Clonning Image [Done]
+
+2025-03-20
+  • NVeCam feat/settings-set-prompt [Need Review]
+
+2025-03-19
+  • Layout PCB ESU-PS [In Progress]
+  • NVeCam feat/settings-wifi-fe [Need Review]
+  • NVeCam feat/settings-wifi-be [Need Review]
+
+2025-03-18
+  • Layout PCB ESU-PS [In Progress]
+
+2025-03-17
+  • Layout PCB ESU-PS [In Progress]
+
 2025-03-05
   • List BoM PCB ESU-REM [Done]
   • Revisi PCB ESU-REM [Done]
