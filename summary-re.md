@@ -2,6 +2,7 @@
 ### A. Monopolar
 #### A.1 Cut
 ##### A.1.1 Pure Cut
+- Input
 - Output
 <br>The image illustrates the output scope for the Pure Cut operation at the power stage output. It provides a detailed view of the waveform characteristics and performance metrics associated with the pure cut process, highlighting the key features and behavior of the signal during this operation.
 
@@ -44,7 +45,7 @@ _Peak Voltage (Vp) and Current (I):_
 - Input and Output
 <br>The image illustrates the input and output scope for the Pure Cut operation at the controller and power stage output. It provides a detailed view of the waveform characteristics and performance metrics associated with the pure cut process, highlighting the key features and behavior of the signal during this operation.
 <p align="center">
-  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output%20-%20new/monopolar/cut/pure-io.png" alt="pure-cut">
+  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output%20-%20new/monopolar/cut/pure-io.png" alt="pure-io">
 </p>
 
 ##### A.1.2 Blend Cut
@@ -185,14 +186,17 @@ _Peak Voltage (Vp) and Current (I):_
 |   60W |        |        |
 
 
+## Electronic Design
+<p align="center">
+  <img src="pic/ESU-Block.png" alt="esu-block">
+</p>
 
 
 
-
-0: drain mosfet
+<!-- 0: drain mosfet
 1: output 555
 2: output T (ref J3-4)
 3: output T (ref J3-4)
 
 CTL-18 | btn coag | active LOW
-CTL-19 | btn cut  | active LOW
+CTL-19 | btn cut  | active LOW -->
