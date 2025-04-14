@@ -53,7 +53,7 @@ _Peak Voltage (Vp) and Current (I):_
 > The oscilloscope setup uses a passive probe with a 10x attenuation factor and a voltage divider of 1/10, resulting in a total measurement factor of 100.
 
 <p align="center">
-  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20cut%20blend.png" alt="cut-blend">
+  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output%20-%20new/monopolar/cut/pure-blend-1-2.png" alt="cut-blend">
 </p>
 
 _Signal Frequency:_
