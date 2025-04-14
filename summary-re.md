@@ -2,7 +2,6 @@
 ### A. Monopolar
 #### A.1 Cut
 ##### A.1.1 Pure Cut
-- Input
 - Output
 <br>The image illustrates the output scope for the Pure Cut operation at the power stage output. It provides a detailed view of the waveform characteristics and performance metrics associated with the pure cut process, highlighting the key features and behavior of the signal during this operation.
 
@@ -13,14 +12,14 @@
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output%20-%20new/monopolar/cut/pure.png" alt="pure-cut">
 </p>
 
-_Signal Frequency:_
+<!-- _Signal Frequency:_
 ```
 T = 5µs ÷ 2.5 wave
 T = 2µs
 
 f = 1 ÷ 2µs
 f = 500kHz
-```
+``` -->
 
 _Peak Voltage (Vp) and Current (I):_
 <br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
@@ -28,7 +27,7 @@ _Peak Voltage (Vp) and Current (I):_
 > [!NOTE]
 > In this analysis, the peak voltage (Vp) is calculated using a simple method that involves measuring the vertical divisions of the peak-to-peak voltage (Vpp) on the oscilloscope. To begin, one observes the oscilloscope display and counts the total number of vertical divisions that the waveform spans from the maximum positive peak to the maximum negative peak, which provides the peak-to-peak voltage (Vpp). The peak voltage (Vp) is then determined by dividing the Vpp by two, expressed mathematically as `Vp = Vpp ÷ 2`.<br><br>While this method is straightforward and convenient, it is important to recognize its limitations, particularly when dealing with asymmetric signals. In an asymmetric waveform, the positive and negative peaks may not be equal in magnitude. Consequently, simply dividing the Vpp by two assumes that the waveform is symmetrical around the zero voltage line, which is often not the case. This approach can lead to significant errors in the calculated peak voltage, as it does not account for the actual heights of the individual peaks. For instance, if the positive peak is much higher than the negative peak, the calculated Vp will not accurately reflect the true maximum voltage deviation from zero.
 
-| Power | Vp     | I      |
+<!-- | Power | Vp     | I      |
 | ----: | -----: | -----: |
 |    5W |    50V |        | 0.5
 |   10W |    75V |        | 0.75
@@ -40,7 +39,13 @@ _Peak Voltage (Vp) and Current (I):_
 |   70W |   165V |        | 1.65
 |   80W |   175V |        | 1.75
 |   90W |   180V |        | 1.8
-|  100W |   185V |        | 1.85
+|  100W |   185V |        | 1.85 -->
+
+- Input and Output
+<br>The image illustrates the input and output scope for the Pure Cut operation at the controller and power stage output. It provides a detailed view of the waveform characteristics and performance metrics associated with the pure cut process, highlighting the key features and behavior of the signal during this operation.
+<p align="center">
+  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output%20-%20new/monopolar/cut/pure-io.png" alt="pure-cut">
+</p>
 
 ##### A.1.2 Blend Cut
 - Input
@@ -56,34 +61,34 @@ _Peak Voltage (Vp) and Current (I):_
   <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output%20-%20new/monopolar/cut/pure-blend-1-2.png" alt="cut-blend">
 </p>
 
-_Signal Frequency:_
+<!-- _Signal Frequency:_
 ```
 T = 10µs ÷ 5
 T = 2µs
 
 f = 1 ÷ 2µs
 f = 500kHz
-```
+``` -->
 
 _Modulation Frequency:_
 ```
-T = 10µs * 4.2 DIV
-T = 42µs
+T = 10µs * 4.8 DIV
+T = 48µs
 
-f = 1 ÷ 42µs
-f = 23.8kHz
+f = 1 ÷ 48µs
+f = 20.8kHz
 ```
 
 _Blend Cut 1 Modulation Duty Cycle:_
 ```
-Duty Cycle = 3.4 DIV ÷ 4.2 DIV x 100%
-Duty Cycle = 80.95%
+Duty Cycle = 4.2 DIV ÷ 4.8 DIV x 100%
+Duty Cycle = 87.50%
 ```
 
 _Blend Cut 2 Modulation Duty Cycle:_
 ```
-Duty Cycle = 3.0 DIV ÷ 4.2 DIV x 100%
-Duty Cycle = 71.42%
+Duty Cycle = 3.8 DIV ÷ 4.8 DIV x 100%
+Duty Cycle = 79.17%
 ```
 
 _Peak Voltage (Vp) and Current (I):_
@@ -92,7 +97,7 @@ _Peak Voltage (Vp) and Current (I):_
 > [!NOTE]
 > In this analysis, the peak voltage (Vp) is calculated using a simple method that involves measuring the vertical divisions of the peak-to-peak voltage (Vpp) on the oscilloscope. To begin, one observes the oscilloscope display and counts the total number of vertical divisions that the waveform spans from the maximum positive peak to the maximum negative peak, which provides the peak-to-peak voltage (Vpp). The peak voltage (Vp) is then determined by dividing the Vpp by two, expressed mathematically as `Vp = Vpp ÷ 2`.<br><br>While this method is straightforward and convenient, it is important to recognize its limitations, particularly when dealing with asymmetric signals. In an asymmetric waveform, the positive and negative peaks may not be equal in magnitude. Consequently, simply dividing the Vpp by two assumes that the waveform is symmetrical around the zero voltage line, which is often not the case. This approach can lead to significant errors in the calculated peak voltage, as it does not account for the actual heights of the individual peaks. For instance, if the positive peak is much higher than the negative peak, the calculated Vp will not accurately reflect the true maximum voltage deviation from zero.
 
-| Power | Vp Blend 1 | I Blend 1 | Vp Blend 2 | I Blend 2 |
+<!-- | Power | Vp Blend 1 | I Blend 1 | Vp Blend 2 | I Blend 2 |
 | ----: | ---------: | --------: | ---------: | --------: |
 |   10W |        70V |           |        80V |           | 0.7 , 0.8
 |   20W |       100V |           |       100V |           | 1   , 1
@@ -103,7 +108,7 @@ _Peak Voltage (Vp) and Current (I):_
 |   70W |       180V |           |       180V |           | 1.8 , 1.8
 |   80W |       190V |           |       190V |           | 1.9 , 1.9
 |   90W |       195V |           |       195V |           | 1.95, 1.95
-|  100W |       200V |           |       200V |           | 2   , 2
+|  100W |       200V |           |       200V |           | 2   , 2 -->
 
 #### A.2 Coag
 ##### A.2.1 Spray & Forced
