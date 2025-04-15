@@ -298,108 +298,6 @@
 				)
 			)
 		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.762) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 5.334 2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 2.032)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Connector_Generic:Conn_01x03"
 			(pin_names
 				(offset 1.016) hide)
@@ -4547,12 +4445,6 @@
 		(uuid "e39d1428-f201-4184-b1df-a9125cba6960")
 	)
 	(junction
-		(at 66.04 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e39dd4c8-87bf-40ca-aebe-f150850af0a3")
-	)
-	(junction
 		(at 121.92 121.92)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5108,7 +5000,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 50.8) (xy 71.12 50.8)
+			(xy 55.88 50.8) (xy 71.12 50.8)
 		)
 		(stroke
 			(width 0)
@@ -5138,7 +5030,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 53.34) (xy 203.2 53.34)
+			(xy 55.88 53.34) (xy 203.2 53.34)
 		)
 		(stroke
 			(width 0)
@@ -5588,7 +5480,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 55.88) (xy 60.96 55.88)
+			(xy 228.6 55.88) (xy 55.88 55.88)
 		)
 		(stroke
 			(width 0)
@@ -5868,16 +5760,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 44.45) (xy 66.04 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f412ba45-611e-4957-9939-84fd353ff56e")
-	)
-	(wire
-		(pts
 			(xy 66.04 48.26) (xy 66.04 71.12)
 		)
 		(stroke
@@ -5918,7 +5800,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 48.26) (xy 66.04 48.26)
+			(xy 55.88 48.26) (xy 66.04 48.26)
 		)
 		(stroke
 			(width 0)
@@ -5966,6 +5848,17 @@
 		)
 		(uuid "fec0cd85-228d-445a-b804-e2b5329f1fc7")
 	)
+	(label "RLY-A"
+		(at 57.15 53.34 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "031e87a8-9eef-4ff4-9abd-8f041032ee6f")
+	)
 	(label "PS-00"
 		(at 152.4 63.5 0)
 		(fields_autoplaced yes)
@@ -5976,6 +5869,28 @@
 			(justify left bottom)
 		)
 		(uuid "1da468f6-9130-4e61-9c7f-236c63291c98")
+	)
+	(label "PWM"
+		(at 57.15 48.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e2606792-138c-40f6-a021-15b993e8c06a")
+	)
+	(label "RLY-K"
+		(at 57.15 55.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eeb16497-2c11-4b9c-8e94-9a51f9a33fa3")
 	)
 	(symbol
 		(lib_id "Mechanical:Heatsink_Pad")
@@ -6373,7 +6288,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 55.88 50.8 0)
+		(at 50.8 50.8 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6382,7 +6297,7 @@
 		(dnp no)
 		(uuid "26be360c-2bf3-45ec-84ac-18427c51dae7")
 		(property "Reference" "J5"
-			(at 55.88 45.466 0)
+			(at 50.8 45.466 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6390,7 +6305,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04"
-			(at 55.88 44.45 0)
+			(at 50.8 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6399,7 +6314,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 55.88 50.8 0)
+			(at 50.8 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6408,7 +6323,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 55.88 50.8 0)
+			(at 50.8 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6417,7 +6332,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 55.88 50.8 0)
+			(at 50.8 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7627,73 +7542,6 @@
 			(project ""
 				(path "/3a4da535-700d-4512-9d93-355e5c375ab5"
 					(reference "D6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 66.04 44.45 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "69333d78-6544-4df6-93d1-b3e6ed2dd9e2")
-		(property "Reference" "TP1"
-			(at 64.516 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 68.58 43.6879 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.54mm_Drill1.0mm"
-			(at 71.12 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 71.12 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 66.04 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5182b836-fa41-44a5-8027-95c59297135a")
-		)
-		(instances
-			(project ""
-				(path "/3a4da535-700d-4512-9d93-355e5c375ab5"
-					(reference "TP1")
 					(unit 1)
 				)
 			)

@@ -5253,13 +5253,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "100nF 400V"
 			(at 167.132 31.242 0)
 			(effects
 				(font
 					(size 1 1)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Rect_L13.0mm_W5.0mm_P10.00mm_FKS3_FKP3_MKS4"

@@ -4,7 +4,10 @@
 ##### A.1.1 Pure Cut
 - Input
 - Output
-<br>The image illustrates the output scope for the Pure Cut operation at the power stage output. It provides a detailed view of the waveform characteristics and performance metrics associated with the pure cut process, highlighting the key features and behavior of the signal during this operation.
+<br>The image illustrates the output scope for the Pure Cut operation at the power stage output in three different load. It provides a detailed view of the waveform characteristics and performance metrics associated with the pure cut process, highlighting the key features and behavior of the signal during this operation.
+  - Left Scope:<br>This represents the output for Pure Cut operation with 100Ω load.
+  - Middle Scope:<br>This represents the output for Pure Cut operation with 500Ω load.
+  - Right Scope:<br>This represents the output for Pure Cut operation with 600Ω load.
 
 > [!NOTE]
 > The oscilloscope setup uses a passive probe with a 10x attenuation factor and a voltage divider of 1/10, resulting in a total measurement factor of 100.
@@ -51,8 +54,9 @@ _Peak Voltage (Vp) and Current (I):_
 ##### A.1.2 Blend Cut
 - Input
 - Output
-<br>The image displays two output scopes for Blend Cut operations at the power stage output:
-  - Left Scope:<br>This represents the output for Blend Cut 1. It illustrates the waveform characteristics and performance metrics associated with the first cut blend operation.
+<br>The image displays three output scopes for Pure Cut operation and Blend Cut operations at the power stage output:
+  - Left Scope:<br>This represents the output for Pure Cut. It illustrates the waveform characteristics and performance metrics associated with the pure cut operation.
+  - Middle Scope:<br>This represents the output for Blend Cut 1. It showcases the waveform details and performance metrics related to the Pure Cut operation, allowing for a comparative analysis between the Pure Cut and Blend Cut 1.
   - Right Scope:<br>This represents the output for Blend Cut 2. It showcases the waveform details and performance metrics related to the second cut blend operation, allowing for a comparative analysis between the two blends.
 
 > [!NOTE]
@@ -112,37 +116,39 @@ _Peak Voltage (Vp) and Current (I):_
 |  100W |       200V |           |       200V |           | 2   , 2 -->
 
 #### A.2 Coag
-##### A.2.1 Spray & Forced
-- Input
-- Output
-<br>The image displays two output scopes for Coagulation operations at the power stage output:
-  - Left Scope:<br>This represents the output for the Spray Coagulation operation. It illustrates the waveform characteristics and performance metrics associated with the coag spray process, highlighting its unique features.
-  - Right Scope:<br>This represents the output for the Forced Coagulation operation. It showcases the waveform details and performance metrics related to the coag forced process, allowing for a comparative analysis between the two coagulation methods.
+##### A.2.1 Spray
+- Input & Output
+<br>The image displays two output scopes for Spray Coagulation operations at the power stage output:
+  - Left Scope:<br>This represents the output for the Spray Coagulation operation at the controller. It illustrates the waveform characteristics and performance metrics associated with the coag spray process, highlighting its unique features.
+  - Right Scope:<br>This represents the output for the Spray Coagulation operation at the power stage. It showcases the waveform details and performance metrics related to the coag spray process, allowing for a comparative analysis between the two stages.
 
 > [!NOTE]
 > The oscilloscope setup uses a passive probe with a 10x attenuation factor and a voltage divider of 1/10, resulting in a total measurement factor of 100.
 
 <p align="center">
-  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output/monopolar%20coag%20spray%20and%20forced.png" alt="coag-spray-forced">
+  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output%20-%20new/monopolar/coag/spray/monopolar-coag-spray-io.png" alt="coag-spray">
 </p>
 
 _Spray Coag Modulation Frequency:_
 ```
-T = 20µs * 2 DIV
-T = 40µs
+T = 42.2µs
 
-f = 1 ÷ 40µs
-f = 25kHz
+f = 1 ÷ 42.2µs
+f = 23.6kHz
 ```
 
-_Forced Coag Modulation Frequency:_
-```
-T = 20µs * 2.2 DIV
-T = 44µs
-
-f = 1 ÷ 44µs
-f = 22.72kHz
-```
+_Spray Coag Duty:_
+| Power (W) | Duty (%)  |
+| --------: | --------: |
+|       10W |       3.3 |
+|       20W |       6.2 |
+|       30W |       8.1 |
+|       40W |       9.5 |
+|       50W |      10.9 |
+|       60W |      12.3 |
+|       70W |      13.7 |
+|       80W |      15.2 |
+|       90W |      16.1 |
 
 _Peak Voltage (Vp) and Current (I):_
 <br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
@@ -150,7 +156,7 @@ _Peak Voltage (Vp) and Current (I):_
 > [!NOTE]
 > In this analysis, the peak voltage (Vp) is calculated using a simple method that involves measuring the vertical divisions of the peak-to-peak voltage (Vpp) on the oscilloscope. To begin, one observes the oscilloscope display and counts the total number of vertical divisions that the waveform spans from the maximum positive peak to the maximum negative peak, which provides the peak-to-peak voltage (Vpp). The peak voltage (Vp) is then determined by dividing the Vpp by two, expressed mathematically as `Vp = Vpp ÷ 2`.<br><br>While this method is straightforward and convenient, it is important to recognize its limitations, particularly when dealing with asymmetric signals. In an asymmetric waveform, the positive and negative peaks may not be equal in magnitude. Consequently, simply dividing the Vpp by two assumes that the waveform is symmetrical around the zero voltage line, which is often not the case. This approach can lead to significant errors in the calculated peak voltage, as it does not account for the actual heights of the individual peaks. For instance, if the positive peak is much higher than the negative peak, the calculated Vp will not accurately reflect the true maximum voltage deviation from zero.
 
-| Power | Vp Spray  | I Spray | Vp  Forced | I Forced |
+<!-- | Power | Vp Spray  | I Spray | Vp  Forced | I Forced |
 | ----: | --------: | ------: | ---------: | -------: |
 |    5W |           |         |            |          |
 |   10W |           |         |            |          |
@@ -158,7 +164,54 @@ _Peak Voltage (Vp) and Current (I):_
 |   30W |           |         |            |          |
 |   40W |           |         |            |          |
 |   50W |           |         |            |          |
-|   60W |           |         |            |          |
+|   60W |           |         |            |          | -->
+
+##### A.2.2 Forced
+- Input & Output
+<br>The image displays two output scopes for Forced Coagulation operations at the power stage output:
+  - Left Scope:<br>This represents the output for the Forced Coagulation operation at the controller. It illustrates the waveform characteristics and performance metrics associated with the coag forced process, highlighting its unique features.
+  - Right Scope:<br>This represents the output for the Forced Coagulation operation at the power stage. It showcases the waveform details and performance metrics related to the coag forced process, allowing for a comparative analysis between the two stages.
+
+> [!NOTE]
+> The oscilloscope setup uses a passive probe with a 10x attenuation factor and a voltage divider of 1/10, resulting in a total measurement factor of 100.
+
+<p align="center">
+  <img src="pic/Reverse%20Engineering/scope%20-%20generator%20output%20-%20new/monopolar/coag/forced/monopolar-coag-forced-io.png" alt="coag-forced">
+</p>
+
+Forced Coag Modulation Frequency:_
+```
+T = 52.2µs
+
+f = 1 ÷ 52.2µs
+f = 19.2kHz
+```
+
+Forced Coag Duty:_
+| Power (W) | Duty (%)  |
+| --------: | --------: |
+|       10W |       3.1 |
+|       20W |       5.7 |
+|       30W |       7.7 |
+|       40W |       8.8 |
+|       50W |      10.3 |
+|       60W |      11.5 |
+
+_Peak Voltage (Vp) and Current (I):_
+<br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
+
+> [!NOTE]
+> In this analysis, the peak voltage (Vp) is calculated using a simple method that involves measuring the vertical divisions of the peak-to-peak voltage (Vpp) on the oscilloscope. To begin, one observes the oscilloscope display and counts the total number of vertical divisions that the waveform spans from the maximum positive peak to the maximum negative peak, which provides the peak-to-peak voltage (Vpp). The peak voltage (Vp) is then determined by dividing the Vpp by two, expressed mathematically as `Vp = Vpp ÷ 2`.<br><br>While this method is straightforward and convenient, it is important to recognize its limitations, particularly when dealing with asymmetric signals. In an asymmetric waveform, the positive and negative peaks may not be equal in magnitude. Consequently, simply dividing the Vpp by two assumes that the waveform is symmetrical around the zero voltage line, which is often not the case. This approach can lead to significant errors in the calculated peak voltage, as it does not account for the actual heights of the individual peaks. For instance, if the positive peak is much higher than the negative peak, the calculated Vp will not accurately reflect the true maximum voltage deviation from zero.
+
+<!-- | Power | Vp Spray  | I Spray | Vp  Forced | I Forced |
+| ----: | --------: | ------: | ---------: | -------: |
+|    5W |           |         |            |          |
+|   10W |           |         |            |          |
+|   20W |           |         |            |          |
+|   30W |           |         |            |          |
+|   40W |           |         |            |          |
+|   50W |           |         |            |          |
+|   60W |           |         |            |          | -->
 
 ### B. Bipolar Standard Coag
 - Input
@@ -188,7 +241,7 @@ _Peak Voltage (Vp) and Current (I):_
 
 ## Electronic Design
 <p align="center">
-  <img src="pic/ESU-Block.png" alt="esu-block">
+  <img src="pic/ESU-block-diagram.png" alt="esu-block-diagram">
 </p>
 
 

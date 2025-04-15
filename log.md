@@ -1,4 +1,10 @@
+2025-04-14
+  • Test coil horizontal di ESU-MSD [Done]
+  • Soldering Signal amplifier LM358 [In Progress]
+
 2025-04-11
+  • Coil winding (model horizontal) [Done]
+  • Test coil horizontal di ESU-REM [Done]
 
 2025-04-10
   • Revisi PCB ESU-MSD (coil horizontal) [Done]
