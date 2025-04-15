@@ -140,15 +140,15 @@ f = 23.6kHz
 _Spray Coag Duty:_
 | Power (W) | Duty (%)  |
 | --------: | --------: |
-|       10W |       3.3 |
-|       20W |       6.2 |
-|       30W |       8.1 |
-|       40W |       9.5 |
-|       50W |      10.9 |
-|       60W |      12.3 |
-|       70W |      13.7 |
-|       80W |      15.2 |
-|       90W |      16.1 |
+|        10 |       3.3 |
+|        20 |       6.2 |
+|        30 |       8.1 |
+|        40 |       9.5 |
+|        50 |      10.9 |
+|        60 |      12.3 |
+|        70 |      13.7 |
+|        80 |      15.2 |
+|        90 |      16.1 |
 
 _Peak Voltage (Vp) and Current (I):_
 <br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
@@ -190,12 +190,12 @@ f = 19.2kHz
 Forced Coag Duty:_
 | Power (W) | Duty (%)  |
 | --------: | --------: |
-|       10W |       3.1 |
-|       20W |       5.7 |
-|       30W |       7.7 |
-|       40W |       8.8 |
-|       50W |      10.3 |
-|       60W |      11.5 |
+|        10 |       3.1 |
+|        20 |       5.7 |
+|        30 |       7.7 |
+|        40 |       8.8 |
+|        50 |      10.3 |
+|        60 |      11.5 |
 
 _Peak Voltage (Vp) and Current (I):_
 <br>The Vp is calculated by taking the vertical division setting on the oscilloscope and multiplying it by 100 (total measurement factor), along with the vertical scale of 1V per division (1V/div).
