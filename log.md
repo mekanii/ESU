@@ -1,3 +1,11 @@
+2025-04-15
+  • Layout PCB ESU-PS [In Progress]
+
+2025-04-15
+  • Fix 555 support 12V [Done]
+  • Test PCB ESU-REM (Resistance min, max, high impedance) [Done]
+  • Fix PCB ESU-REM, tegangan tidak kembali ke seharusnya setelah high impedance [Done]
+
 2025-04-14
   • Test coil horizontal di ESU-MSD [Done]
   • Soldering Signal amplifier LM358 [In Progress]

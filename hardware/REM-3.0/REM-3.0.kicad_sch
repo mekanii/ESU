@@ -3095,12 +3095,6 @@
 		(uuid "0303dbac-076e-49c7-a071-26b3d5eba1b1")
 	)
 	(junction
-		(at 96.52 27.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0323c853-670d-43de-8fe6-c1d601f6a8b2")
-	)
-	(junction
 		(at 152.4 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3113,12 +3107,6 @@
 		(uuid "0ae239b7-e99c-4333-aad9-b49b83f7fd60")
 	)
 	(junction
-		(at 205.74 27.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0e997398-96b6-4d58-bf63-e7224d2e463d")
-	)
-	(junction
 		(at 177.8 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3129,12 +3117,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "18c127ad-de91-47b7-bd93-e6280ea17f29")
-	)
-	(junction
-		(at 101.6 67.31)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "19ee2226-b5a0-4731-a000-c1def3024f58")
 	)
 	(junction
 		(at 144.78 133.35)
@@ -3281,12 +3263,6 @@
 		(uuid "7b94f584-57d2-4429-b089-25cbcd83d541")
 	)
 	(junction
-		(at 100.33 27.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7e2a7a11-d2fa-4ac9-b6d6-1ff51770055a")
-	)
-	(junction
 		(at 62.23 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3309,12 +3285,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "871729d0-f915-48cd-8b06-707d64c2737d")
-	)
-	(junction
-		(at 97.79 67.31)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "89310a30-da63-47f9-b55c-e05f6b54ab6d")
 	)
 	(junction
 		(at 198.12 67.31)
@@ -3401,12 +3371,6 @@
 		(uuid "df86608b-ce8a-4255-8301-2fef279f17ed")
 	)
 	(junction
-		(at 205.74 67.31)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e43a7503-f519-4bc4-b54e-e938ad5ea4c9")
-	)
-	(junction
 		(at 223.52 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3452,26 +3416,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 27.94) (xy 100.33 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "06217664-dd1c-495c-ac79-d31e21bd49b3")
-	)
-	(wire
-		(pts
-			(xy 205.74 50.8) (xy 205.74 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "073d9571-4e3c-4a7b-9601-215d7be3d472")
-	)
-	(wire
-		(pts
 			(xy 160.02 67.31) (xy 165.1 67.31)
 		)
 		(stroke
@@ -3489,26 +3433,6 @@
 			(type default)
 		)
 		(uuid "08252cef-9ed3-4b08-9b1a-bd04015a2227")
-	)
-	(wire
-		(pts
-			(xy 205.74 58.42) (xy 205.74 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0bbfded8-24ef-4441-8e7e-767607b411dc")
-	)
-	(wire
-		(pts
-			(xy 53.34 41.91) (xy 53.34 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "124a6d7c-07de-466c-bf39-561a36ccdec9")
 	)
 	(wire
 		(pts
@@ -3582,17 +3506,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 50.8) (xy 53.34 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c569b72-16dc-429d-8698-a6a1597416d7")
-	)
-	(wire
-		(pts
-			(xy 205.74 67.31) (xy 212.09 67.31)
+			(xy 198.12 67.31) (xy 212.09 67.31)
 		)
 		(stroke
 			(width 0)
@@ -3632,7 +3546,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 27.94) (xy 142.24 27.94)
+			(xy 92.71 27.94) (xy 142.24 27.94)
 		)
 		(stroke
 			(width 0)
@@ -3819,16 +3733,6 @@
 			(type default)
 		)
 		(uuid "39bde5c1-f1d0-4c38-a566-bb858b7adfdc")
-	)
-	(wire
-		(pts
-			(xy 198.12 67.31) (xy 205.74 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ac57d30-890f-42b6-a36e-b4bf1217dd24")
 	)
 	(wire
 		(pts
@@ -4052,16 +3956,6 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 27.94) (xy 96.52 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5fbde7e6-66fe-4493-9b94-a692e663123b")
-	)
-	(wire
-		(pts
 			(xy 167.64 43.18) (xy 165.1 43.18)
 		)
 		(stroke
@@ -4162,7 +4056,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 67.31) (xy 97.79 67.31)
+			(xy 92.71 67.31) (xy 111.76 67.31)
 		)
 		(stroke
 			(width 0)
@@ -4252,16 +4146,6 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 67.31) (xy 97.79 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b456885-c295-4ac5-a558-72e998bb401e")
-	)
-	(wire
-		(pts
 			(xy 80.01 35.56) (xy 80.01 43.18)
 		)
 		(stroke
@@ -4272,7 +4156,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 27.94) (xy 205.74 27.94)
+			(xy 142.24 27.94) (xy 212.09 27.94)
 		)
 		(stroke
 			(width 0)
@@ -4299,16 +4183,6 @@
 			(type default)
 		)
 		(uuid "83703aca-681f-4fca-8ca8-47101a50c6f6")
-	)
-	(wire
-		(pts
-			(xy 101.6 67.31) (xy 101.6 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83901b01-8156-4b96-afb5-24d810b66582")
 	)
 	(wire
 		(pts
@@ -4492,16 +4366,6 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 67.31) (xy 101.6 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9f6e1245-9e1d-4791-b1d9-e60235b7bc33")
-	)
-	(wire
-		(pts
 			(xy 154.94 34.29) (xy 154.94 43.18)
 		)
 		(stroke
@@ -4622,16 +4486,6 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 67.31) (xy 111.76 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "acc587d4-e142-4945-a888-a8412211df2e")
-	)
-	(wire
-		(pts
 			(xy 137.16 87.63) (xy 140.97 87.63)
 		)
 		(stroke
@@ -4739,16 +4593,6 @@
 			(type default)
 		)
 		(uuid "b94eca48-5292-43b7-99e8-d85488330dc7")
-	)
-	(wire
-		(pts
-			(xy 100.33 25.4) (xy 100.33 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9bf99f2-2c1a-4e5d-9e62-83ce7f626ad7")
 	)
 	(wire
 		(pts
@@ -4909,16 +4753,6 @@
 			(type default)
 		)
 		(uuid "da06af9d-d94a-463a-b0b3-d66ea04db85a")
-	)
-	(wire
-		(pts
-			(xy 96.52 25.4) (xy 96.52 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db1de387-ad47-4f0c-baef-29309602026e")
 	)
 	(wire
 		(pts
@@ -5149,16 +4983,6 @@
 			(type default)
 		)
 		(uuid "fe66fc70-131c-439f-90fc-ac8cb641e375")
-	)
-	(wire
-		(pts
-			(xy 205.74 27.94) (xy 212.09 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ff7ee029-0834-46e5-a63f-1bc411766b1d")
 	)
 	(text "R  |   10k | 6\nR  |  100k | 2\nVR |   10k | 1\nC  | 100pF | 2\nC  |   1uF | 2"
 		(exclude_from_sim no)
@@ -5825,75 +5649,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 205.74 54.61 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "35933477-a4fa-42ca-b8c9-4b489b06d0eb")
-		(property "Reference" "C9"
-			(at 206.248 52.324 0)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "470uF 50V"
-			(at 206.248 57.15 0)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm"
-			(at 206.7052 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 205.74 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 205.74 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "78e4cf14-1251-4261-a9ce-2da155d3ba83")
-		)
-		(pin "1"
-			(uuid "4511d42d-3df2-42ea-a19b-3e1b10271ec7")
-		)
-		(instances
-			(project "REM-3.0"
-				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
-					(reference "C9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 123.19 35.56 90)
 		(unit 1)
@@ -6089,6 +5844,71 @@
 			(project "REM-2.0"
 				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 137.16 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4629fee9-e16f-4249-a8d9-de5192a80ece")
+		(property "Reference" "#PWR04"
+			(at 137.16 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 137.16 81.534 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 137.16 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4dbf4b0e-5eef-43a2-b75c-ed169c9cd56f")
+		)
+		(instances
+			(project "REM-3.0"
+				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -7401,71 +7221,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+12V")
-		(at 137.16 85.09 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8f19d2ad-d7e3-4f87-b640-3f563a34c32a")
-		(property "Reference" "#PWR04"
-			(at 137.16 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 137.16 81.026 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 137.16 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "265f7a23-407b-406f-ac0d-58b97c00fa45")
-		)
-		(instances
-			(project ""
-				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 261.62 106.68 0)
 		(unit 1)
@@ -7797,140 +7552,6 @@
 			(project "REM-3.0"
 				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
 					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 96.52 25.4 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9b36d415-428f-4adc-816c-b14415119950")
-		(property "Reference" "JP5"
-			(at 94.742 21.844 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 99.06 24.6379 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 101.6 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 101.6 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 96.52 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dab4f616-4b65-412e-b318-89f59c69e75c")
-		)
-		(instances
-			(project "REM-3.0"
-				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
-					(reference "JP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 97.79 69.85 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a19b7700-e674-470d-84fb-45b2bb5be281")
-		(property "Reference" "JP10"
-			(at 99.568 73.406 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 95.25 70.6121 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 92.71 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 92.71 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 97.79 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "23584061-c639-4f8f-aeef-d5769f92ff59")
-		)
-		(instances
-			(project "REM-3.0"
-				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
-					(reference "JP10")
 					(unit 1)
 				)
 			)
@@ -8436,6 +8057,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+12V")
+		(at 58.42 41.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c86136e9-eeee-4944-90cb-a963c08035b1")
+		(property "Reference" "#PWR02"
+			(at 58.42 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 58.42 38.354 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 58.42 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 58.42 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1a5d13e2-f56d-40da-a83e-05d05dd765af")
+		)
+		(instances
+			(project "REM-3.0"
+				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 140.97 85.09 0)
 		(unit 1)
@@ -8497,138 +8183,6 @@
 			(project "REM-3.0"
 				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
 					(reference "JP7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 53.34 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cb879b92-d27a-4bd5-95f1-59d6b4985e2c")
-		(property "Reference" "#PWR07"
-			(at 53.34 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 53.34 38.354 0)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 53.34 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "83e9bd86-3a04-4634-8249-fc955e10c8df")
-		)
-		(instances
-			(project "REM-2.0"
-				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 100.33 25.4 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cf8805ad-6377-4dc0-89a3-5ae264e7384d")
-		(property "Reference" "JP6"
-			(at 98.552 21.844 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 102.87 24.6379 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 105.41 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 105.41 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 100.33 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "42b6eb34-eaaa-443c-a20e-e309cf669d81")
-		)
-		(instances
-			(project "REM-3.0"
-				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
-					(reference "JP6")
 					(unit 1)
 				)
 			)
@@ -8768,73 +8322,6 @@
 			(project ""
 				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
 					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 101.6 69.85 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d93d4871-8911-43f6-9d96-c2abb7f5c0ae")
-		(property "Reference" "JP9"
-			(at 103.378 73.406 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 99.06 70.6121 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 96.52 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 96.52 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 101.6 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4c8fd865-3cba-40ed-a3e1-f70c87d49971")
-		)
-		(instances
-			(project "REM-3.0"
-				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
-					(reference "JP9")
 					(unit 1)
 				)
 			)
@@ -9484,71 +8971,6 @@
 			(project "REM-2.0"
 				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
 					(reference "C11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 58.42 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "edd5199c-49ea-4f62-8248-dfb9047cd271")
-		(property "Reference" "#PWR02"
-			(at 58.42 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 58.42 38.354 0)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 58.42 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 58.42 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 58.42 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "53d92b08-4c69-4812-8f0d-16aca4c2af23")
-		)
-		(instances
-			(project "REM-2.0"
-				(path "/97586a4c-179f-4169-8689-9cb0277d7cb7"
-					(reference "#PWR02")
 					(unit 1)
 				)
 			)
