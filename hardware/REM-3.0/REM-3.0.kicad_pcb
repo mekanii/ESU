@@ -10513,7 +10513,6 @@
 			)
 		)
 		(model "/Users/margabudi/Documents/KiCad/libraries/ELCO/User Library-Cap-EL(12_5x20-5)T.step"
-			(hide yes)
 			(offset
 				(xyz 2.5 0 0)
 			)
