@@ -1,3 +1,14 @@
+2025-04-29
+- Design Rule Check berdasarkan standar spectra + Rev [In Progress]
+- Order cetak PCB
+- Design & Calculation: bipolar power stage output inductor [To Do]
+- Inductor winding [To Do]
+
+2025-04-28
+- Layout PCB ESU-PS [Done]
+- List BoM PCB ESU-PS [Done]
+- Design Rule Check berdasarkan standar spectra + Rev [In Progress]
+
 2025-04-17
 - Layout PCB ESU-PS [In Progress]
 - Soldering Signal Amplifier LM358 [Done]

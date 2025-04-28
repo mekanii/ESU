@@ -115,7 +115,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "0.01µF 1000"
 			(at 5 3.75 90)
 			(layer "F.Fab")
 			(uuid "6ab4ba27-66b3-49bb-91fd-69586ad45d30")
@@ -350,7 +350,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x03"
+		(property "Value" "PinHeader_2.54mm 02x05 Horizontal"
 			(at 5.08 12.7 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1095,7 +1095,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2nF"
+		(property "Value" "2.2nF 100"
 			(at 2.5 3 0)
 			(layer "F.Fab")
 			(uuid "f04ce914-90a8-4fb2-8da5-3d34b63c0388")
@@ -1331,7 +1331,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x04"
+		(property "Value" "PinHeader_2.54mm 02x04 Horizontal"
 			(at 5.08 10.16 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2554,7 +2554,7 @@
 				)
 			)
 		)
-		(property "Value" "33Ω"
+		(property "Value" "33Ω 2W"
 			(at 10.16 3.37 90)
 			(layer "F.Fab")
 			(uuid "68094024-3340-4f54-aa2d-32fb80a0cca9")
@@ -2829,7 +2829,7 @@
 				)
 			)
 		)
-		(property "Value" "22nF"
+		(property "Value" "22nF 100"
 			(at 2.5 3 -90)
 			(layer "F.Fab")
 			(uuid "546a558e-c10f-4b0f-b21e-75e9304d538f")
@@ -3724,7 +3724,7 @@
 		(descr "THT pad as test Point, diameter 1.5mm, hole diameter 0.7mm")
 		(tags "test point THT pad")
 		(property "Reference" "JP7"
-			(at 0 -1.648 360)
+			(at 0 -1.648 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "f9d22b8f-d1f2-41aa-97a6-765ab281003a")
@@ -3736,7 +3736,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 0 1.75 360)
+			(at 0 1.75 0)
 			(layer "F.Fab")
 			(uuid "2d7d540c-545f-4d57-a115-a97ac26634c3")
 			(effects
@@ -3813,7 +3813,7 @@
 			(uuid "d4b8939d-d879-47ba-a380-cd9d47496d52")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -1.65 360)
+			(at 0 -1.65 0)
 			(layer "F.Fab")
 			(uuid "1eff7eb1-f24b-4e05-8d4c-2f39d1e87afa")
 			(effects
@@ -4520,7 +4520,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100nF 100"
 			(at 2.5 3 -90)
 			(layer "F.Fab")
 			(uuid "3f92ab9b-1fd9-45ce-b20a-45e6b31096d7")
@@ -4755,7 +4755,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "0.01µF 1000"
 			(at 5 3.75 90)
 			(layer "F.Fab")
 			(uuid "658f52f8-fa92-4f01-97fc-2281a3adea70")
@@ -4990,7 +4990,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100nF 100"
 			(at 2.5 3 -90)
 			(layer "F.Fab")
 			(uuid "173e3d8f-591d-40c2-b560-a08753d13ccf")
@@ -5788,7 +5788,7 @@
 				)
 			)
 		)
-		(property "Value" "0.022uF 400V MKP"
+		(property "Value" "0.022µF 400V"
 			(at 5 3.75 0)
 			(layer "F.Fab")
 			(uuid "595075be-27b9-41c4-b91b-76809342d4c8")
@@ -9353,7 +9353,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100nF 100"
 			(at 2.5 3 0)
 			(layer "F.Fab")
 			(uuid "c3bc9732-5760-42d2-a6ae-6f2efa62b487")
@@ -9588,7 +9588,7 @@
 				)
 			)
 		)
-		(property "Value" "33Ω"
+		(property "Value" "33Ω 2W"
 			(at 10.16 3.37 90)
 			(layer "F.Fab")
 			(uuid "23ef6731-8e6f-4e7f-b5fd-60b934f47aac")
@@ -11416,7 +11416,7 @@
 				)
 			)
 		)
-		(property "Value" "10nF"
+		(property "Value" "10nF 63"
 			(at 2.5 3 0)
 			(layer "F.Fab")
 			(uuid "cc243da2-bf4d-4823-b269-717c5c044b20")

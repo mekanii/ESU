@@ -2289,7 +2289,7 @@
 				)
 			)
 		)
-		(property "Value" "10nF"
+		(property "Value" "10nF 63"
 			(at 2.5 3 0)
 			(layer "F.Fab")
 			(uuid "cc243da2-bf4d-4823-b269-717c5c044b20")
@@ -4305,7 +4305,7 @@
 				)
 			)
 		)
-		(property "Value" "0.022uF 400V MKP"
+		(property "Value" "0.022uF 400"
 			(at 5 3.75 0)
 			(layer "F.Fab")
 			(uuid "595075be-27b9-41c4-b91b-76809342d4c8")
@@ -5595,7 +5595,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF 400V"
+		(property "Value" "100nF 400"
 			(at 5 3.75 0)
 			(layer "F.Fab")
 			(uuid "2dde72bc-9265-42c8-ba5d-d2677bb8e466")
@@ -5830,7 +5830,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100nF 100"
 			(at 2.5 3 0)
 			(layer "F.Fab")
 			(uuid "86885e96-d621-424d-ac24-7cfa8eef8a75")
@@ -6431,7 +6431,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2nF"
+		(property "Value" "2.2nF 100"
 			(at 2.5 3 0)
 			(layer "F.Fab")
 			(uuid "f04ce914-90a8-4fb2-8da5-3d34b63c0388")

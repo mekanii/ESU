@@ -4759,7 +4759,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2nF"
+		(property "Value" "2.2nF 100"
 			(at 152.908 121.412 0)
 			(effects
 				(font
@@ -4892,7 +4892,7 @@
 				)
 			)
 		)
-		(property "Value" "33Ω"
+		(property "Value" "33Ω 2W"
 			(at 247.65 89.916 90)
 			(effects
 				(font
@@ -5162,7 +5162,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100nF 100"
 			(at 145.288 121.92 0)
 			(effects
 				(font
@@ -5230,7 +5230,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x04"
+		(property "Value" "PinHeader_2.54mm 02x04 Horizontal"
 			(at 90.17 31.75 0)
 			(effects
 				(font
@@ -5370,7 +5370,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10nF"
+		(property "Value" "10nF 63"
 			(at 160.528 121.412 0)
 			(effects
 				(font
@@ -5440,7 +5440,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100nF 100"
 			(at 178.308 57.15 0)
 			(effects
 				(font
@@ -5660,7 +5660,7 @@
 				)
 			)
 		)
-		(property "Value" "33Ω"
+		(property "Value" "33Ω 2W"
 			(at 247.65 102.616 90)
 			(effects
 				(font
@@ -5728,7 +5728,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "0.01µF 1000"
 			(at 262.128 109.22 0)
 			(effects
 				(font
@@ -5865,7 +5865,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "100nF 100"
 			(at 165.608 57.15 0)
 			(effects
 				(font
@@ -5935,7 +5935,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1kΩ"
+		(property "Value" "5kΩ"
 			(at 153.416 53.34 0)
 			(effects
 				(font
@@ -6427,7 +6427,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x03"
+		(property "Value" "PinHeader_2.54mm 02x05 Horizontal"
 			(at 279.4 86.3601 0)
 			(effects
 				(font
@@ -6567,7 +6567,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22nF"
+		(property "Value" "22nF 100"
 			(at 218.948 57.15 0)
 			(effects
 				(font
@@ -6770,7 +6770,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "0.01µF 1000"
 			(at 254.508 109.22 0)
 			(effects
 				(font
@@ -6905,7 +6905,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.022uF 400V MKP"
+		(property "Value" "0.022µF 400V"
 			(at 224.028 96.012 0)
 			(effects
 				(font
