@@ -1,6 +1,6 @@
 2025-04-29
 - Design Rule Check berdasarkan standar spectra + Rev [In Progress]
-- Order cetak PCB
+- Order cetak PCB [To Do]
 - Design & Calculation: bipolar power stage output inductor [To Do]
 - Inductor winding [To Do]
 
