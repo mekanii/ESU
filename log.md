@@ -1,7 +1,8 @@
 2025-04-29
-- Design Rule Check berdasarkan standar spectra + Rev [In Progress]
+- Design Rule Check berdasarkan standar spectra + Rev [Done]
+- Design & Calculation: bipolar power stage output inductor [Done]
+- Design Jig Inductor winding [In Progress]
 - Order cetak PCB [To Do]
-- Design & Calculation: bipolar power stage output inductor [To Do]
 - Inductor winding [To Do]
 
 2025-04-28
