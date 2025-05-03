@@ -28,13 +28,13 @@ The clock divider is a crucial parameter in microcontroller and digital circuit 
 Clock Divider = \frac{APB_CLK}{Clock Frequency} = \frac{80 MHz}{80 MHz} = 1
 ```
 - Resolution<br>
-We want a 400 kHz PWM frequency, which requires a specific resolution to achieve fine control over the duty cycle. So the max resolution is calculated by the following formula:
+We want a 400 kHz PWM frequency, which requires a specific resolution to achieve fine control over the duty cycle. So the max resolution is calculated by the following formula:<br>
 ```math
 Resolution = \frac{Clock Frequency}{PWM Frequency} = \frac{80 MHz}{400 kHz} = 200
 ```
-This means that for every PWM cycle, we can divide the clock cycles into 200 discrete steps, allowing for precise adjustments to the PWM signal's duty cycle. The value of 200 is used as the **Total Period**, and the **Duty Cycle** can vary from 0 to 200, where:
-  - A duty cycle of 0 corresponds to 0% (always off).
-  - A duty cycle of 200 corresponds to 100% (always on).
+<br>This means that for every PWM cycle, we can divide the clock cycles into 200 discrete steps, allowing for precise adjustments to the PWM signal's duty cycle. The value of 200 is used as the **Total Period**, and the **Duty Cycle** can vary from 0 to 200, where:
+- A duty cycle of 0 corresponds to 0% (always off).
+- A duty cycle of 200 corresponds to 100% (always on).
 
 - Cut
   - Pure Cut
