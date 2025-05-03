@@ -4,18 +4,18 @@
 </p>
 
 # II. Component
-## II.1. Monopolar Switch Detection (MSD)
-### II.1.a. Schematic
-### II.1.b Sine Wave
-### II.1.c Output Scope
+## 1. Monopolar Switch Detection (MSD)
+### a. Schematic
+### b. Sine Wave
+### c. Output Scope
 - Cut
 - Coag
-## II.2. Return Electrode Monitor (REM)
-### II.2.a. Schematic
-### II.2.b. Sine Wave
-### II.2.c. Output Scope
-## II.3. Controller
-### II.3.a. PWM Generator
+## 2. Return Electrode Monitor (REM)
+### a. Schematic
+### b. Sine Wave
+### c. Output Scope
+## 3. Controller
+### a. PWM Generator
 - Cut
   - Pure Cut
   - Cut Blend 1
@@ -24,11 +24,11 @@
   - Spray
   - Forced
   - Standard
-## II.4. Power Stage
-### II.4.a. DAC
-### II.4.b. Transformer Monopolar
+## 4. Power Stage
+### a. DAC
+### b. Transformer Monopolar
 - Toroidal Ferrite Core Transformer
 - Air Core Axial Inductor
-### II.4.c. Transformer Bipolar
+### c. Transformer Bipolar
 - EE Ferrite Core Transformer
 - EE Ferrite Core Inductor
