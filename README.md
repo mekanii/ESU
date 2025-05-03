@@ -36,6 +36,7 @@ This means that for every PWM cycle, we can divide the clock cycles into 200 dis
 - A duty cycle of 0 corresponds to 0% (always off).
 - A duty cycle of 200 corresponds to 100% (always on).
 
+#### Output Scope
 - Cut
   - Pure Cut
   - Cut Blend 1
