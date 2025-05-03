@@ -1,3 +1,10 @@
+2025-05-02
+- LEDC PWM 400kHz resolusi 6-bit [Done]
+- RMT (Remote Control) module 400kHz resolusi 200 level [Done]
+
+2025-04-30
+- LEDC PWM 400kHz resolusi 6-bit [In Progress]
+
 2025-04-29
 - Design Rule Check berdasarkan standar spectra + Rev [Done]
 - Design & Calculation: bipolar power stage output inductor [Done]
