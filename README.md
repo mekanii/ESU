@@ -37,21 +37,21 @@ This means that for every PWM cycle, we can divide the clock cycles into 200 dis
 - A duty cycle of 200 corresponds to 100% (always on).
 
 #### Output Scope
-- Cut
-  - Pure Cut
+##### Cut
+- Pure Cut
 > [!NOTE]
 > 20 pulses per 1 modulation (400 kHz for each pulse).
-  - Cut Blend 1
+- Cut Blend 1
 > [!NOTE]
 > 18 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 2 periods).
-  - Cut Blend 2
+- Cut Blend 2
 > [!NOTE]
 > 17 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 3 periods).
 
-- Coag
-  - Spray
-  - Forced
-  - Standard
+##### Coag
+- Spray
+- Forced
+- Standard
 ## 4. Power Stage
 ### a. DAC
 ### b. Transformer Monopolar
