@@ -27,6 +27,7 @@ The clock divider is a crucial parameter in microcontroller and digital circuit 
 ```math
 Clock Divider = \frac{APB_CLK}{Clock Frequency} = \frac{80 MHz}{80 MHz} = 1
 ```
+
 ​- Resolution<br>
 We want a 400 kHz PWM frequency, which requires a specific resolution to achieve fine control over the duty cycle. So the max resolution is calculated by the following formula:
 ```math
