@@ -46,7 +46,7 @@ This means that for every PWM cycle, we can divide the clock cycles into 200 dis
 > 18 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 2 periods).
   - Cut Blend 2
 > [!NOTE]
-> 18 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 3 periods).
+> 17 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 3 periods).
 
 - Coag
   - Spray
