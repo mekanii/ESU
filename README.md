@@ -39,8 +39,14 @@ This means that for every PWM cycle, we can divide the clock cycles into 200 dis
 #### Output Scope
 - Cut
   - Pure Cut
+    > [!NOTE]
+    > 20 pulses per 1 modulation
   - Cut Blend 1
+    > [!NOTE]
+    > 18 pulses per 1 modulation
   - Cut Blend 2
+    > [!NOTE]
+    > 17 pulses per 1 modulation
 - Coag
   - Spray
   - Forced
