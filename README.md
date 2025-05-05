@@ -89,6 +89,9 @@ The combination of clock frequency and resolution plays a vital role in determin
 - Blend Cut 1 & Blend Cut 2
 > [!NOTE]
 > Blend cut 1: 18 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 2 periods).<br>Blend cut 2: 17 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 3 periods).
+
+The image illustrates the output scope for the Blend Cut 1 (left) and Blend Cut 2 (right ) operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Blend Cut process, highlighting the key features and behavior of the PWM signal during this operation.
+
 <p align="center">
   <img src="pic/PWM/PWM-blend-cut.png" alt="PWM-blend-cut">
 </p>
