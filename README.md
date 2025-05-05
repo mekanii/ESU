@@ -33,7 +33,7 @@ The Remote Control Module (RMT) on the ESP32 is a versatile hardware peripheral 
 ##### Clock Divider
 The clock divider is a crucial parameter in microcontroller and digital circuit design that determines the frequency of a clock signal by dividing the input clock frequency, which is APB_CLK for ESP32.
 ```math
-Clock Divider = \frac{APB\text{_}CLK}{\text{Clock Frequency}} = \frac{80 \, MHz}{80 \, MHz} = 1
+Clock Divider = \frac{APB \_ CLK}{Clock \, Frequency} = \frac{80 \, MHz}{80 \, MHz} = 1
 ```
 ##### Resolution
 We want a 400 kHz PWM frequency, which requires a specific resolution to achieve fine control over the duty cycle. So the max resolution is calculated by the following formula:
