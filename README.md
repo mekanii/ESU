@@ -37,14 +37,14 @@ Below is the formula to calculate the ADC value based on the voltage sense and t
 ```math
 ADC \, Value = \frac{Vsense}{Voltage \, per \, Level}
 ```
-
+<br>
 Using the formula above, we have the following ADC values for different pad resistances:
 | Pad Resistance | Measured Voltage | ADC Value |
 | -------------: | ---------------: | --------: |
 |             5Ω |        10.385 mV |        19 |
 |           200Ω |        558.91 mV |       694 |
 |            1kΩ |        689.31 mV |       855 |
-|         High-Z |        1.1164  V |      1385 |
+|         High-Z |        1116.4 mV |      1385 |
 
 ## 3. Controller
 ### a. PWM Generator
