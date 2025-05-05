@@ -86,12 +86,13 @@ The combination of clock frequency and resolution plays a vital role in determin
 - Pure Cut
 > [!NOTE]
 > 20 pulses per 1 modulation (400 kHz for each pulse).
-- Cut Blend 1
+- Blend Cut 1 & Blend Cut 2
 > [!NOTE]
-> 18 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 2 periods).
-- Cut Blend 2
-> [!NOTE]
-> 17 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 3 periods).
+> Blend cut 1: 18 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 2 periods).
+> Blend cut 2: 17 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 3 periods).
+<p align="center">
+  <img src="pic/PWM/PWM-blend-cut.png" alt="PWM-blend-cut">
+</p>
 
 ##### Coag
 - Spray
