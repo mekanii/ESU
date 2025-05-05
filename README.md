@@ -39,6 +39,7 @@ ADC \, Value = \frac{Vsense}{Voltage \, per \, Level}
 ```
 <br>
 Using the formula above, we have the following ADC values for different pad resistances:
+
 | Pad Resistance | Measured Voltage | ADC Value |
 | -------------: | ---------------: | --------: |
 |             5Ω |        10.385 mV |        19 |
