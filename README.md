@@ -31,7 +31,7 @@ The ESP32's ADC provides a versatile and powerful way to read analog signals wit
 ```math
 Voltage \, per \, Level = \frac{Voltage \, Range}{2^Resolution} = \frac{3.3V - 0V}{2^12} = \frac{3.3V}{4096} ≈ 0.00080586V ≈ 0.80586 mV
 ```
-
+<br>
 Below is the formula to calculate the ADC value based on the voltage sense and the Voltage per Level.
 
 ```math
