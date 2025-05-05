@@ -74,9 +74,9 @@ The combination of clock frequency and resolution plays a vital role in determin
 
 | Mode          | f PWM    | f Clock  | Clock Div | Resolution | 
 | ------------- | -------: | -------: | --------: | ---------: |
-| Cut           |  400 kHz |   80 MHz |         1 |        200 |
-| Blend 1       |  400 kHz |   80 MHz |         1 |        200 |
-| Blend 2       |  400 kHz |   80 MHz |         1 |        200 |
+| Pure Cut      |  400 kHz |   80 MHz |         1 |        200 |
+| Blend Cut 1   |  400 kHz |   80 MHz |         1 |        200 |
+| Blend Cut 2   |  400 kHz |   80 MHz |         1 |        200 |
 | Coag Spray    |   25 kHz |   10 MHz |         8 |        400 |
 | Coag Forced   |   20 kHz |   10 MHz |         8 |        500 |
 | Coag Standard |  400 kHz |   80 MHz |         1 |        200 |
