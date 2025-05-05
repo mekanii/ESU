@@ -19,22 +19,25 @@ Below is the output scope at the input and output of toroidal transformer.
 </p>
 
 #### Sense
-Below is the output scope at the sense circuit, where the pad resistance is 5Ω.
+> [!NOTE]
+> All measurements for Return Electrode Monitoring do not utilize a physical Return Electrode; instead, a variable resistor is used. Therefore, all references to **pad resistance** in this context describe the variable resistor that simulates the Return Electrode.
+
+Below is the output scope from the sense circuit, where the pad resistance is 5Ω. The voltage measured by the oscilloscope is 10.385 mV.
 <p align="center">
   <img src="pic/REM/REM-5ohm.png" alt="rem-5">
 </p>
 
-Below is the output scope at the sense circuit, where the pad resistance is 200Ω.
+Below is the output scope at the sense circuit, where the pad resistance is 200Ω. The voltage measured by the oscilloscope is 558.91 mV
 <p align="center">
   <img src="pic/REM/REM-200ohm.png" alt="rem-200">
 </p>
 
-Below is the output scope at the sense circuit, where the pad resistance is 1kΩ.
+Below is the output scope at the sense circuit, where the pad resistance is 1kΩ. The voltage measured by the oscilloscope is 689.31 mV
 <p align="center">
   <img src="pic/REM/REM-1kohm.png" alt="rem-1000">
 </p>
 
-Below is the output scope at the sense circuit, where the pad resistance is High Impedance.
+Below is the output scope at the sense circuit, where the pad resistance is High Impedance. The voltage measured by the oscilloscope is 1.1164 mV
 <p align="center">
   <img src="pic/REM/REM-highZ.png" alt="rem-high-z">
 </p>
