@@ -40,61 +40,111 @@
 #include <Arduino.h>
 #include <driver/rmt.h>
 
-#define RMT_TX_CHANNEL RMT_CHANNEL_0
+#define RMT_TX_CHANNEL_0 RMT_CHANNEL_0
+#define RMT_TX_CHANNEL_1 RMT_CHANNEL_1
 
-const gpio_num_t PWM_OUT = (gpio_num_t)1;
+const gpio_num_t PWM_0 = (gpio_num_t)1;
+const gpio_num_t PWM_1 = (gpio_num_t)2;
 
-int dutyCycle = 100;
-int totalPeriod = 200;
+int totalPeriodCut = 200;
 int duration0 = 0;
 int duration1 = 0;
 
-rmt_item32_t items[1];
+rmt_channel_t channel = RMT_TX_CHANNEL_0;
+rmt_item32_t items[20];
+int item_num = 20;
 
-void update() {
+void update(int mode, int dutyCycle) {
   // Calculate durations based on duty cycle
   duration0 = dutyCycle;
-  duration1 = totalPeriod - duration0;
   // Set up the PWM signal
-  items[0].duration0 = duration0;
-  items[0].level0 = 1;
-  items[0].duration1 = duration1;
-  items[0].level1 = 0;
-  rmt_write_items(RMT_TX_CHANNEL, items, 1, true);
+  switch (mode) {
+    case 0:
+      duration1 = totalPeriodCut - duration0;
+      items[0].duration0 = duration0;
+      items[0].level0 = 1;
+      items[0].duration1 = duration1;
+      items[0].level1 = 0;
+
+      item_num = 1;
+
+      channel = RMT_TX_CHANNEL_0;
+      break;
+    case 1:
+      duration1 = totalPeriodCut - duration0;
+      for (int i = 0; i < 20; i++) {
+        items[i].duration0 = duration0;
+        items[i].level0 = i < 18 ? 1 : 0;
+        items[i].duration1 = duration1;
+        items[i].level1 = 0;
+      }
+      item_num = 20;
+
+      channel = RMT_TX_CHANNEL_0;
+      break;
+    case 2:
+      duration1 = totalPeriodCut - duration0;
+      for (int i = 0; i < 20; i++) {
+        items[i].duration0 = duration0;
+        items[i].level0 = i < 17 ? 1 : 0;
+        items[i].duration1 = duration1;
+        items[i].level1 = 0;
+      }
+      item_num = 20;
+
+      channel = RMT_TX_CHANNEL_0;
+      break;
+  }
+
+  
 }
 
 void setup() {
   Serial.begin(115200);
 
-  rmt_config_t rmt_tx;
-  rmt_tx.channel = RMT_TX_CHANNEL;
-  rmt_tx.gpio_num = PWM_OUT;
-  rmt_tx.mem_block_num = 1;
-  rmt_tx.tx_config.carrier_en = 0;
+  rmt_config_t rmt_tx_0;
+  rmt_tx_0.channel = RMT_TX_CHANNEL_0;
+  rmt_tx_0.gpio_num = PWM_0;
+  rmt_tx_0.mem_block_num = 1;
+  rmt_tx_0.tx_config.carrier_en = 0;
+  rmt_tx_0.tx_config.idle_output_en = false;
+  rmt_tx_0.clk_div = 1; // 80 MHz ÷ 1 = 80 MHz
   // rmt_tx.tx_config.idle_level = RMT_IDLE_LEVEL_LOW;
-  rmt_tx.tx_config.idle_output_en = false;
-  rmt_tx.clk_div = 1; // 80 MHz ÷ 1 = 80 MHz
-  rmt_tx.tx_config.loop_en = 1;
-  rmt_config(&rmt_tx);
-  rmt_driver_install(RMT_TX_CHANNEL, 0, 0);
+  // rmt_tx.tx_config.loop_en = 1;
+  rmt_config(&rmt_tx_0);
+  rmt_driver_install(RMT_TX_CHANNEL_0, 0, 0);
+
+  rmt_config_t rmt_tx_1;
+  rmt_tx_1.channel = RMT_TX_CHANNEL_1;
+  rmt_tx_1.gpio_num = PWM_1;
+  rmt_tx_1.mem_block_num = 1;
+  rmt_tx_1.tx_config.carrier_en = 0;
+  rmt_tx_1.tx_config.idle_output_en = false;
+  rmt_tx_1.clk_div = 1; // 80 MHz ÷ 1 = 80 MHz
+  rmt_config(&rmt_tx_1);
+  rmt_driver_install(RMT_TX_CHANNEL_1, 0, 0);
   
-  update();
+  // update();
 }
 
-int readSerialData() {
+void readSerialData() {
   if (Serial.available() > 0) {
-    int value = Serial.parseInt();
-    Serial.println(value);
+    String serialData = Serial.readStringUntil('\n');
     
-    if (value != dutyCycle) {
-      dutyCycle = value;
-      update();
+    int spaceIndex = serialData.indexOf(' ');
+    if (spaceIndex > 0) {
+      int mode = serialData.substring(0, spaceIndex).toInt();
+      int dutyCycle = serialData.substring(spaceIndex + 1).toInt();
+
+      Serial.println(serialData, dutyCycle);
+      
+      update(mode);
+    } else {
+      Serial.println("Invalid input format. Please use 'mode dutyCycle'.");
     }
-    return value;
   }
-  return dutyCycle;
 }
 
 void loop() {
-    dutyCycle = readSerialData();
+  readSerialData();
 }

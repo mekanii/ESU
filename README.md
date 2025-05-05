@@ -57,17 +57,29 @@ The Remote Control Module (RMT) on the ESP32 is a versatile hardware peripheral 
 #### Configuration
 ##### Clock Divider
 The clock divider is a crucial parameter in microcontroller and digital circuit design that determines the frequency of a clock signal by dividing the input clock frequency, which is APB_CLK for ESP32.
+
 ```math
-Clock \, Divider = \frac{APB \_ CLK}{Clock \, Frequency} = \frac{80 \, MHz}{80 \, MHz} = 1
+Clock \, Divider = \frac{APB \_ CLK}{Clock \, Frequency}
 ```
+
 ##### Resolution
-We want a 400 kHz PWM frequency, which requires a specific resolution to achieve fine control over the duty cycle. So the max resolution is calculated by the following formula:
+The resolution in duty cycle is a crucial parameter in microcontroller and digital circuit design that determines the granularity of control over the PWM signal. It defines how finely the duty cycle can be adjusted, allowing for precise modulation of the output signal. In the case of the ESP32, the resolution is influenced by the clock frequency which ultimately affect the ability to achieve desired output levels.
+
 ```math
-Resolution = \frac{Clock \, Frequency}{PWM \, Frequency} = \frac{80 \, MHz}{400 \, MHz} = 200
+Resolution = \frac{Clock \, Frequency}{PWM \, Frequency}
 ```
-This means that for every PWM cycle, we can divide the clock cycles into 200 discrete steps, allowing for precise adjustments to the PWM signal's duty cycle. The value of 200 is used as the **Total Period**, and the **Duty Cycle** can vary from 0 to 200, where:
-- A duty cycle of 0 corresponds to 0% (always off).
-- A duty cycle of 200 corresponds to 100% (always on).
+
+##### Combination of Clock Frequency and Resolution
+The combination of clock frequency and resolution plays a vital role in determining the performance of PWM signals in microcontroller applications. The clock frequency sets the base rate at which the system operates, while the resolution defines how many discrete levels the duty cycle can be divided into. A higher clock frequency allows for faster switching and more precise timing, while a higher resolution enables finer control over the duty cycle. Together, they influence the accuracy and responsiveness of the PWM output, making it essential to balance these parameters to meet the specific requirements of the application.
+
+| Mode          | f PWM    | f Clock  | Clock Div | Resolution | 
+| ------------- | -------: | -------: | --------: | ---------: |
+| Cut           |  400 kHz |   80 MHz |         1 |        200 |
+| Blend 1       |  400 kHz |   80 MHz |         1 |        200 |
+| Blend 2       |  400 kHz |   80 MHz |         1 |        200 |
+| Coag Spray    |   25 kHz |   10 MHz |         8 |        400 |
+| Coag Forced   |   20 kHz |   10 MHz |         8 |        500 |
+| Coag Standard |  400 kHz |   80 MHz |         1 |        200 |
 
 #### Output Scope
 ##### Cut
