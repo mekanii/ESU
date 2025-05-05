@@ -47,6 +47,8 @@ const gpio_num_t PWM_0 = (gpio_num_t)1;
 const gpio_num_t PWM_1 = (gpio_num_t)2;
 
 int totalPeriodCut = 200;
+int totalPeriodSpray = 400;
+int totalPeriodForced = 500;
 int duration0 = 0;
 int duration1 = 0;
 
@@ -94,9 +96,30 @@ void update(int mode, int dutyCycle) {
 
       channel = RMT_TX_CHANNEL_0;
       break;
-  }
+    case 3:
+      duration1 = totalPeriodSpray - duration0;
+      items[0].duration0 = duration0;
+      items[0].level0 = 1;
+      items[0].duration1 = duration1;
+      items[0].level1 = 0;
 
-  
+      item_num = 1;
+
+      channel = RMT_TX_CHANNEL_1;
+      break;
+    case 4:
+      duration1 = totalPeriodForced - duration0;
+      items[0].duration0 = duration0;
+      items[0].level0 = 1;
+      items[0].duration1 = duration1;
+      items[0].level1 = 0;
+
+      item_num = 1;
+
+      channel = RMT_TX_CHANNEL_1;
+      break;
+  }
+  rmt_write_items(channel, items, item_num, true);
 }
 
 void setup() {
@@ -109,8 +132,8 @@ void setup() {
   rmt_tx_0.tx_config.carrier_en = 0;
   rmt_tx_0.tx_config.idle_output_en = false;
   rmt_tx_0.clk_div = 1; // 80 MHz ÷ 1 = 80 MHz
-  // rmt_tx.tx_config.idle_level = RMT_IDLE_LEVEL_LOW;
-  // rmt_tx.tx_config.loop_en = 1;
+  // rmt_tx_0.tx_config.idle_level = RMT_IDLE_LEVEL_LOW;
+  rmt_tx_0.tx_config.loop_en = 0;
   rmt_config(&rmt_tx_0);
   rmt_driver_install(RMT_TX_CHANNEL_0, 0, 0);
 
@@ -120,7 +143,9 @@ void setup() {
   rmt_tx_1.mem_block_num = 1;
   rmt_tx_1.tx_config.carrier_en = 0;
   rmt_tx_1.tx_config.idle_output_en = false;
-  rmt_tx_1.clk_div = 1; // 80 MHz ÷ 1 = 80 MHz
+  rmt_tx_1.clk_div = 8; // 80 MHz ÷ 8 = 10 MHz
+  // rmt_tx_1.tx_config.idle_level = RMT_IDLE_LEVEL_LOW;
+  rmt_tx_1.tx_config.loop_en = 0;
   rmt_config(&rmt_tx_1);
   rmt_driver_install(RMT_TX_CHANNEL_1, 0, 0);
   
@@ -136,9 +161,9 @@ void readSerialData() {
       int mode = serialData.substring(0, spaceIndex).toInt();
       int dutyCycle = serialData.substring(spaceIndex + 1).toInt();
 
-      Serial.println(serialData, dutyCycle);
+      Serial.println(serialData);
       
-      update(mode);
+      update(mode, dutyCycle);
     } else {
       Serial.println("Invalid input format. Please use 'mode dutyCycle'.");
     }
