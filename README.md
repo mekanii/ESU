@@ -6,14 +6,22 @@
 # II. Component
 ## 1. Monopolar Switch Detection (MSD)
 ### a. Schematic
-### b. Sine Wave
-### c. Output Scope
+### b. Output Scope
 - Cut
 - Coag
 ## 2. Return Electrode Monitor (REM)
 ### a. Schematic
-### b. Sine Wave
-### c. Output Scope
+### b. Output Scope
+#### Transformer
+<p align="center">
+  <img src="pic/REM/REM XF.png" alt="esu-block-diagram">
+</p>
+
+#### Sense
+5Ω
+200Ω
+1kΩ
+High Impedance
 ## 3. Controller
 ### a. PWM Generator
 #### Using the Remote Control Module (RMT) of ESP32 for Generating PWM Signals
