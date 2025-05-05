@@ -56,7 +56,7 @@ The Remote Control Module (RMT) on the ESP32 is a versatile hardware peripheral 
 - Total Period:<br>The total period of the PWM signal is the sum of the high time and low time.
 #### Configuration
 ##### Clock Divider
-The clock divider is a crucial parameter in microcontroller and digital circuit design that determines the frequency of a clock signal by dividing the input clock frequency, which is APB_CLK for ESP32.
+The clock divider is a crucial parameter in microcontroller and digital circuit design that determines the frequency of a clock signal by dividing the input clock frequency, which is APB_CLK (80 MHz) for ESP32.
 
 ```math
 Clock \, Divider = \frac{APB \_ CLK}{Clock \, Frequency}
