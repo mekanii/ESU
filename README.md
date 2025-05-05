@@ -91,7 +91,7 @@ The combination of clock frequency and resolution plays a vital role in determin
 > Pure Cut PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
 <p align="center">
-  <img src="pic/PWM/PWM-blend-cut.png" alt="PWM-pure-cut">
+  <img src="pic/PWM/PWM-pure-cut.png" alt="PWM-pure-cut">
 </p>
 
 
