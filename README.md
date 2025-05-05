@@ -13,15 +13,32 @@
 ### a. Schematic
 ### b. Output Scope
 #### Transformer
+Below is the output scope at the input and output of toroidal transformer.
 <p align="center">
-  <img src="pic/REM/REM XF.png" alt="esu-block-diagram">
+  <img src="pic/REM/REM XF.png" alt="rem-xf">
 </p>
 
 #### Sense
-5Ω
-200Ω
-1kΩ
-High Impedance
+Below is the output scope at the sense circuit, where the pad resistance is 5Ω.
+<p align="center">
+  <img src="pic/REM/REM-5ohm.png" alt="rem-5">
+</p>
+
+Below is the output scope at the sense circuit, where the pad resistance is 200Ω.
+<p align="center">
+  <img src="pic/REM/REM-200ohm.png" alt="rem-200">
+</p>
+
+Below is the output scope at the sense circuit, where the pad resistance is 1kΩ.
+<p align="center">
+  <img src="pic/REM/REM-1kohm.png" alt="rem-1000">
+</p>
+
+Below is the output scope at the sense circuit, where the pad resistance is High Impedance.
+<p align="center">
+  <img src="pic/REM/REM-highZ.png" alt="rem-high-z">
+</p>
+
 ## 3. Controller
 ### a. PWM Generator
 #### Using the Remote Control Module (RMT) of ESP32 for Generating PWM Signals
@@ -33,7 +50,7 @@ The Remote Control Module (RMT) on the ESP32 is a versatile hardware peripheral 
 ##### Clock Divider
 The clock divider is a crucial parameter in microcontroller and digital circuit design that determines the frequency of a clock signal by dividing the input clock frequency, which is APB_CLK for ESP32.
 ```math
-Clock Divider = \frac{APB \_ CLK}{Clock \, Frequency} = \frac{80 \, MHz}{80 \, MHz} = 1
+Clock \, Divider = \frac{APB \_ CLK}{Clock \, Frequency} = \frac{80 \, MHz}{80 \, MHz} = 1
 ```
 ##### Resolution
 We want a 400 kHz PWM frequency, which requires a specific resolution to achieve fine control over the duty cycle. So the max resolution is calculated by the following formula:
