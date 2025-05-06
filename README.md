@@ -149,6 +149,8 @@ The combination of clock frequency and resolution plays a vital role in determin
 > [!NOTE]
 > Forced Coagulation PWM signal utilize a discrete resolution of 500 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
+<div align="center">
+
 | Duty Cycle | HIGH Time |
 | ----------:| ---------:|
 |         10 |      1 us |
@@ -166,6 +168,8 @@ The combination of clock frequency and resolution plays a vital role in determin
 |        300 |     30 us |
 |        400 |     40 us |
 |        500 |     50 us |
+
+</div>
 
 <p align="center">
   <img src="pic/PWM/PWM-coag-forced.png" alt="PWM-coag-forced">
