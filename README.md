@@ -11,6 +11,11 @@
 - Coag
 ## 2. Return Electrode Monitor (REM)
 ### a. Schematic
+
+<p align="center">
+  <img src="pic/REM/REM-sch.png" alt="rem-sch">
+</p>
+
 ### b. Output Scope
 #### Transformer
 Below is the output scope at the input and output of toroidal transformer.
