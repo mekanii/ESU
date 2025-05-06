@@ -1,9 +1,3 @@
-<style>
-    table {
-        width: 100%;
-    }
-</style>
-
 # I. General Concept
 <p align="center">
   <img src="pic/ESU-block-diagram.png" alt="esu-block-diagram">
@@ -46,7 +40,7 @@ ADC \, Value = \frac{Vsense}{Voltage \, per \, Level}
 <br>
 Using the formula above, we have the following ADC values for different pad resistances:
 
-<div align="center" style="width: 100%">
+<div align="center">
 
 | Pad Resistance | Measured Voltage | ADC Value |
 | -------------: | ---------------: | --------: |
@@ -130,22 +124,22 @@ The combination of clock frequency and resolution plays a vital role in determin
 
 <div align="center">
 
-| Duty Cycle | HIGH Time |
-| ----------:| ---------:|
-|         10 |      1 us |
-|         20 |      2 us |
-|         30 |      3 us |
-|         40 |      4 us |
-|         50 |      5 us |
-|         60 |      6 us |
-|         70 |      7 us |
-|         80 |      8 us |
-|         90 |      9 us |
-|        100 |     10 us |
-|        ... |       ... |
-|        200 |     20 us |
-|        300 |     30 us |
-|        400 |     40 us |
+| Duty Cycle |       % | HIGH Time |
+| ----------:| ------: | ---------:|
+|         10 |   2.5 % |      1 us |
+|         20 |   5.0 % |      2 us |
+|         30 |   7.5 % |      3 us |
+|         40 |  10.0 % |      4 us |
+|         50 |  12.5 % |      5 us |
+|         60 |  15.0 % |      6 us |
+|         70 |  17.5 % |      7 us |
+|         80 |  20.0 % |      8 us |
+|         90 |  22.5 % |      9 us |
+|        100 |  25.0 % |     10 us |
+|        ... |     ... |       ... |
+|        200 |  50.0 % |     20 us |
+|        300 |  75.0 % |     30 us |
+|        400 | 100.0 % |     40 us |
 
 </div>
 
