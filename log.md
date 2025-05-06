@@ -1,4 +1,9 @@
 2025-05-05
+- Menulis dokumentasi PWM Generator [Done]
+- Rework PCB ESU-PS untuk kapasitor snap-in besar [Done]
+- PO PCB [In Progress]
+
+2025-05-05
 - Modulate PWM, 18 pulse per trigger 2 pulse 0% (blend cut 1) [Done]
 - Modulate PWM, 17 pulse per trigger 3 pulse 0% (blend cut 2) [Done]
 - Generate PWM untuk 25kHz resolusi 400 discrete level (coag spray) [Done]
