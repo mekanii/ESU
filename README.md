@@ -115,6 +115,10 @@ The combination of clock frequency and resolution plays a vital role in determin
 > [!NOTE]
 > Coag Spray PWM signal utilize a discrete resolution of 400 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
+<p align="center">
+  <img src="pic/PWM/PWM-coag-spray.png" alt="PWM-coag-spray">
+</p>
+
 | Duty Cycle | HIGH Time |
 | ----------:| ---------:|
 |         10 |      1 us |
@@ -138,7 +142,7 @@ The combination of clock frequency and resolution plays a vital role in determin
 > Coag Forced PWM signal utilize a discrete resolution of 500 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
 <p align="center">
-  <img src="pic/PWM/PWM-coag-spray.png" alt="PWM-coag-spray">
+  <img src="pic/PWM/PWM-coag-forced.png" alt="PWM-coag-forced">
 </p>
 
 | Duty Cycle | HIGH Time |
