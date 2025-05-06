@@ -53,7 +53,7 @@ Using the formula above, we have the following ADC values for different pad resi
 The Remote Control Module (RMT) on the ESP32 is a versatile hardware peripheral designed primarily for sending and receiving infrared signals. However, it can also be effectively utilized to generate precise Pulse Width Modulation (PWM) signals.
 #### Key Concepts
 - Duty Cycle:<br>The duty cycle of a PWM signal is the percentage of one cycle in which the signal is high (on) versus low (off). It is typically expressed as a value between 0 and 100.
-- Total Period:<br>The total period of the PWM signal is the sum of the high time and low time.
+- Total Period:<br>The total period of the PWM signal is the sum of the HIGH time and LOW time.
 #### Configuration
 ##### Clock Divider
 The clock divider is a crucial parameter in microcontroller and digital circuit design that determines the frequency of a clock signal by dividing the input clock frequency, which is APB_CLK (80 MHz) for ESP32.
@@ -99,7 +99,7 @@ The combination of clock frequency and resolution plays a vital role in determin
 <br>The image illustrates the output scope for the Blend Cut 1 (left) and Blend Cut 2 (right ) operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Blend Cut process, highlighting the key features and behavior of the PWM signal during this operation.
 
   - In the images of Blend Cut 1 and Blend Cut 2, both exhibit the same PWM frequency of 400 kHz.
-  - Additionally, for duty cycle levels ranging from 10 to 100, Blend Cut 1 and Blend Cut 2 demonstrate similar waveform high state periods, indicating consistent performance across these duty cycle settings.
+  - Additionally, for duty cycle levels ranging from 10 to 100, Blend Cut 1 and Blend Cut 2 demonstrate similar waveform HIHGH state periods, indicating consistent performance across these duty cycle settings.
   - Furthermore, each pulse in both Blend Cut 1 and Blend Cut 2 is similar to a single pulse of a Pure Cut PWM signal.
 
 > [!NOTE]
@@ -111,7 +111,49 @@ The combination of clock frequency and resolution plays a vital role in determin
 
 ##### Coag
 - Spray
+
+> [!NOTE]
+> Coag Spray PWM signal utilize a discrete resolution of 400 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+
+| Duty Cycle | HIGH Time |
+| ----------:| ---------:|
+|         10 |      1 us |
+|         20 |      2 us |
+|         30 |      3 us |
+|         40 |      4 us |
+|         50 |      5 us |
+|         60 |      6 us |
+|         70 |      7 us |
+|         80 |      8 us |
+|         90 |      9 us |
+|        100 |     10 us |
+|        ... |       ... |
+|        200 |     20 us |
+|        300 |     30 us |
+|        400 |     40 us |
+
 - Forced
+
+> [!NOTE]
+> Coag Forced PWM signal utilize a discrete resolution of 500 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+
+| Duty Cycle | HIGH Time |
+| ----------:| ---------:|
+|         10 |      1 us |
+|         20 |      2 us |
+|         30 |      3 us |
+|         40 |      4 us |
+|         50 |      5 us |
+|         60 |      6 us |
+|         70 |      7 us |
+|         80 |      8 us |
+|         90 |      9 us |
+|        100 |     10 us |
+|        ... |       ... |
+|        200 |     20 us |
+|        300 |     30 us |
+|        400 |     40 us |
+|        500 |     50 us |
 - Standard
 ## 4. Power Stage
 ### a. DAC

@@ -1,3 +1,10 @@
+2025-05-05
+- Modulate PWM, 18 pulse per trigger 2 pulse 0% (blend cut 1) [Done]
+- Modulate PWM, 17 pulse per trigger 3 pulse 0% (blend cut 2) [Done]
+- Generate PWM untuk 25kHz resolusi 400 discrete level (coag spray) [Done]
+- Generate PWM untuk 20kHz resolusi 500 discrete level (coag forced) [Done]
+- Menulis dokumentasi PWM Generator [In Progress]
+
 2025-05-02
 - LEDC PWM 400kHz resolusi 6-bit [Done]
 - RMT (Remote Control) module 400kHz resolusi 200 level [Done]
