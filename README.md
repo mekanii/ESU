@@ -154,6 +154,7 @@ The combination of clock frequency and resolution plays a vital role in determin
 |        300 |     30 us |
 |        400 |     40 us |
 |        500 |     50 us |
+
 - Standard
 ## 4. Power Stage
 ### a. DAC
