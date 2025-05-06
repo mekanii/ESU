@@ -6,6 +6,11 @@
 # II. Component
 ## 1. Monopolar Switch Detection (MSD)
 ### a. Schematic
+
+<p align="center">
+  <img src="pic/MSD/MSD-sch.png" alt="msd-sch">
+</p>
+
 ### b. Output Scope
 - Cut
 - Coag
