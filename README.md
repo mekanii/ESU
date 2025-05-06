@@ -37,6 +37,7 @@ Voltage \, per \, Level = \frac{Voltage \, Range}{2^{Resolution}} = \frac{3.3V -
 ```
 <br>
 Below is the formula to calculate the ADC value based on the voltage sense and the Voltage per Level.
+<br>
 
 ```math
 ADC \, Value = \frac{Vsense}{Voltage \, per \, Level}
