@@ -40,12 +40,16 @@ ADC \, Value = \frac{Vsense}{Voltage \, per \, Level}
 <br>
 Using the formula above, we have the following ADC values for different pad resistances:
 
+<div align="center">
+
 | Pad Resistance | Measured Voltage | ADC Value |
 | -------------: | ---------------: | --------: |
 |             5Ω |        10.385 mV |        19 |
 |           200Ω |        558.91 mV |       694 |
 |            1kΩ |        689.31 mV |       855 |
 |         High-Z |        1116.4 mV |      1385 |
+
+</div>
 
 ## 3. Controller
 ### a. PWM Generator
@@ -72,6 +76,8 @@ Resolution = \frac{Clock \, Frequency}{PWM \, Frequency}
 ##### Combination of Clock Frequency and Resolution
 The combination of clock frequency and resolution plays a vital role in determining the performance of PWM signals in microcontroller applications. The clock frequency sets the base rate at which the system operates, while the resolution defines how many discrete levels the duty cycle can be divided into. A higher clock frequency allows for faster switching and more precise timing, while a higher resolution enables finer control over the duty cycle. Together, they influence the accuracy and responsiveness of the PWM output, making it essential to balance these parameters to meet the specific requirements of the application.
 
+<div align="center">
+
 | Mode          | f PWM    | f Clock  | Clock Div | Resolution | 
 | ------------- | -------: | -------: | --------: | ---------: |
 | Pure Cut      |  400 kHz |   80 MHz |         1 |        200 |
@@ -80,6 +86,8 @@ The combination of clock frequency and resolution plays a vital role in determin
 | Coag Spray    |   25 kHz |   10 MHz |         8 |        400 |
 | Coag Forced   |   20 kHz |   10 MHz |         8 |        500 |
 | Coag Standard |  400 kHz |   80 MHz |         1 |        200 |
+
+</div>
 
 #### Output Scope
 ##### Cut
@@ -114,7 +122,7 @@ The combination of clock frequency and resolution plays a vital role in determin
 <br>The image illustrates the output scope for the Spray Coagulation operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Spray Coagulation process, highlighting the key features and behavior of the PWM signal during this operation.
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings. We can observe that the increment of the duty cycle results in a pulse that exhibits a linear increase in HIGH time, further emphasizing the effectiveness of the PWM modulation in maintaining a predictable response across varying duty cycle levels.
 
-<center>
+<div align="center">
 
 | Duty Cycle | HIGH Time |
 | ----------:| ---------:|
@@ -133,7 +141,7 @@ The combination of clock frequency and resolution plays a vital role in determin
 |        300 |     30 us |
 |        400 |     40 us |
 
-</center>
+</div>
 
 > [!NOTE]
 > Spray Coagulation PWM signal utilize a discrete resolution of 400 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
