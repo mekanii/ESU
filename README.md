@@ -14,6 +14,7 @@
 ### b. Output Scope
 #### Transformer
 Below is the output scope at the input and output of toroidal transformer.
+
 <p align="center">
   <img src="pic/REM/REM XF.png" alt="rem-xf">
 </p>
@@ -23,10 +24,13 @@ Below is the output scope at the input and output of toroidal transformer.
 > All measurements for Return Electrode Monitoring do not utilize a physical Return Electrode; instead, a variable resistor is used. Therefore, all references to **pad resistance** in this context describe the variable resistor that simulates the Return Electrode.
 
 Below is the output scope from the sense circuit, where the pad resistance values are 5Ω, 200Ω, 1kΩ, and High Impedance. The voltages measured by the oscilloscope are 10.385 mV, 558.91 mV, 689.31 mV, and 1.1164 V, respectively.
+
 <p align="center">
   <img src="pic/REM/REM-sense.png" alt="rem-sense">
 </p>
+
 The ESP32's ADC provides a versatile and powerful way to read analog signals with a resolution of up to 12 bits and operates with a reference voltage of 0V to 3.3V (the default voltage range). Below is the formula to calculate the voltage per level for the ADC at 12-bit resolution.
+<br><br>
 
 ```math
 Voltage \, per \, Level = \frac{Voltage \, Range}{2^{Resolution}} = \frac{3.3V - 0V}{2^{12}} = \frac{3.3V}{4096} ≈ 0.00080586V ≈ 0.80586 mV
