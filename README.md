@@ -193,3 +193,11 @@ The combination of clock frequency and resolution plays a vital role in determin
 ### c. Transformer Bipolar
 - EE Ferrite Core Transformer
 - EE Ferrite Core Inductor
+
+
+
+<style>
+    table {
+        width: 100%;
+    }
+</style>
