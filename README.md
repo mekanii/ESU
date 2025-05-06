@@ -1,3 +1,9 @@
+<style>
+    table {
+        width: 100%;
+    }
+</style>
+
 # I. General Concept
 <p align="center">
   <img src="pic/ESU-block-diagram.png" alt="esu-block-diagram">
@@ -40,7 +46,7 @@ ADC \, Value = \frac{Vsense}{Voltage \, per \, Level}
 <br>
 Using the formula above, we have the following ADC values for different pad resistances:
 
-<div align="center">
+<div align="center" style="width: 100%">
 
 | Pad Resistance | Measured Voltage | ADC Value |
 | -------------: | ---------------: | --------: |
@@ -194,10 +200,3 @@ The combination of clock frequency and resolution plays a vital role in determin
 - EE Ferrite Core Transformer
 - EE Ferrite Core Inductor
 
-
-
-<style>
-    table {
-        width: 100%;
-    }
-</style>
