@@ -203,10 +203,14 @@ The combination of clock frequency and resolution plays a vital role in determin
 - Standard
 ## 4. Power Stage
 ### a. DAC
-### b. Transformer Monopolar
-- Toroidal Ferrite Core Transformer
-- Air Core Axial Inductor
-### c. Transformer Bipolar
+### b. Transformer
+#### Monopolar
 - EE Ferrite Core Transformer
+#### Bipolar
+- Toroidal Ferrite Core Transformer
+### c. LC Filter
+#### Monopolar
 - EE Ferrite Core Inductor
-
+#### Bipolar
+- Air Core Axial Inductor
+- Rectangullar Air Core Inductor

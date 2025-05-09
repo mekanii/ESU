@@ -1704,7 +1704,7 @@
 			)
 		)
 		(property "Value" "10A10"
-			(at 7.62 3.77 360)
+			(at 7.62 3.77 0)
 			(layer "F.Fab")
 			(uuid "5ae8f2cf-dcc3-4820-8090-86413d79cf5e")
 			(effects
@@ -2005,7 +2005,7 @@
 			(uuid "5595786f-a412-4d41-ac0f-6a1ee3d4e3fe")
 		)
 		(fp_text user "K"
-			(at 0 -2.3 360)
+			(at 0 -2.3 0)
 			(layer "F.Fab")
 			(uuid "0bdaac59-e722-4aa4-a141-dbe17924eff2")
 			(effects
@@ -2016,7 +2016,7 @@
 			)
 		)
 		(fp_text user "${REFERENCE}"
-			(at 8.295 0 360)
+			(at 8.295 0 0)
 			(layer "F.Fab")
 			(uuid "0d2cd1ed-f867-4af0-a9d0-4192a791253f")
 			(effects
@@ -19858,7 +19858,7 @@
 			)
 		)
 		(property "Value" "L"
-			(at 7.62 3.12 360)
+			(at 7.62 3.12 0)
 			(layer "F.Fab")
 			(uuid "613637df-752e-489d-8193-b703dbbf10dc")
 			(effects
@@ -20073,7 +20073,7 @@
 			(uuid "20a17695-00d2-45b0-b367-13e562ff849f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 7.62 0 360)
+			(at 7.62 0 0)
 			(layer "F.Fab")
 			(uuid "b84e4cb8-84e7-4b43-b1e1-fc42042a8bbf")
 			(effects
@@ -21709,7 +21709,7 @@
 			)
 		)
 		(property "Value" "120Ω 2W"
-			(at 10.16 3.62 360)
+			(at 10.16 3.62 0)
 			(layer "F.Fab")
 			(uuid "2d68effd-698f-4857-831f-b223217ea9e5")
 			(effects
@@ -21924,7 +21924,7 @@
 			(uuid "4f5d3acc-924c-4b53-84fa-645b38024b59")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 10.16 0 360)
+			(at 10.16 0 0)
 			(layer "F.Fab")
 			(uuid "2250a44d-65db-4ce4-bef2-0c3575b9ec36")
 			(effects
@@ -22825,183 +22825,6 @@
 		(model "/Users/margabudi/Documents/KiCad/libraries/RELAY THT/User Library-Releu Songle.STEP"
 			(offset
 				(xyz 12 0 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
-	)
-	(footprint "Heatsink:Heatsink_Custom_10x18x50"
-		(layer "F.Cu")
-		(uuid "fe81c805-c9ad-478e-aa2d-196056515104")
-		(at 230.8225 89.2175 -90)
-		(descr "Heatsink, StoneCold HS")
-		(tags "heatsink")
-		(property "Reference" "HS3"
-			(at 0 -8.85 90)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "cea03e99-005a-47ab-ba0c-3c62a1cfdb38")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "Heatsink"
-			(at 0 -2.7 90)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e81fb395-7174-40d5-aaf4-25ce969a006f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Heatsink:Heatsink_Custom_10x18x50"
-			(at 0 -12.7 -90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "1fbcf11c-4dcc-4e0e-b809-31673e301940")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 -12.7 -90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "fb892c47-2c98-424a-9c06-1cf43d97d119")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" "Heatsink"
-			(at 0 -12.7 -90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "757e24de-03f7-4601-aa1b-7cde86803d48")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property ki_fp_filters "Heatsink_*")
-		(path "/1f8bd106-8d4c-4037-a36b-56072cf45c62")
-		(sheetname "Root")
-		(sheetfile "PS-1.0.kicad_sch")
-		(attr through_hole)
-		(fp_line
-			(start -50 0)
-			(end -50 -18)
-			(stroke
-				(width 0.15)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "f8319ab8-5e05-44ea-bedf-0d69426eb90c")
-		)
-		(fp_line
-			(start 50 0)
-			(end -50 0)
-			(stroke
-				(width 0.15)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "54d7d82a-33fe-4594-812e-8e196aefb678")
-		)
-		(fp_line
-			(start 50 0)
-			(end 50 -18)
-			(stroke
-				(width 0.15)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "e5a33b1e-58d8-403e-980d-9c1390b1536e")
-		)
-		(fp_line
-			(start 50 -18)
-			(end -50 -18)
-			(stroke
-				(width 0.15)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "c398c9c1-098d-4ef1-9353-d29f11623f7c")
-		)
-		(fp_line
-			(start -50 0)
-			(end -50 -18)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(layer "F.CrtYd")
-			(uuid "a9e3647a-e893-4d5c-a6e2-c0829db3b527")
-		)
-		(fp_line
-			(start 50 0)
-			(end -50 0)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(layer "F.CrtYd")
-			(uuid "353a1f0f-27c5-4f3c-84c4-b6ba37e68fd0")
-		)
-		(fp_line
-			(start -50 -18)
-			(end 50 -18)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(layer "F.CrtYd")
-			(uuid "f80ed3e1-c2e2-4689-ba9a-e5f76c251c1f")
-		)
-		(fp_line
-			(start 50 -18)
-			(end 50 0)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(layer "F.CrtYd")
-			(uuid "2efe710e-5630-4a40-a323-e0c2771f041c")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -6.35 90)
-			(layer "F.Fab")
-			(uuid "9d26569d-676f-48d2-b545-c07f3bfcbf22")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(model "/Users/margabudi/Documents/ACAD/doc/Heatsink/10x18x50.step"
-			(offset
-				(xyz -50 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
