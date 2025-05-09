@@ -204,17 +204,17 @@ The combination of clock frequency and resolution plays a vital role in determin
 ## 4. Power Stage
 ### a. DAC
 ### b. Transformer
-#### • Monopolar
+#### Monopolar
 ##### Design and Calculation
 EE Ferrite Core Transformer
-#### • Bipolar
+#### Bipolar
 ##### Design and Calculation
 Toroidal Ferrite Core Transformer
 ### c. LC Filter
-#### • Monopolar
+#### Monopolar
 ##### Design and Calculation
 EE Ferrite Core Inductor
-#### • Bipolar
+#### Bipolar
 ##### Design and Calculation
 Air Core Axial Inductor
 ##### Design and Calculation
