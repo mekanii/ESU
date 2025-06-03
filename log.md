@@ -1,4 +1,22 @@
-2025-05-05
+2025-05-21
+- PCBA Power Stage [In Progress]
+- Desain PCB ESU-Controller [In Progress]
+
+2025-05-20
+- PCBA Power Stage [In Progress]
+
+2025-05-16
+- Desain PCB ESU-Controller [In Progress]
+
+2025-05-14
+- Winding koker 7 [Done]
+
+2025-05-09
+- PO PCB [Done]
+- Kalkulasi Rectangular Air Inductor 7 dan 8.8 [Done]
+- Winding koker 8.8 [Done]
+
+2025-05-06
 - Menulis dokumentasi PWM Generator [Done]
 - Rework PCB ESU-PS untuk kapasitor snap-in besar [Done]
 - PO PCB [In Progress]
