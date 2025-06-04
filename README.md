@@ -203,6 +203,18 @@ The combination of clock frequency and resolution plays a vital role in determin
 - Standard
 ## 4. Power Stage
 ### a. DAC
+#### Cut
+<br>The image illustrates the output scope for the Pure Cut operation at the MOSFET Driver (blue) and MOSFET Drain Pin (yellow). It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the DAC signal during this operation.
+<br>For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings.
+
+> [!NOTE]
+> Pure Cut PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+
+<p align="center">
+  <img src="pic/PWM/Wave-pure-cut-driver-mosfet.png" alt="Wave-pure-cut-driver-mosfet">
+</p>
+
+#### Coag
 ### b. Transformer
 #### Monopolar
 ##### Design and Calculation

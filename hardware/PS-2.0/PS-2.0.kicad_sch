@@ -9482,7 +9482,7 @@
 				)
 			)
 		)
-		(property "Value" "120Ω 2W"
+		(property "Value" "10kΩ 3W"
 			(at 165.354 184.15 90)
 			(effects
 				(font
