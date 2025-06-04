@@ -209,7 +209,7 @@ The image illustrates the output scope for the Pure Cut operation at:
 - MOSFET Drain Pin (yellow).
 
 It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the DAC signal during this operation.
-<br>For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings.
+<br>For duty cycle levels ranging from 20 to 200, demonstrates similar Waveform frequency, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
 > Pure Cut PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
