@@ -204,7 +204,7 @@ The combination of clock frequency and resolution plays a vital role in determin
 ## 4. Power Stage
 ### a. DAC
 #### Cut
-<br>The image illustrates the output scope for the Pure Cut operation at:
+The image illustrates the output scope for the Pure Cut operation at:
 - MOSFET Driver Output (blue)
 - MOSFET Drain Pin (yellow).
 
