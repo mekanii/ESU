@@ -204,7 +204,11 @@ The combination of clock frequency and resolution plays a vital role in determin
 ## 4. Power Stage
 ### a. DAC
 #### Cut
-<br>The image illustrates the output scope for the Pure Cut operation at the MOSFET Driver (blue) and MOSFET Drain Pin (yellow). It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the DAC signal during this operation.
+<br>The image illustrates the output scope for the Pure Cut operation at:
+
+- MOSFET Driver Output (blue)
+- MOSFET Drain Pin (yellow).
+It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the DAC signal during this operation.
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
