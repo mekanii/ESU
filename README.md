@@ -220,7 +220,7 @@ We use three IRFPE50 MOSFETs in parallel to enhance the overall performance and 
 ##### Cut
 The image illustrates the output scope for the Pure Cut operation at:
 - MOSFET Driver Output (blue)
-- MOSFET Drain Pin (yellow).
+- MOSFET Drain Pin (yellow)
 
 It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the DAC signal during this operation.
 <br>For duty cycle levels ranging from 20 to 180, demonstrates similar Waveform frequency, indicating consistent performance across these duty cycle settings.
