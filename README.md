@@ -204,6 +204,11 @@ The combination of clock frequency and resolution plays a vital role in determin
 ## 4. Power Stage
 ### a. DAC
 #### Schematic
+
+<p align="center">
+  <img src="pic/PS/PS2.0.png" alt="PS2.0">
+</p>
+
 ##### MOSFET Driver
 We use the TC4420 as our MOSFET driver due to its high-speed performance and ability to efficiently drive N-channel MOSFETs in various applications. The TC4420 provides a peak output current of up to 6A, allowing for rapid charging and discharging of the MOSFET gate capacitance. This capability minimizes switching losses and enhances overall efficiency in power management.
 
