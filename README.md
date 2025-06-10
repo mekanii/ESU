@@ -221,6 +221,7 @@ We use three IRFPE50 MOSFETs in parallel to enhance the overall performance and 
 The image illustrates the output scope for the Pure Cut operation at:
 - MOSFET Driver Output (blue)
 - MOSFET Drain Pin (yellow)
+- VDS=12V
 
 It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the DAC signal during this operation.
 <br>For duty cycle levels ranging from 20 to 180, demonstrates similar Waveform frequency, indicating consistent performance across these duty cycle settings.
@@ -240,6 +241,17 @@ EE Ferrite Core Transformer
 #### Bipolar
 ##### Design and Calculation
 Toroidal Ferrite Core Transformer
+##### Output Scope
+The image illustrates the output scope for per pulse operation at input transformer with VDS=12V and PWM frequency 400kHz
+<br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
+
+> [!NOTE]
+> 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+
+<p align="center">
+  <img src="pic/PWM/XF/Bipolar/12V/bipolar-xformer-output-400.png" alt="bipolar-xformer-output-400">
+</p>
+
 ### c. LC Filter
 #### Monopolar
 ##### Design and Calculation
