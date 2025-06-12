@@ -1,3 +1,33 @@
+2025-06-12
+- Coil winding air core transformer primary EE25 dengan kawat 0.5 [In Progress]
+- Coil winding air core transformer primary 12.7 x 16.8 x 16.8 dengan kawat 0.5 [In Progress]
+
+2025-06-11
+- Uji ferrite core transformer EE25 [Done]
+- Uji air core transformer primary EE25 untuk output monopolar [In Progress]
+- Coil winding air core transformer secondary EE25 dengan kawat 0.8 [In Progress]
+- Coil winding air core transformer primary 12.7 x 16.8 x 16.8 dengan kawat 0.8 [In Progress]
+- Troubleshooting the drain-source protection failure [Need Review]
+
+2025-06-10
+Uji toroidal ferrite core transformer primer untuk output bipolar [In Progress]
+
+2025-06-05
+- Integrasi Controller dengan ESU-PS [In Progress]
+- Capture sinyal osilasi MOSFET dengan VDS 36V [In Progress]
+
+2025-06-04
+- Integrasi Controller dengan ESU-PS [In Progress]
+- Capture sinyal osilasi MOSFET dengan VDS 12V [In Progress]
+
+2025-06-03
+- Integrasi Controller dengan ESU-PS [In Progress]
+- Uji MOSFET driver [Done]
+
+2025-06-02
+- Uji proteksi tegangan input PCB ESU-PS [Done]
+- Troubleshooting the floating ground failure [Done]
+
 2025-05-21
 - PCBA Power Stage [In Progress]
 - Desain PCB ESU-Controller [In Progress]

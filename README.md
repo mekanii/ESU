@@ -242,7 +242,7 @@ It provides a detailed view of the waveform characteristics and performance metr
 ### b. Transformer
 #### Monopolar
 ##### Design and Calculation
-EE Ferrite Core Transformer
+Air Core Transformer using EE25 Vertical Transformer Bobbin
 #### Bipolar
 ##### Design and Calculation
 Toroidal Ferrite Core Transformer
