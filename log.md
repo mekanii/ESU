@@ -1,3 +1,17 @@
+2025-06-17
+- Winding coil ferrite core EE25 dengan kawat 1 untuk LC filter monopolar [Done]
+- Uji coil ferrite core EE25 dengan kawat 1 untuk LC filter monopolar [Need Review]
+
+2025-06-16
+- Winding air core transformer EE35 dengan kawat 1 Bipolar dan Monopolar [Done]
+- Uji air core transformer EE35 dengan kawat 1 Bipolar dan Monopolar [Done]
+- Integrasi air core transformer EE35 Bipolar dengan LC Filter bawaan [Done]
+
+
+2025-06-13
+- Uji air core transformer primary EE25 dengan kawat 0.5 [Need Review]
+- Uji air core transformer primary 12.7 x 16.8 x 16.8 dengan kawat 0.5 [Need Review]
+
 2025-06-12
 - Coil winding air core transformer primary EE25 dengan kawat 0.5 [In Progress]
 - Coil winding air core transformer primary 12.7 x 16.8 x 16.8 dengan kawat 0.5 [In Progress]

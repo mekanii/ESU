@@ -7310,6 +7310,28 @@
 		)
 		(uuid "fec0cd85-228d-445a-b804-e2b5329f1fc7")
 	)
+	(rectangle
+		(start 163.83 113.03)
+		(end 186.69 142.24)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 64d02149-51c3-4406-a6ad-450e0bed280a)
+	)
+	(text "CHECK"
+		(exclude_from_sim no)
+		(at 175.26 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "269b316b-35bb-4a49-9a92-5cd92e0a78e3")
+	)
 	(label "RLY-A"
 		(at 34.29 53.34 0)
 		(fields_autoplaced yes)
@@ -11440,10 +11462,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "3068d702-3555-4179-b01a-4f9217bee7c8")
+			(uuid "3068d702-3555-4179-b01a-4f9217bee7c9")
 		)
 		(pin "1"
-			(uuid "e9e11bc9-d940-4768-a43d-7f3e78a175bd")
+			(uuid "e9e11bc9-d940-4768-a43d-7f3e78a175be")
 		)
 		(instances
 			(project ""

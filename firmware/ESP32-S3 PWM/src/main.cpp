@@ -46,6 +46,25 @@
 const gpio_num_t PWM_0 = (gpio_num_t)1;
 const gpio_num_t PWM_1 = (gpio_num_t)2;
 
+// Button pin definitions
+const int BUTTON_MODE_0 = 3;    // Button for mode 0 (Cut mode basic)
+const int BUTTON_MODE_1 = 4;    // Button for mode 1 (Cut mode pattern 1)
+const int BUTTON_MODE_2 = 5;    // Button for mode 2 (Cut mode pattern 2)
+const int BUTTON_MODE_3 = 6;    // Button for mode 3 (Spray mode)
+const int BUTTON_MODE_4 = 7;    // Button for mode 4 (Forced mode)
+const int BUTTON_DUTY_UP = 8;   // Button to increase duty cycle
+const int BUTTON_DUTY_DOWN = 9; // Button to decrease duty cycle
+
+// Button state variables
+bool lastButtonState[7] = {HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, HIGH};
+bool currentButtonState[7] = {HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, HIGH};
+unsigned long lastDebounceTime[7] = {0, 0, 0, 0, 0, 0, 0};
+const unsigned long debounceDelay = 50; // 50ms debounce delay
+
+// Current mode and duty cycle
+int currentMode = 0;
+int currentDutyCycle = 50;
+
 int totalPeriodCut = 200;
 int totalPeriodSpray = 400;
 int totalPeriodForced = 500;
@@ -122,6 +141,96 @@ void update(int mode, int dutyCycle) {
   rmt_write_items(channel, items, item_num, true);
 }
 
+void setupButtons() {
+  // Configure button pins as input with internal pull-up resistors
+  pinMode(BUTTON_MODE_0, INPUT_PULLUP);
+  pinMode(BUTTON_MODE_1, INPUT_PULLUP);
+  pinMode(BUTTON_MODE_2, INPUT_PULLUP);
+  pinMode(BUTTON_MODE_3, INPUT_PULLUP);
+  pinMode(BUTTON_MODE_4, INPUT_PULLUP);
+  pinMode(BUTTON_DUTY_UP, INPUT_PULLUP);
+  pinMode(BUTTON_DUTY_DOWN, INPUT_PULLUP);
+}
+
+bool readButtonWithDebounce(int buttonIndex, int buttonPin) {
+  bool reading = digitalRead(buttonPin);
+
+  // If the switch changed, due to noise or pressing:
+  if (reading != lastButtonState[buttonIndex]) {
+    // reset the debouncing timer
+    lastDebounceTime[buttonIndex] = millis();
+  }
+
+  if ((millis() - lastDebounceTime[buttonIndex]) > debounceDelay) {
+    // whatever the reading is at, it's been there for longer than the debounce
+    // delay, so take it as the actual current state:
+
+    // if the button state has changed:
+    if (reading != currentButtonState[buttonIndex]) {
+      currentButtonState[buttonIndex] = reading;
+
+      // only trigger on button press (HIGH to LOW transition)
+      if (currentButtonState[buttonIndex] == LOW) {
+        lastButtonState[buttonIndex] = reading;
+        return true;
+      }
+    }
+  }
+
+  lastButtonState[buttonIndex] = reading;
+  return false;
+}
+
+void readButtons() {
+  // Check mode buttons
+  if (readButtonWithDebounce(0, BUTTON_MODE_0)) {
+    currentMode = 0;
+    Serial.println("Mode 0 selected (Cut basic)");
+    update(currentMode, currentDutyCycle);
+  }
+
+  if (readButtonWithDebounce(1, BUTTON_MODE_1)) {
+    currentMode = 1;
+    Serial.println("Mode 1 selected (Cut pattern 1)");
+    update(currentMode, currentDutyCycle);
+  }
+
+  if (readButtonWithDebounce(2, BUTTON_MODE_2)) {
+    currentMode = 2;
+    Serial.println("Mode 2 selected (Cut pattern 2)");
+    update(currentMode, currentDutyCycle);
+  }
+
+  if (readButtonWithDebounce(3, BUTTON_MODE_3)) {
+    currentMode = 3;
+    Serial.println("Mode 3 selected (Spray)");
+    update(currentMode, currentDutyCycle);
+  }
+
+  if (readButtonWithDebounce(4, BUTTON_MODE_4)) {
+    currentMode = 4;
+    Serial.println("Mode 4 selected (Forced)");
+    update(currentMode, currentDutyCycle);
+  }
+
+  // Check duty cycle adjustment buttons
+  if (readButtonWithDebounce(5, BUTTON_DUTY_UP)) {
+    currentDutyCycle += 10;
+    if (currentDutyCycle > 500) currentDutyCycle = 500; // Limit max duty cycle
+    Serial.print("Duty cycle increased to: ");
+    Serial.println(currentDutyCycle);
+    update(currentMode, currentDutyCycle);
+  }
+
+  if (readButtonWithDebounce(6, BUTTON_DUTY_DOWN)) {
+    currentDutyCycle -= 10;
+    if (currentDutyCycle < 0) currentDutyCycle = 0; // Limit min duty cycle
+    Serial.print("Duty cycle decreased to: ");
+    Serial.println(currentDutyCycle);
+    update(currentMode, currentDutyCycle);
+  }
+}
+
 void setup() {
   Serial.begin(115200);
 
@@ -148,7 +257,21 @@ void setup() {
   rmt_tx_1.tx_config.loop_en = 0;
   rmt_config(&rmt_tx_1);
   rmt_driver_install(RMT_TX_CHANNEL_1, 0, 0);
-  
+
+  // Setup buttons
+  setupButtons();
+
+  Serial.println("ESP32-S3 PWM Controller Ready");
+  Serial.println("Button Controls:");
+  Serial.println("- Pin 3: Mode 0 (Cut basic)");
+  Serial.println("- Pin 4: Mode 1 (Cut pattern 1)");
+  Serial.println("- Pin 5: Mode 2 (Cut pattern 2)");
+  Serial.println("- Pin 6: Mode 3 (Spray)");
+  Serial.println("- Pin 7: Mode 4 (Forced)");
+  Serial.println("- Pin 8: Duty cycle UP");
+  Serial.println("- Pin 9: Duty cycle DOWN");
+  Serial.println("Serial format: 'mode dutyCycle' (e.g., '0 100')");
+
   // update();
 }
 
@@ -171,5 +294,6 @@ void readSerialData() {
 }
 
 void loop() {
-  readSerialData();
+  readSerialData();  // Keep serial input functionality
+  readButtons();     // Add button input functionality
 }
