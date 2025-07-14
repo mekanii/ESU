@@ -264,7 +264,7 @@ EE Ferrite Core Inductor
 #### Bipolar
 ##### Design and Calculation
 ```math
-L = RL • \sqrt{2}
+L = \frac{ RL • \sqrt{2} }{ ⍵0 }
 ```
 
 Air Core Axial Inductor
