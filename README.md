@@ -264,10 +264,7 @@ EE Ferrite Core Inductor
 #### Bipolar
 ##### Design and Calculation
 ```math
-L = \frac{ R_L • \sqrt{2} }{ ⍵_0 }
-where
-R_L = \frac{ R_B_T_L }{ 2 },  R_B_T_L = 100Ω,
-⍵_0 = 2 • π • f_0, f_0 = 400kHz
+L = \frac{ R_L • \sqrt{2} }{ ⍵_0 } \text{ where } R_L = \frac{ R_B_T_L }{ 2 }, R_B_T_L = 100Ω, ⍵_0 = 2 • π • f_0, f_0 = 400kHz
 ```
 
 Air Core Axial Inductor
