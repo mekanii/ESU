@@ -263,6 +263,14 @@ The image illustrates the output scope for per pulse operation at input transfor
 EE Ferrite Core Inductor
 #### Bipolar
 ##### Design and Calculation
+```math
+L = RL • \sqrt{2}
+```
+
 Air Core Axial Inductor
+| N1  | N2  |
+|----:|----:|
+|  36 | 144 |
+|  36 | 144 |
 ##### Design and Calculation
 Rectangullar Air Core Inductor

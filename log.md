@@ -1,10 +1,62 @@
+2025-07-14
+- Coil winding untuk LC filter (multilayer air core inductor 29µH)
+
+2025-07-10
+- Kalkulasi LC Filter untuk resonansi 400kHz Q 0.707 (L=29µH, C=2.7nF, -3.32dB @ ƒ=402.387kHz cut-off)
+
+2025-07-09
+- Literature Review untuk LC filter vs Frequency Response
+
+2025-07-08
+- Literature Review untuk LC filter Type-1 Butterworth
+
+2025-07-04
+- Buat komparasi transformer bawaan (Bipolar dan Monopolar) dengan transformer buatan [Done]
+- Buat komparasi induktor bawaan bipolar dengan induktor buatan [In Progress]
+
+2025-07-03
+- Fix PWM loop enamble timing issue [Done]
+
+2025-07-02
+- Winding ferrite core ETD35 transformer bipolar [In Review]
+- Uji ferrite core ETD35 transformer bipolar [In Review]
+
+2025-07-01
+- Winding ferrite core ETD35 transformer bipolar [In Progress]
+- Uji ferrite core ETD35 transformer bipolar [In Progress]
+
+2025-07-30
+- Winding ferrite core ETD35 transformer bipolar [In Progress]
+- Uji ferrite core ETD35 transformer bipolar [In Progress]
+
+
+
+
+
+
+
+
+
+
+
+
+
+2025-06-19
+- Uji coil air core EE25 dengan kawat 1 untuk LC filter bipolar menggunakan tegangan 72V [Need Review]
+- Uji transformer dan coil monopolar ke resistor dummy 500R [Need Review]
+- Uji transformer dan coil bipolar ke resistor dummy 500R [Need Review]
+
+2025-06-18
+- Uji air core transformer EE35 dengan kawat 1 Bipolar dan Monopolar menggunakan tegangan 72V [Done]
+- Uji coil ferrite core EE25 dengan kawat 1 untuk LC filter monopolar menggunakan tegangan 72V [Need Review]
+
 2025-06-17
 - Winding coil ferrite core EE25 dengan kawat 1 untuk LC filter monopolar [Done]
-- Uji coil ferrite core EE25 dengan kawat 1 untuk LC filter monopolar [Need Review]
+- Uji coil ferrite core EE25 dengan kawat 1 untuk LC filter monopolar menggunakan tegangan 36V [Need Review]
 
 2025-06-16
 - Winding air core transformer EE35 dengan kawat 1 Bipolar dan Monopolar [Done]
-- Uji air core transformer EE35 dengan kawat 1 Bipolar dan Monopolar [Done]
+- Uji air core transformer EE35 dengan kawat 1 Bipolar dan Monopolar menggunakan tegangan 36V [Done]
 - Integrasi air core transformer EE35 Bipolar dengan LC Filter bawaan [Done]
 
 
