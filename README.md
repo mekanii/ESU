@@ -267,34 +267,28 @@ EE Ferrite Core Inductor
   <img src="pic/Type-1 Butterworth Filter.png" alt="Type-1 Butterworth Filter">
 </p>
 
-$f_0 = \frac{ ⍵_0 }{ 2 • π } = \frac{ 1 }{ 2 • π • \sqrt{ L • C } }$
+$f_0 = \frac{ ⍵_0 }{ 2 • π } = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • C_L } }$
 
-$Q = R_L • \sqrt{ \frac{ C }{ L } } $
+$Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } $
 
 To design a filter that is critically damped with a Butterworth response, Q = 0.707 = 1/√2. By substituting Q = 1/√2 into equations for Cut-off Frequency and Quality Factor previously listed, L and C values can be derived for a critically damped system assuming the desired cut-off frequency, ωo, is known.
 
 From<br><br>
-$Q = R_L • \sqrt{ \frac{ C }{ L } } = \frac{ 1 }{ \sqrt{ 2 } } $
+$Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ 1 }{ \sqrt{ 2 } } $
 
 Rearanging<br><br>
-$\sqrt{ \frac{ C }{ L } } = \frac{ 1 }{ R_L • \sqrt{ 2 } } → \frac{ C }{ L } = \frac{ 1 }{ R_L^2 • 2 }$
+$\sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ 1 }{ R_L • \sqrt{ 2 } } → \frac{ C_L }{ L_{BTL} } = \frac{ 1 }{ R_L^2 • 2 }$
 
-$C = \frac{ L }{ R_L^2 • 2 }$
+$C_L = \frac{ L_{BTL} }{ R_L^2 • 2 }$
 
-$C = \frac { L }{ R_L^2 • 2 }$
+Subtituting into equation for Cut-off Frequency.<br><br>
+$f_0 = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • \frac{ L_{BTL} }{ R_L^2 • 2 } } }$
 
-Subtituting into equation for Cut-off Frequency<br><br>
-$f_0 = \frac{ 1 }{ 2 • π • \sqrt{ L • \frac{ L }{ R_L^2 • 2 } } }$
+$f_0 = \frac{ 1 }{ 2 • π • \sqrt{ \frac{ L_{BTL}^2 }{ R_L^2 • 2 } } }$
 
-$f_0 = \frac{ 1 }{ 2 • π • \sqrt{ \frac{ L^2 }{ R_L^2 • 2 } } }$
+$f_0 = \frac{ 1 }{ 2 • π • \frac{ L_{BTL} }{ R_L • \sqrt{ 2 } } }$
 
-$f_0 = \frac{ 1 }{ 2 • π • \frac{ L }{ R_L • \sqrt{ 2 } } }$
-
-$f_0 = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • L }$
-
-$f_0 = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • L }$
-
-
+$f_0 = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • L_{BTL} }$
 
 $L_{BTL} = \frac{ R_L • \sqrt{ 2 } }{ ⍵_0 }$
 
