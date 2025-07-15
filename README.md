@@ -259,13 +259,13 @@ $OD = 40.4 \text{ mm}$
 
 $H = 15.1 \text{ mm}$
 
-$A_e = \frac{( OD – ID ) × H }{ 2 } = \frac{( 40.4 – 23.3 ) × 15.1 }{ 2 }$
+$A_e = \frac{( OD – ID ) • H }{ 2 }$
 
-$A_e = 129.1 \text{ mm}^2$
+$A_e  = \frac{( 40.4 – 23.3 ) • 15.1 }{ 2 } = 129.1 \text{ mm}^2$
 
 $B_{max} = 350 \text{ Gauss}$
 
-$N_p = \frac{ V_in × D × 10^{10} }{ 2 × ƒ × B_{max} × A_e }$
+$N_p = \frac{ V_in • D • 10^{10} }{ 2 • f • B_{max} • A_e }$
 
 ##### Output Scope
 The image illustrates the output scope for per pulse operation at input transformer with VDS=12V and PWM frequency 400kHz
