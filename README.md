@@ -269,6 +269,10 @@ $N_p = \frac{ 72 • 0.5 • 10^{10} }{ 2 • 400,000 • 350 • 129.1 } = \fra
 
 $N_p = 9.96 ≈ 10 \text{ turns}$
 
+$Volt per turn = \frac{ V_{in} }{ N_p } = \frac{ 72 }{ 10 } = 7.2 \text{ V/turn}$
+
+$Volt per turn = \frac{ 72 }{ 10 } = 7.2 \text{ V/turn}$
+
 ##### Output Scope
 The image illustrates the output scope for per pulse operation at input transformer with VDS=12V and PWM frequency 400kHz
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
