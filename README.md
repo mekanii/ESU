@@ -268,6 +268,7 @@ $L_{BTL} = \frac{ R_L • \sqrt{ 2 } }{ ⍵_0 }$
 $C_L = \frac{ 1 }{ ⍵_0 • R_L • \sqrt{ 2 } }$
 
 where
+- $C_{BTL} = \frac{ C_L }{ 2 }$
 - $R_L = \frac{ R_{BTL} }{ 2 }$
 - $⍵_0 = 2 • π • f_0$
 - $R_{BTL} = 100Ω$
@@ -279,17 +280,9 @@ $L_{BTL} = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 } = \
 $L_{BTL} = 28.1492 \text{ µH} ≈ 29 \text{ µH}$
 
 
-$C_L = \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } } = \frac{ 1 }{ 2 • 3.14 • 400,000 • \frac{ 100 }{ 2 } • \sqrt{ 2 } } = \frac{ 1 }{ 2,512,000 • 70.7106 } = 0.000000000562983 \text{ F}$
+$C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2 • 3.14 • 400,000 • \frac{ 100 }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2,512,000 • 70.7106 } }{ 2 } = 0.000000000281492 \text{ F}$
 
-$C_L = 5.62983 \text{ nF}$
-
-where<br><br>
-$C_{BTL} = \frac { C_L }{ 2 }$
-
-then<br><br>
-$C_{BTL} = \frac{ 5.62983 }{ 2 }$
-
-$C_{BTL} = 2.814915 \text{ nF} ≈ 2.7 \text{ nF}$
+$C_{BTL} = 2.81492 \text{ nF} ≈ 2.7 \text{ nF}$
 
 Air Core Axial Inductor
 | N1  | N2  |
