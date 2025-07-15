@@ -277,7 +277,7 @@ From<br><br>
 $Q = R_L • \sqrt{ \frac{ C }{ L } } = \frac{ 1 }{ \sqrt{ 2 } } $
 
 Rearanging<br><br>
-$\sqrt{ \frac{ C }{ L } } = \frac{ 1 }{ R_L • \sqrt{ 2 } }$
+$\sqrt{ \frac{ C }{ L } } = \frac{ 1 }{ R_L • \sqrt{ 2 } } → \frac{ C }{ L } = \frac{ 1 }{ R_L^2 • 2 }$
 
 $C = \frac{ L }{ R_L^2 • 2 }$
 
