@@ -269,7 +269,7 @@ $N_p = \frac{ 72 • 0.5 • 10^{10} }{ 2 • 400,000 • 350 • 129.1 } = \fra
 
 $N_p = 9.96 ≈ 10 \text{ turns}$
 
-$Volt per turn = \frac{ V_{in} }{ N_p } = \frac{ 72 }{ 10 } = 7.2 \text{ V/turn}$
+$Volt \ per \ turn = \frac{ V_{in} }{ N_p }$
 
 $Volt per turn = \frac{ 72 }{ 10 } = 7.2 \text{ V/turn}$
 
