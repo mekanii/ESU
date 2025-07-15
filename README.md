@@ -267,8 +267,10 @@ EE Ferrite Core Inductor
   <img src="pic/Type-1 Butterworth Filter.png" alt="Type-1 Butterworth Filter">
 </p>
 
+Cut-off Frequency for single-ended LC Filter<br><br>
 $f_0 = \frac{ ⍵_0 }{ 2 • π } = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • C_L } }$
 
+Quality Factor<br><br>
 $Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } $
 
 To design a filter that is critically damped with a Butterworth response, Q = 0.707 = 1/√2. By substituting Q = 1/√2 into equations for Cut-off Frequency and Quality Factor previously listed, L and C values can be derived for a critically damped system assuming the desired cut-off frequency, ωo, is known.
@@ -290,16 +292,18 @@ $f_0 = \frac{ 1 }{ 2 • π • \frac{ L_{BTL} }{ R_L • \sqrt{ 2 } } }$
 
 $f_0 = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • L_{BTL} }$
 
-$L_{BTL} = \frac{ R_L • \sqrt{ 2 } }{ ⍵_0 }$
+Solving for L and C<br><br>
+$L_{BTL} = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • f_0 }$
 
-$C_L = \frac{ 1 }{ ⍵_0 • R_L • \sqrt{ 2 } }$
+$C_L = \frac{ 1 }{ 2 • π • f_0 • R_L • \sqrt{ 2 } }$
+
+Calculate for
+- $R_{BTL} = 100Ω$
+- $f_0 = 400kHz = 400,000$
 
 where
 - $C_{BTL} = \frac{ C_L }{ 2 }$
 - $R_L = \frac{ R_{BTL} }{ 2 }$
-- $⍵_0 = 2 • π • f_0$
-- $R_{BTL} = 100Ω$
-- $f_0 = 400kHz = 400,000$
 
 then<br><br>
 $L_{BTL} = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 } = \frac{ \frac{ 100 }{ 2 } • \sqrt{ 2 } }{ 2 • 3.14 • 400,000 } = \frac{ 70.7106 }{ 2,512,000 } = 0.000028149155 \text{ H}$
