@@ -265,6 +265,10 @@ $B_{max} = 350 \text{ Gauss}$
 
 $N_p = \frac{ V_{in} • D • 10^{10} }{ 2 • f • B_{max} • A_e }$
 
+$N_p = \frac{ 72 • 0.5 • 10^{10} }{ 2 • 400,000 • 350 • 129.1 } = \frac{ 360,000,000,000 }{ 36149400000 }$
+
+$N_p = 9.96 ≈ 10 \text{ turns}$
+
 ##### Output Scope
 The image illustrates the output scope for per pulse operation at input transformer with VDS=12V and PWM frequency 400kHz
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
