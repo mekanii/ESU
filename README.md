@@ -268,9 +268,15 @@ $L = \frac{ R_L • \sqrt{ 2 } }{ ⍵_0 }$
 where
 - $R_L = \frac{ R_{BTL} }{ 2 }$
 - $⍵_0 = 2 • π • f_0$
+- $R_{BTL} = 100Ω$
+- $f_0 = 400kHz = 400,000$
 
-then
+then<br>
 $L = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 }$
+$L = \frac{ \frac{ 100 }{ 2 } • \sqrt{ 2 } }{ 2 • 3.14 • 400,000 }$
+$L = \frac{ 70.7106 }{ 2,512,000 }$
+$L = 0.000028149155 \text{H}$
+$L = 28.1492 \text{µH}$
 
 Air Core Axial Inductor
 | N1  | N2  |
