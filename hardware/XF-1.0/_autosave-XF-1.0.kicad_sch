@@ -141,7 +141,7 @@
 				)
 			)
 		)
-		(symbol "Device:L_Ferrite"
+		(symbol "Device:L"
 			(pin_numbers hide)
 			(pin_names
 				(offset 1.016) hide)
@@ -156,8 +156,8 @@
 					)
 				)
 			)
-			(property "Value" "L_Ferrite"
-				(at 2.794 0 90)
+			(property "Value" "L"
+				(at 1.905 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -182,7 +182,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Inductor with ferrite core"
+			(property "Description" "Inductor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -209,7 +209,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "L_Ferrite_0_1"
+			(symbol "L_0_1"
 				(arc
 					(start 0 -2.54)
 					(mid 0.6323 -1.905)
@@ -226,150 +226,6 @@
 					(start 0 -1.27)
 					(mid 0.6323 -0.635)
 					(end 0 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 -2.794) (xy 1.016 -2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 -1.778) (xy 1.016 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 -0.762) (xy 1.016 -0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0.254) (xy 1.016 0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 1.27) (xy 1.016 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 2.286) (xy 1.016 2.794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 -2.286) (xy 1.524 -2.794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 -1.27) (xy 1.524 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 -0.254) (xy 1.524 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 0.762) (xy 1.524 0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 1.778) (xy 1.524 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 2.794) (xy 1.524 2.286)
-					)
 					(stroke
 						(width 0)
 						(type default)
@@ -403,7 +259,7 @@
 					)
 				)
 			)
-			(symbol "L_Ferrite_1_1"
+			(symbol "L_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -964,7 +820,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 59.69) (xy 149.86 62.23)
+			(xy 149.86 59.69) (xy 149.86 69.85)
 		)
 		(stroke
 			(width 0)
@@ -1011,6 +867,16 @@
 			(type default)
 		)
 		(uuid "1f0acb3f-d503-43ac-b167-db2c0fa29c62")
+	)
+	(wire
+		(pts
+			(xy 149.86 77.47) (xy 149.86 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5952ac6b-d6f6-4653-b9f7-c5464cbd95f3")
 	)
 	(wire
 		(pts
@@ -1071,16 +937,6 @@
 			(type default)
 		)
 		(uuid "96503e35-f1cf-498c-a7d1-cca8970c9190")
-	)
-	(wire
-		(pts
-			(xy 149.86 85.09) (xy 149.86 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9b1e6603-7752-4ddd-9023-01fd2aea2f30")
 	)
 	(wire
 		(pts
@@ -1172,12 +1028,13 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0ad1e1ce-5246-407f-86ef-0d0efe259b0f")
-		(property "Reference" "C3"
+		(property "Reference" "C2"
 			(at 156.21 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Value" "4.7nF"
@@ -1226,7 +1083,7 @@
 		(instances
 			(project "XF-1.0"
 				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
-					(reference "C3")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -1308,170 +1165,29 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 149.86 66.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "13424476-aaa8-4253-b4db-cbbd4c90e92d")
-		(property "Reference" "C1-1"
-			(at 152.4 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1nF"
-			(at 153.67 67.3099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L13.0mm_W8.0mm_P10.00mm_FKS3_FKP3_MKS4"
-			(at 150.8252 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 149.86 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 149.86 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9996e48d-59ae-4c2c-8958-7ce60c8f7261")
-		)
-		(pin "1"
-			(uuid "29851e58-b13e-44b8-94c0-6cdfe014a132")
-		)
-		(instances
-			(project "XF-1.0"
-				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
-					(reference "C1-1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 149.86 81.28 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "463e14f8-69d8-432e-bf6a-4c931c2593fb")
-		(property "Reference" "C1-3"
-			(at 152.4 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1nF"
-			(at 153.67 82.5499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L13.0mm_W8.0mm_P10.00mm_FKS3_FKP3_MKS4"
-			(at 150.8252 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 149.86 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 149.86 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "5004f993-dce0-4976-83ca-610a9baf3493")
-		)
-		(pin "1"
-			(uuid "fda5f548-6eeb-4cd0-8c17-5449f9c40c65")
-		)
-		(instances
-			(project "XF-1.0"
-				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
-					(reference "C1-3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
 		(at 149.86 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8152f0c7-83b5-498c-8e6d-965e1f1494ef")
-		(property "Reference" "C1-2"
+		(uuid "13424476-aaa8-4253-b4db-cbbd4c90e92d")
+		(property "Reference" "C3"
 			(at 152.4 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "1nF"
-			(at 153.67 74.9299 0)
+		(property "Value" "CBTL"
+			(at 143.51 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Rect_L13.0mm_W8.0mm_P10.00mm_FKS3_FKP3_MKS4"
@@ -1502,22 +1218,90 @@
 			)
 		)
 		(pin "2"
-			(uuid "cb47190e-4e2c-48a8-8bd8-72f3880e6649")
+			(uuid "9996e48d-59ae-4c2c-8958-7ce60c8f7261")
 		)
 		(pin "1"
-			(uuid "8b8265c0-8d9f-4ea9-9961-63463a7b13e7")
+			(uuid "29851e58-b13e-44b8-94c0-6cdfe014a132")
 		)
 		(instances
-			(project ""
+			(project "XF-1.0"
 				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
-					(reference "C1-2")
+					(reference "C3")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:L_Ferrite")
+		(lib_id "Device:L")
+		(at 143.51 59.69 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "24e47e5c-fe06-4a0c-8532-ea645f5c94b3")
+		(property "Reference" "L1"
+			(at 143.51 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "LBTL"
+			(at 143.51 62.484 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 143.51 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 143.51 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 143.51 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e1d5f442-1b69-43ff-9ca0-04e79a408d21")
+		)
+		(pin "1"
+			(uuid "c9c0337e-9868-4f99-b76f-6511241ff49c")
+		)
+		(instances
+			(project ""
+				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L")
 		(at 143.51 87.63 90)
 		(mirror x)
 		(unit 1)
@@ -1525,16 +1309,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "84ae79cb-cff3-4687-a616-bb640969d101")
+		(uuid "2e39428c-0062-4a40-8f42-d7bd8a68588b")
 		(property "Reference" "L2"
-			(at 143.51 91.44 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "~"
 			(at 143.51 91.44 90)
 			(effects
 				(font
@@ -1543,7 +1319,15 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Transformer_THT:Inductor-EE25"
+		(property "Value" "LBTL"
+			(at 143.51 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
 			(at 143.51 87.63 0)
 			(effects
 				(font
@@ -1561,7 +1345,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Inductor with ferrite core"
+		(property "Description" "Inductor"
 			(at 143.51 87.63 0)
 			(effects
 				(font
@@ -1571,10 +1355,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "f9d71655-8879-421f-8787-0ed588cf0445")
+			(uuid "16e40d4b-b763-46a0-879e-4a88e716df5e")
 		)
 		(pin "1"
-			(uuid "e12f6627-fe91-4f65-9a49-cefe14c6b8b4")
+			(uuid "2a32b780-62d2-41a7-882f-8fb0a5dfa19a")
 		)
 		(instances
 			(project "XF-1.0"
@@ -1594,12 +1378,13 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "85e03c9a-f2a2-4130-8d1a-4746141e90b1")
-		(property "Reference" "C2"
+		(property "Reference" "C1"
 			(at 156.21 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Value" "4.7nF"
@@ -1648,75 +1433,7 @@
 		(instances
 			(project "XF-1.0"
 				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:L_Ferrite")
-		(at 143.51 59.69 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "92f48841-3229-4eda-9c44-eb5ea0db4c3e")
-		(property "Reference" "L1"
-			(at 143.51 55.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 143.51 55.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Transformer_THT:Inductor-EE25"
-			(at 143.51 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 143.51 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Inductor with ferrite core"
-			(at 143.51 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e19eb6d5-e486-495b-b4be-abd3c2f2cc4e")
-		)
-		(pin "1"
-			(uuid "6d38579e-078c-4d05-a105-9a717385fdbe")
-		)
-		(instances
-			(project ""
-				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
-					(reference "L1")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -1738,16 +1455,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "R_US"
-			(at 165.1 74.9299 0)
+		(property "Value" "RBTL"
+			(at 164.846 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
