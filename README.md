@@ -268,18 +268,12 @@ L = \frac{ R_L • \sqrt{ 2 } }{ ⍵_0 }
 ```
 
 where
-```math
-R_L = \frac{ R_BTL }{ 2 }
-```
-
-and
-```math
-⍵_0 = 2 • π • f_0
-```
+$R_L = \frac{ R_{BTL} }{ 2 }
+$⍵_0 = 2 • π • f_0
 
 then
 ```math
-L = \frac{ \frac{ R_BTL }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 }
+L = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 }
 ```
 
 Air Core Axial Inductor
