@@ -263,7 +263,7 @@ $A_e  = \frac{( 40.4 – 23.3 ) • 15.1 }{ 2 } = 129.1 \text{ mm}^2$
 
 $B_{max} = 350 \text{ Gauss}$
 
-$N_p = \frac{ V_{in} • Duty Cycle • 10^{10} }{ 2 • f • B_{max} • A_e }$
+$N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e }$
 
 $N_p = \frac{ 72 • 0.5 • 10^{10} }{ 2 • 400,000 • 350 • 129.1 } = \frac{ 360,000,000,000 }{ 36,149,400,000 }$
 
@@ -271,7 +271,11 @@ $N_p = 9.96 ≈ 10 \text{ turns}$
 
 $Volt \ per \ turn = \frac{ V_{in} }{ N_p }$
 
-$Volt per turn = \frac{ 72 }{ 10 } = 7.2 \text{ V/turn}$
+$Volt \ per \ turn = \frac{ 72 }{ 10 } = 7.2 \text{ V/turn}$
+
+$N_s = \frac{ V_{out} }{ Volt \ per \ turn }$
+
+$N_s = \frac{ 216 }{ 7.2 } = 30 \text{ turns}$
 
 ##### Output Scope
 The image illustrates the output scope for per pulse operation at input transformer with VDS=12V and PWM frequency 400kHz
