@@ -268,8 +268,8 @@ L = \frac{ R_L • \sqrt{ 2 } }{ ⍵_0 }
 ```
 
 where
-$R_L = \frac{ R_{BTL} }{ 2 }
-$⍵_0 = 2 • π • f_0
+- $R_L = \frac{ R_{BTL} }{ 2 }
+- $⍵_0 = 2 • π • f_0
 
 then
 ```math
