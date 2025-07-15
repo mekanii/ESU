@@ -299,7 +299,7 @@ $C_L = \frac{ 1 }{ 2 • π • f_0 • R_L • \sqrt{ 2 } }$
 
 Calculate for
 - $R_{BTL} = 100Ω$
-- $f_0 = 400kHz = 400,000$
+- $f_0 = 400 \text{ kHz} = 400,000 \text{ Hz}$
 
 where
 - $C_{BTL} = \frac{ C_L }{ 2 }$
@@ -315,10 +315,10 @@ $C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sq
 
 $C_{BTL} = 2.81492 \text{ nF} ≈ 2.7 \text{ nF}$
 
-Air Core Axial Inductor
+<!-- Air Core Axial Inductor
 | N1  | N2  |
 |----:|----:|
 |  36 | 144 |
-|  36 | 144 |
+|  36 | 144 | -->
 ##### Design and Calculation
 Rectangullar Air Core Inductor
