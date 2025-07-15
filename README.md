@@ -265,6 +265,8 @@ EE Ferrite Core Inductor
 ##### Design and Calculation
 $L = \frac{ R_L • \sqrt{ 2 } }{ ⍵_0 }$
 
+$C_L = \frac{ 1 }{ ⍵_0 • R_L • \sqrt{ 2 } }$
+
 where
 - $R_L = \frac{ R_{BTL} }{ 2 }$
 - $⍵_0 = 2 • π • f_0$
@@ -275,6 +277,11 @@ then<br><br>
 $L = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 } = \frac{ \frac{ 100 }{ 2 } • \sqrt{ 2 } }{ 2 • 3.14 • 400,000 } = \frac{ 70.7106 }{ 2,512,000 } = 0.000028149155 \text{ H}$
 
 $L = 28.1492 \text{ µH}$
+
+
+$C_L = \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } } = \frac{ 1 }{ 2 • 3.14 • 400,000 • \frac{ 100 }{ 2 } • \sqrt{ 2 } } = \frac{ 1 }{ 2 • 3.14 • 400,000 • 50 • \sqrt{ 2 } } = 0.000000000281492 \text{ F}$
+
+$C_L = 2.81492 \text{ nF}$
 
 Air Core Axial Inductor
 | N1  | N2  |
