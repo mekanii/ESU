@@ -5,6 +5,145 @@
 	(uuid "12f985fe-55a3-431b-9b29-de85666dcd2b")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x02"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_1_1"
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C"
 			(pin_numbers hide)
 			(pin_names
@@ -141,7 +280,7 @@
 				)
 			)
 		)
-		(symbol "Device:L_Ferrite"
+		(symbol "Device:L"
 			(pin_numbers hide)
 			(pin_names
 				(offset 1.016) hide)
@@ -156,8 +295,8 @@
 					)
 				)
 			)
-			(property "Value" "L_Ferrite"
-				(at 2.794 0 90)
+			(property "Value" "L"
+				(at 1.905 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -182,7 +321,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Inductor with ferrite core"
+			(property "Description" "Inductor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -209,7 +348,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "L_Ferrite_0_1"
+			(symbol "L_0_1"
 				(arc
 					(start 0 -2.54)
 					(mid 0.6323 -1.905)
@@ -226,150 +365,6 @@
 					(start 0 -1.27)
 					(mid 0.6323 -0.635)
 					(end 0 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 -2.794) (xy 1.016 -2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 -1.778) (xy 1.016 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 -0.762) (xy 1.016 -0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0.254) (xy 1.016 0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 1.27) (xy 1.016 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 2.286) (xy 1.016 2.794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 -2.286) (xy 1.524 -2.794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 -1.27) (xy 1.524 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 -0.254) (xy 1.524 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 0.762) (xy 1.524 0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 1.778) (xy 1.524 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 2.794) (xy 1.524 2.286)
-					)
 					(stroke
 						(width 0)
 						(type default)
@@ -403,7 +398,7 @@
 					)
 				)
 			)
-			(symbol "L_Ferrite_1_1"
+			(symbol "L_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -612,11 +607,15 @@
 				)
 			)
 		)
-		(symbol "Transformer:ER35-1P-1S"
+		(symbol "Transformer:TRANSF1"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "TF"
+			(property "Reference" "TR"
 				(at 0 6.35 0)
 				(effects
 					(font
@@ -624,15 +623,15 @@
 					)
 				)
 			)
-			(property "Value" ""
-				(at 0 0 0)
+			(property "Value" "TRANSF1"
+				(at 0 -6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" "Transformer_THT:ER35-1P-1S"
+			(property "Footprint" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -659,30 +658,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "ER35-1P-1S_0_1"
-				(circle
-					(center -2.032 4.572)
-					(radius 0.127)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.524 -4.572)
-					(mid -0.7653 -3.81)
-					(end -1.524 -3.048)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "TRANSF1_0_1"
 				(arc
 					(start -1.524 -3.048)
 					(mid -0.7653 -2.286)
@@ -731,21 +707,9 @@
 						(type none)
 					)
 				)
-				(arc
-					(start -1.524 3.048)
-					(mid -0.7653 3.81)
-					(end -1.524 4.572)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(rectangle
-					(start -0.254 5.334)
-					(end 0.254 -5.334)
+					(start -0.254 3.048)
+					(end 0.254 -3.048)
 					(stroke
 						(width 0.0254)
 						(type default)
@@ -756,10 +720,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 -4.572) (xy -1.524 -5.08) (xy -2.54 -5.08)
+						(xy -2.54 5.08) (xy -1.524 5.08) (xy -1.524 3.048) (xy -1.524 3.048)
 					)
 					(stroke
-						(width 0)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
@@ -768,10 +732,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 4.572) (xy -1.524 5.08) (xy -2.54 5.08)
+						(xy -1.524 -3.048) (xy -1.524 -5.08) (xy -2.54 -5.08) (xy -2.54 -5.08)
 					)
 					(stroke
-						(width 0)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
@@ -850,19 +814,8 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 2.032 3.556)
-					(radius 0.127)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 			)
-			(symbol "ER35-1P-1S_1_1"
+			(symbol "TRANSF1_1_1"
 				(pin passive line
 					(at -5.08 5.08 0)
 					(length 2.54)
@@ -900,7 +853,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 5.08 180)
+					(at 5.08 -5.08 180)
 					(length 2.54)
 					(name "~"
 						(effects
@@ -918,7 +871,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 -5.08 180)
+					(at 5.08 5.08 180)
 					(length 2.54)
 					(name "~"
 						(effects
@@ -964,7 +917,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 59.69) (xy 149.86 62.23)
+			(xy 149.86 59.69) (xy 149.86 69.85)
 		)
 		(stroke
 			(width 0)
@@ -974,13 +927,23 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 78.74) (xy 137.16 78.74)
+			(xy 137.16 78.74) (xy 137.16 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "086664a4-df94-45d7-91b2-201b2bcc1914")
+		(uuid "04b0cd6e-1da3-41e2-8799-913baaa0a922")
+	)
+	(wire
+		(pts
+			(xy 137.16 59.69) (xy 137.16 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08e88aa0-b3c5-48d1-8d37-44133d046451")
 	)
 	(wire
 		(pts
@@ -1014,6 +977,36 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 78.74) (xy 127 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33bc2303-2120-45b2-95a2-3befc3bf1fe1")
+	)
+	(wire
+		(pts
+			(xy 175.26 59.69) (xy 175.26 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5643fc71-e119-41e6-a4ad-b5ad73e70ce8")
+	)
+	(wire
+		(pts
+			(xy 149.86 77.47) (xy 149.86 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5952ac6b-d6f6-4653-b9f7-c5464cbd95f3")
+	)
+	(wire
+		(pts
 			(xy 147.32 87.63) (xy 149.86 87.63)
 		)
 		(stroke
@@ -1024,13 +1017,43 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 59.69) (xy 139.7 59.69)
+			(xy 137.16 59.69) (xy 139.7 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "65f7a01c-1a54-4c40-8219-d8b7562389da")
+	)
+	(wire
+		(pts
+			(xy 120.65 72.39) (xy 120.65 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68f61449-1833-4c7b-866e-03674cce4604")
+	)
+	(wire
+		(pts
+			(xy 120.65 68.58) (xy 127 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f00d1c7-08b2-4e2f-aa84-6d6e94122094")
+	)
+	(wire
+		(pts
+			(xy 175.26 87.63) (xy 175.26 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "767e08cf-94f9-4793-a76b-229adddcf72a")
 	)
 	(wire
 		(pts
@@ -1044,7 +1067,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 87.63) (xy 139.7 87.63)
+			(xy 137.16 87.63) (xy 139.7 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1054,43 +1077,13 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 59.69) (xy 167.64 59.69)
+			(xy 162.56 59.69) (xy 175.26 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "86f7c87d-ae4c-42d0-a2ea-0b422f52eb12")
-	)
-	(wire
-		(pts
-			(xy 138.43 68.58) (xy 137.16 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96503e35-f1cf-498c-a7d1-cca8970c9190")
-	)
-	(wire
-		(pts
-			(xy 149.86 85.09) (xy 149.86 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9b1e6603-7752-4ddd-9023-01fd2aea2f30")
-	)
-	(wire
-		(pts
-			(xy 121.92 78.74) (xy 127 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d27111e-667f-4f74-805a-19aefdc2c441")
 	)
 	(wire
 		(pts
@@ -1104,23 +1097,13 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 59.69) (xy 138.43 68.58)
+			(xy 120.65 74.93) (xy 120.65 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a226677a-a0b1-41b0-b3b8-96cae12f1c44")
-	)
-	(wire
-		(pts
-			(xy 138.43 87.63) (xy 138.43 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa714120-2a35-4d7c-8050-d2fcecf2a787")
+		(uuid "ad59b5a5-0847-4bc6-90fa-b3d03df942e2")
 	)
 	(wire
 		(pts
@@ -1144,17 +1127,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 68.58) (xy 127 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d34597ef-e9b7-43fb-a2ba-3c5868ba635f")
-	)
-	(wire
-		(pts
-			(xy 162.56 87.63) (xy 167.64 87.63)
+			(xy 162.56 87.63) (xy 175.26 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1233,220 +1206,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transformer:ER35-1P-1S")
-		(at 132.08 73.66 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "13074eb4-f6d2-40e7-9493-c9db5ff8d0d7")
-		(property "Reference" "TF1"
-			(at 132.1181 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 132.1181 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Transformer_THT:EE35-1P-1S-Vertical-2143"
-			(at 132.08 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 132.08 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6c5d56e4-0309-4d6b-b108-573c23ae4ade")
-		)
-		(pin "2"
-			(uuid "6faf2f5c-3b82-4a3d-8f1e-c23505d57644")
-		)
-		(pin "3"
-			(uuid "02693f73-7cab-4864-8853-773ca4dcf2c9")
-		)
-		(pin "4"
-			(uuid "78340d3c-c25d-4519-925d-a84c4266d490")
-		)
-		(instances
-			(project ""
-				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
-					(reference "TF1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 149.86 66.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "13424476-aaa8-4253-b4db-cbbd4c90e92d")
-		(property "Reference" "C1-1"
-			(at 152.4 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1nF"
-			(at 153.67 67.3099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L13.0mm_W8.0mm_P10.00mm_FKS3_FKP3_MKS4"
-			(at 150.8252 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 149.86 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 149.86 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9996e48d-59ae-4c2c-8958-7ce60c8f7261")
-		)
-		(pin "1"
-			(uuid "29851e58-b13e-44b8-94c0-6cdfe014a132")
-		)
-		(instances
-			(project "XF-1.0"
-				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
-					(reference "C1-1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 149.86 81.28 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "463e14f8-69d8-432e-bf6a-4c931c2593fb")
-		(property "Reference" "C1-3"
-			(at 152.4 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1nF"
-			(at 153.67 82.5499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L13.0mm_W8.0mm_P10.00mm_FKS3_FKP3_MKS4"
-			(at 150.8252 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 149.86 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 149.86 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "5004f993-dce0-4976-83ca-610a9baf3493")
-		)
-		(pin "1"
-			(uuid "fda5f548-6eeb-4cd0-8c17-5449f9c40c65")
-		)
-		(instances
-			(project "XF-1.0"
-				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
-					(reference "C1-3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 149.86 73.66 0)
 		(unit 1)
@@ -1454,8 +1213,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8152f0c7-83b5-498c-8e6d-965e1f1494ef")
-		(property "Reference" "C1-2"
+		(uuid "13424476-aaa8-4253-b4db-cbbd4c90e92d")
+		(property "Reference" "C1"
 			(at 152.4 73.66 0)
 			(effects
 				(font
@@ -1464,13 +1223,12 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1nF"
-			(at 153.67 74.9299 0)
+		(property "Value" "2.7nF"
+			(at 143.51 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -1502,22 +1260,90 @@
 			)
 		)
 		(pin "2"
-			(uuid "cb47190e-4e2c-48a8-8bd8-72f3880e6649")
+			(uuid "9996e48d-59ae-4c2c-8958-7ce60c8f7261")
 		)
 		(pin "1"
-			(uuid "8b8265c0-8d9f-4ea9-9961-63463a7b13e7")
+			(uuid "29851e58-b13e-44b8-94c0-6cdfe014a132")
 		)
 		(instances
-			(project ""
+			(project "XF-1.0"
 				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
-					(reference "C1-2")
+					(reference "C1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:L_Ferrite")
+		(lib_id "Device:L")
+		(at 143.51 59.69 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "24e47e5c-fe06-4a0c-8532-ea645f5c94b3")
+		(property "Reference" "L1"
+			(at 143.51 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "29µH"
+			(at 143.51 62.484 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Inductor_THT:L_Radial_Multilayer_D8.0mm_P12.70mm"
+			(at 143.51 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 143.51 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 143.51 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e1d5f442-1b69-43ff-9ca0-04e79a408d21")
+		)
+		(pin "1"
+			(uuid "c9c0337e-9868-4f99-b76f-6511241ff49c")
+		)
+		(instances
+			(project ""
+				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L")
 		(at 143.51 87.63 90)
 		(mirror x)
 		(unit 1)
@@ -1525,7 +1351,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "84ae79cb-cff3-4687-a616-bb640969d101")
+		(uuid "2e39428c-0062-4a40-8f42-d7bd8a68588b")
 		(property "Reference" "L2"
 			(at 143.51 91.44 90)
 			(effects
@@ -1534,8 +1360,8 @@
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 143.51 91.44 90)
+		(property "Value" "29µH"
+			(at 143.51 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1543,7 +1369,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Transformer_THT:Inductor-EE25"
+		(property "Footprint" "Inductor_THT:L_Radial_Multilayer_D8.0mm_P12.70mm"
 			(at 143.51 87.63 0)
 			(effects
 				(font
@@ -1561,7 +1387,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Inductor with ferrite core"
+		(property "Description" "Inductor"
 			(at 143.51 87.63 0)
 			(effects
 				(font
@@ -1571,15 +1397,90 @@
 			)
 		)
 		(pin "2"
-			(uuid "f9d71655-8879-421f-8787-0ed588cf0445")
+			(uuid "16e40d4b-b763-46a0-879e-4a88e716df5e")
 		)
 		(pin "1"
-			(uuid "e12f6627-fe91-4f65-9a49-cefe14c6b8b4")
+			(uuid "2a32b780-62d2-41a7-882f-8fb0a5dfa19a")
 		)
 		(instances
 			(project "XF-1.0"
 				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
 					(reference "L2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transformer:TRANSF1")
+		(at 132.08 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8423b5f3-b83e-412c-a380-d534090d04b4")
+		(property "Reference" "XF1"
+			(at 132.08 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 132.08 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Transformer_THT:Transformer_Toroid_Horizontal_OD40_ID23_H15"
+			(at 132.08 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 132.08 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1ea49609-a473-4532-ab55-b8f679c85b67")
+		)
+		(pin "3"
+			(uuid "a7aa7a9c-af71-4271-a5ca-1c338613c143")
+		)
+		(pin "4"
+			(uuid "8e76a711-9818-4845-86d7-7bccf787e22c")
+		)
+		(pin "2"
+			(uuid "fcf0df70-18ba-4792-b155-f319a83cf738")
+		)
+		(instances
+			(project ""
+				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
+					(reference "XF1")
 					(unit 1)
 				)
 			)
@@ -1655,33 +1556,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:L_Ferrite")
-		(at 143.51 59.69 90)
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 180.34 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "92f48841-3229-4eda-9c44-eb5ea0db4c3e")
-		(property "Reference" "L1"
-			(at 143.51 55.88 90)
+		(uuid "c49693ee-a53a-4556-ae61-7b87e580d428")
+		(property "Reference" "CN2"
+			(at 182.626 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "~"
-			(at 143.51 55.88 90)
+		(property "Value" "Conn_01x02"
+			(at 182.88 74.9299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Transformer_THT:Inductor-EE25"
-			(at 143.51 59.69 0)
+		(property "Footprint" "Connector_Molex:Molex_KK-396_5273-03A_1x03_P3.96mm_Vertical_2"
+			(at 180.34 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1690,7 +1593,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 143.51 59.69 0)
+			(at 180.34 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1698,8 +1601,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Inductor with ferrite core"
-			(at 143.51 59.69 0)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 180.34 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1708,15 +1611,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "e19eb6d5-e486-495b-b4be-abd3c2f2cc4e")
+			(uuid "38cd613e-50e5-49dc-b638-ac6a3046c01f")
 		)
 		(pin "1"
-			(uuid "6d38579e-078c-4d05-a105-9a717385fdbe")
+			(uuid "2ce07ba6-a43c-48ea-9b20-c85b8006e37f")
 		)
 		(instances
 			(project ""
 				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
-					(reference "L1")
+					(reference "CN2")
 					(unit 1)
 				)
 			)
@@ -1732,7 +1635,7 @@
 		(dnp no)
 		(uuid "e7fd2673-ef31-4354-861e-66a2decd5dcd")
 		(property "Reference" "R1"
-			(at 164.084 73.406 0)
+			(at 164.084 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1740,8 +1643,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R_US"
-			(at 165.1 74.9299 0)
+		(property "Value" "RBTL"
+			(at 164.846 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1787,6 +1690,77 @@
 			(project ""
 				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 115.57 72.39 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f91236bc-b6b5-4c0a-97bf-eb697c0ff602")
+		(property "Reference" "CN1"
+			(at 113.284 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 113.03 74.9299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_KK-396_5273-03A_1x03_P3.96mm_Vertical_2"
+			(at 115.57 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 115.57 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 115.57 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "38296e9b-4442-4a3b-beee-c234cace02df")
+		)
+		(pin "1"
+			(uuid "84472392-f985-497b-988f-d7ec93fa6e26")
+		)
+		(instances
+			(project "XF-1.0"
+				(path "/12f985fe-55a3-431b-9b29-de85666dcd2b"
+					(reference "CN1")
 					(unit 1)
 				)
 			)
