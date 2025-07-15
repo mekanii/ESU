@@ -288,6 +288,7 @@ $C_{BTL} = \frac { C_L }{ 2 }$
 
 then<br><br>
 $C_{BTL} = \frac{ 5.62983 }{ 2 }$
+
 $C_{BTL} = 2.814915 \text{ nF} ≈ 2.7 \text{ nF}$
 
 Air Core Axial Inductor
