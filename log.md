@@ -1,4 +1,10 @@
+2025-07-17
+- Rencana integrasi REM dan MSD [Done]
+- Menulis dokumentasi desain Bipolar toroidal core transformer [Done]
 
+2025-07-16
+- Prototyping controller: integrasi power supply 12V dan 5V [Done]
+- Menulis dokumentasi desain Bipolar toroidal core transformer [In Progress]
 
 2025-07-15
 - PCB layout Transformer + LC Filter [Done]
