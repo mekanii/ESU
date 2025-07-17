@@ -1,3 +1,10 @@
+Tolong pelajari secara detail tentang Indonesia Millenial and Gen Z Report 2025 dari IDN Research Institute. Setelah itu, tolong buatkan resume tentang issue dan karakter terkhusus untuk Gen Z.
+
+2025-07-15
+- PCB layout Transformer + LC Filter [Done]
+- Menulis dokumentasi desain LC Filter [Done]
+- Menulis dokumentasi desain Bipolar toroidal core transformer [In Progress]
+
 2025-07-14
 - Coil winding untuk LC filter (multilayer air core inductor 29µH)
 

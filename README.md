@@ -247,35 +247,37 @@ Air Core Transformer using EE25 Vertical Transformer Bobbin
 ##### Design and Calculation
 Toroidal Ferrite Core Transformer
 
-$V_{in} = 72 \text{ V}$
+$V_{in} = 72 \ V$
 
-$V_{out} = 216 \text{ V}$
+$V_{out} = 216 \ V$
 
-$f = 400 \text{ kHz} = 400,000 \text{ Hz}$
+$f = 400 \ kHz = 400,000 \ Hz$
 
-- $ID = 23.3 \text{ mm}$
-- $OD = 40.4 \text{ mm}$
-- $H = 15.1 \text{ mm}$
+- $ID = 23.3 \ mm$
+- $OD = 40.4 \ mm$
+- $H = 15.1 \ mm$
 
 $A_e = \frac{( OD – ID ) • H }{ 2 }$
 
-$A_e  = \frac{( 40.4 – 23.3 ) • 15.1 }{ 2 } = 129.1 \text{ mm}^2$
+$A_e  = \frac{( 40.4 – 23.3 ) • 15.1 }{ 2 } = 129.1 \ mm^2$
 
-$B_{max} = 350 \text{ Gauss}$
+$B_{max} = 350 \ Gauss$
 
 $N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e }$
 
 $N_p = \frac{ 72 • 0.5 • 10^{10} }{ 2 • 400,000 • 350 • 129.1 } = \frac{ 360,000,000,000 }{ 36,149,400,000 }$
 
-$N_p = 9.96 ≈ 10 \text{ turns}$
+$N_p = 9.96 ≈ 10 \ turns$
 
 $Volt \ per \ turn = \frac{ V_{in} }{ N_p }$
 
-$Volt \ per \ turn = \frac{ 72 }{ 10 } = 7.2 \text{ V/turn}$
+$Volt \ per \ turn = \frac{ 72 }{ 10 } = 7.2 \ V/turn$
 
 $N_s = \frac{ V_{out} }{ Volt \ per \ turn }$
 
 $N_s = \frac{ 216 }{ 7.2 } = 30 \text{ turns}$
+
+$I_{out} = 0.5 \ A$
 
 ##### Output Scope
 The image illustrates the output scope for per pulse operation at input transformer with VDS=12V and PWM frequency 400kHz
@@ -337,14 +339,14 @@ where
 - $R_L = \frac{ R_{BTL} }{ 2 }$
 
 then<br><br>
-$L_{BTL} = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 } = \frac{ \frac{ 100 }{ 2 } • \sqrt{ 2 } }{ 2 • 3.14 • 400,000 } = \frac{ 70.7106 }{ 2,512,000 } = 0.000028149155 \text{ H}$
+$L_{BTL} = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 } = \frac{ \frac{ 100 }{ 2 } • \sqrt{ 2 } }{ 2 • 3.14 • 400,000 } = \frac{ 70.7106 }{ 2,512,000 } = 0.000028149155 \ H$
 
-$L_{BTL} = 28.1492 \text{ µH} ≈ 29 \text{ µH}$
+$L_{BTL} = 28.1492 \ µH ≈ 29 \ µH$
 
 
-$C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2 • 3.14 • 400,000 • \frac{ 100 }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2,512,000 • 70.7106 } }{ 2 } = 0.000000000281492 \text{ F}$
+$C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2 • 3.14 • 400,000 • \frac{ 100 }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2,512,000 • 70.7106 } }{ 2 } = 0.000000000281492 \ F$
 
-$C_{BTL} = 2.81492 \text{ nF} ≈ 2.7 \text{ nF}$
+$C_{BTL} = 2.81492 \ nF ≈ 2.7 \ nF$
 
 <!-- Air Core Axial Inductor
 | N1  | N2  |
