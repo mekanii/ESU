@@ -1,4 +1,4 @@
-Tolong pelajari secara detail tentang Indonesia Millenial and Gen Z Report 2025 dari IDN Research Institute. Setelah itu, tolong buatkan resume tentang issue dan karakter terkhusus untuk Gen Z.
+
 
 2025-07-15
 - PCB layout Transformer + LC Filter [Done]

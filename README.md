@@ -279,6 +279,42 @@ $N_s = \frac{ 216 }{ 7.2 } = 30 \text{ turns}$
 
 $I_{out} = 0.5 \ A$
 
+$P = V_{out} • I_{out} = 216 • 0.5 = 108 \ W$
+
+$I_{in} = \frac{ P }{ V_{in} } = \frac{ 108 }{ 72 } = 1.5 \ A$
+
+For high-frequency applications (400 kHz), we need to consider:
+- **Skin effect** - Current tends to flow on the surface of conductors at high frequencies
+- **Current density** - Typically 1.5-3 A/mm² for transformer applications
+- **Temperature rise** - Higher current density = more heat
+
+###### Wire Diameter
+$dW_p = \sqrt{ \frac{ 4 • I }{ \pi • Current \ Density } }$
+
+- Primary
+$I_{in} = 1.5 \ A$
+
+$Current \ Density = 1.5 \ A/mm^2$
+
+$dW_p = \sqrt{ \frac{ 4 • 1.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 6 }{ 4.712 } } = 1.13 \ mm$
+
+- Secondary
+$I_{out} = 0.5 \ A$
+
+$Current \ Density = 1.5 \ A/mm^2$
+
+$dW_s = \sqrt{ \frac{ 4 • 0.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 2 }{ 4.712 } } = 0.65 \ mm$
+
+###### High-Frequency Considerations
+At 400 kHz, the skin depth in copper is approximately:
+
+$Skin \ depth = \sqrt{ ρ/(π × f × μ) } ≈ 0.1 \ mm$
+
+Since our calculated wire diameters are larger than 2× skin depth, we don't need to worry about the skin effect. However, consider using:
+1. **Litz wire** for better high-frequency performance
+2. **Multiple parallel smaller wires** instead of single thick wire
+3. **Stranded wire** with individual strand diameter < 0.2 mm
+
 ##### Output Scope
 The image illustrates the output scope for per pulse operation at input transformer with VDS=12V and PWM frequency 400kHz
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
