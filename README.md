@@ -315,7 +315,7 @@ Since our calculated wire diameters are larger than 2× skin depth, consider usi
 2. **Multiple parallel smaller wires** instead of single thick wire
 3. **Stranded wire** with individual strand diameter < 0.2 mm
 
-###### Wire Specification for 400 kHz Operation
+###### Wire Specification for 400 kHz Operation using Multiple Parallel Wires
 - Primary
   - 7 parallel 0.2 mm each
   - Total current capacity: ~2.1A
