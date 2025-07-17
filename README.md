@@ -327,7 +327,8 @@ Since our calculated wire diameters are larger than 2× skin depth, consider usi
 
 ###### Wire Length Calculation
 $Length \ per \ turn = 2 • (\frac{OD - ID}{2} + H)$
-$Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 73.3 \ mm$
+
+$Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 
 - Primary
   - Number of Wire: 7
