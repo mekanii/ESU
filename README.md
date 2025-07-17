@@ -310,10 +310,37 @@ At 400 kHz, the skin depth in copper is approximately:
 
 $Skin \ depth = \sqrt{ ρ/(π × f × μ) } ≈ 0.1 \ mm$
 
-Since our calculated wire diameters are larger than 2× skin depth, we don't need to worry about the skin effect. However, consider using:
+Since our calculated wire diameters are larger than 2× skin depth, consider using:
 1. **Litz wire** for better high-frequency performance
 2. **Multiple parallel smaller wires** instead of single thick wire
 3. **Stranded wire** with individual strand diameter < 0.2 mm
+
+###### Wire Specification for 400 kHz Operation
+- Primary
+  - 7 parallel 0.2 mm each
+  - Total current capacity: ~2.1A
+  - Total equivalent area: ~1.5 mm²
+- Secondary
+  - 4 parallel 0.2 mm each
+  - Total current capacity: ~1.0A
+  - Total equivalent area: ~0.8 mm²
+
+###### Wire Length Calculation
+$Length \ per \ turn = 2 • (\frac{OD - ID}{2} + H)$
+$Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 73.3 \ mm$
+
+- Primary
+  - Number of Wire: 7
+  - Turns: 10
+  - $Individual \ Length = 10 • 47.3 • 1.1 ≈ 520 \text{ mm including 10% leads} $
+  - $Total \ Length = 7 • 520 = 3640 \ mm = 3.64 \ m$
+- Secondary
+  - Number of Wire: 4
+  - Turns: 30
+  - $Individual \ Length = 30 • 47.3 • 1.1 ≈ 1561 \text{ mm including 10% leads}$
+  - $Total \ Length = 4 • 1561 = 6244 \ mm = 6.24 \ m$
+
+$Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
 
 ##### Output Scope
 The image illustrates the output scope for per pulse operation at input transformer with VDS=12V and PWM frequency 400kHz
