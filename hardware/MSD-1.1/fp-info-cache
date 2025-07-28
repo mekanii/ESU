@@ -1,4 +1,4 @@
-23815786443451164
+23826360323695481
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -36211,6 +36211,13 @@ Through hole angled pin header THT 2x16 2.54mm double row
 32
 32
 Connector_PinHeader_2.54mm
+PinHeader_2x16_P2.54mm_Horizontal_NoPins
+Through hole angled pin header, 2x16, 2.54mm pitch, 6mm pin length, double rows
+Through hole angled pin header THT 2x16 2.54mm double row
+0
+32
+32
+Connector_PinHeader_2.54mm
 PinHeader_2x16_P2.54mm_Vertical
 Through hole straight pin header, 2x16, 2.54mm pitch, double rows
 Through hole pin header THT 2x16 2.54mm double row
@@ -62916,6 +62923,13 @@ Inductor Radial series Radial pin pitch 7.62*12.70mm^2  length 16.13mm width 16.
 2
 2
 Inductor_THT
+L_Radial_Multilayer_D8.0mm_P12.70mm
+Inductor, Radial series, Radial, pin pitch=3.00mm, , diameter=7mm, http://www.abracon.com/Magnetics/radial/AIUR-16.pdf
+Inductor Radial series Radial pin pitch 3.00mm  diameter 7mm
+0
+2
+2
+Inductor_THT
 L_SELF1408
 Self Ferrite 14 - 08
 SELF
@@ -82849,7 +82863,7 @@ TO-263-5_TabPin3
 TO-263/D2PAK/DDPAK SMD package, http://www.infineon.com/cms/en/product/packages/PG-TO263/PG-TO263-5-1/
 D2PAK DDPAK TO-263 D2PAK-5 TO-263-5 SOT-426
 0
-10
+6
 5
 Package_TO_SOT_SMD
 TO-263-5_TabPin6
@@ -95578,6 +95592,13 @@ EE19
 10
 10
 Transformer_THT
+EE25-1P-1S-Vertical-2143
+
+
+0
+10
+10
+Transformer_THT
 EE25-10-6
 
 
@@ -95591,6 +95612,20 @@ EE25-13-7
 0
 10
 10
+Transformer_THT
+EE35-1P-1S-Vertical-2143
+
+
+0
+4
+4
+Transformer_THT
+Inductor-EE25
+
+
+0
+2
+2
 Transformer_THT
 Transformer_37x44
 transformer 37x44mm²
@@ -95919,6 +95954,13 @@ Transformer, Toroid, tapped, horizontal, laying, Diameter 18mm,
 Transformer Toroid tapped horizontal laying Diameter 18mm 
 0
 5
+4
+Transformer_THT
+Transformer_Toroid_Horizontal_OD40_ID23_H15
+Transformer, Toroid, horizontal, laying, Diameter 9mm, Amidon, T30,
+Transformer Toroid horizontal laying Diameter 9mm Amidon T30 
+0
+6
 4
 Transformer_THT
 Transformer_Toroid_Tapped_Horizontal_D9.0mm_Amidon-T30

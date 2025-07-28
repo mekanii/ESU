@@ -3843,7 +3843,7 @@
 		(property "Reference" "L1"
 			(at 0 0 180)
 			(layer "F.SilkS")
-			(uuid "7ff0bd5c-3a08-462a-b26e-40e707e68087")
+			(uuid "35d2fccc-4c79-4891-a0a5-b0b9d0ec7e10")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -3854,7 +3854,7 @@
 		(property "Value" "L_Ferrite_Coupled"
 			(at 0 0 90)
 			(layer "F.Fab")
-			(uuid "416c28e6-7896-4d10-b4c1-945ff546966b")
+			(uuid "87c77937-2942-4bd3-b141-f80f98952929")
 			(effects
 				(font
 					(size 1 1)
@@ -3867,7 +3867,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "71cea054-ed48-464c-85b8-bdf7b9da1534")
+			(uuid "876c21f4-8ddc-465c-9639-1116f6a1d27e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3880,7 +3880,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f5aaaeb9-ae35-43ae-b030-48b186b2fc5d")
+			(uuid "652ab3c0-2939-41b1-acdd-1aa811c3a6ab")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3893,7 +3893,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "b6d81fbe-0092-4afa-aa77-d30f6ac9dbef")
+			(uuid "45c0dc83-259c-440f-8cfe-b82e8b08fd3b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3910,28 +3910,28 @@
 			(center 0 0)
 			(end 0 -11.684)
 			(stroke
-				(width 0.1)
+				(width 0.15)
 				(type default)
 			)
 			(fill none)
 			(layer "F.SilkS")
-			(uuid "7b85d984-cd44-431a-b921-9b73e7587c24")
+			(uuid "56a243cb-617f-43d5-80d2-452ad3624759")
 		)
 		(fp_circle
 			(center 0 0)
 			(end 0 -7.112)
 			(stroke
-				(width 0.1)
+				(width 0.15)
 				(type default)
 			)
 			(fill none)
 			(layer "F.SilkS")
-			(uuid "811b8fa8-52d5-4245-8f87-6645e885592f")
+			(uuid "b4428902-3084-455a-b41a-2276b0c0d7e9")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
 			(layer "F.Fab")
-			(uuid "a0ce3740-fdc6-406f-88f0-df58b51ac4ef")
+			(uuid "6a27b775-31b5-4a9d-b5ce-d48b5b898f30")
 			(effects
 				(font
 					(size 1 1)
@@ -3940,7 +3940,7 @@
 			)
 		)
 		(pad "1" thru_hole circle
-			(at -7.62 -10.16 90)
+			(at -5.08 -11.43 90)
 			(size 3 3)
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -3948,10 +3948,10 @@
 			(net 2 "Net-(Q1-D)")
 			(pinfunction "1")
 			(pintype "passive")
-			(uuid "15f4cd8b-5030-4835-a1c3-b17ae6558f19")
+			(uuid "eac050a1-46a6-4ef7-9fa9-a6318831c16c")
 		)
 		(pad "2" thru_hole circle
-			(at -2.54 5.08 90)
+			(at -1.27 5.715 90)
 			(size 3 3)
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -3959,7 +3959,7 @@
 			(net 8 "+12V")
 			(pinfunction "2")
 			(pintype "passive")
-			(uuid "950c5468-a383-48c4-a265-3cfd56636fec")
+			(uuid "99582776-a8f4-4f04-83b2-a0500b07a340")
 		)
 		(pad "3" thru_hole circle
 			(at 5.08 -3.175 90)
@@ -3970,7 +3970,7 @@
 			(net 11 "Net-(C5-Pad1)")
 			(pinfunction "3")
 			(pintype "passive")
-			(uuid "fa3c57b1-40d3-45ec-aecd-966cffbf6b4c")
+			(uuid "ed830ced-9341-4173-9198-1d7c2a0f4f5b")
 		)
 		(pad "4" thru_hole circle
 			(at 12.065 3.175 90)
@@ -3981,7 +3981,18 @@
 			(net 14 "Net-(J2-Pin_1)")
 			(pinfunction "4")
 			(pintype "passive")
-			(uuid "5b8393fe-004f-4004-afa0-e752453f9d35")
+			(uuid "bff86b64-4da3-4492-8996-714708752976")
+		)
+		(model "/Users/margabudi/Documents/KiCad/8.0/3dmodels/Transformer/XF_Toroid_OD20_ID14_H08.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
 		)
 	)
 	(footprint "TestPoint:TestPoint_Bridge_Pitch2.54mm_Drill1.0mm"

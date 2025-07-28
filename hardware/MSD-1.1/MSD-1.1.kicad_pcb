@@ -3843,7 +3843,7 @@
 		(property "Reference" "L1"
 			(at 0 0 90)
 			(layer "F.SilkS")
-			(uuid "3f6083d3-6758-4b3e-99f4-4fc2aaca1b23")
+			(uuid "ff0931ce-bf18-4382-be60-0453ae0d0f40")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -3854,7 +3854,7 @@
 		(property "Value" "L_Ferrite_Coupled"
 			(at 0 0 90)
 			(layer "F.Fab")
-			(uuid "144455f6-8e40-4c05-92e6-9e73f804605d")
+			(uuid "3998eb68-f620-4a06-a52c-05b6c956310b")
 			(effects
 				(font
 					(size 1 1)
@@ -3867,7 +3867,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a00d2411-0c6b-4e26-82e5-8a519287c088")
+			(uuid "524f6962-3879-408c-b45b-63389686be01")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3880,7 +3880,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "9a5c6130-52cc-429b-92cc-96e1160a7648")
+			(uuid "ab93bed4-7bbf-47c2-8047-70eb3de8956d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3893,7 +3893,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1ceeb753-5001-4b2f-8e35-be613de71557")
+			(uuid "eaf49c51-ee56-42c2-8f56-94ac319cf60e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3910,28 +3910,28 @@
 			(center 0 0)
 			(end 0 -11.684)
 			(stroke
-				(width 0.1)
+				(width 0.15)
 				(type default)
 			)
 			(fill none)
 			(layer "F.SilkS")
-			(uuid "33ce6968-e377-40d7-8c56-6945f47d5f37")
+			(uuid "56273c2f-1c0b-4b1b-8c85-01c49a3d2ebe")
 		)
 		(fp_circle
 			(center 0 0)
 			(end 0 -7.112)
 			(stroke
-				(width 0.1)
+				(width 0.15)
 				(type default)
 			)
 			(fill none)
 			(layer "F.SilkS")
-			(uuid "e11192df-d132-4251-8f94-5c5f71d1f033")
+			(uuid "0f452929-29f9-484c-a6ed-c72839a6f553")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
 			(layer "F.Fab")
-			(uuid "96907411-c141-4df7-917c-8bda7d221f48")
+			(uuid "199b6e32-5aa3-47bd-bfb4-ea40be90bc72")
 			(effects
 				(font
 					(size 1 1)
@@ -3948,7 +3948,7 @@
 			(net 2 "Net-(Q1-D)")
 			(pinfunction "1")
 			(pintype "passive")
-			(uuid "8d26d449-61d9-4101-991c-7816a1d80321")
+			(uuid "d399e5d3-9e06-4417-a7a2-37d68924fac7")
 		)
 		(pad "2" thru_hole circle
 			(at -1.27 5.715 90)
@@ -3959,7 +3959,7 @@
 			(net 8 "+12V")
 			(pinfunction "2")
 			(pintype "passive")
-			(uuid "b4d53389-f36d-4312-8be6-eaf612c582ec")
+			(uuid "14f6ae2e-3d0c-476f-8efb-b3859a1b2845")
 		)
 		(pad "3" thru_hole circle
 			(at 5.08 -3.175 90)
@@ -3970,7 +3970,7 @@
 			(net 11 "Net-(C5-Pad1)")
 			(pinfunction "3")
 			(pintype "passive")
-			(uuid "27996c0d-5872-4bb0-976a-4dd52c08cf69")
+			(uuid "351082e5-91da-4cd1-aeca-a65aba70c4d1")
 		)
 		(pad "4" thru_hole circle
 			(at 12.065 3.175 90)
@@ -3981,7 +3981,18 @@
 			(net 14 "Net-(J2-Pin_1)")
 			(pinfunction "4")
 			(pintype "passive")
-			(uuid "7914d1cf-73d1-43c0-9781-8a95367651ed")
+			(uuid "37bd3c81-3506-4054-91f3-fda7ab130dcc")
+		)
+		(model "/Users/margabudi/Documents/KiCad/8.0/3dmodels/Transformer/XF_Toroid_OD20_ID14_H08.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
 		)
 	)
 	(footprint "TestPoint:TestPoint_Bridge_Pitch2.54mm_Drill1.0mm"

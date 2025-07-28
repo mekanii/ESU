@@ -2396,7 +2396,7 @@
 		(property "Reference" "L1"
 			(at 0 0 180)
 			(layer "F.SilkS")
-			(uuid "7c988529-4359-42f3-9f53-bf9e6c136838")
+			(uuid "f6acb60e-05aa-4f09-a8c5-8538b2451a3e")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -2407,7 +2407,7 @@
 		(property "Value" "Isolated Transformer (Custom)"
 			(at 0 0 90)
 			(layer "F.Fab")
-			(uuid "2c79dc68-11c9-4405-adbe-a6823cd26d00")
+			(uuid "d6232e4c-0279-4813-a184-1241a8addb7d")
 			(effects
 				(font
 					(size 1 1)
@@ -2419,8 +2419,7 @@
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
-			(hide yes)
-			(uuid "5f60b949-f7bb-4f30-b7dd-7e3fed69df69")
+			(uuid "a4b31e26-1d6f-4d6c-bec3-c9434fd9c0e6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2433,7 +2432,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "b836c544-c5b5-46a7-92fa-fdcfb0e89bf2")
+			(uuid "ec789915-16aa-4ba8-8a7c-695e0c1d9d2f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2446,7 +2445,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f57bd35e-1209-4bd3-a5f7-872e730c2751")
+			(uuid "2f72bf02-5019-4e10-8709-517d2c7b85b8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2463,28 +2462,28 @@
 			(center 0 0)
 			(end 0 -11.684)
 			(stroke
-				(width 0.1)
+				(width 0.15)
 				(type default)
 			)
 			(fill none)
 			(layer "F.SilkS")
-			(uuid "7426cd4e-8a6d-4b03-b46c-779ba0fc70b8")
+			(uuid "905c7787-8693-404e-ac39-e651d4c93666")
 		)
 		(fp_circle
 			(center 0 0)
 			(end 0 -7.112)
 			(stroke
-				(width 0.1)
+				(width 0.15)
 				(type default)
 			)
 			(fill none)
 			(layer "F.SilkS")
-			(uuid "07dcd904-c5e3-49d1-b4f3-e6cd66302ef6")
+			(uuid "ffd7e922-6a1a-4a92-b184-5c5f0a93a61a")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
 			(layer "F.Fab")
-			(uuid "204f498e-225c-4f60-bd36-59f9a64e9617")
+			(uuid "34db4069-5a37-4b41-934a-33ac87237452")
 			(effects
 				(font
 					(size 1 1)
@@ -2493,7 +2492,7 @@
 			)
 		)
 		(pad "1" thru_hole circle
-			(at -7.62 -10.16 90)
+			(at -5.08 -11.43 90)
 			(size 3 3)
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -2501,10 +2500,10 @@
 			(net 4 "Net-(Q1-D)")
 			(pinfunction "1")
 			(pintype "passive")
-			(uuid "0ce27756-ccbb-47cc-8e9f-f1503d4024ce")
+			(uuid "f0d985d1-2ea2-4637-b7e1-62c1edfa4983")
 		)
 		(pad "2" thru_hole circle
-			(at -2.54 5.08 90)
+			(at -1.27 5.715 90)
 			(size 3 3)
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
@@ -2512,7 +2511,7 @@
 			(net 9 "+5V")
 			(pinfunction "2")
 			(pintype "passive")
-			(uuid "d308573a-9ec4-416e-9573-660e35c6487a")
+			(uuid "d6ca65f4-86d6-4902-9004-a3c0c2cca8c6")
 		)
 		(pad "3" thru_hole circle
 			(at 5.08 -3.175 90)
@@ -2523,7 +2522,7 @@
 			(net 11 "Net-(L1-Pad3)")
 			(pinfunction "3")
 			(pintype "passive")
-			(uuid "edae5369-6b5b-43f7-ac81-ae2fd49e57d0")
+			(uuid "bbf6936f-f5b0-4a7d-968c-addf714f9889")
 		)
 		(pad "4" thru_hole circle
 			(at 12.065 3.175 90)
@@ -2534,7 +2533,18 @@
 			(net 12 "Net-(L1-Pad4)")
 			(pinfunction "4")
 			(pintype "passive")
-			(uuid "a1dbbadd-ee38-4009-8792-36507cb1a4b4")
+			(uuid "3ea808ad-806b-4ffb-bff8-1e2a5901cc2a")
+		)
+		(model "/Users/margabudi/Documents/KiCad/8.0/3dmodels/Transformer/XF_Toroid_OD20_ID14_H08.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
 		)
 	)
 	(footprint "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal"
