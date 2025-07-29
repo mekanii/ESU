@@ -11044,7 +11044,7 @@
 		)
 		(uuid "0c3f8cc5-263b-4c60-948d-283d8adc01f8")
 	)
-	(label "SEN-BI"
+	(label "SEN-COAG"
 		(at 138.43 171.45 180)
 		(fields_autoplaced yes)
 		(effects
@@ -11066,7 +11066,7 @@
 		)
 		(uuid "0d2be1f0-116b-45b6-9c6a-cf44f4d930fe")
 	)
-	(label "SW-BI"
+	(label "SW-COAG"
 		(at 299.72 162.56 0)
 		(fields_autoplaced yes)
 		(effects
@@ -11495,7 +11495,7 @@
 		)
 		(uuid "71efe8c4-25c2-472d-925d-1f34523f9243")
 	)
-	(label "SEN-BI"
+	(label "SEN-COAG"
 		(at 214.63 162.56 0)
 		(fields_autoplaced yes)
 		(effects
@@ -11770,7 +11770,7 @@
 		)
 		(uuid "a345034e-8c68-4bea-b503-4af4eabd5065")
 	)
-	(label "SW-BI"
+	(label "SW-COAG"
 		(at 354.33 72.39 0)
 		(fields_autoplaced yes)
 		(effects
@@ -11836,7 +11836,7 @@
 		)
 		(uuid "af02624e-6f79-4704-8ed0-5a345110a888")
 	)
-	(label "SW-MONO"
+	(label "SW-CUT"
 		(at 299.72 151.13 0)
 		(fields_autoplaced yes)
 		(effects
@@ -12133,7 +12133,7 @@
 		)
 		(uuid "df4e409e-8e4e-4656-a767-476c26c1b146")
 	)
-	(label "SEN-MONO"
+	(label "SEN-CUT"
 		(at 214.63 151.13 0)
 		(fields_autoplaced yes)
 		(effects
@@ -12155,7 +12155,7 @@
 		)
 		(uuid "e2ac4226-8b7e-4124-bb35-15f375c54bfb")
 	)
-	(label "SW-MONO"
+	(label "SW-CUT"
 		(at 354.33 74.93 0)
 		(fields_autoplaced yes)
 		(effects
@@ -12221,7 +12221,7 @@
 		)
 		(uuid "f7d603c2-f3b2-4a84-9140-319401f3051f")
 	)
-	(label "SEN-MONO"
+	(label "SEN-CUT"
 		(at 138.43 168.91 180)
 		(fields_autoplaced yes)
 		(effects
@@ -12736,7 +12736,7 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "BAT60A"
 			(at 391.16 124.206 0)
 			(effects
 				(font

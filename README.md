@@ -201,6 +201,12 @@ The combination of clock frequency and resolution plays a vital role in determin
 
 
 - Standard
+
+### b. Serial Communication
+#### 1 Parameters Command <[command]>
+#### 2 Parameters Command <[command] [mode]>
+#### 3 Parameters Command <[command] [mode] [duty cycle]>
+
 ## 4. Power Stage
 ### a. DAC
 #### Schematic
@@ -242,7 +248,83 @@ It provides a detailed view of the waveform characteristics and performance metr
 ### b. Transformer
 #### Monopolar
 ##### Design and Calculation
-Air Core Transformer using EE25 Vertical Transformer Bobbin
+Air Core Transformer using Cylindrical Bobbin
+
+**Bobbin Specifications:**
+- Diameter: 14 mm
+- Height: 19 mm
+- Operating Frequency: 400 kHz PWM
+
+**Design Parameters:**
+Assuming similar power requirements as bipolar design:
+- $V_{in} = 72 \ V$
+- $V_{out} = 216 \ V$ (3:1 ratio)
+- $f = 400 \ kHz = 400,000 \ Hz$
+- $P_{out} = 100 \ W$ (target power)
+
+**Air Core Inductance Calculation:**
+For a single-layer cylindrical coil:
+
+$L = \frac{\mu_0 \cdot N^2 \cdot A}{l}$
+
+Where:
+- $\mu_0 = 4\pi \times 10^{-7} \ H/m$ (permeability of free space)
+- $N$ = number of turns
+- $A$ = cross-sectional area = $\pi \times (d/2)^2 = \pi \times (14/2)^2 = 153.94 \ mm^2$
+- $l$ = coil length (height) = 19 mm
+
+**Turn Calculation for Air Core:**
+For air core transformers at high frequency, we use:
+
+$N_p = \frac{V_{in} \times 10^8}{4.44 \times f \times B_{max} \times A_{eff}}$
+
+For air core: $B_{max} \approx 0.1 \ T$ (much lower than ferrite)
+$A_{eff} = 153.94 \ mm^2 = 1.5394 \times 10^{-4} \ m^2$
+
+$N_p = \frac{72 \times 10^8}{4.44 \times 400,000 \times 0.1 \times 1.5394 \times 10^{-4}} = \frac{7.2 \times 10^9}{27.3} = 264 \ turns$
+
+**Turns Ratio:**
+$N_s = N_p \times \frac{V_{out}}{V_{in}} = 264 \times \frac{216}{72} = 264 \times 3 = 792 \ turns$
+
+**Wire Specifications:**
+At 400 kHz, skin depth = 0.105 mm
+
+Primary Current: $I_p = \frac{P}{V_{in}} = \frac{100}{72} = 1.39 \ A$
+Secondary Current: $I_s = \frac{P}{V_{out}} = \frac{100}{216} = 0.46 \ A$
+
+**Wire Diameter Calculation:**
+Using current density of 2 A/mm² for air core:
+
+Primary: $d_p = \sqrt{\frac{4 \times I_p}{\pi \times J}} = \sqrt{\frac{4 \times 1.39}{\pi \times 2}} = 0.94 \ mm$
+
+Secondary: $d_s = \sqrt{\frac{4 \times I_s}{\pi \times J}} = \sqrt{\frac{4 \times 0.46}{\pi \times 2}} = 0.54 \ mm$
+
+**High-Frequency Wire Selection:**
+- **Primary**: 7 × AWG 30 parallel (0.255 mm each) or 105/44 Litz wire
+- **Secondary**: 3 × AWG 32 parallel (0.202 mm each) or 50/46 Litz wire
+
+**Winding Configuration:**
+- **Primary**: 264 turns, inner layer
+- **Secondary**: 792 turns, outer layer
+- **Layer separation**: Kapton tape insulation
+
+**Wire Length Calculation:**
+Mean turn length ≈ π × diameter = π × 14 = 43.98 mm
+
+Primary wire length: 264 × 43.98 = 11.61 m (+ 20% leads) = **13.9 m**
+Secondary wire length: 792 × 43.98 = 34.83 m (+ 20% leads) = **41.8 m**
+
+**Winding Layers:**
+With wire diameter ~0.3 mm (including insulation):
+- Primary layers: 264 turns ÷ (19mm ÷ 0.3mm) ≈ 4 layers
+- Secondary layers: 792 turns ÷ (19mm ÷ 0.3mm) ≈ 12 layers
+- Total bobbin utilization: ~16 layers × 0.3mm = 4.8 mm radial thickness
+
+**Expected Performance:**
+- **Coupling coefficient**: ~0.7-0.8 (air core)
+- **Leakage inductance**: Higher than ferrite core
+- **Efficiency**: 85-90% (due to air core losses)
+- **Bandwidth**: Excellent for 400 kHz PWM
 #### Bipolar
 ##### Design and Calculation
 Toroidal Ferrite Core Transformer

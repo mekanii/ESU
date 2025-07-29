@@ -1,4 +1,4 @@
-23817597764781076
+23826361285416859
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -62923,6 +62923,13 @@ Inductor Radial series Radial pin pitch 7.62*12.70mm^2  length 16.13mm width 16.
 2
 2
 Inductor_THT
+L_Radial_Multilayer_D8.0mm_P12.70mm
+Inductor, Radial series, Radial, pin pitch=3.00mm, , diameter=7mm, http://www.abracon.com/Magnetics/radial/AIUR-16.pdf
+Inductor Radial series Radial pin pitch 3.00mm  diameter 7mm
+0
+2
+2
+Inductor_THT
 L_SELF1408
 Self Ferrite 14 - 08
 SELF
@@ -95585,6 +95592,13 @@ EE19
 10
 10
 Transformer_THT
+EE25-1P-1S-Vertical-2143
+
+
+0
+10
+10
+Transformer_THT
 EE25-10-6
 
 
@@ -95598,6 +95612,20 @@ EE25-13-7
 0
 10
 10
+Transformer_THT
+EE35-1P-1S-Vertical-2143
+
+
+0
+4
+4
+Transformer_THT
+Inductor-EE25
+
+
+0
+2
+2
 Transformer_THT
 Transformer_37x44
 transformer 37x44mm²
@@ -95926,6 +95954,13 @@ Transformer, Toroid, tapped, horizontal, laying, Diameter 18mm,
 Transformer Toroid tapped horizontal laying Diameter 18mm 
 0
 5
+4
+Transformer_THT
+Transformer_Toroid_Horizontal_OD40_ID23_H15
+Transformer, Toroid, horizontal, laying, Diameter 9mm, Amidon, T30,
+Transformer Toroid horizontal laying Diameter 9mm Amidon T30 
+0
+6
 4
 Transformer_THT
 Transformer_Toroid_Tapped_Horizontal_D9.0mm_Amidon-T30
