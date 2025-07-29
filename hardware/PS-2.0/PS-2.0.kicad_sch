@@ -7374,7 +7374,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:Heatsink")
-		(at 105.41 43.18 0)
+		(at 105.41 21.59 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom yes)
@@ -7382,7 +7382,7 @@
 		(dnp no)
 		(uuid "0479c6bf-2256-4d80-9397-8e6310bf2c30")
 		(property "Reference" "HS1"
-			(at 105.41 38.1 0)
+			(at 105.41 16.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7390,7 +7390,7 @@
 			)
 		)
 		(property "Value" "Heatsink"
-			(at 109.22 42.5449 0)
+			(at 109.22 20.9549 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7400,7 +7400,7 @@
 			)
 		)
 		(property "Footprint" "Heatsink:Heatsink_Stonecold_HS-132_32x14mm_2xFixation1.5mm_NoPad"
-			(at 105.7148 43.18 0)
+			(at 105.7148 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7409,7 +7409,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 105.7148 43.18 0)
+			(at 105.7148 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7418,7 +7418,7 @@
 			)
 		)
 		(property "Description" "Heatsink"
-			(at 105.41 43.18 0)
+			(at 105.41 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7844,7 +7844,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:Heatsink")
-		(at 120.65 43.18 0)
+		(at 120.65 21.59 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom yes)
@@ -7852,7 +7852,7 @@
 		(dnp no)
 		(uuid "1f8bd106-8d4c-4037-a36b-56072cf45c62")
 		(property "Reference" "HS3"
-			(at 120.65 38.1 0)
+			(at 120.65 16.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7860,7 +7860,7 @@
 			)
 		)
 		(property "Value" "Heatsink"
-			(at 124.46 42.5449 0)
+			(at 124.46 20.9549 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7870,7 +7870,7 @@
 			)
 		)
 		(property "Footprint" "Heatsink:Heatsink_Custom_10x18x50"
-			(at 120.9548 43.18 0)
+			(at 120.9548 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7879,7 +7879,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 120.9548 43.18 0)
+			(at 120.9548 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7888,7 +7888,7 @@
 			)
 		)
 		(property "Description" "Heatsink"
-			(at 120.65 43.18 0)
+			(at 120.65 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8539,7 +8539,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 177.8 41.91 0)
+		(at 177.8 20.32 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -8547,7 +8547,7 @@
 		(dnp no)
 		(uuid "45801337-c653-4dcb-bf44-6739c348a142")
 		(property "Reference" "H5"
-			(at 176.53 37.592 0)
+			(at 176.53 16.002 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8556,7 +8556,7 @@
 			)
 		)
 		(property "Value" "MountingHole_Pad"
-			(at 180.34 41.9099 0)
+			(at 180.34 20.3199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8566,7 +8566,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad"
-			(at 177.8 41.91 0)
+			(at 177.8 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8575,7 +8575,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 177.8 41.91 0)
+			(at 177.8 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8584,7 +8584,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 177.8 41.91 0)
+			(at 177.8 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9348,7 +9348,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 187.96 41.91 0)
+		(at 187.96 20.32 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -9356,7 +9356,7 @@
 		(dnp no)
 		(uuid "7e045b7e-5a17-44cb-a1d7-a12fcc27c293")
 		(property "Reference" "H6"
-			(at 186.69 37.592 0)
+			(at 186.69 16.002 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9365,7 +9365,7 @@
 			)
 		)
 		(property "Value" "MountingHole_Pad"
-			(at 190.5 41.9099 0)
+			(at 190.5 20.3199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9375,7 +9375,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad"
-			(at 187.96 41.91 0)
+			(at 187.96 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9384,7 +9384,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 41.91 0)
+			(at 187.96 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9393,7 +9393,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 187.96 41.91 0)
+			(at 187.96 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9490,7 +9490,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 157.48 41.91 0)
+		(at 157.48 20.32 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -9498,7 +9498,7 @@
 		(dnp no)
 		(uuid "8ec3d5fd-4b96-4212-9acd-e0de2878a8a6")
 		(property "Reference" "H3"
-			(at 156.21 37.592 0)
+			(at 156.21 16.002 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9507,7 +9507,7 @@
 			)
 		)
 		(property "Value" "MountingHole_Pad"
-			(at 160.02 41.9099 0)
+			(at 160.02 20.3199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9517,7 +9517,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad"
-			(at 157.48 41.91 0)
+			(at 157.48 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9526,7 +9526,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 157.48 41.91 0)
+			(at 157.48 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9535,7 +9535,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 157.48 41.91 0)
+			(at 157.48 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9702,7 +9702,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 147.32 41.91 0)
+		(at 147.32 20.32 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -9710,7 +9710,7 @@
 		(dnp no)
 		(uuid "9348c5a2-a0ec-4ad7-9152-d736ec4055bf")
 		(property "Reference" "H2"
-			(at 146.05 37.592 0)
+			(at 146.05 16.002 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9719,7 +9719,7 @@
 			)
 		)
 		(property "Value" "MountingHole_Pad"
-			(at 149.86 41.9099 0)
+			(at 149.86 20.3199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9729,7 +9729,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad"
-			(at 147.32 41.91 0)
+			(at 147.32 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9738,7 +9738,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 147.32 41.91 0)
+			(at 147.32 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9747,7 +9747,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 147.32 41.91 0)
+			(at 147.32 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10067,7 +10067,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 137.16 41.91 0)
+		(at 137.16 20.32 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -10075,7 +10075,7 @@
 		(dnp no)
 		(uuid "9ca2428f-6370-4f07-88ef-5c0ac1fe326e")
 		(property "Reference" "H1"
-			(at 135.89 37.592 0)
+			(at 135.89 16.002 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10084,7 +10084,7 @@
 			)
 		)
 		(property "Value" "MountingHole_Pad"
-			(at 139.7 41.9099 0)
+			(at 139.7 20.3199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10094,7 +10094,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad"
-			(at 137.16 41.91 0)
+			(at 137.16 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10103,7 +10103,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 137.16 41.91 0)
+			(at 137.16 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10112,7 +10112,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 137.16 41.91 0)
+			(at 137.16 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10642,7 +10642,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:Heatsink")
-		(at 113.03 43.18 0)
+		(at 113.03 21.59 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom yes)
@@ -10650,7 +10650,7 @@
 		(dnp no)
 		(uuid "c73bbf69-99a7-4a21-a996-c7526fb35da2")
 		(property "Reference" "HS2"
-			(at 113.03 38.1 0)
+			(at 113.03 16.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10658,7 +10658,7 @@
 			)
 		)
 		(property "Value" "Heatsink"
-			(at 116.84 42.5449 0)
+			(at 116.84 20.9549 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10668,7 +10668,7 @@
 			)
 		)
 		(property "Footprint" "Heatsink:Heatsink_Stonecold_HS-132_32x14mm_2xFixation1.5mm_NoPad"
-			(at 113.3348 43.18 0)
+			(at 113.3348 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10677,7 +10677,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 113.3348 43.18 0)
+			(at 113.3348 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10686,7 +10686,7 @@
 			)
 		)
 		(property "Description" "Heatsink"
-			(at 113.03 43.18 0)
+			(at 113.03 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10705,7 +10705,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 167.64 41.91 0)
+		(at 167.64 20.32 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -10713,7 +10713,7 @@
 		(dnp no)
 		(uuid "cc099c10-fa0c-420a-9ea2-303e5878b611")
 		(property "Reference" "H4"
-			(at 166.37 37.592 0)
+			(at 166.37 16.002 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10722,7 +10722,7 @@
 			)
 		)
 		(property "Value" "MountingHole_Pad"
-			(at 170.18 41.9099 0)
+			(at 170.18 20.3199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10732,7 +10732,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_ISO14580_Pad"
-			(at 167.64 41.91 0)
+			(at 167.64 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10741,7 +10741,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 167.64 41.91 0)
+			(at 167.64 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10750,7 +10750,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 167.64 41.91 0)
+			(at 167.64 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)

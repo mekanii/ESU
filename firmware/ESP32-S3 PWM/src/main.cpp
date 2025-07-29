@@ -5,6 +5,8 @@
 #define RMT_TX_CHANNEL_1 RMT_CHANNEL_1
 #define SENS_CUT  4
 #define SENS_COAG 5
+#define MSD1      16
+#define MSD2      15
 
 const gpio_num_t PWM_0 = (gpio_num_t)1;
 const gpio_num_t PWM_1 = (gpio_num_t)2;
@@ -135,6 +137,9 @@ void setupButtons() {
   // Configure button pins as input
   pinMode(SENS_CUT, INPUT);
   pinMode(SENS_COAG, INPUT);
+
+  pinMode(MSD1, INPUT);
+  pinMode(MSD2, INPUT);
 
   // Initialize button states by reading current state
   delay(10); // Small delay to let pins stabilize

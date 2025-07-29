@@ -1,3 +1,25 @@
+2025-07-29
+- Firmware coding: foot switch [Need Review]
+- Firmware coding: Serial Communication untuk setting mode dan duty cycle [Done]
+- Function test: foot switch [Need Review]
+
+2025-07-28
+- Prototyping controller: rangkaian foot switch [Done]
+
+2025-07-25
+- Membuat bobbin induktor untuk LC filter [Done]
+
+2025-07-24
+- Membuat bobbin induktor untuk LC filter [In Progress]
+
+2025-07-23
+- Literature review untuk High Frequency AC current [Skin Effect dan Proximity] [Done]
+- Literature review untuk EMC dan EMI EMS Shielding [Done]
+- Menulis dokumnetasi dan penyesuaian desain Toroidal Transformer dan induktor pada LC filter [Done]
+
+2025-07-22
+- Literature review untuk High Frequency AC current [Skin Effect dan Proximity] [In Progress]
+
 2025-07-17
 - Rencana integrasi REM dan MSD [Done]
 - Menulis dokumentasi desain Bipolar toroidal core transformer [Done]
