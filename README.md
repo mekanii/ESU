@@ -203,9 +203,19 @@ The combination of clock frequency and resolution plays a vital role in determin
 - Standard
 
 ### b. Serial Communication
-#### 1 Parameters Command <[command]>
-#### 2 Parameters Command <[command] [mode]>
-#### 3 Parameters Command <[command] [mode] [duty cycle]>
+#### 1 Parameters <[command]>
+#### 2 Parameters <[command] [mode]>
+#### 3 Parameters <[command] [mode] [duty cycle]>
+##### command = 1
+| mode  |	duty cycle  |	Description         |	Example |	Success Response  |	Error Response  |
+| -----:|:-----------:|:------------------- |:------- |:-----------------:|:---------------:|
+|     0 |	    0 - 200 |	Pure cut            |	1 0 100 |	               00	|              02 |
+|     1 |	    0 - 200 |	Cut pattern 1       |	1 1 150 |	               00	|              02 |
+|     2 |	    0 - 200 |	Cut pattern 2       |	1 2 120 |	               00	|              02 |
+|     3 |	    0 - 400 |	Coag Spray          |	1 3 250 |	               00	|              02 |
+|     4 |	    0 - 500 |	Coag Forced         |	1 4 300 |	               00	|              02 |
+|     5 |	    0 - 200 |	Bipolar Standard    |	1 5 80  |	               00	|              02 |
+| Other |	        N/A	| Invalid	            | 1 6 100 |	              N/A	|              02 |
 
 ## 4. Power Stage
 ### a. DAC
