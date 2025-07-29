@@ -205,32 +205,32 @@ The combination of clock frequency and resolution plays a vital role in determin
 ### b. Serial Communication
 #### 1 Parameters <[command]>
 | Command |	Description 	            | Example | Success Response  | Error Response  |
-| -------:|:------------------------- |:------- |:-----------------:|:---------------:|
-|       2 | Stop all RMT transmission |	2	      | 00                | N/A             |
+|:-------:|:------------------------- |:------- |:-----------------:|:---------------:|
+| 2       | Stop all RMT transmission |	2	      | 00                | N/A             |
 | Other   | Invalid command           | 3       | N/A               | 02              |
 
 #### 2 Parameters <[command] [mode]>
 ##### command = 0
 | Mode  |	Auto-assigned Channel | Description       | Example |	Success Response  |	Error Response  |
-| -----:|:---------------------:|:----------------- |:------- |:-----------------:|:---------------:|
-|     0 |	Channel 0             |	Pure cut          | 0 0     |	00	              | N/A             |
-|     1 |	Channel 0             |	Cut pattern 1     | 0 1     |	00	              | N/A             |
-|     2 |	Channel 0             |	Cut pattern 2     | 0 2     |	00	              | N/A             |
-|     3 |	Channel 1             |	Coag Spray        | 0 3     |	00	              | N/A             |
-|     4 |	Channel 1             |	Coag Forced       | 0 4     |	00	              | N/A             |
-|     5 |	Channel 1             |	Bipolar Standard  | 0 5     |	00	              | N/A             |
+|:-----:|:---------------------:|:----------------- |:------- |:-----------------:|:---------------:|
+| 0     |	Channel 0             |	Pure cut          | 0 0     |	00	              | N/A             |
+| 1     |	Channel 0             |	Cut pattern 1     | 0 1     |	00	              | N/A             |
+| 2     |	Channel 0             |	Cut pattern 2     | 0 2     |	00	              | N/A             |
+| 3     |	Channel 1             |	Coag Spray        | 0 3     |	00	              | N/A             |
+| 4     |	Channel 1             |	Coag Forced       | 0 4     |	00	              | N/A             |
+| 5     |	Channel 1             |	Bipolar Standard  | 0 5     |	00	              | N/A             |
 | Other |	N/A	                  | Invalid           | 0 6     | N/A	              | 02              |
 
 #### 3 Parameters <[command] [mode] [duty cycle]>
 ##### command = 1
 | Mode  |	Duty Cycle  |	Description         |	Example |	Success Response  |	Error Response  |
-| -----:|:-----------:|:------------------- |:------- |:-----------------:|:---------------:|
-|     0 |	    0 - 200 |	Pure cut            |	1 0 100 |	00	              | 02              |
-|     1 |	    0 - 200 |	Cut pattern 1       |	1 1 150 |	00	              | 02              |
-|     2 |	    0 - 200 |	Cut pattern 2       |	1 2 120 |	00	              | 02              |
-|     3 |	    0 - 400 |	Coag Spray          |	1 3 250 |	00	              | 02              |
-|     4 |	    0 - 500 |	Coag Forced         |	1 4 300 |	00	              | 02              |
-|     5 |	    0 - 200 |	Bipolar Standard    |	1 5 80  |	00	              | 02              |
+|:-----:|:-----------:|:------------------- |:------- |:-----------------:|:---------------:|
+| 0     |	    0 - 200 |	Pure cut            |	1 0 100 |	00	              | 02              |
+| 1     |	    0 - 200 |	Cut pattern 1       |	1 1 150 |	00	              | 02              |
+| 2     |	    0 - 200 |	Cut pattern 2       |	1 2 120 |	00	              | 02              |
+| 3     |	    0 - 400 |	Coag Spray          |	1 3 250 |	00	              | 02              |
+| 4     |	    0 - 500 |	Coag Forced         |	1 4 300 |	00	              | 02              |
+| 5     |	    0 - 200 |	Bipolar Standard    |	1 5 80  |	00	              | 02              |
 | Other |	        N/A	| Invalid	            | 1 6 100 |	N/A	              | 02              |
 
 ## 4. Power Stage
