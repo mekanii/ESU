@@ -207,7 +207,7 @@ The combination of clock frequency and resolution plays a vital role in determin
 | Command |	Description 	            | Example | Success Response  | Error Response  |
 |:-------:|:------------------------- |:------- |:-----------------:|:---------------:|
 | 2       | Stop all RMT transmission |	2	      | 00                | N/A             |
-| Other   | Invalid command           | 3       | N/A               | 02              |
+| Other   | Invalid                   | 3       | N/A               | 02              |
 
 #### 2 Parameters <[command] [mode]>
 ##### command = 0
