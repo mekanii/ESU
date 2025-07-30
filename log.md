@@ -1,6 +1,11 @@
+2025-07-30
+- Prototyping controller: rangkaian Monopolar Switch Detection [Done] 
+- Firmware coding: feat/Monopolar Switch Detection [Need Review]
+- Firmware coding: feat/integrasi Monopolar Switch Detection dengan Foot Switch [Need Review]
+
 2025-07-29
-- Firmware coding: foot switch [Need Review]
-- Firmware coding: Serial Communication untuk setting mode dan duty cycle [Done]
+- Firmware coding: feat/foot switch [Need Review]
+- Firmware coding: feat/Serial Communication untuk setting mode dan duty cycle [Done]
 - Function test: foot switch [Need Review]
 
 2025-07-28
