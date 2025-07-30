@@ -403,7 +403,14 @@ It is also important to understand the load impedance variations for the applica
 - Q factor or damping ratio
 
 <p align="center">
-  <img src="pic/Type-1 Butterworth Filter.png" alt="Type-1 Butterworth Filter">
+  <img src="pic/effect-of-q-on-frequency-response.png" alt="effect-of-q-on -frequency-response">
+</p>
+
+Texas Instrument recommends using a second-order Butterworth low-pass filter because of its flat pass-band and phase response. Texas Instrument does not recommend the use of LC filters that peak excessively, like the underdamped filter response shown in figure above. At high frequency, the peaks are generally harsh to the human ear and can also trigger the protection circuitry, such as overcurrent, of some amplifiers. However, overdamped filters result in attenuation of high-frequency signal content.
+
+###### Type 1 Butterworth Filter
+<p align="center">
+  <img src="pic/type-1-butterworth-filter.png" alt="type-1-butterworth-filter">
 </p>
 
 Cut-off Frequency for single-ended LC Filter<br><br>
@@ -452,6 +459,18 @@ $L_{BTL} = 28.1492 \text{ µH} ≈ 29 \text{ µH}$
 $C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2 • 3.14 • 400,000 • \frac{ 100 }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2,512,000 • 70.7106 } }{ 2 } = 0.000000000281492 \ F$
 
 $C_{BTL} = 2.81492 \ nF ≈ 2.7 \ nF$
+
+###### Frequency Response
+With the targeted Q of 0.707 = 1/√2 and the cut-off frequency is:<br><br>
+$f_0 = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • C_L } } = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • 2 • C_{BTL} } }$
+
+$f_0 = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 29 • 10^{-6} • 2 • 2.7 • 10^{-9} } } = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 156.6 • 10^{-15} } } = \frac{ 1 }{ 2 • 3.14 • 3.9572 • 10^{-7} } =  402,387.4966 \text{ Hz}$
+
+$f_0 = 402.387 \text{ kHz}$
+
+Using the standard inductor and capacitor values from the previous calculations, the Q factor for 100Ω load is:<br><br>
+Q = RL/√(CL/L)
+$Q = \frac{ R_L } { \sqrt{ C_L • L_{BTL} } }$
 
 <!-- Air Core Axial Inductor
 | N1  | N2  |
