@@ -469,8 +469,9 @@ $f_0 = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 29 • 10^{-6} • 2 • 2.7 • 10^{-9
 $f_0 = 402.387 \text{ kHz}$
 
 Using the standard inductor and capacitor values from the previous calculations, the Q factor for 100Ω load is:<br><br>
-Q = RL/√(CL/L)
-$Q = \frac{ R_L } { \sqrt{ C_L • L_{BTL} } }$
+$Q = \frac{ R_L } { \sqrt{ C_L • L_{BTL} } } = \frac{ \frac{ R_{BTL}L }{ 2 } } { \sqrt{ 2 • C_{BTL} • L_{BTL} } }$
+
+$Q = \frac{ \frac{ 100 }{ 2 } } { \sqrt{ 2 • 2.7 • 10^{-9} • 29 • 10^{-6} } } = \frac{ 50 } { \sqrt{ 156.6 • 10^{-15} } } = \frac{ 50 } { 3.9572 • 10^{-7} } = 1.2625 • 10^6$
 
 <!-- Air Core Axial Inductor
 | N1  | N2  |
