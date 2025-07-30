@@ -393,6 +393,15 @@ The image illustrates the output scope for per pulse operation at input transfor
 EE Ferrite Core Inductor
 #### Bipolar
 ##### Design and Calculation
+###### Output Class-D LC Filter Frequency Response Properties
+The frequency response of the second-order class-D LC output filter is critical when selecting the component values for the inductor and capacitor. The LC filter response also varies with load impedance. The load impedance determines the damping ratio of the output LC filter and is classified as:
+- Overdamped
+- Critically damped
+- Underdamped
+It is also important to understand the load impedance variations for the application and select the L and C values that suit the expected load variations. Ideally, the LC filter value is selected for a **critically damped, flat passband, and phase response**. Two considerations when selecting components for the second-order low-pass filter is:
+- the cut-off frequency
+- Q factor or damping ratio
+
 <p align="center">
   <img src="pic/Type-1 Butterworth Filter.png" alt="Type-1 Butterworth Filter">
 </p>
