@@ -12,10 +12,10 @@ const gpio_num_t PWM_0 = (gpio_num_t)1;
 const gpio_num_t PWM_1 = (gpio_num_t)2;
 
 // Button state variables (only 2 buttons now: mode1, mode3)
-bool lastButtonState[2] = {HIGH, HIGH};
-bool currentButtonState[2] = {HIGH, HIGH};
-bool buttonPressed[2] = {false, false};  // Track if button is currently pressed
-unsigned long lastDebounceTime[2] = {0, 0};
+bool lastButtonState[4] = {HIGH, HIGH, HIGH, HIGH};
+bool currentButtonState[4] = {HIGH, HIGH, HIGH, HIGH};
+bool buttonPressed[4] = {false, false, false, false};  // Track if button is currently pressed
+unsigned long lastDebounceTime[4] = {0, 0, 0, 0};
 const unsigned long debounceDelay = 50; // 50ms debounce delay
 
 // Default duty cycles for each mode (pure, cut1, cut2, spray, forced, standard)
@@ -145,8 +145,12 @@ void setupButtons() {
   delay(10); // Small delay to let pins stabilize
   lastButtonState[0] = digitalRead(SENS_CUT);
   lastButtonState[1] = digitalRead(SENS_COAG);
+  lastButtonState[2] = digitalRead(MSD1);
+  lastButtonState[3] = digitalRead(MSD2);
   currentButtonState[0] = lastButtonState[0];
   currentButtonState[1] = lastButtonState[1];
+  currentButtonState[2] = lastButtonState[2];
+  currentButtonState[3] = lastButtonState[3];
 }
 
 bool updateButtonState(int buttonIndex, int buttonPin) {
@@ -168,15 +172,29 @@ bool updateButtonState(int buttonIndex, int buttonPin) {
       currentButtonState[buttonIndex] = reading;
 
       if (currentButtonState[buttonIndex] == LOW) {
-        // Button pressed (HIGH to LOW transition for active LOW)
-        buttonPressed[buttonIndex] = true;
-        buttonJustPressed = true;
+        // Check if any other button is already pressed before allowing this press
+        bool otherButtonPressed = false;
+        for (int i = 0; i < 4; i++) {
+          if (i != buttonIndex && buttonPressed[i]) {
+            otherButtonPressed = true;
+            break;
+          }
+        }
+
+        if (!otherButtonPressed) {
+          // Button pressed (HIGH to LOW transition for active LOW) and no other button is pressed
+          buttonPressed[buttonIndex] = true;
+          buttonJustPressed = true;
+        }
+        // If another button is pressed, ignore this button press
       } else {
         // Button released (LOW to HIGH transition for active LOW)
-        buttonPressed[buttonIndex] = false;
-        // Stop RMT transmission when button is released
-        rmt_tx_stop(RMT_TX_CHANNEL_0);
-        rmt_tx_stop(RMT_TX_CHANNEL_1);
+        if (buttonPressed[buttonIndex]) {  // Only stop if this button was actually active
+          buttonPressed[buttonIndex] = false;
+          // Stop RMT transmission when button is released
+          rmt_tx_stop(RMT_TX_CHANNEL_0);
+          rmt_tx_stop(RMT_TX_CHANNEL_1);
+        }
       }
     }
   }
@@ -187,13 +205,13 @@ bool updateButtonState(int buttonIndex, int buttonPin) {
 
 void readButtons() {
   // Check if mode 1 button (SENS_CUT) was just pressed
-  if (updateButtonState(0, SENS_CUT)) {
+  if (updateButtonState(0, SENS_CUT) || updateButtonState(2, MSD1)) {
     // Fire update once when button is first pressed (RMT will auto-loop)
     fire(currentMode[0]);
   }
 
   // Check if mode 3 button (SENS_COAG) was just pressed
-  if (updateButtonState(1, SENS_COAG)) {
+  if (updateButtonState(1, SENS_COAG) || updateButtonState(3, MSD2)) {
     // Fire update once when button is first pressed (RMT will auto-loop)
     fire(currentMode[1]);
   }
