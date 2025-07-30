@@ -478,9 +478,10 @@ $⍵_0 = 20 log_{10} (Q)$
 
 $⍵_0 = 20 log_{10} (0.6823) =  -3.3206 \text{ dB}$
 
-Using the transfer function (Equation 8), the frequency response of the selected LC filter can be plotted to provide a complete visual evaluation of the LC filter response.
+Using the transfer function (Equation 8), the frequency response of the selected LC filter can be plotted to provide a complete visual evaluation of the LC filter response.<br><br>
+$H_{Diff}(s) = \frac{ V_{out}(s) } { V_{in}(s) } = \frac{1}{1 + s • \frac{ L_{BTL} }{ R_L } • C_L + s^2 } = \frac{1}{1 + s • \frac{ L_{BTL} }{ \frac{ R_{BTL} } { 2 } } • 2 • C_{BTL} + s^2 }$
 
-$H_{Diff}(s) = \frac{1}{1 + s • \frac{ L_{BTL} }{ R_L } • C_L + s^2 } = \frac{1}{1 + s • \frac{ L_{BTL} }{ \frac{ R_{BTL} } { 2 } } • 2 • C_{BTL} + s^2 }$
+
 <!-- Air Core Axial Inductor
 | N1  | N2  |
 |----:|----:|
