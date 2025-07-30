@@ -469,10 +469,18 @@ $f_0 = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 29 • 10^{-6} • 2 • 2.7 • 10^{-9
 $f_0 = 402.387 \text{ kHz}$
 
 Using the standard inductor and capacitor values from the previous calculations, the Q factor for 100Ω load is:<br><br>
-$Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ R_{BTL}L }{ 2 } • \sqrt{ \frac{ 2 • C_{BTL} } { L_{BTL} } }$
+$Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ R_{BTL} }{ 2 } • \sqrt{ \frac{ 2 • C_{BTL} } { L_{BTL} } }$
 
 $Q = \frac{ 100 }{ 2 } • \sqrt{ \frac{ 2 • 2.7 • 10^{-9} } { 29 • 10^{-6} } } = 50 • \sqrt{ \frac{ 5.4 • 10^{-9} } { 29 • 10^{-6} } } =  50 • \sqrt{  0.0001862  } =  0.6823$
 
+The peaking at cut-off frequency in dB is:<br><br>
+$⍵_0 = 20 log_{10} (Q)$
+
+$⍵_0 = 20 log_{10} (0.6823) =  -3.3206 \text{ dB}$
+
+Using the transfer function (Equation 8), the frequency response of the selected LC filter can be plotted to provide a complete visual evaluation of the LC filter response.
+
+$H_{Diff}(s) = \frac{1}{1 + s \times \frac{L_{BTL}}{R_{BTL}/2} \times 2 \times C_{BTL} + s^2 \times L_{BTL} \times 2 \times C_{BTL}}$
 <!-- Air Core Axial Inductor
 | N1  | N2  |
 |----:|----:|
