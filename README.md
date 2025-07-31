@@ -280,9 +280,7 @@ Air Core Transformer using Cylindrical Bobbin
 ##### Design and Calculation
 Toroidal Ferrite Core Transformer
 
-```math
-V_{in} = 72 \ V
-```
+$V_{in} = 72 \ V$
 
 $V_{out} = 216 \ V$
 
