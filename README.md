@@ -482,7 +482,7 @@ Using the transfer function below, the frequency response of the selected LC fil
 $H_{Diff}(s) = \frac{ V_{out}(s) } { V_{in}(s) } = \frac{1}{1 + s • \frac{ L_{BTL} }{ R_L } • C_L + s^2 } = \frac{1}{1 + s • \frac{ L_{BTL} }{ \frac{ R_{BTL} } { 2 } } • 2 • C_{BTL} + s^2 }$
 
 <p align="center">
-  <img src="pic/gain-vs-frequency.png" alt="gain-vs-frequency" height="100%">
+  <img src="pic/gain-vs-frequency.png" alt="gain-vs-frequency" style="width: 100%; max-height: 300px; object-fit: contain;">
 </p>
 <!-- Air Core Axial Inductor
 | N1  | N2  |
