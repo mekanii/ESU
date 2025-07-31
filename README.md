@@ -452,26 +452,28 @@ where
 - $R_L = \frac{ R_{BTL} }{ 2 }$
 
 then<br><br>
-$L_{BTL} = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 } = \frac{ \frac{ 100 }{ 2 } • \sqrt{ 2 } }{ 2 • 3.14 • 400,000 } = \frac{ 70.7106 }{ 2,512,000 } = 0.000028149155 \ H$
+$L_{BTL} = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 } = \frac{ \frac{ 100 }{ 2 } • \sqrt{ 2 } }{ 2 • 3.14 • 400,000 } = \frac{ 70.7106 }{ 2,512,000 }$
 
-$L_{BTL} = 28.1492 \text{ µH} ≈ 29 \text{ µH}$
+$L_{BTL} = 0.000028149155 \ H = 28.1492 \text{ µH} ≈ 29 \text{ µH}$
 
-$C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2 • 3.14 • 400,000 • \frac{ 100 }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2,512,000 • 70.7106 } }{ 2 } = 0.000000000281492 \ F$
+$C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2 • 3.14 • 400,000 • \frac{ 100 }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2,512,000 • 70.7106 } }{ 2 }$
 
-$C_{BTL} = 2.81492 \ nF ≈ 2.7 \ nF$
+$C_{BTL} = 0.000000000281492 \ F = 2.81492 \ nF ≈ 2.7 \ nF$
 
 ###### Frequency Response
 With the targeted Q of 0.707 = 1/√2 and the cut-off frequency is:<br><br>
 $f_0 = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • C_L } } = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • 2 • C_{BTL} } }$
 
-$f_0 = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 29 • 10^{-6} • 2 • 2.7 • 10^{-9} } } = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 156.6 • 10^{-15} } } = \frac{ 1 }{ 2 • 3.14 • 3.9572 • 10^{-7} } =  402,387.4966 \text{ Hz}$
+$f_0 = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 29 • 10^{-6} • 2 • 2.7 • 10^{-9} } } = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 156.6 • 10^{-15} } } = \frac{ 1 }{ 2 • 3.14 • 3.9572 • 10^{-7} }$
 
-$f_0 = 402.387 \text{ kHz}$
+$f_0 = 402,387.4966 \text{ Hz} = 402.387 \text{ kHz}$
 
 Using the standard inductor and capacitor values from the previous calculations, the Q factor for 100Ω load is:<br><br>
 $Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ R_{BTL} }{ 2 } • \sqrt{ \frac{ 2 • C_{BTL} } { L_{BTL} } }$
 
-$Q = \frac{ 100 }{ 2 } • \sqrt{ \frac{ 2 • 2.7 • 10^{-9} } { 29 • 10^{-6} } } = 50 • \sqrt{ \frac{ 5.4 • 10^{-9} } { 29 • 10^{-6} } } =  50 • \sqrt{  0.0001862  } =  0.6823$
+$Q = \frac{ 100 }{ 2 } • \sqrt{ \frac{ 2 • 2.7 • 10^{-9} } { 29 • 10^{-6} } }$
+
+$Q = 0.6823$
 
 The peaking at cut-off frequency in dB is:<br><br>
 $⍵_0 = 20 log_{10} (Q)$
@@ -479,7 +481,7 @@ $⍵_0 = 20 log_{10} (Q)$
 $⍵_0 = 20 log_{10} (0.6823) =  -3.3206 \text{ dB}$
 
 Using the transfer function below, the frequency response of the selected LC filter can be plotted to provide a complete visual evaluation of the LC filter response.<br><br>
-$H_{Diff}(s) = \frac{ V_{out}(s) } { V_{in}(s) } = \frac{1}{1 + s • \frac{ L_{BTL} }{ R_L } • C_L + s^2 } = \frac{1}{1 + s • \frac{ L_{BTL} }{ \frac{ R_{BTL} } { 2 } } • 2 • C_{BTL} + s^2 }$
+$H_{Diff}(s) = \frac{ V_{out}(s) } { V_{in}(s) } = \frac{1}{1 + s • \frac{ L_{BTL} }{ R_L } • C_L + s^2 }$
 
 <p align="center">
   <img src="pic/gain-vs-frequency.png" alt="gain-vs-frequency">
