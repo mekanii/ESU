@@ -390,9 +390,9 @@ The image illustrates the output scope for per pulse operation at input transfor
 > [!NOTE]
 > 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
-<p align="center">
+<!-- <p align="center">
   <img src="pic/PWM/XF/Bipolar/12V/bipolar-xformer-output-400.png" alt="bipolar-xformer-output-400">
-</p>
+</p> -->
 
 ### c. LC Filter
 #### Monopolar
