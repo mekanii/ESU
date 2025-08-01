@@ -348,7 +348,7 @@ The skin effect is a phenomenon in alternating current (AC) where the current de
 
 At 400 kHz, the skin depth in copper is approximately:
 
-$δ = \sqrt{ ρ/(π × f × μ) } ≈ 0.1 \ mm$
+$δ = \sqrt{ \frac{ ρ } { π × f × μ } } ≈ 0.1 \ mm$
 
 Since our calculated wire diameters are larger than 2× skin depth, consider using:
 1. **Litz wire** for better high-frequency performance
