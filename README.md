@@ -266,9 +266,9 @@ It provides a detailed view of the waveform characteristics and performance metr
 > [!NOTE]
 > Pure Cut PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
-<p align="center">
+<!-- <p align="center">
   <img src="pic/PWM/Wave-pure-cut-driver-mosfet.png" alt="Wave-pure-cut-driver-mosfet">
-</p>
+</p> -->
 
 ##### Coag
 ### b. Transformer
