@@ -6430,6 +6430,354 @@
 				)
 			)
 		)
+		(symbol "Relay:G5V-1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "K"
+				(at 11.43 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "G5V-1"
+				(at 11.43 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Relay_THT:Relay_SPDT_Omron_G5V-1"
+				(at 28.702 -0.762 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_1.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Ultra-miniature, Highly Sensitive SPDT Relay for Signal Circuits"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Single Pole Relay SPDT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Relay*SPDT*Omron*G5V?1*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "G5V-1_0_0"
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 7.62 2.54) (xy 6.985 3.175) (xy 7.62 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "G5V-1_0_1"
+				(rectangle
+					(start -10.16 5.08)
+					(end 10.16 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -8.255 1.905)
+					(end -1.905 -1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -1.905) (xy -2.54 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -5.08) (xy -5.08 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy -5.08 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 0) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 0) (xy 3.81 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 3.175 3.81)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 5.08 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 5.08) (xy 2.54 2.54) (xy 3.175 3.175) (xy 2.54 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "G5V-1_1_1"
+				(pin passive line
+					(at 2.54 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 7.62 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 90)
+					(length 2.54) hide
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Switch:SW_Omron_B3FS"
 			(pin_numbers hide)
 			(pin_names
@@ -8425,6 +8773,16 @@
 	)
 	(wire
 		(pts
+			(xy 314.96 72.39) (xy 314.96 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34fc26c7-a696-4179-808a-7248b4c0bcf1")
+	)
+	(wire
+		(pts
 			(xy 384.81 114.3) (xy 387.35 114.3)
 		)
 		(stroke
@@ -9162,6 +9520,16 @@
 			(type default)
 		)
 		(uuid "6c97c48d-836f-4650-a6ee-1e4c61f31cef")
+	)
+	(wire
+		(pts
+			(xy 314.96 92.71) (xy 314.96 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d7534b9-c308-4491-a8b8-cb807bc85c8f")
 	)
 	(wire
 		(pts
@@ -10475,6 +10843,16 @@
 	)
 	(wire
 		(pts
+			(xy 304.8 87.63) (xy 307.34 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df00e25c-2da2-4d0c-8072-3479f05f7dfe")
+	)
+	(wire
+		(pts
 			(xy 186.69 176.53) (xy 196.85 176.53)
 		)
 		(stroke
@@ -10712,6 +11090,16 @@
 			(type default)
 		)
 		(uuid "eff332ad-fd0d-4eef-a404-824f314c106e")
+	)
+	(wire
+		(pts
+			(xy 312.42 72.39) (xy 314.96 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f14d69dc-406e-4ea0-886e-1750dfa1d6b7")
 	)
 	(wire
 		(pts
@@ -15764,6 +16152,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Relay:G5V-1")
+		(at 304.8 67.31 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8f1b4eac-89cb-497f-b867-5884ba11198f")
+		(property "Reference" "K1"
+			(at 304.8 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "G5V-1"
+			(at 304.8 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Relay_THT:Relay_SPDT_Omron_G5V-1"
+			(at 304.038 38.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_1.pdf"
+			(at 304.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Ultra-miniature, Highly Sensitive SPDT Relay for Signal Circuits"
+			(at 304.8 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "0973b488-c78e-4b4d-82db-4a6206bc753c")
+		)
+		(pin "9"
+			(uuid "24986116-5179-446e-9f12-ac6f5d0910cd")
+		)
+		(pin "10"
+			(uuid "c9e636aa-4710-43d7-93f5-4de82814aadf")
+		)
+		(pin "5"
+			(uuid "b3481867-8cef-4347-b94a-a0b709e4cf7f")
+		)
+		(pin "2"
+			(uuid "191c44f0-98e6-4457-bbe9-530127cbd505")
+		)
+		(pin "1"
+			(uuid "be0e9932-5f70-4cf9-b96b-2ed1789a377c")
+		)
+		(instances
+			(project ""
+				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
+					(reference "K1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 388.62 132.08 90)
 		(unit 1)
@@ -16093,6 +16561,71 @@
 			(project "CTL-1.0"
 				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
 					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 314.96 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a1577933-cc65-469f-a1cb-92156d4f82d9")
+		(property "Reference" "#PWR025"
+			(at 314.96 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 314.96 98.806 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 314.96 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 314.96 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 314.96 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2acd803f-9929-47b1-b2bf-32f33b85595b")
+		)
+		(instances
+			(project "CTL-1.0"
+				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -17612,6 +18145,148 @@
 			(project "CTL-1.0"
 				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
 					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 300.99 87.63 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d21717ac-1965-4b97-9ebe-5e4017bd477f")
+		(property "Reference" "R19"
+			(at 300.99 85.598 90)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 300.99 89.662 90)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 300.99 89.408 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 300.99 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 300.99 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d14610dd-cffb-4bcc-8f74-a105dc6aed45")
+		)
+		(pin "1"
+			(uuid "a0736b9c-ce49-41fe-8aca-9cc653275c5e")
+		)
+		(instances
+			(project "CTL-1.0"
+				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCX56")
+		(at 312.42 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d3b8639c-9140-417a-8670-00cc01caafc4")
+		(property "Reference" "Q5"
+			(at 317.5 86.868 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BCX56"
+			(at 317.5 88.392 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-89-3"
+			(at 317.5 89.535 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.nxp.com/docs/en/data-sheet/BCP56_BCX56_BC56PA.pdf"
+			(at 312.42 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "1A Ic, 80V Vce, NPN Medium Power Transistor, SOT-89"
+			(at 312.42 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "cb0cb675-41f0-4de8-b7e0-14c3e74c33ba")
+		)
+		(pin "3"
+			(uuid "000b8e94-649f-4984-857f-07643c6eff35")
+		)
+		(pin "1"
+			(uuid "0da6ad6c-9abb-4c7a-af80-5952603bf162")
+		)
+		(instances
+			(project "CTL-1.0"
+				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
+					(reference "Q5")
 					(unit 1)
 				)
 			)
