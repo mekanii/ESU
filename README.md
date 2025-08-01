@@ -339,9 +339,16 @@ $Current \ Density = 1.5 \ A/mm^2$
 $dW_s = \sqrt{ \frac{ 4 • 0.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 2 }{ 4.712 } } = 0.65 \ mm$
 
 ###### High-Frequency Considerations
+**Skin Effect**<br>
+The skin effect is a phenomenon in alternating current (AC) where the current density is highest at the surface of a conductor and decreases exponentially toward the center. This occurs because AC current creates a changing magnetic field that induces **eddy currents** within the conductor, which oppose the main current flow more strongly at the center.
+
+<p align="center">
+  <img src="pic/skin-effect.png" alt="skin-effect">
+</p>
+
 At 400 kHz, the skin depth in copper is approximately:
 
-$Skin \ depth = \sqrt{ ρ/(π × f × μ) } ≈ 0.1 \ mm$
+$δ = \sqrt{ ρ/(π × f × μ) } ≈ 0.1 \ mm$
 
 Since our calculated wire diameters are larger than 2× skin depth, consider using:
 1. **Litz wire** for better high-frequency performance
