@@ -1,3 +1,12 @@
+2025-08-04
+- feat/PCB ESU-CTL: retracing dengan faraday shield untuk mengurangi paracitic capacitance (EMC) [In Progress]
+
+2025-08-01
+- feat/PCB ESU-CTL: add relay untuk driver MOSFET [Need Review]
+
+2025-07-31
+- Winding bipolar toroidal core transformer sesuai kalkulasi baru menggunakan stranded wire 0.5 [Done]
+
 2025-07-30
 - Prototyping controller: rangkaian Monopolar Switch Detection [Done] 
 - Firmware coding: feat/Monopolar Switch Detection [Need Review]
