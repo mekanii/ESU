@@ -444,6 +444,7 @@ This section details the design and analysis of a Type 1 Butterworth Filter in s
 </p>
 
 **Cut-off Frequency for single-ended LC Filter**
+
 The cut-off frequency ($f_0$) of the LC filter is determined by the values of the inductor ($L_{BTL}$) and capacitor ($C_L$), using the formula:
 
 $f_0 = \frac{ ⍵_0 }{ 2 • π } = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • C_L } }$
@@ -461,7 +462,7 @@ To design a filter that is critically damped with a Butterworth response, Q = 0.
 $Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ 1 }{ \sqrt{ 2 } } $
 
 - Rearrange to Express $C_L$ in Terms of $L_{BTL}$ and $R_L$:<br>
-$\sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ 1 }{ R_L • \sqrt{ 2 } } → \frac{ C_L }{ L_{BTL} } = \frac{ 1 }{ R_L^2 • 2 }$<br>
+$\sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ 1 }{ R_L • \sqrt{ 2 } } → \frac{ C_L }{ L_{BTL} } = \frac{ 1 }{ R_L^2 • 2 }$<br><br>
 $C_L = \frac{ L_{BTL} }{ R_L^2 • 2 }$<br>
 This gives a direct relationship between the required capacitance and inductance for the chosen Q.
 
