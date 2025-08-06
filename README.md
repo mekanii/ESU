@@ -291,7 +291,7 @@ Given:
 - Maximum flux density<br>$B_{max} = 350 \ Gauss$
 - Output current<br>$I_{out} = 0.5 \ A$
 
-###### Core Cross-Sectional Area (A_e)
+###### Core Cross-Sectional Area ($A_e$)
 
 $A_e = \frac{( OD – ID ) • H }{ 2 }$
 
