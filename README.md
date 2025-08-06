@@ -448,6 +448,7 @@ The frequency response of the second-order class-D LC output filter is critical 
 - Overdamped
 - Critically damped
 - Underdamped
+
 It is also important to understand the load impedance variations for the application and select the L and C values that suit the expected load variations. Ideally, the LC filter value is selected for a **critically damped, flat passband, and phase response**. Two considerations when selecting components for the second-order low-pass filter is:
 - the cut-off frequency
 - Q factor or damping ratio
