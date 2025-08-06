@@ -280,15 +280,14 @@ Air Core Transformer using Cylindrical Bobbin
 ##### Design and Calculation
 Toroidal Ferrite Core Transformer
 
-$V_{in} = 72 \ V$
-
-$V_{out} = 216 \ V$
-
-$f = 400 \ kHz = 400,000 \ Hz$
-
-- $ID = 23.3 \ mm$
-- $OD = 40.4 \ mm$
-- $H = 15.1 \ mm$
+Given:
+- Input voltage: $V_{in} = 72 \ V$
+- Output voltage: $V_{out} = 216 \ V$
+- Switching frequency: $f = 400 \ kHz = 400,000 \ Hz$
+- Core dimensions:
+  - $ID = 23.3 \ mm$
+  - $OD = 40.4 \ mm$
+  - $H = 15.1 \ mm$
 
 $A_e = \frac{( OD – ID ) • H }{ 2 }$
 
@@ -346,7 +345,7 @@ $dW_s = \sqrt{ \frac{ 4 • 0.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 2 }{ 4.712 }
 
 ###### High-Frequency Considerations
 **Skin Effect**<br>
-The skin effect is a phenomenon in alternating current (AC) where the current density is highest at the surface of a conductor and decreases exponentially toward the center. This occurs because AC current creates a changing magnetic field that induces **eddy currents** within the conductor, which oppose the main current flow more strongly at the center.
+At high frequencies, the skin effect is a phenomenon in alternating current (AC) where the current density becomes highest at the surface of a conductor and decreases exponentially toward the center. This occurs because the alternating current generates a changing magnetic field, which in turn induces **eddy currents** within the conductor. These eddy currents oppose the main current flow more strongly at the center, forcing most of the AC current to flow near the surface. As a result, the effective cross-sectional area available for current flow is reduced, increasing the effective resistance of the wire at higher frequencies.
 
 <p align="center">
   <img src="pic/skin-effect.png" alt="skin-effect">
