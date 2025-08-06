@@ -478,10 +478,11 @@ This equation allows us to solve for the required inductance for a given cut-off
 - **Solve for $L_{BTL}$ and $C_L$**<br>
 Rearranging the above equation for $L_{BTL}$:<br>
 $L_{BTL} = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • f_0 }$<br><br>
-And using the earlier relationship for C_L:<br>
+And using the earlier relationship for $C_L$:<br>
 $C_L = \frac{ 1 }{ 2 • π • f_0 • R_L • \sqrt{ 2 } }$<br><br>
 
-- Apply to a practical example, we have:
+- **Apply to a Practical Example**<br>
+  We have:
   - $R_{BTL} = 100Ω$
   - $f_0 = 400 \text{ kHz} = 400,000 \text{ Hz}$
   <br><br>For a single-ended equivalent:
