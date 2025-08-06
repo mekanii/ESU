@@ -458,33 +458,32 @@ where $R_L$ is the load resistance.
 To design a filter that is critically damped with a Butterworth response, Q = 0.707 = 1/√2. By substituting Q = 1/√2 into equations for Cut-off Frequency and Quality Factor previously listed, L and C values can be derived for a critically damped system assuming the desired cut-off frequency, ωo, is known.
 
 **Step-by-Step Calculation**
-- Bellow is equation relates the load resistance, capacitance, and inductance for a Butterworth response:<br>
-$Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ 1 }{ \sqrt{ 2 } } $
+- **Start with the Quality Factor Equation**<br>
+$Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ 1 }{ \sqrt{ 2 } } $<br><br>
+This equation relates the load resistance, capacitance, and inductance for a Butterworth response
 
-- Rearrange to Express $C_L$ in Terms of $L_{BTL}$ and $R_L$:<br>
+- **Rearrange to Express $C_L$ in Terms of $L_{BTL}$ and $R_L$**<br>
 $\sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ 1 }{ R_L • \sqrt{ 2 } } → \frac{ C_L }{ L_{BTL} } = \frac{ 1 }{ R_L^2 • 2 }$<br><br>
-$C_L = \frac{ L_{BTL} }{ R_L^2 • 2 }$<br>
+$C_L = \frac{ L_{BTL} }{ R_L^2 • 2 }$<br><br>
 This gives a direct relationship between the required capacitance and inductance for the chosen Q.
 
-- Subtituting into equation for Cut-off Frequency.
+- **Substitute $C_L$ into the Cut-off Frequency formula**<br>
+The cut-off frequency for an LC filter is:<br>
+$f_0 = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • \frac{ L_{BTL} }{ R_L^2 • 2 } } }$<br><br>
+$f_0 = \frac{ 1 }{ 2 • π • \sqrt{ \frac{ L_{BTL}^2 }{ R_L^2 • 2 } } }$<br><br>
+$f_0 = \frac{ 1 }{ 2 • π • \frac{ L_{BTL} }{ R_L • \sqrt{ 2 } } }$<br><br>
+$f_0 = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • L_{BTL} }$<br><br>
+This equation allows us to solve for the required inductance for a given cut-off frequency and load.
 
-$f_0 = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • \frac{ L_{BTL} }{ R_L^2 • 2 } } }$
+- **Solve for $L_{BTL} and $C_L$**<br>
+Rearranging the above equation for $L_{BTL}$:<br>
+$L_{BTL} = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • f_0 }$<br><br>
+And using the earlier relationship for C_L:<br>
+$C_L = \frac{ 1 }{ 2 • π • f_0 • R_L • \sqrt{ 2 } }$<br><br>
 
-$f_0 = \frac{ 1 }{ 2 • π • \sqrt{ \frac{ L_{BTL}^2 }{ R_L^2 • 2 } } }$
-
-$f_0 = \frac{ 1 }{ 2 • π • \frac{ L_{BTL} }{ R_L • \sqrt{ 2 } } }$
-
-$f_0 = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • L_{BTL} }$
-
-Solving for L and C
-
-$L_{BTL} = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • f_0 }$
-
-$C_L = \frac{ 1 }{ 2 • π • f_0 • R_L • \sqrt{ 2 } }$
-
-Calculate for
-- $R_{BTL} = 100Ω$
-- $f_0 = 400 \text{ kHz} = 400,000 \text{ Hz}$
+- Apply to a practical example, we have:
+  - $R_{BTL} = 100Ω$
+  - $f_0 = 400 \text{ kHz} = 400,000 \text{ Hz}$
 
 where
 - $C_{BTL} = \frac{ C_L }{ 2 }$
