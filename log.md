@@ -1,3 +1,12 @@
+2025-08-05
+- feat/PCB ESU-PS: retracing dengan faraday shield untuk mengurangi paracitic capacitance (EMC) [Done]
+- List BoM PCB ESU-CTL [Done]
+- Design Rule Check PCB ESU-CTL dengan standar manufaktur Spectra [In Progress]
+- Request PO kompoenen PCB ESU-CTL [In Progress]
+
+2025-08-05
+- feat/PCB ESU-CTL: retracing dengan faraday shield untuk mengurangi paracitic capacitance (EMC) [Done]
+
 2025-08-04
 - feat/PCB ESU-CTL: retracing dengan faraday shield untuk mengurangi paracitic capacitance (EMC) [In Progress]
 
