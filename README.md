@@ -276,8 +276,30 @@ It provides a detailed view of the waveform characteristics and performance metr
 ####  2.4.2.1. Design and Calculation
 Air Core Transformer using Cylindrical Bobbin
 
-### 2.4.3. Transformer Bipolar
-Toroidal Ferrite Core Transformer
+### 2.4.3. Transformer Bipolar (Toroidal Ferrite Core Transformer)
+A toroidal ferrite core transformer is a type of transformer that uses a ring-shaped (toroidal) core made from ferrite material. Ferrite is a ceramic compound consisting of iron oxide mixed with other metals, which provides high magnetic permeability and low electrical conductivity. This makes ferrite ideal for high-frequency transformer applications.
+
+**Structure and Construction**
+- Core Shape<br>
+  The core is a closed loop (doughnut-shaped), which helps confine the magnetic flux within the core material, minimizing leakage and electromagnetic interference (EMI).
+- Windings<br>
+  Copper wire is wound around the toroidal core, usually with primary and secondary windings placed concentrically. The windings can be distributed evenly around the core to further reduce leakage inductance and stray fields.
+- Ferrite Material<br>
+  Ferrite cores are preferred for high-frequency operation (tens of kHz to several MHz) because they have low core losses at these frequencies compared to laminated iron cores.
+
+**Key Advantages**
+- High Efficiency<br>
+  The closed magnetic path of the toroid reduces core losses and leakage flux, resulting in higher efficiency.
+- Low Electromagnetic Interference (EMI)<br>
+  The toroidal shape confines the magnetic field, reducing EMI and making these transformers suitable for sensitive electronic circuits.
+- Compact Size<br>
+  For a given power rating, toroidal transformers are generally smaller and lighter than their laminated counterparts.
+- Quiet Operation<br>
+  The core shape and material minimize audible hum and vibration.
+
+**Power Handling**
+
+The transformer’s power rating is determined by the product of output voltage and current, and the core must be sized to avoid saturation at maximum load.
 
 #### 2.4.3.1. Design and Calculation
 Given:
