@@ -436,28 +436,37 @@ It is also important to understand the load impedance variations for the applica
 
 Texas Instrument recommends using a second-order Butterworth low-pass filter because of its flat pass-band and phase response. Texas Instrument does not recommend the use of LC filters that peak excessively, like the underdamped filter response shown in figure above. At high frequency, the peaks are generally harsh to the human ear and can also trigger the protection circuitry, such as overcurrent, of some amplifiers. However, overdamped filters result in attenuation of high-frequency signal content.
 
-##### b. Single-Ended Equivalent
+##### b. Single-Ended Equivalent, Design and Analysis
+This section details the design and analysis of a Type 1 Butterworth Filter in single-ended  LC circuit equivalent.
+
 <p align="center">
   <img src="pic/type-1-butterworth-filter.png" alt="type-1-butterworth-filter">
 </p>
 
-Cut-off Frequency for single-ended LC Filter<br><br>
+**Cut-off Frequency for single-ended LC Filter**
+The cut-off frequency ($f_0$) of the LC filter is determined by the values of the inductor ($L_{BTL}$) and capacitor ($C_L$), using the formula:
+
 $f_0 = \frac{ ⍵_0 }{ 2 • π } = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • C_L } }$
 
-Quality Factor<br><br>
+The quality factor ($Q$) describes the selectivity or sharpness of the filter’s response and is given by:
+
 $Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } $
+
+where $R_L$ is the load resistance.
 
 To design a filter that is critically damped with a Butterworth response, Q = 0.707 = 1/√2. By substituting Q = 1/√2 into equations for Cut-off Frequency and Quality Factor previously listed, L and C values can be derived for a critically damped system assuming the desired cut-off frequency, ωo, is known.
 
-From<br><br>
+**Step-by-Step Calculation**
+- Bellow is equation relates the load resistance, capacitance, and inductance for a Butterworth response:<br>
 $Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ 1 }{ \sqrt{ 2 } } $
 
-Rearanging<br><br>
-$\sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ 1 }{ R_L • \sqrt{ 2 } } → \frac{ C_L }{ L_{BTL} } = \frac{ 1 }{ R_L^2 • 2 }$
+- Rearrange to Express $C_L$ in Terms of $L_{BTL}$ and $R_L$:<br>
+$\sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ 1 }{ R_L • \sqrt{ 2 } } → \frac{ C_L }{ L_{BTL} } = \frac{ 1 }{ R_L^2 • 2 }$<br>
+$C_L = \frac{ L_{BTL} }{ R_L^2 • 2 }$<br>
+This gives a direct relationship between the required capacitance and inductance for the chosen Q.
 
-$C_L = \frac{ L_{BTL} }{ R_L^2 • 2 }$
+- Subtituting into equation for Cut-off Frequency.
 
-Subtituting into equation for Cut-off Frequency.<br><br>
 $f_0 = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • \frac{ L_{BTL} }{ R_L^2 • 2 } } }$
 
 $f_0 = \frac{ 1 }{ 2 • π • \sqrt{ \frac{ L_{BTL}^2 }{ R_L^2 • 2 } } }$
@@ -466,7 +475,8 @@ $f_0 = \frac{ 1 }{ 2 • π • \frac{ L_{BTL} }{ R_L • \sqrt{ 2 } } }$
 
 $f_0 = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • L_{BTL} }$
 
-Solving for L and C<br><br>
+Solving for L and C
+
 $L_{BTL} = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • f_0 }$
 
 $C_L = \frac{ 1 }{ 2 • π • f_0 • R_L • \sqrt{ 2 } }$
@@ -479,7 +489,8 @@ where
 - $C_{BTL} = \frac{ C_L }{ 2 }$
 - $R_L = \frac{ R_{BTL} }{ 2 }$
 
-then<br><br>
+then
+
 $L_{BTL} = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 } = \frac{ \frac{ 100 }{ 2 } • \sqrt{ 2 } }{ 2 • 3.14 • 400,000 } = \frac{ 70.7106 }{ 2,512,000 }$
 
 $L_{BTL} = 0.000028149155 \ H = 28.1492 \text{ µH} ≈ 29 \text{ µH}$
@@ -489,21 +500,24 @@ $C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sq
 $C_{BTL} = 0.000000000281492 \ F = 2.81492 \ nF ≈ 2.7 \ nF$
 
 ##### c. Frequency Response
-With the targeted Q of 0.707 = 1/√2 and the cut-off frequency is:<br><br>
+With the targeted Q of 0.707 = 1/√2 and the cut-off frequency is:
+
 $f_0 = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • C_L } } = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • 2 • C_{BTL} } }$
 
 $f_0 = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 29 • 10^{-6} • 2 • 2.7 • 10^{-9} } } = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 156.6 • 10^{-15} } } = \frac{ 1 }{ 2 • 3.14 • 3.9572 • 10^{-7} }$
 
 $f_0 = 402,387.4966 \text{ Hz} = 402.387 \text{ kHz}$
 
-Using the standard inductor and capacitor values from the previous calculations, the Q factor for 100Ω load is:<br><br>
+Using the standard inductor and capacitor values from the previous calculations, the Q factor for 100Ω load is:
+
 $Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ R_{BTL} }{ 2 } • \sqrt{ \frac{ 2 • C_{BTL} } { L_{BTL} } }$
 
 $Q = \frac{ 100 }{ 2 } • \sqrt{ \frac{ 2 • 2.7 • 10^{-9} } { 29 • 10^{-6} } }$
 
 $Q = 0.6823$
 
-The peaking at cut-off frequency in dB is:<br><br>
+The peaking at cut-off frequency in dB is:
+
 $⍵_0 = 20 log_{10} (Q)$
 
 $⍵_0 = 20 log_{10} (0.6823) =  -3.3206 \text{ dB}$
