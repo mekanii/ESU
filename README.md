@@ -69,27 +69,27 @@ Using the formula above, we have the following ADC values for different pad resi
 
 ## 2.3. Controller
 ### 2.3.1. PWM Generator
-#### Using the Remote Control Module (RMT) of ESP32 for Generating PWM Signals
+#### 2.3.1.1. Using the Remote Control Module (RMT) of ESP32 for Generating PWM Signals
 The Remote Control Module (RMT) on the ESP32 is a versatile hardware peripheral designed primarily for sending and receiving infrared signals. However, it can also be effectively utilized to generate precise Pulse Width Modulation (PWM) signals.
-#### Key Concepts
+#### 2.3.1.2. Key Concepts
 - Duty Cycle:<br>The duty cycle of a PWM signal is the percentage of one cycle in which the signal is high (on) versus low (off). It is typically expressed as a value between 0 and 100.
 - Total Period:<br>The total period of the PWM signal is the sum of the HIGH time and LOW time.
-#### Configuration
-##### Clock Divider
+#### 2.3.1.3. Configuration
+##### a. Clock Divider
 The clock divider is a crucial parameter in microcontroller and digital circuit design that determines the frequency of a clock signal by dividing the input clock frequency, which is APB_CLK (80 MHz) for ESP32.
 
 ```math
 Clock \, Divider = \frac{APB \_ CLK}{Clock \, Frequency}
 ```
 
-##### Resolution
+##### b. Resolution
 The resolution in duty cycle is a crucial parameter in microcontroller and digital circuit design that determines the granularity of control over the PWM signal. It defines how finely the duty cycle can be adjusted, allowing for precise modulation of the output signal. In the case of the ESP32, the resolution is influenced by the clock frequency which ultimately affect the ability to achieve desired output levels.
 
 ```math
 Resolution = \frac{Clock \, Frequency}{PWM \, Frequency}
 ```
 
-##### Combination of Clock Frequency and Resolution
+##### c. Combination of Clock Frequency and Resolution
 The combination of clock frequency and resolution plays a vital role in determining the performance of PWM signals in microcontroller applications. The clock frequency sets the base rate at which the system operates, while the resolution defines how many discrete levels the duty cycle can be divided into. A higher clock frequency allows for faster switching and more precise timing, while a higher resolution enables finer control over the duty cycle. Together, they influence the accuracy and responsiveness of the PWM output, making it essential to balance these parameters to meet the specific requirements of the application.
 
 <div align="center">
@@ -105,8 +105,8 @@ The combination of clock frequency and resolution plays a vital role in determin
 
 </div>
 
-#### Output Scope
-##### Cut
+#### 2.3.1.4. Output Scope
+##### a. Cut
 - Pure Cut
 <br>The image illustrates the output scope for the Pure Cut operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the PWM signal during this operation.
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings.
@@ -133,7 +133,7 @@ The combination of clock frequency and resolution plays a vital role in determin
   <img src="pic/PWM/PWM-blend-cut.png" alt="PWM-blend-cut">
 </p>
 
-##### Coag
+##### b. Coag
 - Spray
 <br>The image illustrates the output scope for the Spray Coagulation operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Spray Coagulation process, highlighting the key features and behavior of the PWM signal during this operation.
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings. We can observe that the increment of the duty cycle results in a pulse that exhibits a linear increase in HIGH time, further emphasizing the effectiveness of the PWM modulation in maintaining a predictable response across varying duty cycle levels.
