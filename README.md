@@ -475,7 +475,7 @@ $f_0 = \frac{ 1 }{ 2 • π • \frac{ L_{BTL} }{ R_L • \sqrt{ 2 } } }$<br><br
 $f_0 = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • L_{BTL} }$<br><br>
 This equation allows us to solve for the required inductance for a given cut-off frequency and load.
 
-- **Solve for $L_{BTL} and $C_L$**<br>
+- **Solve for $L_{BTL}$ and $C_L$**<br>
 Rearranging the above equation for $L_{BTL}$:<br>
 $L_{BTL} = \frac{ R_L • \sqrt{ 2 } }{ 2 • π • f_0 }$<br><br>
 And using the earlier relationship for C_L:<br>
@@ -483,11 +483,10 @@ $C_L = \frac{ 1 }{ 2 • π • f_0 • R_L • \sqrt{ 2 } }$<br><br>
 
 - Apply to a practical example, we have:
   - $R_{BTL} = 100Ω$
-  - $f_0 = 400 \text{ kHz} = 400,000 \text{ Hz}$
-
-where
-- $C_{BTL} = \frac{ C_L }{ 2 }$
-- $R_L = \frac{ R_{BTL} }{ 2 }$
+  - $f_0 = 400 \text{ kHz} = 400,000 \text{ Hz}$<br>
+For a single-ended equivalent:
+  - $C_{BTL} = \frac{ C_L }{ 2 }$
+  - $R_L = \frac{ R_{BTL} }{ 2 }$
 
 then
 
