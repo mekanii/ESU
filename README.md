@@ -483,7 +483,8 @@ $C_L = \frac{ 1 }{ 2 • π • f_0 • R_L • \sqrt{ 2 } }$<br><br>
 
 - Apply to a practical example, we have:
   - $R_{BTL} = 100Ω$
-  - $f_0 = 400 \text{ kHz} = 400,000 \text{ Hz}$<br>
+  - $f_0 = 400 \text{ kHz} = 400,000 \text{ Hz}$
+  
 For a single-ended equivalent:
   - $C_{BTL} = \frac{ C_L }{ 2 }$
   - $R_L = \frac{ R_{BTL} }{ 2 }$
