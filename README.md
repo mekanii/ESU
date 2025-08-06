@@ -484,20 +484,14 @@ $C_L = \frac{ 1 }{ 2 • π • f_0 • R_L • \sqrt{ 2 } }$<br><br>
 - Apply to a practical example, we have:
   - $R_{BTL} = 100Ω$
   - $f_0 = 400 \text{ kHz} = 400,000 \text{ Hz}$
-  
-For a single-ended equivalent:
+  <br><br>For a single-ended equivalent:
   - $C_{BTL} = \frac{ C_L }{ 2 }$
   - $R_L = \frac{ R_{BTL} }{ 2 }$
-
-then
-
-$L_{BTL} = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 } = \frac{ \frac{ 100 }{ 2 } • \sqrt{ 2 } }{ 2 • 3.14 • 400,000 } = \frac{ 70.7106 }{ 2,512,000 }$
-
-$L_{BTL} = 0.000028149155 \ H = 28.1492 \text{ µH} ≈ 29 \text{ µH}$
-
-$C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2 • 3.14 • 400,000 • \frac{ 100 }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2,512,000 • 70.7106 } }{ 2 }$
-
-$C_{BTL} = 0.000000000281492 \ F = 2.81492 \ nF ≈ 2.7 \ nF$
+  <br><br>Plugging in the values:<br>
+$L_{BTL} = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 } = \frac{ \frac{ 100 }{ 2 } • \sqrt{ 2 } }{ 2 • 3.14 • 400,000 } = \frac{ 70.7106 }{ 2,512,000 }$<br><br>
+$L_{BTL} = 0.000028149155 \ H = 28.1492 \text{ µH} ≈ 29 \text{ µH}$<br><br>
+$C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2 • 3.14 • 400,000 • \frac{ 100 }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2,512,000 • 70.7106 } }{ 2 }$<br><br>
+$C_{BTL} = 0.000000000281492 \ F = 2.81492 \ nF ≈ 2.7 \ nF$<br><br>
 
 ##### c. Frequency Response
 With the targeted Q of 0.707 = 1/√2 and the cut-off frequency is:
