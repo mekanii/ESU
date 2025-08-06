@@ -292,11 +292,16 @@ Given:
 - Output current<br>$I_{out} = 0.5 \ A$
 
 ###### Core Cross-Sectional Area ($A_e$)
+The effective cross-sectional area of the core is calculated as:
 
 $A_e = \frac{( OD – ID ) • H }{ 2 }$
 
 $A_e  = \frac{( 40.4 – 23.3 ) • 15.1 }{ 2 } = 129.1 \ mm^2$
 
+This area is important for determining how much magnetic flux the core can handle without saturating.
+
+###### Primary Turns ($N_p$)
+The number of primary turns is determined by:
 
 $N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e }$
 
@@ -304,19 +309,30 @@ $N_p = \frac{ 72 • 0.5 • 10^{10} }{ 2 • 400,000 • 350 • 129.1 } = \fra
 
 $N_p = 9.96 ≈ 10 \ turns$
 
+This ensures the core does not saturate at the maximum input voltage and duty cycle.
+
+###### Volt per Turn
+The voltage induced per turn is:
+
 $Volt \ per \ turn = \frac{ V_{in} }{ N_p }$
 
 $Volt \ per \ turn = \frac{ 72 }{ 10 } = 7.2 \ V/turn$
+
+###### Secondary Turns ($N_s$)
+The number of secondary turns is:
 
 $N_s = \frac{ V_{out} }{ Volt \ per \ turn }$
 
 $N_s = \frac{ 216 }{ 7.2 } = 30 \text{ turns}$
 
+This ensures the transformer provides the correct output voltage.
 
-
+###### Output Power and Currents ($N_s$)
 $P = V_{out} • I_{out} = 216 • 0.5 = 108 \ W$
 
 $I_{in} = \frac{ P }{ V_{in} } = \frac{ 108 }{ 72 } = 1.5 \ A$
+
+These calculations confirm the input current required to deliver the desired output power.
 
 For high-frequency applications (400 kHz), we need to consider:
 - **Skin effect** - Current tends to flow on the surface of conductors at high frequencies
