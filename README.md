@@ -418,7 +418,7 @@ The image illustrates the output scope for per pulse operation at input transfor
 Type 1 Butterworth Filter: Differential Filter
 #### 2.4.4.1 Design and Calculation
 
-### 2.4.5 Bipolar
+### 2.4.5 LC Filter Bipolar Bipolar
 Type 1 Butterworth Filter: Differential Filter
 #### 2.4.5.1 Design and Calculation
 ##### a. Output Class-D LC Filter Frequency Response Properties
