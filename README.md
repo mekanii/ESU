@@ -5,31 +5,31 @@
 
 # 2. Component
 ## 2.1. Monopolar Switch Detection (MSD)
-### a. Schematic
+### 2.1.1. Schematic
 
 <p align="center">
   <img src="pic/MSD/MSD-sch.png" alt="msd-sch">
 </p>
 
-### b. Output Scope
+### 2.1.2. Output Scope
 - Cut
 - Coag
 ## 2.2. Return Electrode Monitor (REM)
-### a. Schematic
+### 2.2.1. Schematic
 
 <p align="center">
   <img src="pic/REM/REM-sch.png" alt="rem-sch">
 </p>
 
-### b. Output Scope
-#### Transformer
+### 2.2.2. Output Scope
+#### 2.2.2.1. Transformer
 Below is the output scope at the input and output of toroidal transformer.
 
 <p align="center">
   <img src="pic/REM/REM XF.png" alt="rem-xf">
 </p>
 
-#### Sense
+#### 2.2.2.2 Sense
 > [!NOTE]
 > All measurements for Return Electrode Monitoring do not utilize a physical Return Electrode; instead, a variable resistor is used. Therefore, all references to **pad resistance** in this context describe the variable resistor that simulates the Return Electrode.
 
@@ -67,8 +67,8 @@ Using the formula above, we have the following ADC values for different pad resi
 
 </div>
 
-## 2.3 Controller
-### 2.3.1 PWM Generator
+## 2.3. Controller
+### 2.3.1. PWM Generator
 #### Using the Remote Control Module (RMT) of ESP32 for Generating PWM Signals
 The Remote Control Module (RMT) on the ESP32 is a versatile hardware peripheral designed primarily for sending and receiving infrared signals. However, it can also be effectively utilized to generate precise Pulse Width Modulation (PWM) signals.
 #### Key Concepts
@@ -202,14 +202,14 @@ The combination of clock frequency and resolution plays a vital role in determin
 
 - Standard
 
-### 2.3.2 Serial Communication
-#### 2.3.2.1 Parameters <[command]>
+### 2.3.2. Serial Communication
+#### 2.3.2.1. Parameters <[command]>
 | Command |	Description 	            | Example | Success Response  | Error Response  |
 |:-------:|:------------------------- |:------- |:-----------------:|:---------------:|
 | 2       | Stop all RMT transmission |	2	      | 00                | N/A             |
 | Other   | Invalid                   | 3       | N/A               | 02              |
 
-#### 2.3.2.2 Parameters <[command] [mode]>
+#### 2.3.2.2. Parameters <[command] [mode]>
 ##### command = 0
 | Mode  |	Auto-assigned Channel | Description       | Example |	Success Response  |	Error Response  |
 |:-----:|:---------------------:|:----------------- |:------- |:-----------------:|:---------------:|
@@ -221,7 +221,7 @@ The combination of clock frequency and resolution plays a vital role in determin
 | 5     |	Channel 1             |	Bipolar Standard  | 0 5     |	00	              | N/A             |
 | Other |	N/A	                  | Invalid           | 0 6     | N/A	              | 02              |
 
-#### 2.3.2.3 Parameters <[command] [mode] [duty cycle]>
+#### 2.3.2.3. Parameters <[command] [mode] [duty cycle]>
 ##### command = 1
 | Mode  |	Duty Cycle  |	Description         |	Example |	Success Response  |	Error Response  |
 |:-----:|:-----------:|:------------------- |:------- |:-----------------:|:---------------:|
@@ -233,28 +233,28 @@ The combination of clock frequency and resolution plays a vital role in determin
 | 5     |	    0 - 200 |	Bipolar Standard    |	1 5 80  |	00	              | 02              |
 | Other |	        N/A	| Invalid	            | 1 6 100 |	N/A	              | 02              |
 
-## 2.4 Power Stage
+## 2.4. Power Stage
 ### 2.4.1. DAC
-#### 2.4.1.1 Schematic
+#### 2.4.1.1. Schematic
 
 <p align="center">
   <img src="pic/PS/PS2.0.png" alt="PS2.0">
 </p>
 
-#### 2.4.1.2 MOSFET Driver
+#### 2.4.1.2. MOSFET Driver
 We use the TC4420 as our MOSFET driver due to its high-speed performance and ability to efficiently drive N-channel MOSFETs in various applications. The TC4420 provides a peak output current of up to 6A, allowing for rapid charging and discharging of the MOSFET gate capacitance. This capability minimizes switching losses and enhances overall efficiency in power management.
 
 Operating within a supply voltage range of 4.5V to 18V, the TC4420 can effectively drive MOSFET gates at a voltage level of 12V, ensuring that the MOSFET turns on fully for optimal performance. Its fast switching speed, with propagation delays in the nanosecond range (typically 55ns), is crucial for high-frequency applications, reducing transition times and heat generation.
 
-#### 2.4.1.3 Utilizing Three IRFPE50 MOSFETs in Parallel for Enhanced Performance and Reliability
+#### 2.4.1.3. Utilizing Three IRFPE50 MOSFETs in Parallel for Enhanced Performance and Reliability
 We use three IRFPE50 MOSFETs in parallel to enhance the overall performance and reliability of our circuit. The decision to parallel these MOSFETs is driven by several key factors:
 - Increased Current Handling:<br>Each IRFPE50 MOSFET has a maximum continuous drain current rating of ID=7.8A at TC=25°C and ID=4.9A at TC=100°C. By connecting three times as many of them in parallel, we effectively triple the total current handling capability. This is particularly beneficial in applications where high current loads are expected, ensuring that the circuit can handle the demands without overheating or exceeding the MOSFET's ratings.
 - Improved Thermal Management:<br>Paralleling MOSFETs helps distribute the heat generated during operation across multiple devices. This reduces the thermal stress on each individual MOSFET, allowing for better thermal management. Proper heat dissipation is crucial for maintaining performance and preventing thermal runaway, especially in high-power applications.
 - Lower On-Resistance:<br>The IRFPE50 has a low on-resistance (RDS(on)) of approximately 1.2Ω. When MOSFETs are paralleled, the effective on-resistance decreases, which results in lower conduction losses. This is advantageous for improving the efficiency of the circuit, as it minimizes the voltage drop across the MOSFETs when they are in the on state.
 - Redundancy and Reliability:<br>Using multiple MOSFETs in parallel provides a level of redundancy. If one MOSFET were to fail, the remaining devices can continue to operate, thereby enhancing the overall reliability of the circuit. This is particularly important in critical applications where failure could lead to significant issues.
 
-#### 2.4.1.4 Output Scope
-##### Cut
+#### 2.4.1.4. Output Scope
+##### a. Cut
 The image illustrates the output scope for the Pure Cut operation at:
 - MOSFET Driver Output (blue)
 - MOSFET Drain Pin (yellow)
@@ -270,16 +270,16 @@ It provides a detailed view of the waveform characteristics and performance metr
   <img src="pic/PWM/Wave-pure-cut-driver-mosfet.png" alt="Wave-pure-cut-driver-mosfet">
 </p> -->
 
-##### Coag
+##### b. Coag
 
-### 2.4.2 Transformer Monopolar
-####  2.4.2.1 Design and Calculation
+### 2.4.2. Transformer Monopolar
+####  2.4.2.1. Design and Calculation
 Air Core Transformer using Cylindrical Bobbin
 
-### 2.4.3 Transformer Bipolar
+### 2.4.3. Transformer Bipolar
 Toroidal Ferrite Core Transformer
 
-#### 2.4.3.1 Design and Calculation
+#### 2.4.3.1. Design and Calculation
 Given:
 - Input voltage<br>$V_{in} = 72 \ V$
 - Output voltage<br>$V_{out} = 216 \ V$
@@ -291,7 +291,7 @@ Given:
 - Maximum flux density<br>$B_{max} = 350 \ Gauss$
 - Output current<br>$I_{out} = 0.5 \ A$
 
-##### Core Cross-Sectional Area ($A_e$)
+##### a. Core Cross-Sectional Area ($A_e$)
 The effective cross-sectional area of the core is calculated as:
 
 $A_e = \frac{( OD – ID ) • H }{ 2 }$
@@ -300,7 +300,7 @@ $A_e  = \frac{( 40.4 – 23.3 ) • 15.1 }{ 2 } = 129.1 \ mm^2$
 
 This area is important for determining how much magnetic flux the core can handle without saturating.
 
-##### Primary Turns ($N_p$)
+##### b. Primary Turns ($N_p$)
 The number of primary turns is determined by:
 
 $N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e }$
@@ -311,14 +311,14 @@ $N_p = 9.96 ≈ 10 \ turns$
 
 This ensures the core does not saturate at the maximum input voltage and duty cycle.
 
-##### Volt per Turn
+##### c. Volt per Turn
 The voltage induced per turn is:
 
 $Volt \ per \ turn = \frac{ V_{in} }{ N_p }$
 
 $Volt \ per \ turn = \frac{ 72 }{ 10 } = 7.2 \ V/turn$
 
-##### Secondary Turns ($N_s$)
+##### d. Secondary Turns ($N_s$)
 The number of secondary turns is:
 
 $N_s = \frac{ V_{out} }{ Volt \ per \ turn }$
@@ -327,7 +327,7 @@ $N_s = \frac{ 216 }{ 7.2 } = 30 \text{ turns}$
 
 This ensures the transformer provides the correct output voltage.
 
-##### Output Power and Currents ($N_s$)
+##### e. Output Power and Currents ($N_s$)
 $P = V_{out} • I_{out} = 216 • 0.5 = 108 \ W$
 
 $I_{in} = \frac{ P }{ V_{in} } = \frac{ 108 }{ 72 } = 1.5 \ A$
@@ -339,7 +339,7 @@ For high-frequency applications (400 kHz), we need to consider:
 - **Current density** - Typically 1.5-3 A/mm² for transformer applications
 - **Temperature rise** - Higher current density = more heat
 
-##### Wire Diameter
+##### f. Wire Diameter
 To calculate the required wire diameter for a given current, use the formula:<br><br>
 $dW = \sqrt{ \frac{ 4 • I }{ \pi • J } }$
 
@@ -358,7 +358,7 @@ Secondary:
 - $Current \ Density = 1.5 \ A/mm^2$
 - $dW_s = \sqrt{ \frac{ 4 • 0.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 2 }{ 4.712 } } = 0.65 \ mm$
 
-##### High-Frequency Considerations
+##### g. High-Frequency Considerations
 **Skin Effect**<br>
 At high frequencies, the skin effect is a phenomenon in alternating current (AC) where the current density becomes highest at the surface of a conductor and decreases exponentially toward the center. This occurs because the alternating current generates a changing magnetic field, which in turn induces **eddy currents** within the conductor. These eddy currents oppose the main current flow more strongly at the center, forcing most of the AC current to flow near the surface. As a result, the effective cross-sectional area available for current flow is reduced, increasing the effective resistance of the wire at higher frequencies.
 
@@ -375,7 +375,7 @@ Since our calculated wire diameters are larger than 2× skin depth, consider usi
 2. **Multiple parallel smaller wires** instead of single thick wire
 3. **Stranded wire** with individual strand diameter < 0.2 mm
 
-##### Wire Specification for 400 kHz Operation using Stranded wire
+##### h. Wire Specification for 400 kHz Operation using Stranded wire
 - Primary
   - 7 parallel 0.2 mm each
   - Total current capacity: ~2.1A
@@ -385,7 +385,7 @@ Since our calculated wire diameters are larger than 2× skin depth, consider usi
   - Total current capacity: ~1.0A
   - Total equivalent area: ~0.8 mm²
 
-##### Wire Length Calculation
+##### i. Wire Length Calculation
 $Length \ per \ turn = 2 • (\frac{OD - ID}{2} + H)$
 
 $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
@@ -421,7 +421,7 @@ Type 1 Butterworth Filter: Differential Filter
 ### 2.4.5 Bipolar
 Type 1 Butterworth Filter: Differential Filter
 #### 2.4.5.1 Design and Calculation
-##### Output Class-D LC Filter Frequency Response Properties
+##### a. Output Class-D LC Filter Frequency Response Properties
 The frequency response of the second-order class-D LC output filter is critical when selecting the component values for the inductor and capacitor. The LC filter response also varies with load impedance. The load impedance determines the damping ratio of the output LC filter and is classified as:
 - Overdamped
 - Critically damped
@@ -436,7 +436,7 @@ It is also important to understand the load impedance variations for the applica
 
 Texas Instrument recommends using a second-order Butterworth low-pass filter because of its flat pass-band and phase response. Texas Instrument does not recommend the use of LC filters that peak excessively, like the underdamped filter response shown in figure above. At high frequency, the peaks are generally harsh to the human ear and can also trigger the protection circuitry, such as overcurrent, of some amplifiers. However, overdamped filters result in attenuation of high-frequency signal content.
 
-##### Single-Ended Equivalent
+##### b. Single-Ended Equivalent
 <p align="center">
   <img src="pic/type-1-butterworth-filter.png" alt="type-1-butterworth-filter">
 </p>
@@ -488,7 +488,7 @@ $C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sq
 
 $C_{BTL} = 0.000000000281492 \ F = 2.81492 \ nF ≈ 2.7 \ nF$
 
-##### Frequency Response
+##### c. Frequency Response
 With the targeted Q of 0.707 = 1/√2 and the cut-off frequency is:<br><br>
 $f_0 = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • C_L } } = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • 2 • C_{BTL} } }$
 
