@@ -322,16 +322,22 @@ For high-frequency applications (400 kHz), we need to consider:
 - **Temperature rise** - Higher current density = more heat
 
 ###### Wire Diameter
-$dW = \sqrt{ \frac{ 4 • I }{ \pi • Current \ Density } }$
+To calculate the required wire diameter for a given current, use the formula:<br><br>
+$dW = \sqrt{ \frac{ 4 • I }{ \pi • J } }$
 
-**Primary**
+Where:
+- $dW = wire \ diameter$
+- $I = current \ (A)$
+- $J = current \ density \ (A/mm^2)$
+
+Primary
 $I_{in} = 1.5 \ A$
 
 $Current \ Density = 1.5 \ A/mm^2$
 
 $dW_p = \sqrt{ \frac{ 4 • 1.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 6 }{ 4.712 } } = 1.13 \ mm$
 
-**Secondary**
+Secondary
 $I_{out} = 0.5 \ A$
 
 $Current \ Density = 1.5 \ A/mm^2$
