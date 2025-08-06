@@ -448,13 +448,24 @@ The image illustrates the output scope for per pulse operation at input transfor
   <img src="pic/PWM/XF/Bipolar/12V/bipolar-xformer-output-400.png" alt="bipolar-xformer-output-400">
 </p> -->
 
-### 2.4.3 LC Filter Monopolar
-Type 1 Butterworth Filter: Differential Filter
-#### 2.4.3.1 Design and Calculation
+### 2.4.3 LC Filter
+**Type 1 Butterworth Filter: Differential Filter**
 
-### 2.4.4 LC Filter Bipolar Bipolar
-Type 1 Butterworth Filter: Differential Filter
-#### 2.4.4.1 Design and Calculation
+A Type 1 Butterworth filter is a second-order low-pass filter that provides a maximally flat frequency response in the passband. The "Type 1" designation typically refers to the specific topology or configuration of the filter circuit. In the context of differential filters, this often means a balanced configuration that processes differential signals (signals with equal and opposite components).
+
+**Differential Filter Configuration**
+
+A differential filter is designed to handle differential signals, which are commonly used in high-speed digital circuits, audio systems, and communication equipment. The filter processes both the positive and negative components of the signal simultaneously, providing better noise immunity and common-mode rejection.
+
+**Key Characteristics:**
+- Balanced Input/Output<br>
+  The filter has balanced input and output terminals, typically labeled as $V_{in+}$, $V_{in−}$, $V_{out+}$, and $V_{out−}$.
+- Common-Mode Rejection<br>
+  The filter can reject common-mode noise (noise that appears equally on both input lines) while amplifying the differential signal.
+- Symmetrical Design<br>
+  The filter components are arranged symmetrically to ensure equal processing of both signal components.
+  
+#### 2.4.3.1 Design and Calculation
 ##### a. Output Class-D LC Filter Frequency Response Properties
 The frequency response of the second-order class-D LC output filter is critical when selecting the component values for the inductor and capacitor. The LC filter response also varies with load impedance. The load impedance determines the damping ratio of the output LC filter and is classified as:
 - Overdamped
