@@ -281,8 +281,8 @@ Air Core Transformer using Cylindrical Bobbin
 Toroidal Ferrite Core Transformer
 
 Given:
-- Input voltage: $V_{in} = 72 \ V$
-- Output voltage: $V_{out} = 216 \ V$
+- Input voltage:<br>$V_{in} = 72 \ V$
+- Output voltage:<br>$V_{out} = 216 \ V$
 - Switching frequency: $f = 400 \ kHz = 400,000 \ Hz$
 - Core dimensions:
   - $ID = 23.3 \ mm$
@@ -329,19 +329,15 @@ Where:
 - $I = current \ (A)$
 - $J = current \ density \ (A/mm^2)$
 
-Primary
-$I_{in} = 1.5 \ A$
+Primary:
+- $I_{in} = 1.5 \ A$
+- $Current \ Density = 1.5 \ A/mm^2$
+- $dW_p = \sqrt{ \frac{ 4 • 1.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 6 }{ 4.712 } } = 1.13 \ mm$
 
-$Current \ Density = 1.5 \ A/mm^2$
-
-$dW_p = \sqrt{ \frac{ 4 • 1.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 6 }{ 4.712 } } = 1.13 \ mm$
-
-Secondary
-$I_{out} = 0.5 \ A$
-
-$Current \ Density = 1.5 \ A/mm^2$
-
-$dW_s = \sqrt{ \frac{ 4 • 0.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 2 }{ 4.712 } } = 0.65 \ mm$
+Secondary:
+- $I_{out} = 0.5 \ A$
+- $Current \ Density = 1.5 \ A/mm^2$
+- $dW_s = \sqrt{ \frac{ 4 • 0.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 2 }{ 4.712 } } = 0.65 \ mm$
 
 ###### High-Frequency Considerations
 **Skin Effect**<br>
