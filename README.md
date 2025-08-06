@@ -281,19 +281,22 @@ Air Core Transformer using Cylindrical Bobbin
 Toroidal Ferrite Core Transformer
 
 Given:
-- Input voltage:<br>$V_{in} = 72 \ V$
-- Output voltage:<br>$V_{out} = 216 \ V$
-- Switching frequency: $f = 400 \ kHz = 400,000 \ Hz$
+- Input voltage<br>$V_{in} = 72 \ V$
+- Output voltage<br>$V_{out} = 216 \ V$
+- Switching frequency<br>$f = 400 \ kHz = 400,000 \ Hz$
 - Core dimensions:
-  - $ID = 23.3 \ mm$
-  - $OD = 40.4 \ mm$
-  - $H = 15.1 \ mm$
+  - Inner diameter<br>$ID = 23.3 \ mm$
+  - Outer diameter<br>$OD = 40.4 \ mm$
+  - Height<br>$H = 15.1 \ mm$
+- Maximum flux density<br>$B_{max} = 350 \ Gauss$
+- Output current<br>$I_{out} = 0.5 \ A$
+
+###### Core Cross-Sectional Area (A_e)
 
 $A_e = \frac{( OD – ID ) • H }{ 2 }$
 
 $A_e  = \frac{( 40.4 – 23.3 ) • 15.1 }{ 2 } = 129.1 \ mm^2$
 
-$B_{max} = 350 \ Gauss$
 
 $N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e }$
 
@@ -309,7 +312,7 @@ $N_s = \frac{ V_{out} }{ Volt \ per \ turn }$
 
 $N_s = \frac{ 216 }{ 7.2 } = 30 \text{ turns}$
 
-$I_{out} = 0.5 \ A$
+
 
 $P = V_{out} • I_{out} = 216 • 0.5 = 108 \ W$
 
