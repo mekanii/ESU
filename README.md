@@ -272,11 +272,9 @@ It provides a detailed view of the waveform characteristics and performance metr
 
 ##### b. Coag
 
-### 2.4.2. Transformer Monopolar
-####  2.4.2.1. Design and Calculation
-Air Core Transformer using Cylindrical Bobbin
+### 2.4.2. Transformer
+**Toroidal Ferrite Core Transformer**
 
-### 2.4.3. Transformer Bipolar (Toroidal Ferrite Core Transformer)
 A toroidal ferrite core transformer is a type of transformer that uses a ring-shaped (toroidal) core made from ferrite material. Ferrite is a ceramic compound consisting of iron oxide mixed with other metals, which provides high magnetic permeability and low electrical conductivity. This makes ferrite ideal for high-frequency transformer applications.
 
 **Structure and Construction**
@@ -301,7 +299,28 @@ A toroidal ferrite core transformer is a type of transformer that uses a ring-sh
 
 The transformer’s power rating is determined by the product of output voltage and current, and the core must be sized to avoid saturation at maximum load.
 
-#### 2.4.3.1. Design and Calculation
+**Skin Effect**
+
+At high frequencies, the skin effect is a phenomenon in alternating current (AC) where the current density becomes highest at the surface of a conductor and decreases exponentially toward the center. This occurs because the alternating current generates a changing magnetic field, which in turn induces **eddy currents** within the conductor. These eddy currents oppose the main current flow more strongly at the center, forcing most of the AC current to flow near the surface. As a result, the effective cross-sectional area available for current flow is reduced, increasing the effective resistance of the wire at higher frequencies.
+
+<p align="center">
+  <img src="pic/skin-effect.png" alt="skin-effect">
+</p>
+
+The depth at which the current density falls to 37% of its value at the surface.
+
+$δ = \sqrt{ \frac{ ρ } { π • f • μ } }$
+
+Where:
+- ρ = resistivity of the conductor (Ω·m)
+- μ = permeability of the conductor (H/m)
+- f = frequency (Hz)
+
+For high-frequency windings, consider using multiple thinner wires in parallel (Litz wire) to reduce skin effect losses.
+
+The calculated diameter above is based on DC or low-frequency AC. For high-frequency applications, the effective area may be less than the physical area due to skin effect.
+
+#### 2.4.2.1. Design and Calculation
 Given:
 - Input voltage<br>$V_{in} = 72 \ V$
 - Output voltage<br>$V_{out} = 216 \ V$
@@ -381,13 +400,6 @@ Secondary:
 - $dW_s = \sqrt{ \frac{ 4 • 0.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 2 }{ 4.712 } } = 0.65 \ mm$
 
 ##### g. High-Frequency Considerations
-**Skin Effect**<br>
-At high frequencies, the skin effect is a phenomenon in alternating current (AC) where the current density becomes highest at the surface of a conductor and decreases exponentially toward the center. This occurs because the alternating current generates a changing magnetic field, which in turn induces **eddy currents** within the conductor. These eddy currents oppose the main current flow more strongly at the center, forcing most of the AC current to flow near the surface. As a result, the effective cross-sectional area available for current flow is reduced, increasing the effective resistance of the wire at higher frequencies.
-
-<p align="center">
-  <img src="pic/skin-effect.png" alt="skin-effect">
-</p>
-
 At 400 kHz, the skin depth in copper is approximately:
 
 $δ = \sqrt{ \frac{ ρ } { π • f • μ } } ≈ 0.1 \ mm$
@@ -425,7 +437,7 @@ $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 
 $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
 
-#### 2.4.3.2 Output Scope
+#### 2.4.2.2 Output Scope
 The image illustrates the output scope for per pulse operation at input transformer with VDS=12V and PWM frequency 400kHz
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
 
@@ -436,13 +448,13 @@ The image illustrates the output scope for per pulse operation at input transfor
   <img src="pic/PWM/XF/Bipolar/12V/bipolar-xformer-output-400.png" alt="bipolar-xformer-output-400">
 </p> -->
 
-### 2.4.4 LC Filter Monopolar
+### 2.4.3 LC Filter Monopolar
+Type 1 Butterworth Filter: Differential Filter
+#### 2.4.3.1 Design and Calculation
+
+### 2.4.4 LC Filter Bipolar Bipolar
 Type 1 Butterworth Filter: Differential Filter
 #### 2.4.4.1 Design and Calculation
-
-### 2.4.5 LC Filter Bipolar Bipolar
-Type 1 Butterworth Filter: Differential Filter
-#### 2.4.5.1 Design and Calculation
 ##### a. Output Class-D LC Filter Frequency Response Properties
 The frequency response of the second-order class-D LC output filter is critical when selecting the component values for the inductor and capacitor. The LC filter response also varies with load impedance. The load impedance determines the damping ratio of the output LC filter and is classified as:
 - Overdamped
