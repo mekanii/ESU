@@ -4,7 +4,7 @@
 </p>
 
 # II. Component
-## 1. Monopolar Switch Detection (MSD)
+## II.1. Monopolar Switch Detection (MSD)
 ### a. Schematic
 
 <p align="center">
@@ -14,7 +14,7 @@
 ### b. Output Scope
 - Cut
 - Coag
-## 2. Return Electrode Monitor (REM)
+## II.2. Return Electrode Monitor (REM)
 ### a. Schematic
 
 <p align="center">
@@ -67,7 +67,7 @@ Using the formula above, we have the following ADC values for different pad resi
 
 </div>
 
-## 3. Controller
+## II.3. Controller
 ### a. PWM Generator
 #### Using the Remote Control Module (RMT) of ESP32 for Generating PWM Signals
 The Remote Control Module (RMT) on the ESP32 is a versatile hardware peripheral designed primarily for sending and receiving infrared signals. However, it can also be effectively utilized to generate precise Pulse Width Modulation (PWM) signals.
