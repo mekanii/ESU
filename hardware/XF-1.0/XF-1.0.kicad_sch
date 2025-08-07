@@ -1882,7 +1882,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L13.0mm_W8.0mm_P10.00mm_FKS3_FKP3_MKS4"
+		(property "Footprint" "Capacitor_THT:C_Axial_L12.0mm_D6.5mm_P20.00mm_Horizontal"
 			(at 150.8252 77.47 0)
 			(effects
 				(font
@@ -2618,7 +2618,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "62ba39d1-0152-4d88-bd25-b9e9f3cb41e4")
+		(uuid "79a43469-f017-4880-a39f-8d684e6000de")
 		(property "Reference" "C4"
 			(at 152.4 116.84 0)
 			(effects
@@ -2637,7 +2637,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L13.0mm_W8.0mm_P10.00mm_FKS3_FKP3_MKS4"
+		(property "Footprint" "Capacitor_THT:C_Axial_L12.0mm_D6.5mm_P20.00mm_Horizontal"
 			(at 150.8252 120.65 0)
 			(effects
 				(font
@@ -2665,10 +2665,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "3d32230b-36c2-4522-a966-d10738fb4c2c")
+			(uuid "8a93193b-f8aa-47a1-a3de-06b8a74506f3")
 		)
 		(pin "1"
-			(uuid "ea2930d8-0c66-4722-8116-77442fa8168a")
+			(uuid "e496155a-9523-4f9b-92e7-116354c00bc0")
 		)
 		(instances
 			(project "XF-1.0"
