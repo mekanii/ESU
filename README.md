@@ -636,6 +636,9 @@ Disadvantages:
 - **Use Inductance Formula to Solve for Number of Turns**<br>
   The inductance formula for multilayer air-core inductor:<br>
   $L = \frac{ 0.0254 • N^2 • D_{avg}^2} { 3D_{avg} + 9l + 10w }$
+
+  Where
+  $w = \frac{ D_{outer} - D_{inner} } { 2 }$
   
 - **Iterative Solution Process**
   - Initial Guess
