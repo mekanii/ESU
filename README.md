@@ -628,7 +628,7 @@ Disadvantages:
   $D_{outer} ≈ D_{inner} + 2 • w$
 
   The winding thickness can be estimated as:<br>
-  $w ≈ l • d_{wire}$
+  $w ≈ Number \ of \ Layers • d_{wire}$
 
 - **Calculate Average Diameter**<br>
   $D_{avg} = \frac{ D_{inner} + D_{outer} } { 2 }$
@@ -646,7 +646,7 @@ Disadvantages:
     Start with an initial guess for the number of layers
   - Calculate Dimensions
     - Calculate outer diameter<br>
-      $D_{outer} = D_{inner} + 2 • ( N_{layer} • d_wire )$
+      $D_{outer} = D_{inner} + 2 • ( Number \ of \ Layers • d_wire )$
     - Calculate average diameter<br>
       $D_{avg} = \frac{ D_{inner} + D_{outer} } { 2 }$
     - Calculate winding thickness<br>
