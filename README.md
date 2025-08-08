@@ -650,7 +650,7 @@ Disadvantages:
     - Calculate average diameter<br>
       $D_{avg} = \frac{ D_{inner} + D_{outer} } { 2 }$
     - Calculate winding thickness<br>
-      $w = \frac{ D_{outer} - D_{inner} } { 2 }
+      $w = \frac{ D_{outer} - D_{inner} } { 2 }$
   - Calculate Required Turns<br>
     Rearrange the inductance formula to solve for N:<br>
     $N = \sqrt{ \frac{ L • ( 3D_{avg} + 9l + 10w )} { 0.0254 • D_{avg}^2 }}$
