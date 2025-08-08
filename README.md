@@ -619,7 +619,7 @@ Disadvantages:
 - Lower Q Factor<br>
   Generally lower quality factor compared to ferromagnetic core inductors
 
-**Step-by-Step Calculation**
+**Step-by-Step Calculation**<br>
 - **Calculate Turns per Layer**<br>
   $N_{layer} = \frac{ l } { d_{wire} }$
 
@@ -635,7 +635,7 @@ Disadvantages:
 
 - **Use Inductance Formula to Solve for Number of Turns**<br>
   The inductance formula for multilayer air-core inductor:<br>
-  $L = \frac{ 0.0254 • N^2 • D_{avg}^2} { 3D_{avg} + 9l + 10w }$
+  $L = \frac{ 0.001 • N^2 • D_{avg}^2} { 3D_{avg} + 9l + 10w }$
 
   Where:<br>
   $w = \frac{ D_{outer} - D_{inner} } { 2 }$
@@ -646,17 +646,38 @@ Disadvantages:
     Start with an initial guess for the number of layers
   - Calculate Dimensions
     - Calculate outer diameter<br>
-      $D_{outer} = D_{inner} + 2 • ( Number \ of \ Layers • d_wire )$
+      $D_{outer} = D_{inner} + 2 • ( Number \ of \ Layers • d_{wire} )$
     - Calculate average diameter<br>
       $D_{avg} = \frac{ D_{inner} + D_{outer} } { 2 }$
     - Calculate winding thickness<br>
       $w = \frac{ D_{outer} - D_{inner} } { 2 }$
   - Calculate Required Turns<br>
     Rearrange the inductance formula to solve for N:<br>
-    $N = \sqrt{ \frac{ L • ( 3D_{avg} + 9l + 10w )} { 0.0254 • D_{avg}^2 }}$
+    $N = \sqrt{ \frac{ L • ( 3D_{avg} + 9l + 10w )} { 0.001 • D_{avg}^2 }}$
   - Calculate Actual Number of Layers<br>
     $Actual \ Layers = \frac{ N } { N_{layer} }$
-  - Iterate
+  - Iterate<br>
+    If the calculated layers don't match the initial guess, adjust and repeat.
+
+**Practical Calculation**
+**Given:**
+- Wire diameter ($d_{wire}$): 1 mm
+- Axial length ($l$): 16 mm
+- Inner diameter ($D_{inner}$): 8 mm
+- Target inductance ($L$): 29 μH
+
+**Calculations:**
+- Turns per Layer<br>
+  $N_{layer} = \frac{ 16 } { 1 } = 16$
+
+- Initial Guess<br>
+  Assume 5 layers
+
+- Calculate Dimensions<br>
+
+
+
+
 <!-- Air Core Axial Inductor
 | N1  | N2  |
 |----:|----:|
