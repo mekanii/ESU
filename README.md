@@ -661,10 +661,10 @@ Disadvantages:
 
 **Practical Calculation**
 **Given:**
-- Wire diameter ($d_{wire}$): 1 mm
-- Axial length ($l$): 16 mm
-- Inner diameter ($D_{inner}$): 8 mm
-- Target inductance ($L$): 29 μH
+- Wire diameter ( $d_{wire}$ ): 1 mm
+- Axial length ( $l$ ): 16 mm
+- Inner diameter ( $D_{inner}$ ): 8 mm
+- Target inductance ( $L$ ): 29 μH
 
 **Calculations:**
 - Turns per Layer<br>
@@ -674,7 +674,9 @@ Disadvantages:
   Assume 5 layers
 
 - Calculate Dimensions<br>
-
+  - Outer Diameter<br>
+    $D_{outer} = D_{inner} + 2 • ( Number \ of \ Layers • d_{wire} )$
+    $D_{outer} = 8 + 2 • ( 5 • 1 ) = 18 mm
 
 
 
