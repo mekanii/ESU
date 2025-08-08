@@ -464,7 +464,7 @@ A differential filter is designed to handle differential signals, which are comm
   The filter can reject common-mode noise (noise that appears equally on both input lines) while amplifying the differential signal.
 - Symmetrical Design<br>
   The filter components are arranged symmetrically to ensure equal processing of both signal components.
-  
+
 #### 2.4.3.1 Design and Calculation
 ##### a. Output Class-D LC Filter Frequency Response Properties
 The frequency response of the second-order class-D LC output filter is critical when selecting the component values for the inductor and capacitor. The LC filter response also varies with load impedance. The load impedance determines the damping ratio of the output LC filter and is classified as:
@@ -569,6 +569,55 @@ $H_{Diff}(s) = \frac{ V_{out}(s) } { V_{in}(s) } = \frac{1}{1 + s • \frac{ L_{
 <p align="center">
   <img src="pic/gain-vs-frequency.png" alt="gain-vs-frequency">
 </p>
+
+##### d. Multilayer Air-Core Inductor
+A multilayer air-core inductor is a type of inductor that consists of multiple layers of wire wound around a non-magnetic form (bobbin or mandrel) without any ferromagnetic core material. The "air-core" designation means the magnetic flux path is primarily through air, and the "multilayer" indicates that the wire is wound in multiple concentric layers rather than a single layer.
+
+**Structure and Construction**
+
+Core components:
+- Bobbin/mandrel<br>
+  A cylindrical form made of non-magnetic material (plastic, ceramic, or air) around which the wire is wound
+- Wire windings<br>>
+  Multiple layers of insulated copper wire wound concentrically
+- Layer structure<br>
+  Each layer is wound tightly against the previous layer, creating a compact coil structure
+- Terminals<br>
+  Connection points at the beginning and end of the wire
+
+Winding Pattern
+- Layer-by-Layer<br>
+  Wire is wound in complete layers, starting from the bobbin surface
+- Tight Winding<br>
+  Each turn is placed as close as possible to adjacent turns
+- Layer Transition<br>
+  When one layer is complete, the wire moves to the next layer
+- Direction Consistency<br>
+  All layers are wound in the same direction
+
+**Key Characteristics**
+
+Advantages:
+- No Core Losses<br>
+  Absence of ferromagnetic material eliminates hysteresis and eddy current losses
+- High Frequency Operation<br>
+  Suitable for high-frequency applications (MHz to GHz range)
+- Linear Behavior<br>
+  No saturation effects, maintaining inductance over a wide current range
+- Low Distortion<br>
+  Minimal harmonic distortion in signal applications
+- Temperature Stability<br>
+  Inductance remains relatively constant with temperature changes
+
+Disadvantages:
+- Lower Inductance<br>
+  Compared to ferromagnetic cores, air-core inductors have lower inductance per turn
+- Larger Size<br>
+  Requires more turns and larger physical size for the same inductance
+- External Field<br>
+  Magnetic field extends beyond the coil, potentially causing interference
+- Lower Q Factor<br>
+  Generally lower quality factor compared to ferromagnetic core inductors
 <!-- Air Core Axial Inductor
 | N1  | N2  |
 |----:|----:|

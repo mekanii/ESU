@@ -1,9 +1,12 @@
-2025-08-06
+2025-08-08
+
+
+2025-08-07
 - Design Rule Check PCB ESU-CTL dengan standar manufaktur Spectra [Done]
 - rev/PCB ESU-XF re-placement dan retracing menyesuaikan komponen tersedia sesuai hitungan LC filter [Done]
 - Request PO kompoenen PCB ESU-CTL dan LC Filter [In Progress]
 
-2025-08-05
+2025-08-06
 - feat/PCB ESU-PS: retracing dengan faraday shield untuk mengurangi paracitic capacitance (EMC) [Done]
 - List BoM PCB ESU-CTL [Done]
 - Design Rule Check PCB ESU-CTL dengan standar manufaktur Spectra [In Progress]

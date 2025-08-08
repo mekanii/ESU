@@ -7705,7 +7705,7 @@
 	)
 	(wire
 		(pts
-			(xy 351.79 72.39) (xy 361.95 72.39)
+			(xy 351.79 77.47) (xy 361.95 77.47)
 		)
 		(stroke
 			(width 0)
@@ -9625,7 +9625,7 @@
 	)
 	(wire
 		(pts
-			(xy 351.79 77.47) (xy 361.95 77.47)
+			(xy 351.79 72.39) (xy 361.95 72.39)
 		)
 		(stroke
 			(width 0)
@@ -9695,7 +9695,7 @@
 	)
 	(wire
 		(pts
-			(xy 351.79 83.82) (xy 361.95 83.82)
+			(xy 351.79 86.36) (xy 361.95 86.36)
 		)
 		(stroke
 			(width 0)
@@ -10215,7 +10215,7 @@
 	)
 	(wire
 		(pts
-			(xy 351.79 86.36) (xy 361.95 86.36)
+			(xy 351.79 83.82) (xy 361.95 83.82)
 		)
 		(stroke
 			(width 0)
@@ -10917,7 +10917,7 @@
 		(uuid "4a6ba19e-ab14-447f-8ac6-1de779f1fc78")
 	)
 	(label "+5V"
-		(at 354.33 77.47 0)
+		(at 354.33 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11104,7 +11104,7 @@
 		(uuid "769066a0-8d37-467b-82ef-98e794483a94")
 	)
 	(label "BUZZ"
-		(at 354.33 83.82 0)
+		(at 354.33 86.36 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11302,7 +11302,7 @@
 		(uuid "a345034e-8c68-4bea-b503-4af4eabd5065")
 	)
 	(label "SW-COAG"
-		(at 354.33 72.39 0)
+		(at 354.33 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11445,7 +11445,7 @@
 		(uuid "bba6100e-3182-4bfb-81c9-56cb899f3ae7")
 	)
 	(label "+12V"
-		(at 354.33 86.36 0)
+		(at 354.33 83.82 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -14712,6 +14712,78 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 367.03 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "85f59bba-93a8-48d3-ac23-dfd60f8d4a88")
+		(property "Reference" "J3"
+			(at 366.776 69.85 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 369.57 76.1999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_KK-396_5273-03A_1x03_P3.96mm_Vertical"
+			(at 367.03 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 367.03 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 367.03 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1a2898a8-3de8-4d70-b6e6-3110eaae34ac")
+		)
+		(pin "3"
+			(uuid "7550c57d-bf55-440f-9681-4e88a7c3d5fb")
+		)
+		(pin "2"
+			(uuid "938e6722-65a8-4e90-aea5-5c82028ceb07")
+		)
+		(instances
+			(project "CTL-3.0"
+				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "ESP32:ESP32-S3-WROOM-1U")
 		(at 139.7 161.29 0)
 		(unit 1)
@@ -15574,6 +15646,75 @@
 			(project "CTL-1.0"
 				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
 					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 367.03 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a56a4a6f-cf7c-42c9-8387-cb60ad898ce7")
+		(property "Reference" "J4"
+			(at 367.03 81.28 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 369.57 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_KK-396_5273-02A_1x02_P3.96mm_Vertical"
+			(at 367.03 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 367.03 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 367.03 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2a23341c-7ee9-4330-b61a-c6b960b56c77")
+		)
+		(pin "1"
+			(uuid "40e46940-548e-41de-8cdf-1cc0e936282f")
+		)
+		(instances
+			(project "CTL-3.0"
+				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -17318,78 +17459,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
-		(at 367.03 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e02a1a1d-da40-47b8-972a-12f6cf94e16d")
-		(property "Reference" "J3"
-			(at 366.776 69.85 0)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "Conn_01x03"
-			(at 369.57 76.1999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_Molex:Molex_KK-396_5273-03A_1x03_P3.96mm_Vertical"
-			(at 367.03 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 367.03 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 367.03 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5a7ee14c-d77a-45be-baac-73c459556508")
-		)
-		(pin "3"
-			(uuid "5bcb89b4-2fab-4b57-b8df-8169b26de2c8")
-		)
-		(pin "2"
-			(uuid "84150d81-c824-420b-8225-95f49ff84a2f")
-		)
-		(instances
-			(project ""
-				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_02x16_Odd_Even")
 		(at 367.03 41.91 0)
 		(unit 1)
@@ -17542,75 +17611,6 @@
 			(project ""
 				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
-		(at 367.03 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e96ae407-9179-48c1-85b3-981fec3462d3")
-		(property "Reference" "J4"
-			(at 367.03 81.28 0)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Value" "Conn_01x02"
-			(at 369.57 86.3599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Connector_Molex:Molex_KK-396_5273-02A_1x02_P3.96mm_Vertical"
-			(at 367.03 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 367.03 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 367.03 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "4f59e495-f087-4ada-8116-fcf432461a29")
-		)
-		(pin "1"
-			(uuid "a2d5e9c1-2c4a-4924-81ad-2f36a07db9cb")
-		)
-		(instances
-			(project ""
-				(path "/6b19d318-fbab-46b0-b882-d3538e8b12f1"
-					(reference "J4")
 					(unit 1)
 				)
 			)
