@@ -675,9 +675,17 @@ Disadvantages:
 
 - Calculate Dimensions<br>
   - Outer Diameter<br>
-    $D_{outer} = 8 + 2 • ( 5 • 1 ) = 18 mm$
+    $D_{outer} = 8 + 2 • ( 5 • 1 ) = 18 \ mm$
+  - Average Diameter<br>
+    $D_{avg} = \frac{ 8 + 18 } { 2 } = 13 \ mm$
+  - Winding Thickness<br>
+    $w = \frac{ 18 - 8 } { 2 } = 5 \ mm$
 
+- Calculate Required Turns<br>
+  $N = \sqrt{ \frac{ 29 • ( ( 3 • 13 ) + ( 9 • 16 ) + ( 10 • 5 ) )} { 0.001 • 13^2 }} ≈ 200$
 
+- Calculate Actual Layers
+  $Actual \ Layers = \frac{ 200 } { 16 }$
 
 <!-- Air Core Axial Inductor
 | N1  | N2  |

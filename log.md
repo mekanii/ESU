@@ -1,5 +1,5 @@
 2025-08-08
-
+- Desain dan kalkulasi induktor sesuai dengan hasil desain LC Filter [In Progress]
 
 2025-08-07
 - Design Rule Check PCB ESU-CTL dengan standar manufaktur Spectra [Done]
