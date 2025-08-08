@@ -625,13 +625,18 @@ Disadvantages:
 
 - **Estimate Number of Layers Needed**<br>
   First, we need to estimate the outer diameter. For rough approximation:<br>
-  $D_{outer} ≈ D_{bobbin} + 2 • w$
+  $D_{outer} ≈ D_{inner} + 2 • w$
 
   The winding thickness can be estimated as:<br>
   $w ≈ N • d_{wire}$
+
+- **Calculate Average Diameter**<br>
+  $D_{avg} = \frac{ D_{inner} + D_{outer} } { 2 }$
+
+- **Use Inductance Formula to Solve for Number of Turns**<br>
+  The inductance formula for multilayer air-core inductor:<br>
+  $L = \frac{ 0.0254 • N^2 • D_{avg}^2} { 3D_{avg} + 9l + 10w }$
   
-- **Calculate Average Diameter**
-- **Use Inductance Formula to Solve for Number of Turns**
 - **Iterative Solution Process**
   - Initial Guess
   - Calculate Dimensions
