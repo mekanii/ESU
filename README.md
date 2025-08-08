@@ -585,7 +585,7 @@ Core components:
 - Terminals<br>
   Connection points at the beginning and end of the wire
 
-Winding Pattern
+Winding Pattern:
 - Layer-by-Layer<br>
   Wire is wound in complete layers, starting from the bobbin surface
 - Tight Winding<br>
