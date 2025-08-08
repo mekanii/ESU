@@ -618,6 +618,26 @@ Disadvantages:
   Magnetic field extends beyond the coil, potentially causing interference
 - Lower Q Factor<br>
   Generally lower quality factor compared to ferromagnetic core inductors
+
+**Step-by-Step Calculation**
+- **Calculate Turns per Layer**<br>
+  $N_{layer} = \frac{ l } { d_{wire} }$
+
+- **Estimate Number of Layers Needed**<br>
+  First, we need to estimate the outer diameter. For rough approximation:<br>
+  $D_{outer} ≈ D_{bobbin} + 2 • w$
+
+  The winding thickness can be estimated as:<br>
+  $w ≈ N • d_{wire}$
+  
+- **Calculate Average Diameter**
+- **Use Inductance Formula to Solve for Number of Turns**
+- **Iterative Solution Process**
+  - Initial Guess
+  - Calculate Dimensions
+  - Calculate Required Turns
+  - Calculate Actual Number of Layers
+  - Iterate
 <!-- Air Core Axial Inductor
 | N1  | N2  |
 |----:|----:|
