@@ -628,7 +628,7 @@ Disadvantages:
   $D_{outer} ≈ D_{inner} + 2 • w$
 
   The winding thickness can be estimated as:<br>
-  $w ≈ N • d_{wire}$
+  $w ≈ l • d_{wire}$
 
 - **Calculate Average Diameter**<br>
   $D_{avg} = \frac{ D_{inner} + D_{outer} } { 2 }$
@@ -637,14 +637,25 @@ Disadvantages:
   The inductance formula for multilayer air-core inductor:<br>
   $L = \frac{ 0.0254 • N^2 • D_{avg}^2} { 3D_{avg} + 9l + 10w }$
 
-  Where
+  Where:<br>
   $w = \frac{ D_{outer} - D_{inner} } { 2 }$
-  
-- **Iterative Solution Process**
-  - Initial Guess
+
+- **Iterative Solution Process**<br>
+  Since the outer diameter depends on the number of layers, and the number of layers depends on the total turns, we need an iterative approach:
+  - Initial Guess<br>
+    Start with an initial guess for the number of layers
   - Calculate Dimensions
-  - Calculate Required Turns
-  - Calculate Actual Number of Layers
+    - Calculate outer diameter<br>
+      $D_{outer} = D_{inner} + 2 • ( N_{layer} • d_wire )$
+    - Calculate average diameter<br>
+      $D_{avg} = \frac{ D_{inner} + D_{outer} } { 2 }$
+    - Calculate winding thickness<br>
+      $w = \frac{ D_{outer} - D_{inner} } { 2 }
+  - Calculate Required Turns<br>
+    Rearrange the inductance formula to solve for N:<br>
+    $N = \sqrt{ \frac{ L • ( 3D_{avg} + 9l + 10w )} { 0.0254 • D_{avg}^2 }}$
+  - Calculate Actual Number of Layers<br>
+    $Actual \ Layers = \frac{ N } { N_{layer} }$
   - Iterate
 <!-- Air Core Axial Inductor
 | N1  | N2  |
