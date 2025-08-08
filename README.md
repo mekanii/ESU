@@ -675,8 +675,7 @@ Disadvantages:
 
 - Calculate Dimensions<br>
   - Outer Diameter<br>
-    $D_{outer} = D_{inner} + 2 • ( Number \ of \ Layers • d_{wire} )$
-    $D_{outer} = 8 + 2 • ( 5 • 1 ) = 18 mm
+    $D_{outer} = 8 + 2 • ( 5 • 1 ) = 18 mm$
 
 
 
