@@ -183,6 +183,7 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 </p>
 
 <div align="center">
+
 | Duty Cycle |       % | HIGH Time |
 | ----------:| ------: | ---------:|
 |         10 |   2.5 % |      1 us |
@@ -199,6 +200,7 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 |        200 |  50.0 % |     20 us |
 |        300 |  75.0 % |     30 us |
 |        400 | 100.0 % |     40 us |
+
 </div>
 
 ##### c. 20kHz
@@ -214,6 +216,7 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 </p>
 
 <div align="center">
+
 | Duty Cycle |       % | HIGH Time |
 | ----------:| -------:| ---------:|
 |         10 |   2.0 % |      1 us |
@@ -231,6 +234,7 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 |        300 |  60.0 % |     30 us |
 |        400 |  80.0 % |     40 us |
 |        500 | 100.0 % |     50 us |
+
 </div>
 
 ### 2.3.2. Serial Communication
