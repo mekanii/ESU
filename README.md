@@ -234,7 +234,7 @@ The combination of clock frequency and resolution plays a vital role in determin
 | Other |	        N/A	| Invalid	            | 1 6 100 |	N/A	              | 02              |
 
 ## 2.4. Power Stage
-### 2.4.1. DAC
+### 2.4.1. HF Switch
 #### 2.4.1.1. Schematic
 
 <p align="center">
