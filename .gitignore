@@ -12,6 +12,9 @@
 # Ignore temporary Excel files
 ~$*.xlsx
 
+# Ignore dot-tilde files (temporary/backup files like .~Request PO 20250807.xlsx)
+.~*
+
 # PlatformIO specific files
 .pio/
 .vscode/
