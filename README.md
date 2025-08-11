@@ -764,7 +764,7 @@ Disadvantages:
     With 71 turns and 5 layers:
     - $N_{layer} = \frac{ 71 } { 5 } = 14.2 \ turns \ per \ layer$
     - $N_{layer}Actual = 14$ _(since we can't have partial turns)_
-    - $N = $N_{layer}Actual • Number \ of \ Layers = 14 • 5 = 70 \ turns$
+    - $N = N_{layer}Actual • Number \ of \ Layers = 14 • 5 = 70 \ turns$
   - Calculate final inductance<br>
     $L = \frac{ 0.007925 • N^2 • D_{avg}^2} { 3D_{avg} + 9l + 10w }$
 
