@@ -601,7 +601,7 @@ $C_L = \frac{ 1 }{ 2 • π • f_0 • R_L • \sqrt{ 2 } }$<br><br>
     - $R_L = \frac{ R_{BTL} }{ 2 }$
   - Plugging in the values:
     - $L_{BTL} = \frac{ \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } }{ 2 • π • f_0 } = \frac{ \frac{ 100 }{ 2 } • \sqrt{ 2 } }{ 2 • 3.14 • 400,000 } = \frac{ 70.7106 }{ 2,512,000 }$<br><br>
-      $L_{BTL} = 0.000028149155 \ H = 28.1492 \text{ µH} ≈ 29 \text{ µH}$
+      $L_{BTL} = 0.000028149155 \ H = 28.1492 \text{ µH}$
     - $C_{BTL} = \frac{ \frac{ 1 }{ 2 • π • f_0 • \frac{ R_{BTL} }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2 • 3.14 • 400,000 • \frac{ 100 }{ 2 } • \sqrt{ 2 } } }{ 2 } = \frac{ \frac{ 1 }{ 2,512,000 • 70.7106 } }{ 2 }$<br><br>
       $C_{BTL} = 0.000000000281492 \ F = 2.81492 \ nF ≈ 2.7 \ nF$
 
@@ -610,23 +610,23 @@ With the targeted Q of 0.707 = 1/√2 and the cut-off frequency is:
 
 $f_0 = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • C_L } } = \frac{ 1 }{ 2 • π • \sqrt{ L_{BTL} • 2 • C_{BTL} } }$
 
-$f_0 = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 29 • 10^{-6} • 2 • 2.7 • 10^{-9} } } = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 156.6 • 10^{-15} } } = \frac{ 1 }{ 2 • 3.14 • 3.9572 • 10^{-7} }$
+$f_0 = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 28.1492 • 10^{-6} • 2 • 2.7 • 10^{-9} } } = \frac{ 1 }{ 2 • 3.14 • \sqrt{ 152 • 10^{-15} } } = \frac{ 1 }{ 2 • 3.14 • 3.8988 • 10^{-7} }$
 
-$f_0 = 402,387.4966 \text{ Hz} = 402.387 \text{ kHz}$
+$f_0 = 408,423.2417 \text{ Hz} = 408.423 \text{ kHz}$
 
 Using the standard inductor and capacitor values from the previous calculations, the Q factor for 100Ω load is:
 
 $Q = R_L • \sqrt{ \frac{ C_L }{ L_{BTL} } } = \frac{ R_{BTL} }{ 2 } • \sqrt{ \frac{ 2 • C_{BTL} } { L_{BTL} } }$
 
-$Q = \frac{ 100 }{ 2 } • \sqrt{ \frac{ 2 • 2.7 • 10^{-9} } { 29 • 10^{-6} } }$
+$Q = \frac{ 100 }{ 2 } • \sqrt{ \frac{ 2 • 2.7 • 10^{-9} } { 28.14 • 10^{-6} } }$
 
-$Q = 0.6823$
+$Q = 0.6925$
 
 The peaking at cut-off frequency in dB is:
 
 $⍵_0 = 20 log_{10} (Q)$
 
-$⍵_0 = 20 log_{10} (0.6823) =  -3.3206 \text{ dB}$
+$⍵_0 = 20 log_{10} (0.6925) =  -3.192 \text{ dB}$
 
 Using the transfer function below, the frequency response of the selected LC filter can be plotted to provide a complete visual evaluation of the LC filter response.<br><br>
 $H_{Diff}(s) = \frac{ V_{out}(s) } { V_{in}(s) } = \frac{1}{1 + s • \frac{ L_{BTL} }{ R_L } • C_L + s^2 }$
@@ -700,7 +700,7 @@ Disadvantages:
 
 - **Use Inductance Formula to Solve for Number of Turns**<br>
   The inductance formula for multilayer air-core inductor:<br>
-  $L = \frac{ 0.001 • N^2 • D_{avg}^2} { 3D_{avg} + 9l + 10w }$
+  $L = \frac{ 0.007925 • N^2 • D_{avg}^2} { 3D_{avg} + 9l + 10w }$
 
   Where:<br>
   $w = \frac{ D_{outer} - D_{inner} } { 2 }$
@@ -718,7 +718,7 @@ Disadvantages:
       $w = \frac{ D_{outer} - D_{inner} } { 2 }$
   - Calculate Required Turns<br>
     Rearrange the inductance formula to solve for N:<br>
-    $N = \sqrt{ \frac{ L • ( 3D_{avg} + 9l + 10w )} { 0.001 • D_{avg}^2 }}$
+    $N = \sqrt{ \frac{ L • ( 3D_{avg} + 9l + 10w )} { 0.007925 • D_{avg}^2 }}$
   - Calculate Actual Number of Layers<br>
     $Actual \ Layers = \frac{ N } { N_{layer} }$
   - Iterate<br>
@@ -733,7 +733,7 @@ Disadvantages:
 
 **Calculations:**
 - Turns per Layer<br>
-  $N_{layer} = \frac{ 16 } { 1 } = 16$
+  $N_{layer} = \frac{ 16 } { 1 } = 16 \ turns \ per \ layer$
 
 - Initial Guess<br>
   Assume 5 layers
@@ -747,10 +747,28 @@ Disadvantages:
     $w = \frac{ 18 - 8 } { 2 } = 5 \ mm$
 
 - Calculate Required Turns<br>
-  $N = \sqrt{ \frac{ 29 • ( ( 3 • 13 ) + ( 9 • 16 ) + ( 10 • 5 ) )} { 0.001 • 13^2 }} ≈ 200$
+  $N = \sqrt{ \frac{ 29 • ( ( 3 • 13 ) + ( 9 • 16 ) + ( 10 • 5 ) )} { 0.007925 • 13^2 }} ≈ 71 \ turns$
 
-- Calculate Actual Layers
-  $Actual \ Layers = \frac{ 200 } { 16 }$
+- Calculate Actual Layers<br>
+  $Actual \ Layers = \frac{ 71 } { 16 } ≈ 4.44 layers$
+
+  Since we can't have partial layers, we need 5 layers.
+
+- Recalculate with 5 Layers
+  - $D_{outer} = 18 \ mm$
+  - $D_{avg} = 13 \ mm$
+  - $w = 5 \ mm$
+  - Final calculation<br>
+    $N = \sqrt{ \frac{ 29 • ( ( 3 • 13 ) + ( 9 • 16 ) + ( 10 • 5 ) )} { 0.007925 • 13^2 }} ≈ 71 \ turns$
+  - Final verification<br>
+    With 71 turns and 5 layers:
+    - $N_{layer} = \frac{ 71 } { 5 } = 14.2 \ turns \ per \ layer$
+    - $N_{layer}Actual = 14$ _(since we can't have partial turns)_
+    - $N = $N_{layer}Actual • Number \ of \ Layers = 14 • 5 = 70 \ turns$
+  - Calculate final inductance<br>
+    $L = \frac{ 0.007925 • N^2 • D_{avg}^2} { 3D_{avg} + 9l + 10w }$
+
+    $L = \frac{ 0.007925 • 70^2 • 13^2} { (3 • 3) + (9 • 16) + (10 • 5) } = 28.14 \text{ µH}$
 
 #### 2.4.3.2 Output Scope
 ##### a. 400kHz
