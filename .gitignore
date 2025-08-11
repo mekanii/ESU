@@ -10,6 +10,7 @@
 *.dwl2
 
 # Ignore temporary Excel files
+hardware/~$*.xlsx
 ~$*.xlsx
 
 # Ignore dot-tilde files (temporary/backup files like .~Request PO 20250807.xlsx)
