@@ -688,26 +688,31 @@ Disadvantages:
 - Lower Q Factor<br>
   Generally lower quality factor compared to ferromagnetic core inductors
 
-**Step-by-Step Calculation**<br>
+**Step-by-Step Calculation**
+
+<p align="center">
+  <img src="pic/air-core-inductor.png" alt="air-core-inductor">
+</p>
+
 - **Calculate Turns per Layer**<br>
   $N_{layer} = \frac{ l } { d_{wire} }$
 
 - **Estimate Number of Layers Needed**<br>
   First, we need to estimate the outer diameter. For rough approximation:<br>
-  $D_{outer} ≈ D_{inner} + 2 • w$
+  $OD ≈ ID + 2 • w$
 
   The winding thickness can be estimated as:<br>
   $w ≈ Number \ of \ Layers • d_{wire}$
 
 - **Calculate Average Diameter**<br>
-  $D_{avg} = \frac{ D_{inner} + D_{outer} } { 2 }$
+  $D = \frac{ ID + OD } { 2 }$
 
 - **Use Inductance Formula to Solve for Number of Turns**<br>
   The inductance formula for multilayer air-core inductor:<br>
-  $L = \frac{ 0.007925 • N^2 • D_{avg}^2} { 3D_{avg} + 9l + 10w }$
+  $L = \frac{ 0.007925 • N^2 • D^2} { 3D + 9l + 10w }$
 
   Where:<br>
-  $w = \frac{ D_{outer} - D_{inner} } { 2 }$
+  $w = \frac{ OD - ID } { 2 }$
 
 - **Iterative Solution Process**<br>
   Since the outer diameter depends on the number of layers, and the number of layers depends on the total turns, we need an iterative approach:
@@ -715,14 +720,14 @@ Disadvantages:
     Start with an initial guess for the number of layers
   - Calculate Dimensions
     - Calculate outer diameter<br>
-      $D_{outer} = D_{inner} + 2 • ( Number \ of \ Layers • d_{wire} )$
+      $OD = ID + 2 • ( Number \ of \ Layers • d_{wire} )$
     - Calculate average diameter<br>
-      $D_{avg} = \frac{ D_{inner} + D_{outer} } { 2 }$
+      $D = \frac{ ID + OD } { 2 }$
     - Calculate winding thickness<br>
-      $w = \frac{ D_{outer} - D_{inner} } { 2 }$
+      $w = \frac{ OD - ID } { 2 }$
   - Calculate Required Turns<br>
     Rearrange the inductance formula to solve for N:<br>
-    $N = \sqrt{ \frac{ L • ( 3D_{avg} + 9l + 10w )} { 0.007925 • D_{avg}^2 }}$
+    $N = \sqrt{ \frac{ L • ( 3D + 9l + 10w )} { 0.007925 • D^2 }}$
   - Calculate Actual Number of Layers<br>
     $Actual \ Layers = \frac{ N } { N_{layer} }$
   - Iterate<br>
@@ -732,7 +737,7 @@ Disadvantages:
 **Given:**
 - Wire diameter ( $d_{wire}$ ): 1 mm
 - Axial length ( $l$ ): 16 mm
-- Inner diameter ( $D_{inner}$ ): 8 mm
+- Inner diameter ( $ID$ ): 8 mm
 - Target inductance ( $L$ ): 29 μH
 
 **Calculations:**
@@ -744,9 +749,9 @@ Disadvantages:
 
 - Calculate Dimensions<br>
   - Outer Diameter<br>
-    $D_{outer} = 8 + 2 • ( 5 • 1 ) = 18 \ mm$
+    $OD = 8 + 2 • ( 5 • 1 ) = 18 \ mm$
   - Average Diameter<br>
-    $D_{avg} = \frac{ 8 + 18 } { 2 } = 13 \ mm$
+    $D = \frac{ 8 + 18 } { 2 } = 13 \ mm$
   - Winding Thickness<br>
     $w = \frac{ 18 - 8 } { 2 } = 5 \ mm$
 
@@ -759,8 +764,8 @@ Disadvantages:
   Since we can't have partial layers, we need 5 layers.
 
 - Recalculate with 5 Layers
-  - $D_{outer} = 18 \ mm$
-  - $D_{avg} = 13 \ mm$
+  - $OD = 18 \ mm$
+  - $D = 13 \ mm$
   - $w = 5 \ mm$
   - Final calculation<br>
     $N = \sqrt{ \frac{ 29 • ( ( 3 • 13 ) + ( 9 • 16 ) + ( 10 • 5 ) )} { 0.007925 • 13^2 }} ≈ 71 \ turns$
@@ -770,7 +775,7 @@ Disadvantages:
     - $N_{layer}Actual = 14$ _(since we can't have partial turns)_
     - $N = N_{layer}Actual • Number \ of \ Layers = 14 • 5 = 70 \ turns$
   - Calculate final inductance<br>
-    $L = \frac{ 0.007925 • N^2 • D_{avg}^2} { 3D_{avg} + 9l + 10w }$
+    $L = \frac{ 0.007925 • N^2 • D^2} { 3D + 9l + 10w }$
 
     $L = \frac{ 0.007925 • 70^2 • 13^2} { (3 • 3) + (9 • 16) + (10 • 5) } = 28.14 \text{ µH}$
 
