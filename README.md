@@ -114,9 +114,20 @@ The combination of clock frequency and resolution plays a vital role in determin
 > [!NOTE]
 > Pure Cut PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
-<p align="center">
+<p align="center"><img src="pic/PWM/400kHz/1/10.png" alt="pwm-400-1-10"></p>
+<p align="center"><img src="pic/PWM/400kHz/1/20.png" alt="pwm-400-1-20"></p>
+<p align="center"><img src="pic/PWM/400kHz/1/30.png" alt="pwm-400-1-30"></p>
+<p align="center"><img src="pic/PWM/400kHz/1/40.png" alt="pwm-400-1-40"></p>
+<p align="center"><img src="pic/PWM/400kHz/1/50.png" alt="pwm-400-1-50"></p>
+<p align="center"><img src="pic/PWM/400kHz/1/60.png" alt="pwm-400-1-60"></p>
+<p align="center"><img src="pic/PWM/400kHz/1/70.png" alt="pwm-400-1-70"></p>
+<p align="center"><img src="pic/PWM/400kHz/1/80.png" alt="pwm-400-1-80"></p>
+<p align="center"><img src="pic/PWM/400kHz/1/90.png" alt="pwm-400-1-90"></p>
+<p align="center"><img src="pic/PWM/400kHz/1/100.png" alt="pwm-400-1-100"></p>
+
+<!-- <p align="center">
   <img src="pic/PWM/PWM-pure-cut.png" alt="PWM-pure-cut">
-</p>
+</p> -->
 
 - Pattern 2<br>
 The image illustrates the output scope for the Pattern 2 (Blend Cut 1) operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Blend Cut process, highlighting the key features and behavior of the PWM signal during this operation.<br>
@@ -164,8 +175,14 @@ The image illustrates the output scope for the 25kHz (Spray Coagulation operatio
 
 For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings. We can observe that the increment of the duty cycle results in a pulse that exhibits a linear increase in HIGH time, further emphasizing the effectiveness of the PWM modulation in maintaining a predictable response across varying duty cycle levels.
 
-<div align="center">
+> [!NOTE]
+> 25kHz PWM signal utilize a discrete resolution of 400 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
+<p align="center">
+  <img src="pic/PWM/PWM-coag-spray.png" alt="PWM-coag-spray">
+</p>
+
+<div align="center">
 | Duty Cycle |       % | HIGH Time |
 | ----------:| ------: | ---------:|
 |         10 |   2.5 % |      1 us |
@@ -182,15 +199,7 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 |        200 |  50.0 % |     20 us |
 |        300 |  75.0 % |     30 us |
 |        400 | 100.0 % |     40 us |
-
 </div>
-
-> [!NOTE]
-> 25kHz PWM signal utilize a discrete resolution of 400 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
-
-<p align="center">
-  <img src="pic/PWM/PWM-coag-spray.png" alt="PWM-coag-spray">
-</p>
 
 ##### c. 20kHz
 The image illustrates the output scope for the 20kHz (Forced Coagulation operation) at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Forced Coagulation process, highlighting the key features and behavior of the PWM signal during this operation.
@@ -200,8 +209,11 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 > [!NOTE]
 > 20kHz PWM signal utilize a discrete resolution of 500 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
-<div align="center">
+<p align="center">
+  <img src="pic/PWM/PWM-coag-forced.png" alt="PWM-coag-forced">
+</p>
 
+<div align="center">
 | Duty Cycle |       % | HIGH Time |
 | ----------:| -------:| ---------:|
 |         10 |   2.0 % |      1 us |
@@ -219,15 +231,7 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 |        300 |  60.0 % |     30 us |
 |        400 |  80.0 % |     40 us |
 |        500 | 100.0 % |     50 us |
-
 </div>
-
-<p align="center">
-  <img src="pic/PWM/PWM-coag-forced.png" alt="PWM-coag-forced">
-</p>
-
-
-- Standard
 
 ### 2.3.2. Serial Communication
 #### 2.3.2.1. 1 Parameters <[command]>
