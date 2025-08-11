@@ -125,16 +125,16 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 > [!NOTE]
 > Pattern 2: 18 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 2 periods).<br>This pattern utilize a discrete resolution of 200 levels, similar to that of a Pattern 1 (Pure Cut) PWM signal. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
-<p align="center"><img src="pic/PWM/400kHz/2/10" alt="pwm-400-2-10"></p>
-<p align="center"><img src="pic/PWM/400kHz/2/20" alt="pwm-400-2-20"></p>
-<p align="center"><img src="pic/PWM/400kHz/2/30" alt="pwm-400-2-30"></p>
-<p align="center"><img src="pic/PWM/400kHz/2/40" alt="pwm-400-2-40"></p>
-<p align="center"><img src="pic/PWM/400kHz/2/50" alt="pwm-400-2-50"></p>
-<p align="center"><img src="pic/PWM/400kHz/2/60" alt="pwm-400-2-60"></p>
-<p align="center"><img src="pic/PWM/400kHz/2/70" alt="pwm-400-2-70"></p>
-<p align="center"><img src="pic/PWM/400kHz/2/80" alt="pwm-400-2-80"></p>
-<p align="center"><img src="pic/PWM/400kHz/2/90" alt="pwm-400-2-90"></p>
-<p align="center"><img src="pic/PWM/400kHz/2/100" alt="pwm-400-2-100"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/10.png" alt="pwm-400-2-10"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/20.png" alt="pwm-400-2-20"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/30.png" alt="pwm-400-2-30"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/40.png" alt="pwm-400-2-40"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/50.png" alt="pwm-400-2-50"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/60.png" alt="pwm-400-2-60"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/70.png" alt="pwm-400-2-70"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/80.png" alt="pwm-400-2-80"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/90.png" alt="pwm-400-2-90"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/100.png" alt="pwm-400-2-100"></p>
 
 - Pattern 3
 <br>The image illustrates the output scope for the Pattern 3 (Blend Cut 2) operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Blend Cut process, highlighting the key features and behavior of the PWM signal during this operation.
@@ -143,16 +143,16 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 > [!NOTE]
 > Pattern 3: 17 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 3 periods).<br>This pattern utilize a discrete resolution of 200 levels, similar to that of a Pattern 1 (Pure Cut) PWM signal. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
-<p align="center"><img src="pic/PWM/400kHz/3/10" alt="pwm-400-3-10"></p>
-<p align="center"><img src="pic/PWM/400kHz/3/20" alt="pwm-400-3-20"></p>
-<p align="center"><img src="pic/PWM/400kHz/3/30" alt="pwm-400-3-30"></p>
-<p align="center"><img src="pic/PWM/400kHz/3/40" alt="pwm-400-3-40"></p>
-<p align="center"><img src="pic/PWM/400kHz/3/50" alt="pwm-400-3-50"></p>
-<p align="center"><img src="pic/PWM/400kHz/3/60" alt="pwm-400-3-60"></p>
-<p align="center"><img src="pic/PWM/400kHz/3/70" alt="pwm-400-3-70"></p>
-<p align="center"><img src="pic/PWM/400kHz/3/80" alt="pwm-400-3-80"></p>
-<p align="center"><img src="pic/PWM/400kHz/3/90" alt="pwm-400-3-90"></p>
-<p align="center"><img src="pic/PWM/400kHz/3/100" alt="pwm-400-3-100"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/10.png" alt="pwm-400-3-10"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/20.png" alt="pwm-400-3-20"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/30.png" alt="pwm-400-3-30"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/40.png" alt="pwm-400-3-40"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/50.png" alt="pwm-400-3-50"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/60.png" alt="pwm-400-3-60"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/70.png" alt="pwm-400-3-70"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/80.png" alt="pwm-400-3-80"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/90.png" alt="pwm-400-3-90"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/100.png" alt="pwm-400-3-100"></p>
 
 
 <!-- <p align="center">
