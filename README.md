@@ -232,7 +232,7 @@ The combination of clock frequency and resolution plays a vital role in determin
 | 5     |	Channel 1             |	Bipolar Standard  | 0 5     |	00	              | N/A             |
 | Other |	N/A	                  | Invalid           | 0 6     | N/A	              | 02              |
 
-#### 2.3.2.3. 3 Parameters <[command] [mode] [duty cycle]>
+#### 2.3.2.3. 3 Parameters <[command] [data1] [data2]>
 ##### command = 1
 - Description: Mode and duty cycle adjustment command.
 - Parameters:
