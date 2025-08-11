@@ -733,7 +733,7 @@ Disadvantages:
   - Iterate<br>
     If the calculated layers don't match the initial guess, adjust and repeat.
 
-**Practical Calculation**
+**Practical Calculation**<br>
 **Given:**
 - Wire diameter ( $d_{wire}$ ): 1 mm
 - Axial length ( $l$ ): 16 mm
