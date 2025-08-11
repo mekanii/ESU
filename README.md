@@ -643,7 +643,7 @@ A multilayer air-core inductor is a type of inductor that consists of multiple l
 Core components:
 - Bobbin/mandrel<br>
   A cylindrical form made of non-magnetic material (plastic, ceramic, or air) around which the wire is wound
-- Wire windings<br>>
+- Wire windings<br>
   Multiple layers of insulated copper wire wound concentrically
 - Layer structure<br>
   Each layer is wound tightly against the previous layer, creating a compact coil structure
