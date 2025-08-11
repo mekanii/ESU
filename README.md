@@ -438,11 +438,26 @@ $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
 
 #### 2.4.2.2 Output Scope
-The image illustrates the output scope for per pulse operation at input transformer with VDS=72V and PWM frequency 400kHz
+##### a. 400kHz
+The image illustrates the output scope at output transformer with PWM frequency 400kHz
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
 > 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+
+##### b. 25kHz
+The image illustrates the output scope at output transformer with PWM frequency 25kHz
+<br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
+
+> [!NOTE]
+> 25kHz PWM signal utilize a discrete resolution of 400 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+
+##### c. 20kHz
+The image illustrates the output scope at output transformer with PWM frequency 20kHz
+<br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
+
+> [!NOTE]
+> 20kHz PWM signal utilize a discrete resolution of 500 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
 <!-- <p align="center">
   <img src="pic/PWM/XF/Bipolar/12V/bipolar-xformer-output-400.png" alt="bipolar-xformer-output-400">
@@ -686,6 +701,56 @@ Disadvantages:
 
 - Calculate Actual Layers
   $Actual \ Layers = \frac{ 200 } { 16 }$
+
+#### 2.4.3.2 Output Scope
+##### a. 400kHz
+The image illustrates the output scope at output transformer with PWM frequency 400kHz. The 400kHz PWM signal exhibits three distinct pulse patterns that repeat cyclically:
+- Pattern 1: 20 pulses per period
+- Pattern 2: 18 pulses per period
+- Pattern 3: 17 pulses per period
+These patterns represent different modulation schemes or switching sequences that are used to achieve the desired output characteristics. The variation in pulse count per period allows for precise control over the output waveform while maintaining the overall 400kHz switching frequency.
+
+For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
+
+> [!NOTE]
+> 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+
+- Pattern 1
+- Pattern 2
+- Pattern 3<br>
+  <p align="center">
+    <img src="pic/PS/blend-cut-2/LC-47u-3n3/10.png" alt="">
+  </p>
+  <p align="center">
+    <img src="pic/PS/blend-cut-2/LC-47u-3n3/20.png" alt="">
+  </p>
+  <p align="center">
+    <img src="pic/PS/blend-cut-2/LC-47u-3n3/30.png" alt="">
+  </p>
+  <p align="center">
+    <img src="pic/PS/blend-cut-2/LC-47u-3n3/40.png" alt="">
+  </p>
+  <p align="center">
+    <img src="pic/PS/blend-cut-2/LC-47u-3n3/50.png" alt="">
+  </p>
+  <p align="center">
+    <img src="pic/PS/blend-cut-2/LC-47u-3n3/60.png" alt="">
+  </p>
+  <p align="center">
+    <img src="pic/PS/blend-cut-2/LC-47u-3n3/70.png" alt="">
+  </p>
+  <p align="center">
+    <img src="pic/PS/blend-cut-2/LC-47u-3n3/80.png" alt="">
+  </p>
+  <p align="center">
+    <img src="pic/PS/blend-cut-2/LC-47u-3n3/90.png" alt="">
+  </p>
+  <p align="center">
+    <img src="pic/PS/blend-cut-2/LC-47u-3n3/100.png" alt="">
+  </p>
+
+##### b. 25kHz
+##### c. 20kHz
 
 <!-- Air Core Axial Inductor
 | N1  | N2  |
