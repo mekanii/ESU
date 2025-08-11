@@ -203,15 +203,26 @@ The combination of clock frequency and resolution plays a vital role in determin
 - Standard
 
 ### 2.3.2. Serial Communication
-#### 2.3.2.1. Parameters <[command]>
+#### 2.3.2.1. 1 Parameters <[command]>
+- Description: Single parameter command for basic system operations.
+- Parameters:
+  - command: Command identifier
+
 | Command |	Description 	            | Example | Success Response  | Error Response  |
 |:-------:|:------------------------- |:------- |:-----------------:|:---------------:|
+| 0       | System status query       | 0       | 00                | N/A             |
+| 1       | System reset              | 1       | 00                | 02              |
 | 2       | Stop all RMT transmission |	2	      | 00                | N/A             |
 | Other   | Invalid                   | 3       | N/A               | 02              |
 
-#### 2.3.2.2. Parameters <[command] [mode]>
+#### 2.3.2.2. 2 Parameters <[command] [data1]>
 ##### command = 0
-| Mode  |	Auto-assigned Channel | Description       | Example |	Success Response  |	Error Response  |
+- Description: Mode selection command without duty cycle adjustment.
+- Parameters:
+  - command: Command identifier, must be 0
+  - data1: Mode selection (0-5)
+
+| data1 |	Auto-assigned Channel | Description       | Example |	Success Response  |	Error Response  |
 |:-----:|:---------------------:|:----------------- |:------- |:-----------------:|:---------------:|
 | 0     |	Channel 0             |	Pure cut          | 0 0     |	00	              | N/A             |
 | 1     |	Channel 0             |	Cut pattern 1     | 0 1     |	00	              | N/A             |
@@ -221,8 +232,14 @@ The combination of clock frequency and resolution plays a vital role in determin
 | 5     |	Channel 1             |	Bipolar Standard  | 0 5     |	00	              | N/A             |
 | Other |	N/A	                  | Invalid           | 0 6     | N/A	              | 02              |
 
-#### 2.3.2.3. Parameters <[command] [mode] [duty cycle]>
+#### 2.3.2.3. 3 Parameters <[command] [mode] [duty cycle]>
 ##### command = 1
+- Description: Mode and duty cycle adjustment command.
+- Parameters:
+  - command: Command identifier, must be 1
+  - data1: Mode selection (0-5)
+  - data2: Duty cycle value (range varies by mode)
+
 | Mode  |	Duty Cycle  |	Description         |	Example |	Success Response  |	Error Response  |
 |:-----:|:-----------:|:------------------- |:------- |:-----------------:|:---------------:|
 | 0     |	    0 - 200 |	Pure cut            |	1 0 100 |	00	              | 02              |
