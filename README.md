@@ -258,7 +258,7 @@ We use three IRFPE50 MOSFETs in parallel to enhance the overall performance and 
 The image illustrates the output scope for the Pure Cut operation at:
 - MOSFET Driver Output (blue)
 - MOSFET Drain Pin (yellow)
-- VDS=12V
+- VDS=72V
 
 It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the DAC signal during this operation.
 <br>For duty cycle levels ranging from 20 to 180, demonstrates similar Waveform frequency, indicating consistent performance across these duty cycle settings.
@@ -438,7 +438,7 @@ $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
 
 #### 2.4.2.2 Output Scope
-The image illustrates the output scope for per pulse operation at input transformer with VDS=12V and PWM frequency 400kHz
+The image illustrates the output scope for per pulse operation at input transformer with VDS=72V and PWM frequency 400kHz
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
