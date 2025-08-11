@@ -708,6 +708,7 @@ The image illustrates the output scope at output transformer with PWM frequency 
 - Pattern 1: 20 pulses per period
 - Pattern 2: 18 pulses per period
 - Pattern 3: 17 pulses per period
+
 These patterns represent different modulation schemes or switching sequences that are used to achieve the desired output characteristics. The variation in pulse count per period allows for precise control over the output waveform while maintaining the overall 400kHz switching frequency.
 
 For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
