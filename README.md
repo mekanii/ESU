@@ -108,11 +108,11 @@ The combination of clock frequency and resolution plays a vital role in determin
 #### 2.3.1.4. Output Scope
 ##### a. 400kHz
 - Pattern 1
-<br>The image illustrates the output scope for the Pure Cut operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the PWM signal during this operation.
+<br>The image illustrates the output scope for the Pattern 1 (Pure Cut operation) at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the PWM signal during this operation.
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
-> Pure Cut PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
 <p align="center"><img src="pic/PWM/400kHz/1/10.png" alt="pwm-400-1-10"></p>
 <p align="center"><img src="pic/PWM/400kHz/1/20.png" alt="pwm-400-1-20"></p>
@@ -754,7 +754,7 @@ Disadvantages:
 
 #### 2.4.3.2 Output Scope
 ##### a. 400kHz
-The image illustrates the output scope at output transformer with PWM frequency 400kHz. The 400kHz PWM signal exhibits three distinct pulse patterns that repeat cyclically:
+The image illustrates the output scope of the 400kHz PWM signal at the output transformer combined with the LC filter. The 400kHz PWM signal exhibits three distinct pulse patterns that repeat cyclically:
 - Pattern 1: 20 pulses per period
 - Pattern 2: 18 pulses per period
 - Pattern 3: 17 pulses per period
@@ -766,19 +766,39 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
 > [!NOTE]
 > 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
-- Pattern 1
-- Pattern 2
+- Pattern 1<br>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/10.png" alt="400-1-10"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/20.png" alt="400-1-20"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/30.png" alt="400-1-30"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/40.png" alt="400-1-40"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/50.png" alt="400-1-50"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/60.png" alt="400-1-60"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/70.png" alt="400-1-70"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/80.png" alt="400-1-80"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/90.png" alt="400-1-90"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/100.png" alt="400-1-100"></p>
+- Pattern 2<br>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/10.png" alt="400-2-10"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/20.png" alt="400-2-20"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/30.png" alt="400-2-30"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/40.png" alt="400-2-40"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/50.png" alt="400-2-50"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/60.png" alt="400-2-60"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/70.png" alt="400-2-70"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/80.png" alt="400-2-80"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/90.png" alt="400-2-90"></p>
+  <p align="center"><img src="pic/PS/400kHz/LC-29u-2n7/100.png" alt="400-2-100"></p>
 - Pattern 3<br>
-  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/10.png" alt="400-3-47u-3n3-10"></p>
-  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/20.png" alt="400-3-47u-3n3-20"></p>
-  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/30.png" alt="400-3-47u-3n3-30"></p>
-  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/40.png" alt="400-3-47u-3n3-40"></p>
-  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/50.png" alt="400-3-47u-3n3-50"></p>
-  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/60.png" alt="400-3-47u-3n3-60"></p>
-  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/70.png" alt="400-3-47u-3n3-70"></p>
-  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/80.png" alt="400-3-47u-3n3-80"></p>
-  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/90.png" alt="400-3-47u-3n3-90"></p>
-  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/100.png" alt="400-3-47u-3n3-100"></p>
+  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/10.png" alt="400-3-10"></p>
+  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/20.png" alt="400-3-20"></p>
+  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/30.png" alt="400-3-30"></p>
+  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/40.png" alt="400-3-40"></p>
+  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/50.png" alt="400-3-50"></p>
+  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/60.png" alt="400-3-60"></p>
+  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/70.png" alt="400-3-70"></p>
+  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/80.png" alt="400-3-80"></p>
+  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/90.png" alt="400-3-90"></p>
+  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/100.png" alt="400-3-100"></p>
 
 ##### b. 25kHz
 ##### c. 20kHz
