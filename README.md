@@ -106,8 +106,8 @@ The combination of clock frequency and resolution plays a vital role in determin
 </div>
 
 #### 2.3.1.4. Output Scope
-##### a. Cut
-- Pure Cut
+##### a. 400kHz
+- Pattern 1
 <br>The image illustrates the output scope for the Pure Cut operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the PWM signal during this operation.
 <br>For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings.
 
@@ -118,20 +118,46 @@ The combination of clock frequency and resolution plays a vital role in determin
   <img src="pic/PWM/PWM-pure-cut.png" alt="PWM-pure-cut">
 </p>
 
-
-- Blend Cut 1 & Blend Cut 2
-<br>The image illustrates the output scope for the Blend Cut 1 (left) and Blend Cut 2 (right ) operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Blend Cut process, highlighting the key features and behavior of the PWM signal during this operation.
-
-  - In the images of Blend Cut 1 and Blend Cut 2, both exhibit the same PWM frequency of 400 kHz.
-  - Additionally, for duty cycle levels ranging from 10 to 100, Blend Cut 1 and Blend Cut 2 demonstrate similar waveform HIHGH state periods, indicating consistent performance across these duty cycle settings.
-  - Furthermore, each pulse in both Blend Cut 1 and Blend Cut 2 is similar to a single pulse of a Pure Cut PWM signal.
+- Pattern 2<br>
+The image illustrates the output scope for the Pattern 2 (Blend Cut 1) operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Blend Cut process, highlighting the key features and behavior of the PWM signal during this operation.<br>
+For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency and similar waveform HIGH state periods, indicating consistent performance across these duty cycle settings. Each pulse in Blend Cut 1 is similar to a single pulse of a Pattern 1 (Pure Cut) PWM signal.
 
 > [!NOTE]
-> Blend cut 1: 18 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 2 periods).<br>Blend cut 2: 17 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 3 periods).<br>Both Blend Cut 1 and Blend Cut 2 utilize a discrete resolution of 200 levels, similar to that of a Pure Cut PWM signal. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> Pattern 2: 18 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 2 periods).<br>This pattern utilize a discrete resolution of 200 levels, similar to that of a Pattern 1 (Pure Cut) PWM signal. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
-<p align="center">
+<p align="center"><img src="pic/PWM/400kHz/2/10" alt="pwm-400-2-10"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/20" alt="pwm-400-2-20"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/30" alt="pwm-400-2-30"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/40" alt="pwm-400-2-40"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/50" alt="pwm-400-2-50"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/60" alt="pwm-400-2-60"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/70" alt="pwm-400-2-70"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/80" alt="pwm-400-2-80"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/90" alt="pwm-400-2-90"></p>
+<p align="center"><img src="pic/PWM/400kHz/2/100" alt="pwm-400-2-100"></p>
+
+- Pattern 3
+<br>The image illustrates the output scope for the Pattern 3 (Blend Cut 2) operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Blend Cut process, highlighting the key features and behavior of the PWM signal during this operation.
+<br>For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency and similar waveform HIGH state periods, indicating consistent performance across these duty cycle settings. Each pulse in Blend Cut 2 is similar to a single pulse of a Pure Cut PWM signal.
+
+> [!NOTE]
+> Pattern 3: 17 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 3 periods).<br>This pattern utilize a discrete resolution of 200 levels, similar to that of a Pattern 1 (Pure Cut) PWM signal. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+
+<p align="center"><img src="pic/PWM/400kHz/3/10" alt="pwm-400-3-10"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/20" alt="pwm-400-3-20"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/30" alt="pwm-400-3-30"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/40" alt="pwm-400-3-40"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/50" alt="pwm-400-3-50"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/60" alt="pwm-400-3-60"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/70" alt="pwm-400-3-70"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/80" alt="pwm-400-3-80"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/90" alt="pwm-400-3-90"></p>
+<p align="center"><img src="pic/PWM/400kHz/3/100" alt="pwm-400-3-100"></p>
+
+
+<!-- <p align="center">
   <img src="pic/PWM/PWM-blend-cut.png" alt="PWM-blend-cut">
-</p>
+</p> -->
 
 ##### b. Coag
 - Spray
@@ -736,36 +762,16 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
 - Pattern 1
 - Pattern 2
 - Pattern 3<br>
-  <p align="center">
-    <img src="pic/PS/blend-cut-2/LC-47u-3n3/10.png" alt="">
-  </p>
-  <p align="center">
-    <img src="pic/PS/blend-cut-2/LC-47u-3n3/20.png" alt="">
-  </p>
-  <p align="center">
-    <img src="pic/PS/blend-cut-2/LC-47u-3n3/30.png" alt="">
-  </p>
-  <p align="center">
-    <img src="pic/PS/blend-cut-2/LC-47u-3n3/40.png" alt="">
-  </p>
-  <p align="center">
-    <img src="pic/PS/blend-cut-2/LC-47u-3n3/50.png" alt="">
-  </p>
-  <p align="center">
-    <img src="pic/PS/blend-cut-2/LC-47u-3n3/60.png" alt="">
-  </p>
-  <p align="center">
-    <img src="pic/PS/blend-cut-2/LC-47u-3n3/70.png" alt="">
-  </p>
-  <p align="center">
-    <img src="pic/PS/blend-cut-2/LC-47u-3n3/80.png" alt="">
-  </p>
-  <p align="center">
-    <img src="pic/PS/blend-cut-2/LC-47u-3n3/90.png" alt="">
-  </p>
-  <p align="center">
-    <img src="pic/PS/blend-cut-2/LC-47u-3n3/100.png" alt="">
-  </p>
+  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/10.png" alt="400-3-47u-3n3-10"></p>
+  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/20.png" alt="400-3-47u-3n3-20"></p>
+  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/30.png" alt="400-3-47u-3n3-30"></p>
+  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/40.png" alt="400-3-47u-3n3-40"></p>
+  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/50.png" alt="400-3-47u-3n3-50"></p>
+  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/60.png" alt="400-3-47u-3n3-60"></p>
+  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/70.png" alt="400-3-47u-3n3-70"></p>
+  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/80.png" alt="400-3-47u-3n3-80"></p>
+  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/90.png" alt="400-3-47u-3n3-90"></p>
+  <p align="center"><img src="pic/PS/blend-cut-2/LC-47u-3n3/100.png" alt="400-3-47u-3n3-100"></p>
 
 ##### b. 25kHz
 ##### c. 20kHz
