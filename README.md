@@ -298,23 +298,25 @@ We use three IRFPE50 MOSFETs in parallel to enhance the overall performance and 
 - Redundancy and Reliability:<br>Using multiple MOSFETs in parallel provides a level of redundancy. If one MOSFET were to fail, the remaining devices can continue to operate, thereby enhancing the overall reliability of the circuit. This is particularly important in critical applications where failure could lead to significant issues.
 
 #### 2.4.1.4. Output Scope
-##### a. Cut
-The image illustrates the output scope for the Pure Cut operation at:
+##### a. 400kHz
+The image illustrates the output scope for the 400kHz operation at:
 - MOSFET Driver Output (blue)
 - MOSFET Drain Pin (yellow)
 - VDS=72V
 
-It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the DAC signal during this operation.
+It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the HF Switch signal during this operation.
 <br>For duty cycle levels ranging from 20 to 180, demonstrates similar Waveform frequency, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
-> Pure Cut PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
 
 <!-- <p align="center">
   <img src="pic/PWM/Wave-pure-cut-driver-mosfet.png" alt="Wave-pure-cut-driver-mosfet">
 </p> -->
 
-##### b. Coag
+##### b. 25KHz
+
+##### c. 25KHz
 
 ### 2.4.2. Transformer
 **Toroidal Ferrite Core Transformer**
