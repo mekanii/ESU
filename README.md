@@ -640,47 +640,40 @@ $H_{Diff}(s) = \frac{ V_{out}(s) } { V_{in}(s) } = \frac{1}{1 + s • \frac{ L_{
 </p>
 
 ##### d. Multilayer Air-Core Inductor
+
 A multilayer air-core inductor is a type of inductor that consists of multiple layers of wire wound around a non-magnetic form (bobbin or mandrel) without any ferromagnetic core material. The "air-core" designation means the magnetic flux path is primarily through air, and the "multilayer" indicates that the wire is wound in multiple concentric layers rather than a single layer.
 
-**Structure and Construction**
-
-Core components:
-- Bobbin/mandrel<br>
-  A cylindrical form made of non-magnetic material (plastic, ceramic, or air) around which the wire is wound
-- Wire windings<br>
-  Multiple layers of insulated copper wire wound concentrically
-- Layer structure<br>
-  Each layer is wound tightly against the previous layer, creating a compact coil structure
-- Terminals<br>
-  Connection points at the beginning and end of the wire
-
-Winding Pattern:
-- Layer-by-Layer<br>
-  Wire is wound in complete layers, starting from the bobbin surface
-- Tight Winding<br>
-  Each turn is placed as close as possible to adjacent turns
-- Layer Transition<br>
-  When one layer is complete, the wire moves to the next layer
-- Direction Consistency<br>
-  All layers are wound in the same direction
+<p align="center">
+  <img src="pic/air-core-inductor.png" alt="air-core-inductor">
+</p>
 
 **Key Characteristics**
 
 Advantages:
 - No Core Losses<br>
-  Absence of ferromagnetic material eliminates hysteresis and eddy current losses
+  Absence of ferromagnetic material eliminates hysteresis and eddy current losses (No ferromagnetic material means no hysteresis, No conductive core means no eddy currents).<br>
+  _Source: "Inductor Design Handbook" by Colonel Wm. T. McLyman, NASA Technical Memorandum 102538_
 - High Frequency Operation<br>
-  Suitable for high-frequency applications (MHz to GHz range)
+  Suitable for high-frequency applications (100kHz to several GHz range).<br>
+  _Source: "RF Circuit Design" by Chris Bowick, Howard W. Sams & Co._
 - Linear Behavior<br>
-  No saturation effects, maintaining inductance over a wide current range
+  No saturation effects, maintaining inductance over a wide current range, Linear B-H relationship (air has μr = 1).<br>
+  _Source: "Magnetic Components for Power Electronics" by Alex Van den Bossche_
 - Low Distortion<br>
-  Minimal harmonic distortion in signal applications
+  Minimal harmonic distortion in signal applications (at low frequencies). But, at high frequencies, parasitic effects can introduce distortion. Inter-turn capacitance can cause frequency-dependent behavior.<br>
+  _Source: "High Frequency Circuit Design" by Ralph S. Carson_
 - Temperature Stability<br>
-  Inductance remains relatively constant with temperature changes
+  Inductance remains relatively constant with temperature changes (Temperature coefficient: Typically <100 ppm/°C)<br>
+  _Source: "Temperature Effects on Inductor Performance" - IEEE Transactions on Magnetics_
 
 Disadvantages:
 - Lower Inductance<br>
-  Compared to ferromagnetic cores, air-core inductors have lower inductance per turn
+  Compared to ferromagnetic cores, air-core inductors have lower inductance per turn.
+  - Air-core: L ∝ N² × r²
+  - Ferrite-core: L ∝ N² × μr × Ae
+  - Typical ratio: Ferrite cores provide 100-1000× higher inductance per turn
+
+  _Source: "Magnetic Core Selection for Transformers and Inductors" by Colonel Wm. T. McLyman_
 - Larger Size<br>
   Requires more turns and larger physical size for the same inductance
 - External Field<br>
@@ -689,10 +682,6 @@ Disadvantages:
   Generally lower quality factor compared to ferromagnetic core inductors
 
 **Step-by-Step Calculation**
-
-<p align="center">
-  <img src="pic/air-core-inductor.png" alt="air-core-inductor">
-</p>
 
 - **Calculate Turns per Layer**<br>
   $N_{layer} = \frac{ l } { d_{wire} }$
