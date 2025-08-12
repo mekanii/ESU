@@ -3,6 +3,7 @@
 # Ignore backup files
 *.bak
 
+
 # Ignore DWL files
 *.dwl
 
@@ -15,6 +16,9 @@ hardware/~$*.xlsx
 
 # Ignore dot-tilde files (temporary/backup files like .~Request PO 20250807.xlsx)
 .~*
+
+# Ignore dot-dollar backup files (like .$Firmware-ESU-CTL-1-Button.drawio.bkp)
+.$*
 
 # PlatformIO specific files
 .pio/
