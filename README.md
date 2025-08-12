@@ -668,7 +668,7 @@ Advantages:
 
 Disadvantages:
 - Lower Inductance<br>
-  Compared to ferromagnetic cores, air-core inductors have lower inductance per turn.
+  Compared to ferromagnetic cores, air-core inductors have lower inductance per turn
   - Air-core: L ∝ N² × r²
   - Ferrite-core: L ∝ N² × μr × Ae
   - Typical ratio: Ferrite cores provide 100-1000× higher inductance per turn
@@ -676,11 +676,24 @@ Disadvantages:
   _Source: "Magnetic Core Selection for Transformers and Inductors" by Colonel Wm. T. McLyman_
 - Larger Size<br>
   Requires more turns and larger physical size for the same inductance
+  - Air-core: Volume ∝ N² × r³
+  - Ferrite-core: Volume ∝ N² × Ae × l
+  - Typical: Air-core inductors are 5-20× larger for same inductance
+
+  _Source: "Inductor Design for Switching Regulators" - Texas Instruments Application Note_
 - External Field<br>
   Magnetic field extends beyond the coil, potentially causing interference
-- Lower Q Factor<br>
-  Generally lower quality factor compared to ferromagnetic core inductors
 
+  Source: "Electromagnetic Compatibility Engineering" by Henry W. Ott
+
+- Q factor varies with frequency and design<br>
+  Q factor depends on Wire resistance, Operating frequency, Core material properties.
+  - Low frequency: Air-core can have HIGHER Q than ferrite
+  - High frequency: Ferrite cores often have higher Q due to lower wire resistance
+
+  _Source: "Quality Factor of Inductors" - IEEE Transactions on Components and Packaging_
+
+  
 **Step-by-Step Calculation**
 
 - **Calculate Turns per Layer**<br>
