@@ -1,4 +1,7 @@
-2025-08-011
+2025-08-12
+- Coil winding hasil desain LC Filter [In Progress] [2/4]
+
+2025-08-11
 - Desain dan kalkulasi induktor sesuai dengan hasil desain LC Filter [Done]
 - Coil winding hasil desain LC Filter [In Progress] [1/4]
 
