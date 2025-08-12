@@ -643,10 +643,6 @@ $H_{Diff}(s) = \frac{ V_{out}(s) } { V_{in}(s) } = \frac{1}{1 + s • \frac{ L_{
 
 A multilayer air-core inductor is a type of inductor that consists of multiple layers of wire wound around a non-magnetic form (bobbin or mandrel) without any ferromagnetic core material. The "air-core" designation means the magnetic flux path is primarily through air, and the "multilayer" indicates that the wire is wound in multiple concentric layers rather than a single layer.
 
-<p align="center">
-  <img src="pic/air-core-inductor.png" alt="air-core-inductor">
-</p>
-
 **Key Characteristics**
 
 Advantages:
@@ -695,6 +691,10 @@ Disadvantages:
 
   
 **Step-by-Step Calculation**
+
+<p align="center">
+  <img src="pic/air-core-inductor.png" alt="air-core-inductor">
+</p>
 
 - **Calculate Turns per Layer**<br>
   $N_{layer} = \frac{ l } { d_{wire} }$
