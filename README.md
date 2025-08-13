@@ -805,15 +805,15 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <thead>
         <tr>
           <th align="center" rowspan="2">Duty<br>Cycle</th>
-          <th align="center" rowspan="2" style="border-right: 2px;">%</th>
-          <th align="center" colspan="4" style="border-right: 2px;">Observed ESU Product</th>
+          <th align="center" rowspan="2" style="border-right: 2px solid #000000;">%</th>
+          <th align="center" colspan="4" style="border-right: 2px solid #000000;">Observed ESU Product</th>
           <th align="center" colspan="4">RnD Implementation</th>
         </tr>
         <tr>
-          <th align="center" style="border-left: 2px;">$V_{max}$ [V]</th>
+          <th align="center" style="border-left: 2px solid #000000;">$V_{max}$ [V]</th>
           <th align="center">$V_{min}$ [V]</th>
           <th align="center">$V_{rms}$ [V]</th>
-          <th align="center" style="border-right: 2px;">$f_{kHz}$ [V]</th>
+          <th align="center" style="border-right: 2px solid #000000;">$f_{kHz}$ [V]</th>
           <th align="center">$V_{max}$ [V]</th>
           <th align="center">$V_{min}$ [V]</th>
           <th align="center">$V_{rms}$ [V]</th>
