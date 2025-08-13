@@ -806,6 +806,13 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
         <th>Duty Cycle</th>
         <th>%</th>
         <th>$V_{max}$ [V]</th>
+        <th>$V_{min}$ [V]</th>
+        <th>$V_{rms}$ [V]</th>
+        <th>$f_{kHz}$ [V]</th>
+        <th>$V_{max}$ [V]</th>
+        <th>$V_{min}$ [V]</th>
+        <th>$V_{rms}$ [V]</th>
+        <th>$f_{kHz}$ [V]</th>
       </tr>
     </thead>
     <tbody>
@@ -813,6 +820,13 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
         <td>10</td>
         <td>5</td>
         <td>48.273</td>
+        <td>-42.206</td>
+        <td>18.234</td>
+        <td>160.31</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
