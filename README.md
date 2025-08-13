@@ -109,10 +109,10 @@ The combination of clock frequency and resolution plays a vital role in determin
 ##### a. 400kHz
 - Pattern 1
 <br>The image illustrates the output scope for the Pattern 1 (Pure Cut operation) at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the PWM signal during this operation.
-<br>For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings.
+<br>For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
-> 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> 400kHz PWM signal utilize a discrete resolution of 200 levels.
 
 <p align="center"><img src="pic/PWM/400kHz/1/10.png" alt="pwm-400-1-10"></p>
 <p align="center"><img src="pic/PWM/400kHz/1/20.png" alt="pwm-400-1-20"></p>
@@ -131,10 +131,10 @@ The combination of clock frequency and resolution plays a vital role in determin
 
 - Pattern 2<br>
 The image illustrates the output scope for the Pattern 2 (Blend Cut 1) operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Blend Cut process, highlighting the key features and behavior of the PWM signal during this operation.<br>
-For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency and similar waveform HIGH state periods, indicating consistent performance across these duty cycle settings. Each pulse in Blend Cut 1 is similar to a single pulse of a Pattern 1 (Pure Cut) PWM signal.
+For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency and similar waveform HIGH state periods, indicating consistent performance across these duty cycle settings. Each pulse in Blend Cut 1 is similar to a single pulse of a Pattern 1 (Pure Cut) PWM signal.
 
 > [!NOTE]
-> Pattern 2: 18 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 2 periods).<br>This pattern utilize a discrete resolution of 200 levels, similar to that of a Pattern 1 (Pure Cut) PWM signal. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> Pattern 2: 18 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 2 periods).<br>This pattern utilize a discrete resolution of 200 levels, similar to that of a Pattern 1 (Pure Cut) PWM signal.
 
 <p align="center"><img src="pic/PWM/400kHz/2/10.png" alt="pwm-400-2-10"></p>
 <p align="center"><img src="pic/PWM/400kHz/2/20.png" alt="pwm-400-2-20"></p>
@@ -149,10 +149,10 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 
 - Pattern 3
 <br>The image illustrates the output scope for the Pattern 3 (Blend Cut 2) operation at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Blend Cut process, highlighting the key features and behavior of the PWM signal during this operation.
-<br>For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency and similar waveform HIGH state periods, indicating consistent performance across these duty cycle settings. Each pulse in Blend Cut 2 is similar to a single pulse of a Pure Cut PWM signal.
+<br>For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency and similar waveform HIGH state periods, indicating consistent performance across these duty cycle settings. Each pulse in Blend Cut 2 is similar to a single pulse of a Pure Cut PWM signal.
 
 > [!NOTE]
-> Pattern 3: 17 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 3 periods).<br>This pattern utilize a discrete resolution of 200 levels, similar to that of a Pattern 1 (Pure Cut) PWM signal. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> Pattern 3: 17 pulses per 1 modulation (400 kHz for each pulse, with 0% PWM during the last 3 periods).<br>This pattern utilize a discrete resolution of 200 levels, similar to that of a Pattern 1 (Pure Cut) PWM signal.
 
 <p align="center"><img src="pic/PWM/400kHz/3/10.png" alt="pwm-400-3-10"></p>
 <p align="center"><img src="pic/PWM/400kHz/3/20.png" alt="pwm-400-3-20"></p>
@@ -173,10 +173,10 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 ##### b. 25kHz
 The image illustrates the output scope for the 25kHz (Spray Coagulation operation) at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Spray Coagulation process, highlighting the key features and behavior of the PWM signal during this operation.
 
-For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings. We can observe that the increment of the duty cycle results in a pulse that exhibits a linear increase in HIGH time, further emphasizing the effectiveness of the PWM modulation in maintaining a predictable response across varying duty cycle levels.
+For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings. We can observe that the increment of the duty cycle results in a pulse that exhibits a linear increase in HIGH time, further emphasizing the effectiveness of the PWM modulation in maintaining a predictable response across varying duty cycle levels.
 
 > [!NOTE]
-> 25kHz PWM signal utilize a discrete resolution of 400 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> 25kHz PWM signal utilize a discrete resolution of 400 levels.
 
 <p align="center">
   <img src="pic/PWM/PWM-coag-spray.png" alt="PWM-coag-spray">
@@ -184,7 +184,7 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 
 <div align="center">
 
-| Duty Cycle |       % | HIGH Time |
+| Discrete Level |       % | HIGH Time |
 | ----------:| ------: | ---------:|
 |         10 |   2.5 % |      1 us |
 |         20 |   5.0 % |      2 us |
@@ -206,10 +206,10 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 ##### c. 20kHz
 The image illustrates the output scope for the 20kHz (Forced Coagulation operation) at the PWM generator. It provides a detailed view of the waveform characteristics and performance metrics associated with the Forced Coagulation process, highlighting the key features and behavior of the PWM signal during this operation.
 
-For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings. We can observe that the increment of the duty cycle results in a pulse that exhibits a linear increase in HIGH time, further emphasizing the effectiveness of the PWM modulation in maintaining a predictable response across varying duty cycle levels.
+For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings. We can observe that the increment of the duty cycle results in a pulse that exhibits a linear increase in HIGH time, further emphasizing the effectiveness of the PWM modulation in maintaining a predictable response across varying duty cycle levels.
 
 > [!NOTE]
-> 20kHz PWM signal utilize a discrete resolution of 500 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> 20kHz PWM signal utilize a discrete resolution of 500 levels.
 
 <p align="center">
   <img src="pic/PWM/PWM-coag-forced.png" alt="PWM-coag-forced">
@@ -217,7 +217,7 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 
 <div align="center">
 
-| Duty Cycle |       % | HIGH Time |
+| Discrete Level |       % | HIGH Time |
 | ----------:| -------:| ---------:|
 |         10 |   2.0 % |      1 us |
 |         20 |   4.0 % |      2 us |
@@ -252,7 +252,7 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 
 #### 2.3.2.2. 2 Parameters <[command] [data1]>
 ##### command = 0
-- Description: Mode selection command without duty cycle adjustment.
+- Description: Mode selection command without discrete level adjustment.
 - Parameters:
   - command: Command identifier, must be 0
   - data1: Mode selection (0-5)
@@ -269,21 +269,21 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar PWM frequency
 
 #### 2.3.2.3. 3 Parameters <[command] [data1] [data2]>
 ##### command = 1
-- Description: Mode and duty cycle adjustment command.
+- Description: Mode and discrete level adjustment command.
 - Parameters:
   - command: Command identifier, must be 1
   - data1: Mode selection (0-5)
-  - data2: Duty cycle value (range varies by mode)
+  - data2: discrete level value (range varies by mode)
 
-| Mode  |	Duty Cycle  |	Description         |	Example |	Success Response  |	Error Response  |
-|:-----:|:-----------:|:------------------- |:------- |:-----------------:|:---------------:|
-| 0     |	    0 - 200 |	Pure cut            |	1 0 100 |	00	              | 02              |
-| 1     |	    0 - 200 |	Cut pattern 1       |	1 1 150 |	00	              | 02              |
-| 2     |	    0 - 200 |	Cut pattern 2       |	1 2 120 |	00	              | 02              |
-| 3     |	    0 - 400 |	Coag Spray          |	1 3 250 |	00	              | 02              |
-| 4     |	    0 - 500 |	Coag Forced         |	1 4 300 |	00	              | 02              |
-| 5     |	    0 - 200 |	Bipolar Standard    |	1 5 80  |	00	              | 02              |
-| Other |	        N/A	| Invalid	            | 1 6 100 |	N/A	              | 02              |
+| Mode  |	Discrete Level  |	Description         |	Example |	Success Response  |	Error Response  |
+|:-----:|:---------------:|:------------------- |:------- |:-----------------:|:---------------:|
+| 0     |	        0 - 200 |	Pure cut            |	1 0 100 |	00	              | 02              |
+| 1     |	        0 - 200 |	Cut pattern 1       |	1 1 150 |	00	              | 02              |
+| 2     |	        0 - 200 |	Cut pattern 2       |	1 2 120 |	00	              | 02              |
+| 3     |	        0 - 400 |	Coag Spray          |	1 3 250 |	00	              | 02              |
+| 4     |	        0 - 500 |	Coag Forced         |	1 4 300 |	00	              | 02              |
+| 5     |	        0 - 200 |	Bipolar Standard    |	1 5 80  |	00	              | 02              |
+| Other |	            N/A	| Invalid	            | 1 6 100 |	N/A	              | 02              |
 
 ## 2.4. Power Stage
 ### 2.4.1. HF Switch
@@ -313,10 +313,10 @@ The image illustrates the output scope for the 400kHz operation at:
 - VDS=72V
 
 It provides a detailed view of the waveform characteristics and performance metrics associated with the Pure Cut process, highlighting the key features and behavior of the HF Switch signal during this operation.
-<br>For duty cycle levels ranging from 20 to 180, demonstrates similar Waveform frequency, indicating consistent performance across these duty cycle settings.
+<br>For discrete levels ranging from 20 to 180, demonstrates similar Waveform frequency, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
-> 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> 400kHz PWM signal utilize a discrete resolution of 200 levels.
 
 <!-- <p align="center">
   <img src="pic/PWM/Wave-pure-cut-driver-mosfet.png" alt="Wave-pure-cut-driver-mosfet">
@@ -494,24 +494,24 @@ $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
 #### 2.4.2.2 Output Scope
 ##### a. 400kHz
 The image illustrates the output scope at output transformer with PWM frequency 400kHz
-<br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
+<br>For discrete levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
-> 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> 400kHz PWM signal utilize a discrete resolution of 200 levels.
 
 ##### b. 25kHz
 The image illustrates the output scope at output transformer with PWM frequency 25kHz
-<br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
+<br>For discrete levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
-> 25kHz PWM signal utilize a discrete resolution of 400 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> 25kHz PWM signal utilize a discrete resolution of 400 levels.
 
 ##### c. 20kHz
 The image illustrates the output scope at output transformer with PWM frequency 20kHz
-<br>For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
+<br>For discrete levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
-> 20kHz PWM signal utilize a discrete resolution of 500 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> 20kHz PWM signal utilize a discrete resolution of 500 levels.
 
 <!-- <p align="center">
   <img src="pic/PWM/XF/Bipolar/12V/bipolar-xformer-output-400.png" alt="bipolar-xformer-output-400">
@@ -790,10 +790,10 @@ The image illustrates the output scope of the 400kHz PWM signal at the output tr
 
 These patterns represent different modulation schemes or switching sequences that are used to achieve the desired output characteristics. The variation in pulse count per modulation allows for precise control over the output waveform while maintaining the overall 400kHz switching frequency.
 
-For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
+For discrete levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
-> 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+> 400kHz PWM signal utilize a discrete resolution of 200 levels.
 >
 > In the image below, there are 2 sections (left and right). The **left section** shows the scope measurement of observed ESU product, while the **right section** displays the result of RnD implementation.
 
@@ -972,6 +972,7 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
    
 - Pattern 2<br>
   <p align="center"><img src="pic/PS/400kHz/2/400kHz-2-comparison.png" alt="400-2-comparison"></p>
+
 - Pattern 3<br>
   <p align="center"><img src="pic/PS/400kHz/3/400kHz-3-comparison.png" alt="400-3-comparison"></p>
 
