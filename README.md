@@ -936,10 +936,10 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <td>-130.000</td>
       <td>67.718</td>
       <td>429.55</td>
-      <td><strong style="color: #9b0302;">120.060</strong></td>
-      <td><strong style="color: #9b0302;">-132.130</strong></td>
-      <td><strong style="color: #9b0302;">85.187</strong></td>
-      <td><strong style="color: #9b0302;">399.87</strong></td>
+      <td><span style="color: #9b0302;">120.060</span></td>
+      <td><span style="color: #9b0302;">-132.130</span></td>
+      <td><span style="color: #9b0302;">85.187</span></td>
+      <td><span style="color: #9b0302;">399.87</span></td>
       </tr>
       </tbody>
     </table>
