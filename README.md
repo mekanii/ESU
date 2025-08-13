@@ -803,36 +803,48 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
   <div align="center">
     <table>
       <thead>
-        <tr>
-          <th align="center" rowspan="2">Duty<br>Cycle</th>
-          <th align="center" rowspan="2" style="border-right: 2px solid #000000;">%</th>
-          <th align="center" colspan="4" style="border-right: 2px solid #000000;">Observed ESU Product</th>
-          <th align="center" colspan="4">RnD Implementation</th>
-        </tr>
-        <tr>
-          <th align="center" style="border-left: 2px solid #000000;">$V_{max}$ [V]</th>
-          <th align="center">$V_{min}$ [V]</th>
-          <th align="center">$V_{rms}$ [V]</th>
-          <th align="center" style="border-right: 2px solid #000000;">$f_{kHz}$ [V]</th>
-          <th align="center">$V_{max}$ [V]</th>
-          <th align="center">$V_{min}$ [V]</th>
-          <th align="center">$V_{rms}$ [V]</th>
-          <th align="center">$f_{kHz}$ [V]</th>
-        </tr>
+      <tr>
+      <th align="center" rowspan="2">Duty<br>Cycle</th>
+      <th align="center" rowspan="2">%</th>
+      <th align="center" colspan="4">Observed ESU Product</th>
+      <th align="center" colspan="4">RnD Implementation</th>
+      </tr>
+      <tr>
+      <th align="center">$V_{max}$ [V]</th>
+      <th align="center">$V_{min}$ [V]</th>
+      <th align="center">$V_{rms}$ [V]</th>
+      <th align="center">$f_{kHz}$ [V]</th>
+      <th align="center">$V_{max}$ [V]</th>
+      <th align="center">$V_{min}$ [V]</th>
+      <th align="center">$V_{rms}$ [V]</th>
+      <th align="center">$f_{kHz}$ [V]</th>
+      </tr>
       </thead>
       <tbody align="right">
-        <tr>
-          <td>10</td>
-          <td>5</td>
-          <td>48.273</td>
-          <td>-42.206</td>
-          <td>18.234</td>
-          <td>160.31</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
+      <tr>
+      <td>10</td>
+      <td>5</td>
+      <td>48.273</td>
+      <td>-42.206</td>
+      <td>18.234</td>
+      <td>160.31</td>
+      <td>61.456</td>
+      <td>-57.940</td>
+      <td>30.639</td>
+      <td>400.64</td>
+      </tr>
+      <tr>
+      <td>20</td>
+      <td>10</td>
+      <td>51.766</td>
+      <td>-62.533</td>
+      <td>30.127</td>
+      <td>414.49</td>
+      <td>68.733</td>
+      <td>-63.186</td>
+      <td>34.250</td>
+      <td>400.73</td>
+      </tr>
       </tbody>
     </table>
   </div>
