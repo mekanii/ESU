@@ -800,36 +800,38 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
 - Pattern 1<br>
   <p align="center"><img src="pic/PS/400kHz/1/400kHz-1-comparison.png" alt="400-1-comparison"></p>
 
-  <table>
-    <thead>
-      <tr>
-        <th align="center">Duty Cycle</th>
-        <th align="center">%</th>
-        <th align="center">$V_{max}$ [V]</th>
-        <th align="center">$V_{min}$ [V]</th>
-        <th align="center">$V_{rms}$ [V]</th>
-        <th align="center">$f_{kHz}$ [V]</th>
-        <th align="center">$V_{max}$ [V]</th>
-        <th align="center">$V_{min}$ [V]</th>
-        <th align="center">$V_{rms}$ [V]</th>
-        <th align="center">$f_{kHz}$ [V]</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>10</td>
-        <td>5</td>
-        <td>48.273</td>
-        <td>-42.206</td>
-        <td>18.234</td>
-        <td>160.31</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <div align="center">
+    <table>
+      <thead>
+        <tr>
+          <th align="center">Duty Cycle</th>
+          <th align="center">%</th>
+          <th align="center">$V_{max}$ [V]</th>
+          <th align="center">$V_{min}$ [V]</th>
+          <th align="center">$V_{rms}$ [V]</th>
+          <th align="center">$f_{kHz}$ [V]</th>
+          <th align="center">$V_{max}$ [V]</th>
+          <th align="center">$V_{min}$ [V]</th>
+          <th align="center">$V_{rms}$ [V]</th>
+          <th align="center">$f_{kHz}$ [V]</th>
+        </tr>
+      </thead>
+      <tbody align="right">
+        <tr>
+          <td>10</td>
+          <td>5</td>
+          <td>48.273</td>
+          <td>-42.206</td>
+          <td>18.234</td>
+          <td>160.31</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <!-- |             |     |               |               |               |         | RnD           |               |               |         |
   |------------:|----:|--------------:|--------------:|--------------:|--------:|--------------:|--------------:|--------------:|--------:|
