@@ -846,6 +846,8 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <td>400.73</td>
       </tr>
       <tr>
+      <td>30</td>
+      <td>15</td>
       <td>61.380</td>
       <td>-78.540</td>
       <td>39.703</td>
@@ -854,10 +856,10 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
       </tr>
       <tr>
+      <td>40</td>
+      <td>20</td>
       <td>71.106</td>
       <td>-88.593</td>
       <td>46.299</td>
@@ -866,10 +868,10 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
       </tr>
       <tr>
+      <td>50</td>
+      <td>25</td>
       <td>86.213</td>
       <td>-100.240</td>
       <td>55.591</td>
@@ -878,10 +880,10 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
       </tr>
       <tr>
+      <td>60</td>
+      <td>30</td>
       <td>94.873</td>
       <td>-110.200</td>
       <td>60.121</td>
@@ -890,10 +892,10 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
       </tr>
       <tr>
+      <td>70</td>
+      <td>35</td>
       <td>98.313</td>
       <td>-114.43</td>
       <td>62.467</td>
@@ -902,10 +904,10 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
       </tr>
       <tr>
+      <td>80</td>
+      <td>40</td>
       <td>103.530</td>
       <td>-120.300</td>
       <td>64.498</td>
@@ -914,10 +916,10 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
       </tr>
       <tr>
+      <td>90</td>
+      <td>45</td>
       <td>104.540</td>
       <td>-124.040</td>
       <td>66.208</td>
@@ -926,16 +928,14 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
       </tr>
       <tr>
+      <td>100</td>
+      <td>50</td>
       <td>109.900</td>
       <td>-130.000</td>
       <td>67.718</td>
       <td>429.55</td>
-      <td></td>
-      <td></td>
       <td></td>
       <td></td>
       <td></td>
