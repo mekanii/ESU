@@ -800,10 +800,27 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
 - Pattern 1<br>
   <p align="center"><img src="pic/PS/400kHz/1/400kHz-1-comparison.png" alt="400-1-comparison"></p>
 
-  |             |     |               |               |               |         | RnD           |               |               |         |
+  <table>
+    <thead>
+      <tr>
+        <th>Duty Cycle</th>
+        <th>%</th>
+        <th>$V_{max}$ [V]</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>10</td>
+        <td>5</td>
+        <td>48.273</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- |             |     |               |               |               |         | RnD           |               |               |         |
   |------------:|----:|--------------:|--------------:|--------------:|--------:|--------------:|--------------:|--------------:|--------:|
   | Duty Cycle  | %   | $V_{max}$ [V] | $V_{min}$ [V] | $V_{rms}$ [V] | f [kHz] | $V_{max}$ [V] | $V_{min}$ [V] | $V_{rms}$ [V] | f [kHz] |
-  |          10 |   5 |        48.273 |       -42.206 |        18.234 |  160.31 |               |               |               |         |
+  |          10 |   5 |        48.273 |       -42.206 |        18.234 |  160.31 |               |               |               |         | -->
 - Pattern 2<br>
   <p align="center"><img src="pic/PS/400kHz/2/400kHz-2-comparison.png" alt="400-1-comparison"></p>
 - Pattern 3<br>
