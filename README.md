@@ -936,21 +936,37 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <td>-130.000</td>
       <td>67.718</td>
       <td>429.55</td>
-      <td><span style="color: red;">120.060</span></td>
-      <td><span style="color: red;">-132.130</span></td>
-      <td><span style="color: red;">85.187</span></td>
-      <td><span style="color: red;">399.87</span></td>
+      <td><strong>120.060</strong></td>
+      <td><strong>-132.130</strong></td>
+      <td><strong>85.187</strong></td>
+      <td><strong>399.87</strong></td>
       </tr>
       </tbody>
     </table>
-  </div>
+     </div>
 
-  <!-- |             |     |               |               |               |         | RnD           |               |               |         |
-  |------------:|----:|--------------:|--------------:|--------------:|--------:|--------------:|--------------:|--------------:|--------:|
-  | Duty Cycle  | %   | $V_{max}$ [V] | $V_{min}$ [V] | $V_{rms}$ [V] | f [kHz] | $V_{max}$ [V] | $V_{min}$ [V] | $V_{rms}$ [V] | f [kHz] |
-  |          10 |   5 |        48.273 |       -42.206 |        18.234 |  160.31 |               |               |               |         | -->
+   **Analysis of Pattern 1 (LC-29u-3n3):**
+
+   The comparison between the observed ESU product and R&D implementation reveals several key differences:
+
+   **Frequency Performance:**
+   - **Observed ESU**: Frequency varies significantly from 160.31 kHz to 429.55 kHz across duty cycles, indicating frequency instability
+   - **R&D Implementation**: Maintains consistent frequency around 400 kHz (±0.5 kHz), demonstrating superior frequency stability
+
+   **Voltage Characteristics:**
+   - **Voltage Range**: R&D implementation shows higher voltage amplitudes across all duty cycles
+   - **Symmetry**: Both implementations maintain good voltage symmetry between positive and negative peaks.
+     - Metric used: asymmetry = (|Vmax| − |Vmin|) / (|Vmax| + |Vmin|)
+      - Consistency (±): R&D stays within ±1.0%–±7.0% across discrete levels 10–100 (5%–50% duty) (mean ≈ ±4.24%), while the observed ESU product ranges ±6.7%–±12.3% over the same levels (mean ≈ ±8.63%). This is ~2× better balance in R&D.
+      - Examples (asymmetry %): level 10 (5%) → Observed 6.71%, R&D 2.94%; level 50 (25%) → Observed 7.52%, R&D 6.99%; level 100 (50%) → Observed 8.38%, R&D 4.79%.
+   - **Scaling**: R&D implementation provides better voltage scaling with duty cycle changes
+
+   **Performance Improvements:** R&D implementation eliminates the frequency drift observed in the commercial product and maintains a consistent 400 kHz operation, ensuring predictable performance across all settings.
+
+   **Key Observations:** The R&D implementation maintains 399.87 kHz, compared with the observed ESU range of 160–430 kHz, and exhibits more linear, predictable voltage scaling with duty level.
+   
 - Pattern 2<br>
-  <p align="center"><img src="pic/PS/400kHz/2/400kHz-2-comparison.png" alt="400-1-comparison"></p>
+  <p align="center"><img src="pic/PS/400kHz/2/400kHz-2-comparison.png" alt="400-2-comparison"></p>
 - Pattern 3<br>
   <p align="center"><img src="pic/PS/400kHz/3/400kHz-3-comparison.png" alt="400-3-comparison"></p>
 
