@@ -797,7 +797,7 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
 >
 > In the image below, there are 2 sections (left and right). The **left section** shows the scope measurement of observed ESU product, while the **right section** displays the result of RnD implementation.
 
-- Pattern 1<br>
+- **Pattern 1**<br>
   <p align="center"><img src="pic/PS/400kHz/1/400kHz-1-comparison.png" alt="400-1-comparison"></p>
 
   <div align="center">
@@ -949,7 +949,7 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
 
    The comparison between the observed ESU product and RnD implementation reveals several key differences:
 
-   **Frequency Performance:** The observed ESU varies significantly from 160.31 kHz to 429.55 kHz across duty levels, indicating frequency instability, while the RnD implementation maintains approximately 400 kHz (±0.5 kHz), demonstrating superior frequency stability.
+   **Frequency Performance:** The observed ESU varies significantly across duty levels. The 160.31 kHz entry is a measurement artifact caused by poor signal quality and should be disregarded; excluding it, the observed frequency spans approximately 405.41–429.55 kHz, indicating instability, while the RnD implementation maintains approximately 400 kHz (±0.5 kHz), demonstrating superior frequency stability.
 
    **Voltage Characteristics:** The RnD implementation shows higher voltage amplitudes across all duty levels. Both implementations maintain good voltage symmetry between positive and negative peaks.
    
@@ -970,11 +970,61 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
 
    **Key Observations:** The RnD implementation maintains 399.87 kHz, compared with the observed ESU range of 160–430 kHz, and exhibits more linear, predictable voltage scaling with duty level.
    
-- Pattern 2<br>
+- **Pattern 2**<br>
   <p align="center"><img src="pic/PS/400kHz/2/400kHz-2-comparison.png" alt="400-2-comparison"></p>
 
-- Pattern 3<br>
+  <div align="center">
+    <table>
+      <thead>
+      <tr>
+      <th align="center" rowspan="2">Discrete<br>Level</th>
+      <th align="center" rowspan="2">%</th>
+      <th align="center" colspan="4">Observed ESU Product</th>
+      <th align="center" colspan="4">RnD Implementation</th>
+      </tr>
+      <tr>
+      <th align="center">$V_{max}$ [V]</th>
+      <th align="center">$V_{min}$ [V]</th>
+      <th align="center">$V_{rms}$ [V]</th>
+      <th align="center">$f$ [kHz]</th>
+      <th align="center">$V_{max}$ [V]</th>
+      <th align="center">$V_{min}$ [V]</th>
+      <th align="center">$V_{rms}$ [V]</th>
+      <th align="center">$f$ [kHz]</th>
+      </tr>
+      </thead>
+      <tbody align="right">
+      </tbody>
+    </table>
+  </div>
+
+- **Pattern 3**<br>
   <p align="center"><img src="pic/PS/400kHz/3/400kHz-3-comparison.png" alt="400-3-comparison"></p>
+
+  <div align="center">
+    <table>
+      <thead>
+      <tr>
+      <th align="center" rowspan="2">Discrete<br>Level</th>
+      <th align="center" rowspan="2">%</th>
+      <th align="center" colspan="4">Observed ESU Product</th>
+      <th align="center" colspan="4">RnD Implementation</th>
+      </tr>
+      <tr>
+      <th align="center">$V_{max}$ [V]</th>
+      <th align="center">$V_{min}$ [V]</th>
+      <th align="center">$V_{rms}$ [V]</th>
+      <th align="center">$f$ [kHz]</th>
+      <th align="center">$V_{max}$ [V]</th>
+      <th align="center">$V_{min}$ [V]</th>
+      <th align="center">$V_{rms}$ [V]</th>
+      <th align="center">$f$ [kHz]</th>
+      </tr>
+      </thead>
+      <tbody align="right">
+      </tbody>
+    </table>
+  </div>
 
 ##### b. 25kHz
 ##### c. 20kHz
