@@ -945,30 +945,30 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
     </table>
      </div>
 
-   **Analysis of Pattern 1 (LC-29u-3n3):**
+   **Analysis**
 
-   The comparison between the observed ESU product and R&D implementation reveals several key differences:
+   The comparison between the observed ESU product and RnD implementation reveals several key differences:
 
-   **Frequency Performance:** The observed ESU varies significantly from 160.31 kHz to 429.55 kHz across duty levels, indicating frequency instability, while the R&D implementation maintains approximately 400 kHz (±0.5 kHz), demonstrating superior frequency stability.
+   **Frequency Performance:** The observed ESU varies significantly from 160.31 kHz to 429.55 kHz across duty levels, indicating frequency instability, while the RnD implementation maintains approximately 400 kHz (±0.5 kHz), demonstrating superior frequency stability.
 
-   **Voltage Characteristics:** The R&D implementation shows higher voltage amplitudes across all duty levels. Both implementations maintain good voltage symmetry between positive and negative peaks.
+   **Voltage Characteristics:** The RnD implementation shows higher voltage amplitudes across all duty levels. Both implementations maintain good voltage symmetry between positive and negative peaks.
    
    Using the asymmetry metric:
    
    $assymetry = \frac{|Vmax| − |Vmin|}{|Vmax| + |Vmin|}$
    
-   R&D stays within ±1.0%–±7.0% across discrete levels 10–100 (5%–50% duty) (mean ≈ ±4.24%), while the observed ESU product ranges ±6.7%–±12.3% over the same levels (mean ≈ ±8.63%), indicating roughly 2× better balance.
+   RnD stays within ±1.0%–±7.0% across discrete levels 10–100 (5%–50% duty) (mean ≈ ±4.24%), while the observed ESU product ranges ±6.7%–±12.3% over the same levels (mean ≈ ±8.63%), indicating roughly 2× better balance.
    
    For example:
-   - level 10 (5%) → observed 6.71%, R&D 2.94%
-   - level 50 (25%) → observed 7.52%, R&D 6.99%
-   - level 100 (50%) → observed 8.38%, R&D 4.79%.
+   - level 10 (5%) → observed 6.71%, RnD 2.94%
+   - level 50 (25%) → observed 7.52%, RnD 6.99%
+   - level 100 (50%) → observed 8.38%, RnD 4.79%.
    
    The R&D implementation also provides better voltage scaling with duty level changes.
 
-   **Performance Improvements:** R&D implementation eliminates the frequency drift observed in the commercial product and maintains a consistent 400 kHz operation, ensuring predictable performance across all settings.
+   **Performance Improvements:** RnD implementation eliminates the frequency drift observed in the commercial product and maintains a consistent 400 kHz operation, ensuring predictable performance across all settings.
 
-   **Key Observations:** The R&D implementation maintains 399.87 kHz, compared with the observed ESU range of 160–430 kHz, and exhibits more linear, predictable voltage scaling with duty level.
+   **Key Observations:** The RnD implementation maintains 399.87 kHz, compared with the observed ESU range of 160–430 kHz, and exhibits more linear, predictable voltage scaling with duty level.
    
 - Pattern 2<br>
   <p align="center"><img src="pic/PS/400kHz/2/400kHz-2-comparison.png" alt="400-2-comparison"></p>
