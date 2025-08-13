@@ -218,22 +218,22 @@ For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, 
 <div align="center">
 
 | Discrete Level |       % | HIGH Time |
-| ----------:| -------:| ---------:|
-|         10 |   2.0 % |      1 us |
-|         20 |   4.0 % |      2 us |
-|         30 |   6.0 % |      3 us |
-|         40 |   8.0 % |      4 us |
-|         50 |  10.0 % |      5 us |
-|         60 |  12.0 % |      6 us |
-|         70 |  14.0 % |      7 us |
-|         80 |  16.0 % |      8 us |
-|         90 |  18.0 % |      9 us |
-|        100 |  20.0 % |     10 us |
-|        ... |     ... |       ... |
-|        200 |  40.0 % |     20 us |
-|        300 |  60.0 % |     30 us |
-|        400 |  80.0 % |     40 us |
-|        500 | 100.0 % |     50 us |
+| --------------:| -------:| ---------:|
+|             10 |   2.0 % |      1 us |
+|             20 |   4.0 % |      2 us |
+|             30 |   6.0 % |      3 us |
+|             40 |   8.0 % |      4 us |
+|             50 |  10.0 % |      5 us |
+|             60 |  12.0 % |      6 us |
+|             70 |  14.0 % |      7 us |
+|             80 |  16.0 % |      8 us |
+|             90 |  18.0 % |      9 us |
+|            100 |  20.0 % |     10 us |
+|            ... |     ... |       ... |
+|            200 |  40.0 % |     20 us |
+|            300 |  60.0 % |     30 us |
+|            400 |  80.0 % |     40 us |
+|            500 | 100.0 % |     50 us |
 
 </div>
 
@@ -804,7 +804,7 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
     <table>
       <thead>
       <tr>
-      <th align="center" rowspan="2">Duty<br>Cycle</th>
+      <th align="center" rowspan="2">Discrete<br>Level</th>
       <th align="center" rowspan="2">%</th>
       <th align="center" colspan="4">Observed ESU Product</th>
       <th align="center" colspan="4">RnD Implementation</th>
