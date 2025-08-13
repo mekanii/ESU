@@ -803,16 +803,16 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
   <table>
     <thead>
       <tr>
-        <th>Duty Cycle</th>
-        <th>%</th>
-        <th>$V_{max}$ [V]</th>
-        <th>$V_{min}$ [V]</th>
-        <th>$V_{rms}$ [V]</th>
-        <th>$f_{kHz}$ [V]</th>
-        <th>$V_{max}$ [V]</th>
-        <th>$V_{min}$ [V]</th>
-        <th>$V_{rms}$ [V]</th>
-        <th>$f_{kHz}$ [V]</th>
+        <th align="center">Duty Cycle</th>
+        <th align="center">%</th>
+        <th align="center">$V_{max}$ [V]</th>
+        <th align="center">$V_{min}$ [V]</th>
+        <th align="center">$V_{rms}$ [V]</th>
+        <th align="center">$f_{kHz}$ [V]</th>
+        <th align="center">$V_{max}$ [V]</th>
+        <th align="center">$V_{min}$ [V]</th>
+        <th align="center">$V_{rms}$ [V]</th>
+        <th align="center">$f_{kHz}$ [V]</th>
       </tr>
     </thead>
     <tbody>
