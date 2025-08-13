@@ -804,8 +804,12 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
     <table>
       <thead>
         <tr>
-          <th align="center">Duty Cycle</th>
-          <th align="center">%</th>
+          <th align="center" rowspan="2">Duty<br>Cycle</th>
+          <th align="center" rowspan="2">%</th>
+          <th align="center" colspan="4">Observed ESU Product</th>
+          <th align="center" colspan="4">RnD Implementation</th>
+        </tr>
+        <tr>
           <th align="center">$V_{max}$ [V]</th>
           <th align="center">$V_{min}$ [V]</th>
           <th align="center">$V_{rms}$ [V]</th>
