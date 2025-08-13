@@ -794,40 +794,15 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
 
 > [!NOTE]
 > 400kHz PWM signal utilize a discrete resolution of 200 levels. Therefore, all references to **duty cycle** in this context should be understood as discrete levels rather than percentages.
+>
+> In the image below, there are 2 sections (left and right). The **left section** shows the scope measurement of observed ESU product, while the **right section** displays the result of R&D implementation.
 
 - Pattern 1<br>
-  <p align="center"><img src="pic/PS/400kHz/1/LC-29u-3n3/10.png" alt="400-1-10"></p>
-  <p align="center"><img src="pic/PS/400kHz/1/LC-29u-3n3/20.png" alt="400-1-20"></p>
-  <p align="center"><img src="pic/PS/400kHz/1/LC-29u-3n3/30.png" alt="400-1-30"></p>
-  <p align="center"><img src="pic/PS/400kHz/1/LC-29u-3n3/40.png" alt="400-1-40"></p>
-  <p align="center"><img src="pic/PS/400kHz/1/LC-29u-3n3/50.png" alt="400-1-50"></p>
-  <p align="center"><img src="pic/PS/400kHz/1/LC-29u-3n3/60.png" alt="400-1-60"></p>
-  <p align="center"><img src="pic/PS/400kHz/1/LC-29u-3n3/70.png" alt="400-1-70"></p>
-  <p align="center"><img src="pic/PS/400kHz/1/LC-29u-3n3/80.png" alt="400-1-80"></p>
-  <p align="center"><img src="pic/PS/400kHz/1/LC-29u-3n3/90.png" alt="400-1-90"></p>
-  <p align="center"><img src="pic/PS/400kHz/1/LC-29u-3n3/100.png" alt="400-1-100"></p>
+  <p align="center"><img src="pic/PS/400kHz/1/400kHz-1-comparison.png" alt="400-1-comparison"></p>
 - Pattern 2<br>
-  <p align="center"><img src="pic/PS/400kHz/2/LC-29u-3n3/10.png" alt="400-2-10"></p>
-  <p align="center"><img src="pic/PS/400kHz/2/LC-29u-3n3/20.png" alt="400-2-20"></p>
-  <p align="center"><img src="pic/PS/400kHz/2/LC-29u-3n3/30.png" alt="400-2-30"></p>
-  <p align="center"><img src="pic/PS/400kHz/2/LC-29u-3n3/40.png" alt="400-2-40"></p>
-  <p align="center"><img src="pic/PS/400kHz/2/LC-29u-3n3/50.png" alt="400-2-50"></p>
-  <p align="center"><img src="pic/PS/400kHz/2/LC-29u-3n3/60.png" alt="400-2-60"></p>
-  <p align="center"><img src="pic/PS/400kHz/2/LC-29u-3n3/70.png" alt="400-2-70"></p>
-  <p align="center"><img src="pic/PS/400kHz/2/LC-29u-3n3/80.png" alt="400-2-80"></p>
-  <p align="center"><img src="pic/PS/400kHz/2/LC-29u-3n3/90.png" alt="400-2-90"></p>
-  <p align="center"><img src="pic/PS/400kHz/2/LC-29u-3n3/100.png" alt="400-2-100"></p>
+  <p align="center"><img src="pic/PS/400kHz/2/400kHz-2-comparison.png" alt="400-1-comparison"></p>
 - Pattern 3<br>
-  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/10.png" alt="400-3-10"></p>
-  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/20.png" alt="400-3-20"></p>
-  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/30.png" alt="400-3-30"></p>
-  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/40.png" alt="400-3-40"></p>
-  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/50.png" alt="400-3-50"></p>
-  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/60.png" alt="400-3-60"></p>
-  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/70.png" alt="400-3-70"></p>
-  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/80.png" alt="400-3-80"></p>
-  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/90.png" alt="400-3-90"></p>
-  <p align="center"><img src="pic/PS/400kHz/3//LC-47u-3n3/100.png" alt="400-3-100"></p>
+  <p align="center"><img src="pic/PS/400kHz/3/400kHz-3-comparison.png" alt="400-3-comparison"></p>
 
 ##### b. 25kHz
 ##### c. 20kHz

@@ -75,7 +75,7 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
 			(outputdirectory "")
 		)
@@ -1338,7 +1338,7 @@
 		(descr "Molex KK 396 Interconnect System, old/engineering part number: 5273-05A example for new part number: 09-65-2058, 5 Pins (https://www.molex.com/pdm_docs/sd/009652028_sd.pdf), generated with kicad-footprint-generator")
 		(tags "connector Molex KK-396 vertical")
 		(property "Reference" "CN3"
-			(at 7.92 -3.81 0)
+			(at 7.92 -7.21 0)
 			(layer "F.SilkS")
 			(uuid "f2b52290-e3f0-4bf6-a863-54ff8c97661d")
 			(effects
@@ -1677,7 +1677,7 @@
 		(descr "Molex KK 396 Interconnect System, old/engineering part number: 5273-05A example for new part number: 09-65-2058, 5 Pins (https://www.molex.com/pdm_docs/sd/009652028_sd.pdf), generated with kicad-footprint-generator")
 		(tags "connector Molex KK-396 vertical")
 		(property "Reference" "CN6"
-			(at 7.92 -4.035 0)
+			(at 7.92 -7.21 0)
 			(layer "F.SilkS")
 			(uuid "506a6652-437c-4704-b63a-ff55dbe75d90")
 			(effects
@@ -2941,7 +2941,7 @@
 		(uuid "7b13c5a6-81c0-46a0-8993-f2f27afe031d")
 		(at 53.8075 54.385 180)
 		(property "Reference" "CN7"
-			(at 3.96 -3.4 180)
+			(at 3.96 -7.21 180)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "be344511-9970-4ba6-840a-1f0926fcbe17")
@@ -4392,7 +4392,7 @@
 		(descr "Molex KK 396 Interconnect System, old/engineering part number: 5273-05A example for new part number: 09-65-2058, 5 Pins (https://www.molex.com/pdm_docs/sd/009652028_sd.pdf), generated with kicad-footprint-generator")
 		(tags "connector Molex KK-396 vertical")
 		(property "Reference" "CN4"
-			(at 7.92 -3.81 0)
+			(at 7.92 7.0775 0)
 			(layer "F.SilkS")
 			(uuid "bad5f0fe-1df2-41a5-9a41-aed1235e4899")
 			(effects
@@ -5056,7 +5056,7 @@
 		(uuid "f1224557-43c3-4af0-8b88-20f9618df9e2")
 		(at 105.8775 54.385 180)
 		(property "Reference" "CN5"
-			(at 3.96 -3.4 180)
+			(at 3.96 -7.21 180)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "3600f6b7-79f7-476d-b06d-b1b129ee3b45")
