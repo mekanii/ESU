@@ -813,11 +813,11 @@ For duty cycle levels ranging from 10 to 100, demonstrates similar Waveform leng
       <th align="center">$V_{max}$ [V]</th>
       <th align="center">$V_{min}$ [V]</th>
       <th align="center">$V_{rms}$ [V]</th>
-      <th align="center">$f_{kHz}$ [V]</th>
+      <th align="center">$f$ [kHz]</th>
       <th align="center">$V_{max}$ [V]</th>
       <th align="center">$V_{min}$ [V]</th>
       <th align="center">$V_{rms}$ [V]</th>
-      <th align="center">$f_{kHz}$ [V]</th>
+      <th align="center">$f$ [kHz]</th>
       </tr>
       </thead>
       <tbody align="right">
