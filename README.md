@@ -1328,6 +1328,103 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
 
 <p align="center"><img src="pic/PS/20kHz/20kHz-comparison.png" alt="20-comparison"></p>
 
+<div align="center">
+  <table>
+    <thead>
+    <tr>
+    <th align="center" rowspan="2">Discrete<br>Level</th>
+    <th align="center" rowspan="2">%</th>
+    <th align="center" colspan="4">Observed ESU Product</th>
+    <th align="center" colspan="4">RnD Implementation</th>
+    </tr>
+    <tr>
+    <th align="center">$V_{max}$ [V]</th>
+    <th align="center">$V_{min}$ [V]</th>
+    <th align="center">$V_{rms}$ [V]</th>
+    <th align="center">$f$ [kHz]</th>
+    <th align="center">$V_{max}$ [V]</th>
+    <th align="center">$V_{min}$ [V]</th>
+    <th align="center">$V_{rms}$ [V]</th>
+    <th align="center">$f$ [kHz]</th>
+    </tr>
+    </thead>
+    <tbody align="right">
+      <tr>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 <!-- Air Core Axial Inductor
 | N1  | N2  |
 |----:|----:|
