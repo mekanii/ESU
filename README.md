@@ -1326,6 +1326,139 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
 
 <p align="center"><img src="pic/PS/25kHz/25kHz-comparison.png" alt="25-comparison"></p>
 
+<div align="center">
+  <table>
+    <thead>
+    <tr>
+    <th align="center" rowspan="2">Discrete<br>Level</th>
+    <th align="center" rowspan="2">%</th>
+    <th align="center" colspan="4">Observed ESU Product</th>
+    <th align="center" colspan="4">RnD Implementation</th>
+    </tr>
+    <tr>
+    <th align="center">$V_{max}$ [V]</th>
+    <th align="center">$V_{min}$ [V]</th>
+    <th align="center">$V_{rms}$ [V]</th>
+    <th align="center">$f$ [kHz]</th>
+    <th align="center">$V_{max}$ [V]</th>
+    <th align="center">$V_{min}$ [V]</th>
+    <th align="center">$V_{rms}$ [V]</th>
+    <th align="center">$f$ [kHz]</th>
+    </tr>
+    </thead>
+    <tbody align="right">
+      <tr>
+        <td></td>
+        <td></td>
+        <td>72.866</td>
+        <td>-113.380</td>
+        <td>24.067</td>
+        <td>23.682</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>96.650</td>
+        <td>-142.340</td>
+        <td>31.243</td>
+        <td>23.688</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>142.180</td>
+        <td>-173.490</td>
+        <td>32.586</td>
+        <td>23.688</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>159.960</td>
+        <td>-211.880</td>
+        <td>35.350</td>
+        <td>23.692</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>179.480</td>
+        <td>-250.280</td>
+        <td>40.377</td>
+        <td>23.692</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>198.560</td>
+        <td>-283.180</td>
+        <td>45.195</td>
+        <td>23.690</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>215.010</td>
+        <td>-300.290</td>
+        <td>48.932</td>
+        <td>23.694</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>234.540</td>
+        <td>-313.890</td>
+        <td>52.046</td>
+        <td>23.694</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>250.120</td>
+        <td>-326.610</td>
+        <td>54.171</td>
+        <td>23.702</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ##### c. 20kHz
 
 <p align="center"><img src="pic/PS/20kHz/20kHz-comparison.png" alt="20-comparison"></p>
