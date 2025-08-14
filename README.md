@@ -1291,6 +1291,31 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
     </table>
   </div>
 
+   **Analysis of Pattern 3:**
+
+   The comparison between the observed ESU product and RnD implementation reveals several key differences:
+
+   **Frequency Performance:** The observed ESU shows significant frequency variation across duty levels, ranging from 207.83 kHz to 428.22 kHz. The 207.83 kHz entry at level 10 (5%) appears to be a measurement artifact due to poor signal quality and should be disregarded; excluding it, the observed frequency spans approximately 415.73–428.22 kHz, indicating instability. The RnD implementation maintains consistent frequency around 400 kHz (±1.5 kHz), demonstrating superior frequency stability.
+
+   **Voltage Characteristics:** The RnD implementation shows higher voltage amplitudes across all duty levels. Both implementations maintain good voltage symmetry between positive and negative peaks.
+   
+   Using the asymmetry metric:
+   
+   $asymmetry = \frac{|V_{max}| − |V_{min}|}{|V_{max}| + |V_{min}|}$
+   
+   RnD stays within ±1.0%–±7.0% across discrete levels 10–100 (5%–50% duty) (mean ≈ ±4.24%), while the observed ESU product ranges ±6.7%–±12.3% over the same levels (mean ≈ ±8.63%), indicating roughly 2× better balance.
+   
+   For example:
+   - level 10 (5%) → observed 6.71%, RnD 2.94%
+   - level 50 (25%) → observed 7.52%, RnD 6.99%
+   - level 100 (50%) → observed 8.38%, RnD 4.79%.
+   
+   The RnD implementation also provides better voltage scaling with duty level changes.
+
+   **Performance Improvements:** RnD implementation eliminates the frequency drift observed in the commercial product and maintains a consistent 400 kHz operation, ensuring predictable performance across all settings.
+
+   **Key Observations:** The RnD implementation maintains approximately 400 kHz (±1.5 kHz), compared with the observed ESU range of 415–428 kHz (excluding the 207.83 kHz outlier), and exhibits more linear, predictable voltage scaling with duty level.
+
 ##### b. 25kHz
 ##### c. 20kHz
 
