@@ -1170,122 +1170,122 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <tr>
       <td>10</td>
       <td>5</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>48.926</td>
+      <td>-44.066</td>
+      <td>18.943</td>
+      <td>207.83</td>
+      <td>60.286</td>
+      <td>-59.533</td>
+      <td>28.050</td>
+      <td>400.64</td>
       </tr>
       <tr>
       <td>20</td>
       <td>10</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>55.753</td>
+      <td>-69.633</td>
+      <td>32.175</td>
+      <td>415.73</td>
+      <td>68.046</td>
+      <td>-65.400</td>
+      <td>31.979</td>
+      <td>400.16</td>
       </tr>
       <tr>
       <td>30</td>
       <td>15</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>70.946</td>
+      <td>-85.666</td>
+      <td>42.184</td>
+      <td>418.55</td>
+      <td>78.620</td>
+      <td>-73.566</td>
+      <td>40.452</td>
+      <td>399.58</td>
       </tr>
       <tr>
       <td>40</td>
       <td>20</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>85.313</td>
+      <td>-100.470</td>
+      <td>50.448</td>
+      <td>419.81</td>
+      <td>94.926</td>
+      <td>-83.073</td>
+      <td>51.715</td>
+      <td>400.16</td>
       </tr>
       <tr>
       <td>50</td>
       <td>25</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>94.466</td>
+      <td>-110.280</td>
+      <td>56.027</td>
+      <td>424.08</td>
+      <td>108.360</td>
+      <td>-94.573</td>
+      <td>60.278</td>
+      <td>400.64</td>
       </tr>
       <tr>
       <td>60</td>
       <td>30</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>100.390</td>
+      <td>-117.300</td>
+      <td>59.483</td>
+      <td>426.91</td>
+      <td>117.220</td>
+      <td>-105.470</td>
+      <td>69.178</td>
+      <td>400.35</td>
       </tr>
       <tr>
       <td>70</td>
       <td>35</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>104.900</td>
+      <td>-122.710</td>
+      <td>61.268</td>
+      <td>427.56</td>
+      <td>121.450</td>
+      <td>-113.880</td>
+      <td>74.676</td>
+      <td>400.06</td>
       </tr>
       <tr>
       <td>80</td>
       <td>40</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>107.760</td>
+      <td>-127.870</td>
+      <td>62.862</td>
+      <td>428.22</td>
+      <td>120.930</td>
+      <td>-120.880</td>
+      <td>76.880</td>
+      <td>400.06</td>
       </tr>
       <tr>
       <td>90</td>
       <td>45</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>110.170</td>
+      <td>-132.270</td>
+      <td>64.130</td>
+      <td>427.13</td>
+      <td>117.540</td>
+      <td>127.220</td>
+      <td>77.012</td>
+      <td>400.16</td>
       </tr>
       <tr>
       <td>100</td>
       <td>50</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>112.080</td>
+      <td>-136.180</td>
+      <td>65.200</td>
+      <td>425.71</td>
+      <td>111.420</td>
+      <td>-129.620</td>
+      <td>76.420</td>
+      <td>400.64</td>
       </tr>
       </tbody>
     </table>
