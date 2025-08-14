@@ -1001,10 +1001,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>-43.520</td>
       <td>17.890</td>
       <td>46.081</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>61.713</td>
+      <td>-57.720</td>
+      <td>29.600</td>
+      <td>399.58</td>
       </tr>
       <tr>
       <td>20</td>
@@ -1013,10 +1013,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>-65.593</td>
       <td>30.809</td>
       <td>417.50</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>68.786</td>
+      <td>-62.720</td>
+      <td>33.171</td>
+      <td>400.64</td>
       </tr>
       <tr>
       <td>30</td>
@@ -1025,10 +1025,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>-80.666</td>
       <td>39.187</td>
       <td>409.80</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>79.440</td>
+      <td>-72.586</td>
+      <td>43.001</td>
+      <td>398.62</td>
       </tr>
       <tr>
       <td>40</td>
@@ -1037,10 +1037,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>-92.633</td>
       <td>46.598</td>
       <td>409.39</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>97.880</td>
+      <td>-85.366</td>
+      <td>55.341</td>
+      <td>401.60</td>
       </tr>
       <tr>
       <td>50</td>
@@ -1049,10 +1049,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>-107.880</td>
       <td>55.419</td>
       <td>422.36</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>112.080</td>
+      <td>-96.840</td>
+      <td>65.243</td>
+      <td>399.68</td>
       </tr>
       <tr>
       <td>60</td>
@@ -1061,10 +1061,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>-114.430</td>
       <td>59.244</td>
       <td>426.80</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>123.010</td>
+      <td>-109.080</td>
+      <td>74.953</td>
+      <td>400.06</td>
       </tr>
       <tr>
       <td>70</td>
@@ -1073,10 +1073,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>-120.080</td>
       <td>61.409</td>
       <td>427.46</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>126.23</td>
+      <td>-120.11</td>
+      <td>80.381</td>
+      <td>399.87</td>
       </tr>
       <tr>
       <td>80</td>
@@ -1085,10 +1085,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>-124.920</td>
       <td>63.326</td>
       <td>425.71</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>126.280</td>
+      <td>-124.920</td>
+      <td>82.718</td>
+      <td>399.87</td>
       </tr>
       <tr>
       <td>90</td>
@@ -1097,10 +1097,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>-128.690</td>
       <td>64.916</td>
       <td>424.95</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>127.270</td>
+      <td>-133.990</td>
+      <td>83.515</td>
+      <td>399.87</td>
       </tr>
       <tr>
       <td>100</td>
@@ -1109,10 +1109,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>-134.070</td>
       <td>66.180</td>
       <td>424.95</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>126.280</td>
+      <td>-138.880</td>
+      <td>81.670</td>
+      <td>400.06</td>
       </tr>
       </tbody>
     </table>
