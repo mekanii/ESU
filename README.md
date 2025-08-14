@@ -1323,7 +1323,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
    **Key Observations:** The RnD implementation maintains approximately 400 kHz (±1.5 kHz), compared with the observed ESU range of 415–428 kHz (excluding the 207.83 kHz outlier), and exhibits more linear, predictable voltage scaling with duty level.
 
 ##### b. 25kHz
+
 ##### c. 20kHz
+
+<p align="center"><img src="pic/PS/20kHz/20kHz-comparison.png" alt="20-comparison"></p>
 
 <!-- Air Core Axial Inductor
 | N1  | N2  |
