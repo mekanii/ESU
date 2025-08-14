@@ -1109,10 +1109,10 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>-134.070</td>
       <td>66.180</td>
       <td>424.95</td>
-      <td>126.280</td>
-      <td>-138.880</td>
-      <td>81.670</td>
-      <td>400.06</td>
+      <td><strong>126.280</strong></td>
+      <td><strong>-138.880</strong></td>
+      <td><strong>81.670</strong></td>
+      <td><strong>400.06</strong></td>
       </tr>
       </tbody>
     </table>
