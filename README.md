@@ -947,6 +947,8 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
 
    **Analysis**
 
+   <p align="center"><img src="pic/PS/400kHz/1/400kHz-1-analysis.png" alt="400-1-analysis"></p>
+
    The comparison between the observed ESU product and RnD implementation reveals several key differences:
 
    **Frequency Performance:** The observed ESU varies significantly across duty levels. The 160.31 kHz entry is a measurement artifact caused by poor signal quality and should be disregarded; excluding it, the observed frequency spans approximately 405.41–429.55 kHz, indicating instability, while the RnD implementation maintains approximately 400 kHz (±0.5 kHz), demonstrating superior frequency stability.
