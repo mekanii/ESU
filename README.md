@@ -1324,6 +1324,8 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
 
 ##### b. 25kHz
 
+<p align="center"><img src="pic/PS/25kHz/25kHz-comparison.png" alt="25-comparison"></p>
+
 ##### c. 20kHz
 
 <p align="center"><img src="pic/PS/20kHz/20kHz-comparison.png" alt="20-comparison"></p>
