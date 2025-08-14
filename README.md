@@ -1350,72 +1350,72 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
     </thead>
     <tbody align="right">
       <tr>
-        <td>10</td>
         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>20</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>84.480</td>
+        <td>-128.090</td>
+        <td>25.387</td>
+        <td>19.158</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
-        <td>30</td>
         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>40</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>122.210</td>
+        <td>-160.120</td>
+        <td>30.377</td>
+        <td>19.152</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
-        <td>50</td>
         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>162.360</td>
+        <td>-213.860</td>
+        <td>32.246</td>
+        <td>19.154</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
-        <td>60</td>
+        <td></td>
+        <td></td>
+        <td>179.460</td>
+        <td>-249.180</td>
+        <td>35.753</td>
+        <td>19.152</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
+      </tr>
+      <tr>
         <td></td>
+        <td></td>
+        <td>200.960</td>
+        <td>-287.360</td>
+        <td>41.550</td>
+        <td>19.157</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>220.260</td>
+        <td>-306.89</td>
+        <td>46.031</td>
+        <td>19.162</td>
         <td></td>
         <td></td>
         <td></td>
