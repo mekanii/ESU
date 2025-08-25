@@ -521,10 +521,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$
         <th>$δ$<br>[mm]</th>
         <th>$Primary$</th>
         <th>$Secondary$</th>
-        <th>$Primary \\ Individual \\ Length$<br>[m]</th>
-        <th>$Primary \\ Total \\ Length$<br>[m]</th>
-        <th>$Secondary \\ Individual \\ Length$<br>[m]</th>
-        <th>$Secondary \\ Total \\ Length$<br>[m]</th>
+        <th>$Primary \ Individual \ Length$<br>[m]</th>
+        <th>$Primary \ Total \ Length$<br>[m]</th>
+        <th>$Secondary \ Individual \ Length$<br>[m]</th>
+        <th>$Secondary \ Total \ Length$<br>[m]</th>
       </tr>
     </thead>
     <tbody align="right">
