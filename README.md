@@ -505,19 +505,19 @@ $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
         <th>$V_{in} \ [V]$</th>
         <th>$V_{out} \ [V]$</th>
         <th>$I_{out} \ [A]$</th>
-        <th>$P = V_{out} • I_{out} \ [W]$</th>
-        <th>$I_{in} = \frac{P}{ V_{in} } \ [A]$</th>
+        <th>$P \ [W]$</th>
+        <th>$I_{in} \ [A]$</th>
         <th>$ID \ [mm]$</th>
         <th>$OD \ [mm]$</th>
         <th>$H \ [mm]$</th>
-        <th>$A_e = \frac{( OD – ID ) • H }{ 2 } \ [mm^2]$</th>
+        <th>$A_e \ [mm^2]$</th>
         <th>$B_{max} \ [Gauss]$</th>
-        <th>$N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e } \ [turns]$</th>
-        <th>$Volt \ per \ turn = \frac{ V_{in} }{ N_p } \ [V/turn]$</th>
-        <th>$N_s = \frac{ V_{out} }{ Volt \ per \ turn } \ [turns]$</th>
+        <th>$N_p \ [turns]$</th>
+        <th>$Volt \ per \ turn \ [V/turn]$</th>
+        <th>$N_s \ [turns]$</th>
         <th>$J \ [A/mm^2]$</th>
-        <th>$dW_p = \sqrt{ \frac{ 4 • I_{in} }{ \pi • J } } \ [mm]$</th>
-        <th>$dW_s = \sqrt{ \frac{ 4 • I_{out} }{ \pi • J } } \ [mm]$</th>
+        <th>$dW_p \ [mm]$</th>
+        <th>$dW_s \ [mm]$</th>
       </tr>
     </thead>
     <tbody align="right">
