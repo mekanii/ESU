@@ -485,12 +485,12 @@ $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 - Primary
   - Number of Wire: 32
   - Turns: 10
-  - $Individual \ Length = 10 • 47.3 • 1.1 ≈ 520 \text{ mm including 10\% leads} $
+  - $Individual \ Length = 10 • 47.3 • 1.1 ≈ 520 \text{ mm including 10\\% leads} $
   - $Total \ Length = 32 • 520 = 16640 \ mm = 16.64 \ m$
 - Secondary
   - Number of Wire: 11
   - Turns: 30
-  - $Individual \ Length = 30 • 47.3 • 1.1 ≈ 1561 \text{ mm including 10\% leads}$
+  - $Individual \ Length = 30 • 47.3 • 1.1 ≈ 1561 \text{ mm including 10\\% leads}$
   - $Total \ Length = 11 • 1561 = 17171 \ mm = 17.17 \ m$
 
 $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$
