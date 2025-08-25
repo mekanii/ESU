@@ -500,29 +500,17 @@ $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
 <div align="center">
   <table>
     <thead>
-      <tr>
-        <th align="center">$f$ [Hz]</th>
-        <th align="center">$V_{in}$ [V]</th>
-        <th align="center">$ID$ [mm]</th>
-        <th align="center">$OD$ [mm]</th>
-        <th align="center">$H$ [mm]</th>
-        <th align="center">$A_e = \frac{( OD – ID ) • H }{ 2 }$ [mm^2]</th>
-        <th align="center">$B_{max}$ [Gauss]</th>
-        <th align="center">$N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e }$ [turns]</th>
-      </tr>
+    <tr>
+    <th align="center">$f$ [Hz]</th>
+    <th align="center">$V_{in}$ [V]</th>
+    <th align="center">$ID$ [mm]</th>
+    <th align="center">$OD$ [mm]</th>
+    <th align="center">$H$ [mm]</th>
+    <th align="center">$A_e = \frac{( OD – ID ) • H }{ 2 }$ [mm^2]</th>
+    <th align="center">$B_{max}$ [Gauss]</th>
+    <th align="center">$N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e }$ [turns]</th>
+    </tr>
     </thead>
-    <tbody align="right">
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
   </table>
 </div>
 
