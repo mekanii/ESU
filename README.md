@@ -495,23 +495,55 @@ $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 
 $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
 
+##### i. Calculation Result Table for 400kHz and 100kHz
+
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th align="center">$f$ [Hz]</th>
+        <th align="center">$V_{in}$ [V]</th>
+        <th align="center">$ID$ [mm]</th>
+        <th align="center">$OD$ [mm]</th>
+        <th align="center">$H$ [mm]</th>
+        <th align="center">$A_e = \frac{( OD – ID ) • H }{ 2 }$ [mm^2]</th>
+        <th align="center">$B_{max}$ [Gauss]</th>
+        <th align="center">$N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e }$ [turns]</th>
+      </tr>
+    </thead>
+    <tbody align="right">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
 #### 2.4.2.2 Output Scope
 ##### a. 400kHz
-The image illustrates the output scope at output transformer with PWM frequency 400kHz
+The image illustrates the output scope at output transformer 400kHz with PWM frequency 400kHz
 <br>For discrete levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
 > 400kHz PWM signal utilize a discrete resolution of 200 levels.
 
 ##### b. 25kHz
-The image illustrates the output scope at output transformer with PWM frequency 25kHz
+The image illustrates the output scope at output transformer 100kHz with PWM frequency 25kHz
 <br>For discrete levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
 > 25kHz PWM signal utilize a discrete resolution of 400 levels.
 
 ##### c. 20kHz
-The image illustrates the output scope at output transformer with PWM frequency 20kHz
+The image illustrates the output scope at output transformer 100kHz with PWM frequency 20kHz
 <br>For discrete levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
 
 > [!NOTE]
