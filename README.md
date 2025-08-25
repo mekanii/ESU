@@ -495,11 +495,11 @@ $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 
 $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
 
-##### i. Calculation Result Table for 400kHz and 100kHz
+##### i. Calculation Results Table for 400kHz and 100kHz
 
 <div align="center">
   <table>
-    <thead>
+    <thead align="center">
       <tr>
         <th>$f \ [Hz]$</th>
         <th>$V_{in} \ [V]$</th>
