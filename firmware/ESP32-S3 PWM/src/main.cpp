@@ -3,10 +3,14 @@
 
 #define RMT_TX_CHANNEL_0 RMT_CHANNEL_0
 #define RMT_TX_CHANNEL_1 RMT_CHANNEL_1
-#define SENS_CUT  4
-#define SENS_COAG 5
-#define MSD1      16
-#define MSD2      15
+#define SENS_CUT    4
+#define SENS_COAG   5
+#define MSD1        16
+#define MSD2        15
+#define CTL_RLY_1   8
+#define CTL_RLY_2   37
+#define CTL_PWM_EN  38
+#define CTL_BUZZ    36
 
 const gpio_num_t PWM_0 = (gpio_num_t)1;
 const gpio_num_t PWM_1 = (gpio_num_t)2;
@@ -41,96 +45,115 @@ void fire(int mode) {
 
   // Calculate durations based on duty cycle
   duration0 = dutyCycles[mode];
-  // Set up the PWM signal
-  switch (mode) {
-    case 0:
-      duration1 = totalPeriods[0] - duration0;
-      items[0].duration0 = duration0;
-      items[0].level0 = 1;
-      items[0].duration1 = duration1;
-      items[0].level1 = 0;
 
-      item_num = 1;
+  // Wait for setRelay to complete and return true
+  if (setRelay(mode)) {
+    // Set up the PWM signal
+    switch (mode) {
+      case 0:
+        duration1 = totalPeriods[0] - duration0;
+        items[0].duration0 = duration0;
+        items[0].level0 = 1;
+        items[0].duration1 = duration1;
+        items[0].level1 = 0;
 
-      channel = RMT_TX_CHANNEL_0;
-      break;
-    case 1:
-      duration1 = totalPeriods[1] - duration0;
-      for (int i = 0; i < 20; i++) {
-        items[i].duration0 = duration0;
-        items[i].level0 = i < 18 ? 1 : 0;
-        items[i].duration1 = duration1;
-        items[i].level1 = 0;
-      }
-      item_num = 20;
+        item_num = 1;
 
-      channel = RMT_TX_CHANNEL_0;
-      break;
-    case 2:
-      duration1 = totalPeriods[2] - duration0;
-      for (int i = 0; i < 20; i++) {
-        items[i].duration0 = duration0;
-        items[i].level0 = i < 17 ? 1 : 0;
-        items[i].duration1 = duration1;
-        items[i].level1 = 0;
-      }
-      item_num = 20;
+        channel = RMT_TX_CHANNEL_0;
+        break;
+      case 1:
+        duration1 = totalPeriods[1] - duration0;
+        for (int i = 0; i < 20; i++) {
+          items[i].duration0 = duration0;
+          items[i].level0 = i < 18 ? 1 : 0;
+          items[i].duration1 = duration1;
+          items[i].level1 = 0;
+        }
+        item_num = 20;
 
-      channel = RMT_TX_CHANNEL_0;
-      break;
-    case 3:
-      duration1 = totalPeriods[3] - duration0;
-      items[0].duration0 = duration0;
-      items[0].level0 = 1;
-      items[0].duration1 = duration1;
-      items[0].level1 = 0;
+        channel = RMT_TX_CHANNEL_0;
+        break;
+      case 2:
+        duration1 = totalPeriods[2] - duration0;
+        for (int i = 0; i < 20; i++) {
+          items[i].duration0 = duration0;
+          items[i].level0 = i < 17 ? 1 : 0;
+          items[i].duration1 = duration1;
+          items[i].level1 = 0;
+        }
+        item_num = 20;
 
-      item_num = 1;
+        channel = RMT_TX_CHANNEL_0;
+        break;
+      case 3:
+        duration1 = totalPeriods[3] - duration0;
+        items[0].duration0 = duration0;
+        items[0].level0 = 1;
+        items[0].duration1 = duration1;
+        items[0].level1 = 0;
 
-      channel = RMT_TX_CHANNEL_1;
-      break;
-    case 4:
-      duration1 = totalPeriods[4] - duration0;
-      items[0].duration0 = duration0;
-      items[0].level0 = 1;
-      items[0].duration1 = duration1;
-      items[0].level1 = 0;
+        item_num = 1;
 
-      item_num = 1;
+        channel = RMT_TX_CHANNEL_1;
+        break;
+      case 4:
+        duration1 = totalPeriods[4] - duration0;
+        items[0].duration0 = duration0;
+        items[0].level0 = 1;
+        items[0].duration1 = duration1;
+        items[0].level1 = 0;
 
-      channel = RMT_TX_CHANNEL_1;
-      break;
-    case 5:
-      duration1 = totalPeriods[0] - duration0;
-      items[0].duration0 = duration0;
-      items[0].level0 = 1;
-      items[0].duration1 = duration1;
-      items[0].level1 = 0;
+        item_num = 1;
 
-      item_num = 1;
+        channel = RMT_TX_CHANNEL_1;
+        break;
+      case 5:
+        duration1 = totalPeriods[1] - duration0;
+        for (int i = 0; i < 20; i++) {
+          items[i].duration0 = duration0;
+          items[i].level0 = i < 18 ? 1 : 0;
+          items[i].duration1 = duration1;
+          items[i].level1 = 0;
+        }
+        item_num = 20;
 
-      channel = RMT_TX_CHANNEL_0;
-      break;
-    default:
-      // Default to mode 1 if invalid mode is provided
-      duration1 = totalPeriods[0] - duration0;
-      for (int i = 0; i < 20; i++) {
-        items[i].duration0 = duration0;
-        items[i].level0 = i < 18 ? 1 : 0;
-        items[i].duration1 = duration1;
-        items[i].level1 = 0;
-      }
-      item_num = 20;
-      channel = RMT_TX_CHANNEL_0;
-      break;
+        channel = RMT_TX_CHANNEL_0;
+        break;
+      default:
+        // Default to mode 1 if invalid mode is provided
+        duration1 = totalPeriods[0] - duration0;
+        for (int i = 0; i < 20; i++) {
+          items[i].duration0 = duration0;
+          items[i].level0 = i < 18 ? 1 : 0;
+          items[i].duration1 = duration1;
+          items[i].level1 = 0;
+        }
+        item_num = 20;
+        channel = RMT_TX_CHANNEL_0;
+        break;
+    }
+
+    rmt_write_items(channel, items, item_num, true);
   }
-
-  rmt_write_items(channel, items, item_num, true);
 }
 
 void rmtStop() {
   rmt_tx_stop(RMT_TX_CHANNEL_0);
   rmt_tx_stop(RMT_TX_CHANNEL_1);
+}
+
+void setupRelay() {
+  pinMode(CTL_RLY_1, OUTPUT);
+  pinMode(CTL_RLY_2, OUTPUT);
+  pinMode(CTL_PWM_EN, OUTPUT);
+
+  digitalWrite(CTL_RLY_1, LOW);
+  digitalWrite(CTL_RLY_2, LOW);
+  digitalWrite(CTL_PWM_EN, LOW);
+  
+  delay(1000);
+
+  digitalWrite(CTL_PWM_EN, HIGH);
 }
 
 void setupButtons() {
@@ -151,6 +174,42 @@ void setupButtons() {
   currentButtonState[1] = lastButtonState[1];
   currentButtonState[2] = lastButtonState[2];
   currentButtonState[3] = lastButtonState[3];
+}
+
+bool setRelay(int mode) {
+  switch (mode) {
+    case 0:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, LOW);
+      break;
+    case 1:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, LOW);
+      break;
+    case 2:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, LOW);
+      break;
+    case 3:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, HIGH);
+      break;
+    case 4:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, HIGH);
+      break;
+    case 5:
+      digitalWrite(CTL_RLY_1, HIGH);
+      digitalWrite(CTL_RLY_2, HIGH);
+      break;
+    default:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, LOW);
+      break;
+  }
+
+  delay(500);
+  return true;
 }
 
 bool updateButtonState(int buttonIndex, int buttonPin) {
@@ -299,6 +358,8 @@ void readSerialData() {
 }
 
 void setup() {
+  setupRelay();
+
   Serial.begin(115200);
 
   rmt_config_t rmt_tx_0;
@@ -328,7 +389,6 @@ void setup() {
   rmt_set_tx_intr_en(RMT_TX_CHANNEL_0, 1);
   rmt_set_tx_intr_en(RMT_TX_CHANNEL_1, 1);
 
-  // Setup buttons
   setupButtons();
 }
 

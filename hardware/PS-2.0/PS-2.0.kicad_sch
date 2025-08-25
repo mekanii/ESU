@@ -4875,6 +4875,12 @@
 		(uuid "0f18dad0-9152-462c-a8ca-9158876cf67f")
 	)
 	(junction
+		(at 227.33 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "182f1eb7-0b85-4825-b6a2-078ab21703f9")
+	)
+	(junction
 		(at 252.73 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5276,6 +5282,16 @@
 	)
 	(wire
 		(pts
+			(xy 227.33 43.18) (xy 227.33 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1078a515-54ac-47e6-8720-e972a610536e")
+	)
+	(wire
+		(pts
 			(xy 250.19 124.46) (xy 252.73 124.46)
 		)
 		(stroke
@@ -5463,6 +5479,16 @@
 			(type default)
 		)
 		(uuid "338a04f9-4e59-42ad-bad4-528e5adf2c81")
+	)
+	(wire
+		(pts
+			(xy 22.86 45.72) (xy 267.97 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37a54151-6072-4d5f-9d0f-d96f81c1184c")
 	)
 	(wire
 		(pts
@@ -5663,6 +5689,16 @@
 			(type default)
 		)
 		(uuid "5d76f50c-fd80-4f0b-b1e1-9d3ad5195bbf")
+	)
+	(wire
+		(pts
+			(xy 267.97 43.18) (xy 227.33 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e42d5de-1bb3-49be-a0a4-806027d1122a")
 	)
 	(wire
 		(pts
@@ -6908,6 +6944,17 @@
 		)
 		(uuid "5013ccf7-c19f-4ecb-ad22-9c63604fdaf5")
 	)
+	(label "RLY-A.2"
+		(at 24.13 45.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "98b50f1e-df8d-44c1-83ac-48c875475e00")
+	)
 	(label "PWM-EN"
 		(at 24.13 43.18 0)
 		(fields_autoplaced yes)
@@ -6996,7 +7043,7 @@
 		)
 		(uuid "e2606792-138c-40f6-a021-15b993e8c06a")
 	)
-	(label "RLY-A"
+	(label "RLY-A.1"
 		(at 24.13 48.26 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8606,6 +8653,77 @@
 			(project ""
 				(path "/3a4da535-700d-4512-9d93-355e5c375ab5"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 273.05 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5a143a43-2943-464e-8c78-982a3cc07970")
+		(property "Reference" "J4"
+			(at 275.59 44.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 275.59 45.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_KK-396_5273-02A_1x02_P3.96mm_Vertical"
+			(at 273.05 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 273.05 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 273.05 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "dcacedfb-e556-4479-a86c-fd4ad67f2927")
+		)
+		(pin "1"
+			(uuid "d411da90-fb07-4d11-b884-8221b6325805")
+		)
+		(instances
+			(project "PS-2.0"
+				(path "/3a4da535-700d-4512-9d93-355e5c375ab5"
+					(reference "J4")
 					(unit 1)
 				)
 			)

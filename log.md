@@ -1,3 +1,30 @@
+2025-08-25
+
+2025-08-22
+- create/PCB ESU-XF add transformer switching relay [Dome]
+- fix/PCB ESU-Main dioda TVS dengan Vbr=137V, Vc=179V, Ipp=10x1000µs (A) [Done]
+- Intensive switching stress test untuk menguji ketahanan dioda TVS baru [Need Reqiew]
+- Literature review IEC 60601-1 3rd Edition 2005 [In Progress]
+
+2025-08-21
+- create/PCB ESU-XF add transformer switching relay [In Progress]
+
+2025-08-20
+- Desaiin dan kalkulasi transformer 100kHz untuk support modulasi 25kHz (4 slot RMT: 1 pulse 3 off) dan 20kHz (5 slot RMT: 1 pulse 4 off) [Done]
+- Troubleshoot Dioda TVS ESU-Main meledak saat long firing [Done]
+- create/PCB ESU-XF add transformer switching relay [In Progress]
+
+2025-08-19
+- feat/PCB ESU-CTL add trace relay transformer 2 [Done]
+- feat/PCB ESU-PS add trace relay transformer 2 [Done]
+- Desaiin dan kalkulasi transformer 100kHz untuk support modulasi 25kHz (4 slot RMT: 1 pulse 3 off) dan 20kHz (5 slot RMT: 1 pulse 4 off) [In Progress]
+
+2025-08-14
+- Menulis tabel komparasi output scope [Done]
+
+2025-08-13
+- Menulis tabel komparasi output scope [In Progress]
+
 2025-08-12
 - Coil winding hasil desain LC Filter [In Progress] [2/4]
 

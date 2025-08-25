@@ -1,6 +1,6 @@
 # 1. General Concept
 <p align="center">
-  <img src="pic/ESU-block-diagram.png" alt="esu-block-diagram">
+  <img src="pic/ESU-block-diagram-2.png" alt="esu-block-diagram">
 </p>
 
 # 2. Component
