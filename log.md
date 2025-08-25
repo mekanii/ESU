@@ -1,4 +1,7 @@
 2025-08-25
+- Firmware coding: feat/control-relay [Need Review]
+- Firmware coding: fix/PWM-25khz-timing untuk skala 0-100W dengan resolusi 800 step per modulasi (100 step 50% duty cycle untuk 100W, compatible transformer 100kHz) [Done]
+- Firmware coding: fix/PWM-20khz-timing untuk skala 0-100W dengan resolusi 1000 per modulasi (100 step 50% duty cycle untuk 100W, compatible transformer 100kHz) [Done]
 
 2025-08-22
 - create/PCB ESU-XF add transformer switching relay [Dome]

@@ -26,7 +26,7 @@ const unsigned long debounceDelay = 50; // 50ms debounce delay
 int dutyCycles[6] = {50, 50, 50, 50, 50, 50};
 
 // Total periods for each mode (pure, cut1, cut2, spray, forced, standard)
-int totalPeriods[6] = {200, 200, 200, 400, 500, 200};
+int totalPeriods[6] = {200, 200, 200, 800, 1000, 200};
 
 // Current mode and duty cycle (start with mode 1)
 int currentMode[2] = {1, 3};
@@ -70,7 +70,7 @@ bool setRelay(int mode) {
       break;
   }
 
-  delay(500);
+  delay(100);
   return true;
 }
 
@@ -379,7 +379,7 @@ void setup() {
   rmt_tx_1.gpio_num = PWM_1;
   rmt_tx_1.mem_block_num = 1;
   rmt_tx_1.tx_config.carrier_en = 0;
-  rmt_tx_1.clk_div = 8; // 80 MHz ÷ 8 = 10 MHz
+  rmt_tx_1.clk_div = 4; // 80 MHz ÷ 4 = 20 MHz
   // rmt_tx_1.tx_config.idle_level = RMT_IDLE_LEVEL_LOW;
   rmt_tx_1.tx_config.idle_output_en = 1;
   rmt_tx_1.tx_config.loop_en = 1;

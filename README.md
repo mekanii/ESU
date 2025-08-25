@@ -103,8 +103,8 @@ The combination of clock frequency and resolution plays a vital role in determin
 | Pure Cut      |  400 kHz |   80 MHz |         1 |        200 |
 | Blend Cut 1   |  400 kHz |   80 MHz |         1 |        200 |
 | Blend Cut 2   |  400 kHz |   80 MHz |         1 |        200 |
-| Coag Spray    |   25 kHz |   10 MHz |         8 |        400 |
-| Coag Forced   |   20 kHz |   10 MHz |         8 |        500 |
+| Coag Spray    |   25 kHz |   10 MHz |         8 |        800 |
+| Coag Forced   |   20 kHz |   10 MHz |         8 |       1000 |
 | Coag Standard |  400 kHz |   80 MHz |         1 |        200 |
 
 </div>
@@ -180,30 +180,35 @@ The image illustrates the output scope for the 25kHz (Spray Coagulation operatio
 For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings. We can observe that the increment of the duty cycle results in a pulse that exhibits a linear increase in HIGH time, further emphasizing the effectiveness of the PWM modulation in maintaining a predictable response across varying duty cycle levels.
 
 > [!NOTE]
-> 25kHz PWM signal utilize a discrete resolution of 400 levels.
+> 25kHz PWM signal utilize a discrete resolution of 800 levels.
 
 <p align="center">
-  <img src="pic/PWM/PWM-coag-spray.png" alt="PWM-coag-spray">
+  <p align="center"><img src="pic/PWM/25kHz/10.png" alt="pwm-25-10"></p>
+  <p align="center"><img src="pic/PWM/25kHz/20.png" alt="pwm-25-20"></p>
+  <p align="center"><img src="pic/PWM/25kHz/30.png" alt="pwm-25-30"></p>
+  <p align="center"><img src="pic/PWM/25kHz/40.png" alt="pwm-25-40"></p>
+  <p align="center"><img src="pic/PWM/25kHz/50.png" alt="pwm-25-50"></p>
+  <p align="center"><img src="pic/PWM/25kHz/60.png" alt="pwm-25-60"></p>
+  <p align="center"><img src="pic/PWM/25kHz/70.png" alt="pwm-25-70"></p>
+  <p align="center"><img src="pic/PWM/25kHz/80.png" alt="pwm-25-80"></p>
+  <p align="center"><img src="pic/PWM/25kHz/90.png" alt="pwm-25-90"></p>
+  <p align="center"><img src="pic/PWM/25kHz/100.png" alt="pwm-25-100"></p>
 </p>
 
 <div align="center">
 
-| Discrete Level |       % | HIGH Time |
-| ----------:| ------: | ---------:|
-|         10 |   2.5 % |      1 us |
-|         20 |   5.0 % |      2 us |
-|         30 |   7.5 % |      3 us |
-|         40 |  10.0 % |      4 us |
-|         50 |  12.5 % |      5 us |
-|         60 |  15.0 % |      6 us |
-|         70 |  17.5 % |      7 us |
-|         80 |  20.0 % |      8 us |
-|         90 |  22.5 % |      9 us |
-|        100 |  25.0 % |     10 us |
-|        ... |     ... |       ... |
-|        200 |  50.0 % |     20 us |
-|        300 |  75.0 % |     30 us |
-|        400 | 100.0 % |     40 us |
+| Discrete Level  |       % | HIGH Time | LOW Time  |
+| ---------------:| ------: | ---------:| ---------:|
+|              10 |  1.25 % |    0.5 µs |   39.5 µs |
+|              20 |  2.50 % |    1.0 µs |   39.0 µs |
+|              30 |  3.75 % |    1.5 µs |   38.5 µs |
+|              40 |  5.00 % |    2.0 µs |   38.0 µs |
+|              50 |  6.25 % |    2.5 µs |   37.5 µs |
+|              60 |  7.50 % |    3.0 µs |   37.0 µs |
+|              70 |  8.75 % |    3.5 µs |   36.5 µs |
+|              80 | 10.00 % |    4.0 µs |   36.0 µs |
+|              90 | 11.25 % |    4.5 µs |   35.5 µs |
+|             100 | 12.50 % |    5.0 µs |   35.0 µs |
 
 </div>
 
@@ -213,31 +218,35 @@ The image illustrates the output scope for the 20kHz (Forced Coagulation operati
 For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, indicating consistent performance across these duty cycle settings. We can observe that the increment of the duty cycle results in a pulse that exhibits a linear increase in HIGH time, further emphasizing the effectiveness of the PWM modulation in maintaining a predictable response across varying duty cycle levels.
 
 > [!NOTE]
-> 20kHz PWM signal utilize a discrete resolution of 500 levels.
+> 20kHz PWM signal utilize a discrete resolution of 1000 levels.
 
 <p align="center">
-  <img src="pic/PWM/PWM-coag-forced.png" alt="PWM-coag-forced">
+  <p align="center"><img src="pic/PWM/20kHz/10.png" alt="pwm-20-10"></p>
+  <p align="center"><img src="pic/PWM/20kHz/20.png" alt="pwm-20-20"></p>
+  <p align="center"><img src="pic/PWM/20kHz/30.png" alt="pwm-20-30"></p>
+  <p align="center"><img src="pic/PWM/20kHz/40.png" alt="pwm-20-40"></p>
+  <p align="center"><img src="pic/PWM/20kHz/50.png" alt="pwm-20-50"></p>
+  <p align="center"><img src="pic/PWM/20kHz/60.png" alt="pwm-20-60"></p>
+  <p align="center"><img src="pic/PWM/20kHz/70.png" alt="pwm-20-70"></p>
+  <p align="center"><img src="pic/PWM/20kHz/80.png" alt="pwm-20-80"></p>
+  <p align="center"><img src="pic/PWM/20kHz/90.png" alt="pwm-20-90"></p>
+  <p align="center"><img src="pic/PWM/20kHz/100.png" alt="pwm-20-100"></p>
 </p>
 
 <div align="center">
 
-| Discrete Level |       % | HIGH Time |
-| --------------:| -------:| ---------:|
-|             10 |   2.0 % |      1 us |
-|             20 |   4.0 % |      2 us |
-|             30 |   6.0 % |      3 us |
-|             40 |   8.0 % |      4 us |
-|             50 |  10.0 % |      5 us |
-|             60 |  12.0 % |      6 us |
-|             70 |  14.0 % |      7 us |
-|             80 |  16.0 % |      8 us |
-|             90 |  18.0 % |      9 us |
-|            100 |  20.0 % |     10 us |
-|            ... |     ... |       ... |
-|            200 |  40.0 % |     20 us |
-|            300 |  60.0 % |     30 us |
-|            400 |  80.0 % |     40 us |
-|            500 | 100.0 % |     50 us |
+| Discrete Level  |       % | HIGH Time | LOW Time  |
+| ---------------:| ------: | ---------:| ---------:|
+|              10 |  1.00 % |    0.5 µs |   49.5 µs |
+|              20 |  2.00 % |    1.0 µs |   49.0 µs |
+|              30 |  3.00 % |    1.5 µs |   48.5 µs |
+|              40 |  4.00 % |    2.0 µs |   48.0 µs |
+|              50 |  5.00 % |    2.5 µs |   47.5 µs |
+|              60 |  6.00 % |    3.0 µs |   47.0 µs |
+|              70 |  7.00 % |    3.5 µs |   46.5 µs |
+|              80 |  8.00 % |    4.0 µs |   46.0 µs |
+|              90 |  9.00 % |    4.5 µs |   45.5 µs |
+|             100 | 10.00 % |    5.0 µs |   45.0 µs |
 
 </div>
 
