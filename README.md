@@ -469,13 +469,13 @@ Since our calculated wire diameters are larger than 2× skin depth, consider usi
 
 ##### h. Wire Specification for 400 kHz Operation using Stranded wire
 - Primary
-  - 7 parallel 0.2 mm each
-  - Total current capacity: ~2.1A
-  - Total equivalent area: ~1.5 mm²
+  - 32 parallel 0.2 mm each
+  - Total current capacity: ~1.5A
+  - Total equivalent area: ~1.0 mm²
 - Secondary
-  - 4 parallel 0.2 mm each
-  - Total current capacity: ~1.0A
-  - Total equivalent area: ~0.8 mm²
+  - 11 parallel 0.2 mm each
+  - Total current capacity: ~0.5A
+  - Total equivalent area: ~0.33 mm²
 
 ##### i. Wire Length Calculation
 $Length \ per \ turn = 2 • (\frac{OD - ID}{2} + H)$
@@ -483,17 +483,17 @@ $Length \ per \ turn = 2 • (\frac{OD - ID}{2} + H)$
 $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 
 - Primary
-  - Number of Wire: 7
+  - Number of Wire: 32
   - Turns: 10
   - $Individual \ Length = 10 • 47.3 • 1.1 ≈ 520 \text{ mm including 10\% leads} $
-  - $Total \ Length = 7 • 520 = 3640 \ mm = 3.64 \ m$
+  - $Total \ Length = 32 • 520 = 16640 \ mm = 16.64 \ m$
 - Secondary
-  - Number of Wire: 4
+  - Number of Wire: 11
   - Turns: 30
   - $Individual \ Length = 30 • 47.3 • 1.1 ≈ 1561 \text{ mm including 10\% leads}$
-  - $Total \ Length = 4 • 1561 = 6244 \ mm = 6.24 \ m$
+  - $Total \ Length = 11 • 1561 = 17171 \ mm = 17.17 \ m$
 
-$Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
+$Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$
 
 ##### i. Calculation Results Table for 400kHz and 100kHz
 
@@ -518,6 +518,9 @@ $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
         <th>$J$<br>[A/mm²]</th>
         <th>$dW_p$<br>[mm]</th>
         <th>$dW_s$<br>[mm]</th>
+        <th>$δ$<br>[mm]</th>
+        <th>$Primary$</th>
+        <th>$Secondary$</th>
       </tr>
     </thead>
     <tbody align="right">
@@ -539,6 +542,9 @@ $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
         <td>1.5</td>
         <td>1.13</td>
         <td>0.65</td>
+        <td>0.103</td>
+        <td>0.2mm x 32</td>
+        <td>0.2mm x 11</td>
       </tr>
       <tr>
         <td>100,000</td>
@@ -558,6 +564,9 @@ $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
         <td>1.5</td>
         <td>1.09</td>
         <td>0.41</td>
+        <td>0.206</td>
+        <td>0.2mm x 32</td>
+        <td>0.2mm x 5</td>
       </tr>
     </tbody>
   </table>
