@@ -552,20 +552,64 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$
         <td>504</td>
         <td>0.2</td>
         <td>100</td>
-        <td>1.5</td>
+        <td>1.4</td>
         <td>23.3</td>
         <td>40.4</td>
         <td>15.1</td>
         <td>129.1</td>
         <td>350</td>
         <td>40</td>
-        <td>7.2</td>
+        <td>1.8</td>
         <td>279</td>
         <td>1.5</td>
         <td>1.09</td>
         <td>0.41</td>
         <td>0.206</td>
-        <td>0.2mm x 32</td>
+        <td>0.2mm x 30</td>
+        <td>0.2mm x 5</td>
+      </tr>
+      <tr>
+        <td>400,000</td>
+        <td>48</td>
+        <td>200</td>
+        <td>0.5</td>
+        <td>100</td>
+        <td>2.08</td>
+        <td>23.3</td>
+        <td>40.4</td>
+        <td>15.1</td>
+        <td>129.1</td>
+        <td>350</td>
+        <td>7</td>
+        <td>6.8</td>
+        <td>29</td>
+        <td>1.5</td>
+        <td>1.33</td>
+        <td>0.65</td>
+        <td>0.103</td>
+        <td>0.2mm x 44</td>
+        <td>0.2mm x 11</td>
+      </tr>
+      <tr>
+        <td>100,000</td>
+        <td>48</td>
+        <td>500</td>
+        <td>0.2</td>
+        <td>100</td>
+        <td>2.08</td>
+        <td>23.3</td>
+        <td>40.4</td>
+        <td>15.1</td>
+        <td>129.1</td>
+        <td>350</td>
+        <td>27</td>
+        <td>1.8</td>
+        <td>281</td>
+        <td>1.5</td>
+        <td>1.33</td>
+        <td>0.41</td>
+        <td>0.206</td>
+        <td>0.2mm x 44</td>
         <td>0.2mm x 5</td>
       </tr>
     </tbody>

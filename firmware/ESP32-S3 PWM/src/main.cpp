@@ -38,6 +38,42 @@ rmt_channel_t channel = RMT_TX_CHANNEL_0;
 rmt_item32_t items[20];
 int item_num = 20;
 
+bool setRelay(int mode) {
+  switch (mode) {
+    case 0:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, LOW);
+      break;
+    case 1:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, LOW);
+      break;
+    case 2:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, LOW);
+      break;
+    case 3:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, HIGH);
+      break;
+    case 4:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, HIGH);
+      break;
+    case 5:
+      digitalWrite(CTL_RLY_1, HIGH);
+      digitalWrite(CTL_RLY_2, HIGH);
+      break;
+    default:
+      digitalWrite(CTL_RLY_1, LOW);
+      digitalWrite(CTL_RLY_2, LOW);
+      break;
+  }
+
+  delay(500);
+  return true;
+}
+
 void fire(int mode) {
   // Stop any ongoing transmission before starting a new one
   rmt_tx_stop(RMT_TX_CHANNEL_0);
@@ -174,42 +210,6 @@ void setupButtons() {
   currentButtonState[1] = lastButtonState[1];
   currentButtonState[2] = lastButtonState[2];
   currentButtonState[3] = lastButtonState[3];
-}
-
-bool setRelay(int mode) {
-  switch (mode) {
-    case 0:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, LOW);
-      break;
-    case 1:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, LOW);
-      break;
-    case 2:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, LOW);
-      break;
-    case 3:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, HIGH);
-      break;
-    case 4:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, HIGH);
-      break;
-    case 5:
-      digitalWrite(CTL_RLY_1, HIGH);
-      digitalWrite(CTL_RLY_2, HIGH);
-      break;
-    default:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, LOW);
-      break;
-  }
-
-  delay(500);
-  return true;
 }
 
 bool updateButtonState(int buttonIndex, int buttonPin) {
