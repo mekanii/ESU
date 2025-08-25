@@ -501,14 +501,14 @@ $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
   <table>
     <thead>
     <tr>
-    <th>$f$ [Hz]</th>
-    <th>$V_{in}$ [V]</th>
-    <th>$ID$ [mm]</th>
-    <th>$OD$ [mm]</th>
-    <th>$H [mm]$</th>
-    <th>$A_e = \frac{( OD – ID ) • H }{ 2 } [mm^2]$</th>
-    <th>$B_{max}$ [Gauss]</th>
-    <th>$N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e }$ [turns]</th>
+    <th>$f \ [Hz]$</th>
+    <th>$V_{in} \ [V]$</th>
+    <th>$ID \ [mm]$</th>
+    <th>$OD \ [mm]$</th>
+    <th>$H \ [mm]$</th>
+    <th>$A_e = \frac{( OD – ID ) • H }{ 2 } \ [mm^2]$</th>
+    <th>$B_{max} \ [Gauss]$</th>
+    <th>$N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e } \ [turns]$</th>
     </tr>
     </thead>
   </table>
