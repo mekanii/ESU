@@ -521,6 +521,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$
         <th>$δ$<br>[mm]</th>
         <th>$Primary$</th>
         <th>$Secondary$</th>
+        <th>$Primary \\ Individual \\ Length$</th>
+        <th>$Primary \\ Total \\ Length$</th>
+        <th>$Secondary \\ Individual \\ Length$</th>
+        <th>$Secondary \\ Total \\ Length$</th>
       </tr>
     </thead>
     <tbody align="right">
@@ -545,6 +549,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$
         <td>0.103</td>
         <td>0.2mm x 32</td>
         <td>0.2mm x 11</td>
+        <td>520.3 mm</td>
+        <td>16.65 m</td>
+        <td>1560.9 mm</td>
+        <td>17.17 m</td>
       </tr>
       <tr>
         <td>100,000</td>
@@ -567,6 +575,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$
         <td>0.206</td>
         <td>0.2mm x 30</td>
         <td>0.2mm x 5</td>
+        <td>2081.2 mm</td>
+        <td>62.44 m</td>
+        <td>14516.4 mm</td>
+        <td>72.58 m</td>
       </tr>
       <tr>
         <td>400,000</td>
@@ -589,6 +601,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$
         <td>0.103</td>
         <td>0.2mm x 44</td>
         <td>0.2mm x 11</td>
+        <td>364.2 mm</td>
+        <td>16.03 m</td>
+        <td>1508.9 mm</td>
+        <td>16.60 m</td>
       </tr>
       <tr>
         <td>100,000</td>
@@ -611,6 +627,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$
         <td>0.206</td>
         <td>0.2mm x 44</td>
         <td>0.2mm x 5</td>
+        <td>1404.8 mm</td>
+        <td>61.81 m</td>
+        <td>14620.4 mm</td>
+        <td>73.10 m</td>
       </tr>
     </tbody>
   </table>
