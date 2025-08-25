@@ -3,6 +3,10 @@
   <img src="pic/ESU-block-diagram-2.png" alt="esu-block-diagram">
 </p>
 
+<p align="center">
+  <img src="pic/PWM.png" alt="pwm">
+</p>
+
 # 2. Component
 ## 2.1. Monopolar Switch Detection (MSD)
 ### 2.1.1. Schematic
