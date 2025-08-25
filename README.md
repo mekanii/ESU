@@ -501,23 +501,23 @@ $Total \ Wire \ Length \ Needed = 3.64 + 6.24 = 9.88 m$
   <table>
     <thead>
       <tr>
-        <th>$f$ [Hz]</th>
-        <th>$V_{in}$ [V]</th>
-        <th>$V_{out}$ [V]</th>
-        <th>$I_{out}$ [A]</th>
-        <th>$P$ [W]</th>
-        <th>$I_{in}$ [A]</th>
-        <th>$ID$ [mm]</th>
-        <th>$OD$ [mm]</th>
-        <th>$H$ [mm]</th>
-        <th>$A_e \ [mm^2]$</th>
-        <th>$B_{max}$ [Gauss]</th>
-        <th>$N_p$ [turns]</th>
-        <th>$Volt \ per \ turn$ [V/turn]</th>
-        <th>$N_s$ [turns]</th>
-        <th>$J \ [A/mm^2]$</th>
-        <th>$dW_p$ [mm]</th>
-        <th>$dW_s$ [mm]</th>
+        <th>$f$<br>[Hz]</th>
+        <th>$V_{in}$<br>[V]</th>
+        <th>$V_{out}$<br>[V]</th>
+        <th>$I_{out}$<br>[A]</th>
+        <th>$P$<br>[W]</th>
+        <th>$I_{in}$<br>[A]</th>
+        <th>$ID$<br>[mm]</th>
+        <th>$OD$<br>[mm]</th>
+        <th>$H$<br>[mm]</th>
+        <th>$A_e$<br>[mm²]</th>
+        <th>$B_{max}$<br>[Gauss]</th>
+        <th>$N_p$<br>[turns]</th>
+        <th>$Volt \ per \ turn$<br>[V/turn]</th>
+        <th>$N_s$<br>[turns]</th>
+        <th>$J$<br>[A/mm²]</th>
+        <th>$dW_p$<br>[mm]</th>
+        <th>$dW_s$<br>[mm]</th>
       </tr>
     </thead>
     <tbody align="right">
