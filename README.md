@@ -482,7 +482,7 @@ $A_{strand} = \frac{pi • d_{strand}^2}{4}$
 
 Number of strands is calculated by following formula
 
-$N = ⌈ \frac{A_{req}}{A_{strand} • η_{pack}} ⌉$
+$N_{strands} = ⌈ \frac{A_{req}}{A_{strand} • η_{pack}} ⌉$
 
 Where:
 - $I = current \ (A)$
@@ -500,7 +500,14 @@ Where:
   - Total equivalent area: ~0.33 mm² -->
 
 ##### i. Wire Length Calculation
+Length per turn (mean path around toroid):
 $Length \ per \ turn = 2 • (\frac{OD - ID}{2} + H)$
+
+Individual conductor length (per strand, includes ~10% leads allowance):
+$Individual \ Length = 1.1 • N • Length \ per \ turn$
+
+Total copper length for the bundle (all parallel strands combined):
+$Total \ Length = N_{strands} • Individual \ Length$
 
 <!-- $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 
@@ -541,10 +548,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$ -->
         <th>$dW_p$<br>[mm]</th>
         <th>$dW_s$<br>[mm]</th>
         <th>$δ$<br>[mm]</th>
-        <th>$d_{p strand}$<br>[mm]</th>
-        <th>$d_{s strand}$<br>[mm]</th>
-        <th>$Number of Primary Strands$</th>
-        <th>$Number of Secondary Strands$</th>
+        <th>$d_{p \ strand}$<br>[mm]</th>
+        <th>$d_{s \ strand}$<br>[mm]</th>
+        <th>$N_{p \ strands}$</th>
+        <th>$N_{s \ strands}$</th>
         <th>$Primary \ Individual \ Length$<br>[m]</th>
         <th>$Primary \ Total \ Length$<br>[m]</th>
         <th>$Secondary \ Individual \ Length$<br>[m]</th>
