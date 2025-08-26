@@ -556,10 +556,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$ -->
         <th>$d_{s \ strand}$<br>[mm]</th>
         <th>$N_{p \ strands}$</th>
         <th>$N_{s \ strands}$</th>
-        <th>$Primary \ Individual \ Length$<br>[m]</th>
-        <th>$Primary \ Total \ Length$<br>[m]</th>
-        <th>$Secondary \ Individual \ Length$<br>[m]</th>
-        <th>$Secondary \ Total \ Length$<br>[m]</th>
+        <th>$Individual \ Length_{\ p}$<br>[m]</th>
+        <th>$Total \ Length_{\ p}$<br>[m]</th>
+        <th>$Individual \ Length_{\ s}$<br>[m]</th>
+        <th>$Total \ Length_{\ s}$<br>[m]</th>
       </tr>
     </thead>
     <tbody align="right">
