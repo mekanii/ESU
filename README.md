@@ -472,15 +472,15 @@ If our calculated wire diameters are larger than 2× skin depth, consider using:
 3. **Stranded wire** with individual strand diameter 2x skin depth
 
 ##### h. Wire Specification for High-Frequency Operation using Stranded wire
-Required copper area
+Required copper area is the net copper cross‑section needed to carry the target current without exceeding your thermal/current‑density limit. Pick $J$ based on allowed temperature rise and cooling. Typical transformer design uses $J=1.5$–$3.0$ A/mm²; choose the lower end for continuous duty, compact windings, or poor airflow; higher values may be acceptable for pulsed or well‑cooled designs.
 
 $A_{req} = \frac{I}{J}$
 
-Area per strand (bare copper diameter)
+Area per strand is the metallic copper area of a single strand. Use the bare copper diameter (exclude enamel). If you only have an enamelled wire gauge, subtract twice the enamel thickness to estimate bare diameter, or use datasheet bare area.
 
 $A_{strand} = \frac{pi • d_{strand}^2}{4}$
 
-Number of strands
+Number of strands is calculated by following formula
 
 $N = ⌈ \frac{A_{req}}{A_{strand} • η_{pack}} ⌉$
 
@@ -488,7 +488,7 @@ Where:
 - $I = current \ (A)$
 - $J = current \ density \ (A/mm^2)$
 - $d_{strand} = strand \ diameter \ (mm)$
-- $η_{pack} = packing/fill \ factor \ for \ round \ wires \ in \ a \ bundle \ (typically \ 0.7–0.9; \ use 1.0 \ if \ we \ ignore \ packing)$
+- $η_{pack} = packing/fill \ factor \ for \ round \ wires \ in \ a \ bundle \ (typically \ 0.7–0.9; \ use \ 1.0 \ if \ we \ ignore \ packing)$
 
 <!-- - Primary
   - 32 parallel 0.2 mm each
@@ -541,8 +541,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$ -->
         <th>$dW_p$<br>[mm]</th>
         <th>$dW_s$<br>[mm]</th>
         <th>$δ$<br>[mm]</th>
-        <th>$Primary$</th>
-        <th>$Secondary$</th>
+        <th>$d_{p strand}$<br>[mm]</th>
+        <th>$d_{s strand}$<br>[mm]</th>
+        <th>$Number of Primary Strands$</th>
+        <th>$Number of Secondary Strands$</th>
         <th>$Primary \ Individual \ Length$<br>[m]</th>
         <th>$Primary \ Total \ Length$<br>[m]</th>
         <th>$Secondary \ Individual \ Length$<br>[m]</th>
@@ -569,8 +571,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$ -->
         <td>1.13</td>
         <td>0.65</td>
         <td>0.103</td>
-        <td>0.2mm x 32</td>
-        <td>0.2mm x 11</td>
+        <td>0.2</td>
+        <td>0.2</td>
+        <td>32</td>
+        <td>11</td>
         <td>0.520</td>
         <td>16.65</td>
         <td>1.561</td>
@@ -595,8 +599,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$ -->
         <td>1.09</td>
         <td>0.41</td>
         <td>0.206</td>
-        <td>0.2mm x 30</td>
-        <td>0.2mm x 5</td>
+        <td>0.2</td>
+        <td>0.2</td>
+        <td>30</td>
+        <td>5</td>
         <td>2.081</td>
         <td>62.44</td>
         <td>14.516</td>
@@ -621,8 +627,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$ -->
         <td>1.33</td>
         <td>0.65</td>
         <td>0.103</td>
-        <td>0.2mm x 44</td>
-        <td>0.2mm x 11</td>
+        <td>0.2</td>
+        <td>0.2</td>
+        <td>44</td>
+        <td>11</td>
         <td>0.364</td>
         <td>16.03</td>
         <td>1.509</td>
@@ -647,8 +655,10 @@ $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$ -->
         <td>1.33</td>
         <td>0.41</td>
         <td>0.206</td>
-        <td>0.2mm x 44</td>
-        <td>0.2mm x 5</td>
+        <td>0.2</td>
+        <td>0.2</td>
+        <td>44</td>
+        <td>5</td>
         <td>1.405</td>
         <td>61.81</td>
         <td>14.620</td>
