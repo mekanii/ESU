@@ -379,7 +379,7 @@ For high-frequency windings, consider using multiple thinner wires in parallel (
 The calculated diameter above is based on DC or low-frequency AC. For high-frequency applications, the effective area may be less than the physical area due to skin effect.
 
 #### 2.4.2.1. Design and Calculation
-Given:
+<!-- Given:
 - Input voltage<br>$V_{in} = 72 \ V$
 - Output voltage<br>$V_{out} = 216 \ V$
 - Switching frequency<br>$f = 400 \ kHz = 400,000 \ Hz$
@@ -388,14 +388,14 @@ Given:
   - Outer diameter<br>$OD = 40.4 \ mm$
   - Height<br>$H = 15.1 \ mm$
 - Maximum flux density<br>$B_{max} = 350 \ Gauss$
-- Output current<br>$I_{out} = 0.5 \ A$
+- Output current<br>$I_{out} = 0.5 \ A$ -->
 
 ##### a. Core Cross-Sectional Area ($A_e$)
 The effective cross-sectional area of the core is calculated as:
 
 $A_e = \frac{( OD – ID ) • H }{ 2 }$
 
-$A_e  = \frac{( 40.4 – 23.3 ) • 15.1 }{ 2 } = 129.1 \ mm^2$
+<!-- $A_e  = \frac{( 40.4 – 23.3 ) • 15.1 }{ 2 } = 129.1 \ mm^2$ -->
 
 This area is important for determining how much magnetic flux the core can handle without saturating.
 
@@ -404,9 +404,9 @@ The number of primary turns is determined by:
 
 $N_p = \frac{ V_{in} • Duty \ Cycle • 10^{10} }{ 2 • f • B_{max} • A_e }$
 
-$N_p = \frac{ 72 • 0.5 • 10^{10} }{ 2 • 400,000 • 350 • 129.1 } = \frac{ 360,000,000,000 }{ 36,149,400,000 }$
+<!-- $N_p = \frac{ 72 • 0.5 • 10^{10} }{ 2 • 400,000 • 350 • 129.1 } = \frac{ 360,000,000,000 }{ 36,149,400,000 }$
 
-$N_p = 9.96 ≈ 10 \ turns$
+$N_p = 9.96 ≈ 10 \ turns$ -->
 
 This ensures the core does not saturate at the maximum input voltage and duty cycle.
 
@@ -415,25 +415,29 @@ The voltage induced per turn is:
 
 $Volt \ per \ turn = \frac{ V_{in} }{ N_p }$
 
-$Volt \ per \ turn = \frac{ 72 }{ 10 } = 7.2 \ V/turn$
+<!-- $Volt \ per \ turn = \frac{ 72 }{ 10 } = 7.2 \ V/turn$ -->
 
 ##### d. Secondary Turns ($N_s$)
 The number of secondary turns is:
 
 $N_s = \frac{ V_{out} }{ Volt \ per \ turn }$
 
-$N_s = \frac{ 216 }{ 7.2 } = 30 \text{ turns}$
+<!-- $N_s = \frac{ 216 }{ 7.2 } = 30 \text{ turns}$ -->
 
 This ensures the transformer provides the correct output voltage.
 
 ##### e. Output Power and Currents ($N_s$)
-$P = V_{out} • I_{out} = 216 • 0.5 = 108 \ W$
+$P = V_{out} • I_{out}$
 
-$I_{in} = \frac{ P }{ V_{in} } = \frac{ 108 }{ 72 } = 1.5 \ A$
+<!-- $P = 216 • 0.5 = 108 \ W$ -->
+
+$I_{in} = \frac{ P }{ V_{in} }$
+
+<!-- $I_{in} = \frac{ 108 }{ 72 } = 1.5 \ A$ -->
 
 These calculations confirm the input current required to deliver the desired output power.
 
-For high-frequency applications (400 kHz), we need to consider:
+For high-frequency applications, we need to consider:
 - **Skin effect** - Current tends to flow on the surface of conductors at high frequencies
 - **Current density** - Typically 1.5-3 A/mm² for transformer applications
 - **Temperature rise** - Higher current density = more heat
@@ -447,7 +451,7 @@ Where:
 - $I = current \ (A)$
 - $J = current \ density \ (A/mm^2)$
 
-Primary:
+<!-- Primary:
 - $I_{in} = 1.5 \ A$
 - $Current \ Density = 1.5 \ A/mm^2$
 - $dW_p = \sqrt{ \frac{ 4 • 1.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 6 }{ 4.712 } } = 1.13 \ mm$
@@ -455,32 +459,47 @@ Primary:
 Secondary:
 - $I_{out} = 0.5 \ A$
 - $Current \ Density = 1.5 \ A/mm^2$
-- $dW_s = \sqrt{ \frac{ 4 • 0.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 2 }{ 4.712 } } = 0.65 \ mm$
+- $dW_s = \sqrt{ \frac{ 4 • 0.5 }{ 3.14 • 1.5 } } = \sqrt{ \frac{ 2 }{ 4.712 } } = 0.65 \ mm$ -->
 
 ##### g. High-Frequency Considerations
-At 400 kHz, the skin depth in copper is approximately:
+The skin depth in copper is approximately calculated by following formula:
 
-$δ = \sqrt{ \frac{ ρ } { π • f • μ } } ≈ 0.1 \ mm$
+$δ = \sqrt{ \frac{ ρ } { π • f • μ } }$
 
-Since our calculated wire diameters are larger than 2× skin depth, consider using:
+If our calculated wire diameters are larger than 2× skin depth, consider using:
 1. **Litz wire** for better high-frequency performance
-2. **Multiple parallel smaller wires** instead of single thick wire
-3. **Stranded wire** with individual strand diameter < 0.2 mm
+2. **Multiple parallel smaller wires** instead of single thick wire with individual wire diameter 2x skin depth
+3. **Stranded wire** with individual strand diameter 2x skin depth
 
-##### h. Wire Specification for 400 kHz Operation using Stranded wire
-- Primary
+##### h. Wire Specification for High-Frequency Operation using Stranded wire
+Required copper area
+
+$A_{req} = \frac{I}{J}$
+
+Area per strand (bare copper diameter)
+
+$A_{strand} = \frac{pi • d_{strand}^2}{4}$
+
+Number of strands
+
+$N = ⌈ \frac{A_{req}}{A_{strand} • η_{pack}} ⌉$
+
+Where:
+- $I: current \ (A)$
+
+<!-- - Primary
   - 32 parallel 0.2 mm each
   - Total current capacity: ~1.5A
   - Total equivalent area: ~1.0 mm²
 - Secondary
   - 11 parallel 0.2 mm each
   - Total current capacity: ~0.5A
-  - Total equivalent area: ~0.33 mm²
+  - Total equivalent area: ~0.33 mm² -->
 
 ##### i. Wire Length Calculation
 $Length \ per \ turn = 2 • (\frac{OD - ID}{2} + H)$
 
-$Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
+<!-- $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 
 - Primary
   - Number of Wire: 32
@@ -493,7 +512,7 @@ $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
   - $Individual \ Length = 30 • 47.3 • 1.1 ≈ 1561 \text{ mm including 10\\% leads}$
   - $Total \ Length = 11 • 1561 = 17171 \ mm = 17.17 \ m$
 
-$Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$
+$Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$ -->
 
 ##### i. Calculation Results Table for 400kHz and 100kHz
 
