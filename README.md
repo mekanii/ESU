@@ -44,20 +44,13 @@ Below is the output scope from the sense circuit, where the pad resistance value
 </p>
 
 The ESP32's ADC provides a versatile and powerful way to read analog signals with a resolution of up to 12 bits and operates with a reference voltage of 0V to 3.3V (the default voltage range). Below is the formula to calculate the voltage per level for the ADC at 12-bit resolution.
-<br>
 
-```math
-Voltage \, per \, Level = \frac{Voltage \, Range}{2^{Resolution}} = \frac{3.3V - 0V}{2^{12}} = \frac{3.3V}{4096} ≈ 0.00080586V ≈ 0.80586 mV
-```
-<br>
+$Voltage \ per \ Level = \frac{Voltage \ Range}{2^{Resolution}} = \frac{3.3V - 0V}{2^{12}} = \frac{3.3V}{4096} ≈ 0.00080586V ≈ 0.80586 mV$
+
 Below is the formula to calculate the ADC value based on the voltage sense and the Voltage per Level.
-<br>
-<br>
 
-```math
-ADC \, Value = \frac{Vsense}{Voltage \, per \, Level}
-```
-<br>
+$ADC \ Value = \frac{V_{sense}}{Voltage \ per \ Level}$
+
 Using the formula above, we have the following ADC values for different pad resistances:
 
 <div align="center">
@@ -82,16 +75,12 @@ The Remote Control Module (RMT) on the ESP32 is a versatile hardware peripheral 
 ##### a. Clock Divider
 The clock divider is a crucial parameter in microcontroller and digital circuit design that determines the frequency of a clock signal by dividing the input clock frequency, which is APB_CLK (80 MHz) for ESP32.
 
-```math
-Clock \, Divider = \frac{APB \_ CLK}{Clock \, Frequency}
-```
+$Clock \ Divider = \frac{APB \_ CLK}{Clock \ Frequency}$
 
 ##### b. Resolution
 The resolution in duty cycle is a crucial parameter in microcontroller and digital circuit design that determines the granularity of control over the PWM signal. It defines how finely the duty cycle can be adjusted, allowing for precise modulation of the output signal. In the case of the ESP32, the resolution is influenced by the clock frequency which ultimately affect the ability to achieve desired output levels.
 
-```math
-Resolution = \frac{Clock \, Frequency}{PWM \, Frequency}
-```
+$Resolution = \frac{Clock \ Frequency}{PWM \ Frequency}$
 
 ##### c. Combination of Clock Frequency and Resolution
 The combination of clock frequency and resolution plays a vital role in determining the performance of PWM signals in microcontroller applications. The clock frequency sets the base rate at which the system operates, while the resolution defines how many discrete levels the duty cycle can be divided into. A higher clock frequency allows for faster switching and more precise timing, while a higher resolution enables finer control over the duty cycle. Together, they influence the accuracy and responsiveness of the PWM output, making it essential to balance these parameters to meet the specific requirements of the application.
@@ -197,18 +186,18 @@ For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, 
 
 <div align="center">
 
-| Discrete Level  |       % | HIGH Time | LOW Time  |
-| ---------------:| ------: | ---------:| ---------:|
-|              10 |  1.25 % |    0.5 µs |   39.5 µs |
-|              20 |  2.50 % |    1.0 µs |   39.0 µs |
-|              30 |  3.75 % |    1.5 µs |   38.5 µs |
-|              40 |  5.00 % |    2.0 µs |   38.0 µs |
-|              50 |  6.25 % |    2.5 µs |   37.5 µs |
-|              60 |  7.50 % |    3.0 µs |   37.0 µs |
-|              70 |  8.75 % |    3.5 µs |   36.5 µs |
-|              80 | 10.00 % |    4.0 µs |   36.0 µs |
-|              90 | 11.25 % |    4.5 µs |   35.5 µs |
-|             100 | 12.50 % |    5.0 µs |   35.0 µs |
+| Discrete Level  | Duty Cycle  | HIGH Time | LOW Time  |
+| ---------------:| -----------:| ---------:| ---------:|
+|              10 |      1.25 % |    0.5 µs |   39.5 µs |
+|              20 |      2.50 % |    1.0 µs |   39.0 µs |
+|              30 |      3.75 % |    1.5 µs |   38.5 µs |
+|              40 |      5.00 % |    2.0 µs |   38.0 µs |
+|              50 |      6.25 % |    2.5 µs |   37.5 µs |
+|              60 |      7.50 % |    3.0 µs |   37.0 µs |
+|              70 |      8.75 % |    3.5 µs |   36.5 µs |
+|              80 |     10.00 % |    4.0 µs |   36.0 µs |
+|              90 |     11.25 % |    4.5 µs |   35.5 µs |
+|             100 |     12.50 % |    5.0 µs |   35.0 µs |
 
 </div>
 
@@ -235,18 +224,18 @@ For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, 
 
 <div align="center">
 
-| Discrete Level  |       % | HIGH Time | LOW Time  |
-| ---------------:| ------: | ---------:| ---------:|
-|              10 |  1.00 % |    0.5 µs |   49.5 µs |
-|              20 |  2.00 % |    1.0 µs |   49.0 µs |
-|              30 |  3.00 % |    1.5 µs |   48.5 µs |
-|              40 |  4.00 % |    2.0 µs |   48.0 µs |
-|              50 |  5.00 % |    2.5 µs |   47.5 µs |
-|              60 |  6.00 % |    3.0 µs |   47.0 µs |
-|              70 |  7.00 % |    3.5 µs |   46.5 µs |
-|              80 |  8.00 % |    4.0 µs |   46.0 µs |
-|              90 |  9.00 % |    4.5 µs |   45.5 µs |
-|             100 | 10.00 % |    5.0 µs |   45.0 µs |
+| Discrete Level  | Duty Cycle  | HIGH Time | LOW Time  |
+| ---------------:| -----------:| ---------:| ---------:|
+|              10 |      1.00 % |    0.5 µs |   49.5 µs |
+|              20 |      2.00 % |    1.0 µs |   49.0 µs |
+|              30 |      3.00 % |    1.5 µs |   48.5 µs |
+|              40 |      4.00 % |    2.0 µs |   48.0 µs |
+|              50 |      5.00 % |    2.5 µs |   47.5 µs |
+|              60 |      6.00 % |    3.0 µs |   47.0 µs |
+|              70 |      7.00 % |    3.5 µs |   46.5 µs |
+|              80 |      8.00 % |    4.0 µs |   46.0 µs |
+|              90 |      9.00 % |    4.5 µs |   45.5 µs |
+|             100 |     10.00 % |    5.0 µs |   45.0 µs |
 
 </div>
 
@@ -255,6 +244,8 @@ For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, 
 - Description: Single parameter command for basic system operations.
 - Parameters:
   - command: Command identifier
+
+
 
 | Command |	Description 	            | Example | Success Response  | Error Response  |
 |:-------:|:------------------------- |:------- |:-----------------:|:---------------:|
