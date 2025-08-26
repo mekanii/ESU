@@ -485,7 +485,10 @@ Number of strands
 $N = ⌈ \frac{A_{req}}{A_{strand} • η_{pack}} ⌉$
 
 Where:
-- $I: current \ (A)$
+- $I = current \ (A)$
+- $J = current \ density \ (A/mm^2)$
+- $d_{strand} = strand \ diameter \ (mm)$
+- $η_{pack} = packing/fill \ factor \ for \ round \ wires \ in \ a \ bundle \ (typically \ 0.7–0.9; \ use 1.0 \ if \ we \ ignore \ packing)$
 
 <!-- - Primary
   - 32 parallel 0.2 mm each
