@@ -512,7 +512,7 @@ Total copper length for the bundle (all parallel strands combined):
 
 $Total \ Length = N_{strands} • Individual \ Length$
 
-$Total \ Wire \ Length \ Needed = Total \ Length_{\ primary} + Total \ Secondary \ Length_{\ secondary}$
+$Total \ Wire \ Length \ Needed = Total \ Length_{\ p} + Total \ Length_{\ s}$
 <!-- $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 
 - Primary
