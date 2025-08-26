@@ -500,15 +500,19 @@ Where:
   - Total equivalent area: ~0.33 mm² -->
 
 ##### i. Wire Length Calculation
-Length per turn (mean path around toroid):
+Length per turn (mean path around toroid)
+
 $Length \ per \ turn = 2 • (\frac{OD - ID}{2} + H)$
 
 Individual conductor length (per strand, includes ~10% leads allowance):
+
 $Individual \ Length = 1.1 • N • Length \ per \ turn$
 
 Total copper length for the bundle (all parallel strands combined):
+
 $Total \ Length = N_{strands} • Individual \ Length$
 
+$Total \ Wire \ Length \ Needed = Total \ Length_{\ primary} + Total \ Secondary \ Length_{\ secondary}$
 <!-- $Length \ per \ turn = 2 • (\frac{40.4 - 23.3}{2} + 15.1 ) = 47.3 \ mm$
 
 - Primary
