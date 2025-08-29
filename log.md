@@ -1,7 +1,9 @@
+
+
 2025-08-26
 - Supplier inquiry untuk HMI 7" (TN/IPS) dan sejenisnya [Done]
-- Desain dan kalkulasi LC filter untuk frekuensi 100kHz dengan Rload 500Ω (monopolar) [In Progress]
-- Desain dan kalkulasi LC filter untuk frekuensi 400kHz dengan Rload 500Ω (monopolar) [In Progress]
+- Desain dan kalkulasi LC filter untuk frekuensi 100kHz dengan Rload 500Ω (monopolar) [Done]
+- Desain dan kalkulasi LC filter untuk frekuensi 400kHz dengan Rload 500Ω (monopolar) [Done]
 
 2025-08-25
 - Firmware coding: feat/control-relay [Need Review]
