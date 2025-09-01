@@ -1,16 +1,25 @@
 #include <Arduino.h>
 #include <driver/rmt.h>
+#include <driver/adc.h>
+#include <esp_adc_cal.h>
 
-#define RMT_TX_CHANNEL_0 RMT_CHANNEL_0
-#define RMT_TX_CHANNEL_1 RMT_CHANNEL_1
-#define SENS_CUT    4
-#define SENS_COAG   5
-#define MSD1        16
-#define MSD2        15
-#define CTL_RLY_1   8
-#define CTL_RLY_2   37
-#define CTL_PWM_EN  38
-#define CTL_BUZZ    36
+#define RMT_TX_CHANNEL_0  RMT_CHANNEL_0
+#define RMT_TX_CHANNEL_1  RMT_CHANNEL_1
+#define SENS_CUT          4
+#define SENS_COAG         5
+#define OPTO              6
+#define REM               7
+#define REM_UPPER_LIMIT   694
+#define MSD1              16
+#define MSD2              15
+#define CTL_RLY_1         8
+#define CTL_RLY_2         37
+#define CTL_PWM_EN        38
+#define CTL_BUZZ          36
+
+#define ADC_CHANNEL       ADC1_CHANNEL_6
+#define ADC_WIDTH         ADC_WIDTH_BIT_12
+#define ADC_ATTEN         ADC_ATTEN_DB_12
 
 const gpio_num_t PWM_0 = (gpio_num_t)1;
 const gpio_num_t PWM_1 = (gpio_num_t)2;
@@ -37,6 +46,18 @@ int duration1 = 0;
 rmt_channel_t channel = RMT_TX_CHANNEL_0;
 rmt_item32_t items[20];
 int item_num = 20;
+
+void setupADC() {
+  adc1_config_width(ADC_WIDTH);
+  adc1_config_channel_atten(ADC_CHANNEL, ADC_ATTEN);
+}
+
+int readREM() {
+  int adc_value = adc1_get_raw(ADC_CHANNEL);
+  // Serial.print("REM: ");
+  // Serial.println(adc_value);
+  return adc_value;
+}
 
 bool setRelay(int mode) {
   switch (mode) {
@@ -394,5 +415,7 @@ void setup() {
 
 void loop() {
   readSerialData();  // Keep serial input functionality
-  readButtons();     // Add button input functionality
+  if(readREM() < REM_UPPER_LIMIT) {
+    readButtons();     // Add button input functionality
+  }
 }

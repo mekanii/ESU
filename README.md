@@ -1042,7 +1042,7 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
 > In the image below, there are 2 sections (left and right). The **left section** shows the scope measurement of observed ESU product, while the **right section** displays the result of RnD implementation.
 
 - **Pattern 1**<br>
-  <p align="center"><img src="pic/PS/400kHz/1/400kHz-1-comparison.png" alt="400-1-comparison"></p>
+  <p align="center"><img src="pic/PS/400kHz/1/comparison-500.png" alt="400-1-comparison"></p>
 
   <div align="center">
     <table>
@@ -1217,7 +1217,7 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
    **Key Observations:** The RnD implementation maintains 399.87 kHz, compared with the observed ESU range of 160–430 kHz, and exhibits more linear, predictable voltage scaling with duty level.
    
 - **Pattern 2**<br>
-  <p align="center"><img src="pic/PS/400kHz/2/400kHz-2-comparison.png" alt="400-2-comparison"></p>
+  <p align="center"><img src="pic/PS/400kHz/2/comparison-500.png" alt="400-2-comparison"></p>
 
   <div align="center">
     <table>
@@ -1392,7 +1392,7 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
    **Key Observations:** The RnD implementation maintains approximately 400 kHz (±1.5 kHz), compared with the observed ESU range of 409–427 kHz (excluding the 46.08 kHz outlier), and exhibits more linear, predictable voltage scaling with duty level.
 
 - **Pattern 3**<br>
-  <p align="center"><img src="pic/PS/400kHz/3/400kHz-3-comparison.png" alt="400-3-comparison"></p>
+  <p align="center"><img src="pic/PS/400kHz/3/comparison-500.png" alt="400-3-comparison"></p>
 
   <div align="center">
     <table>

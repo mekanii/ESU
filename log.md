@@ -1,4 +1,10 @@
+2025-09-01
+- Firmware coding: feat/return-electrode-monitoring [Need Review]
+- Menulis tabel komparasi output scope (Rload 500Ω) [In Progress]
 
+
+2025-08-29
+- Menulis tabel komparasi output scope (Rload 500Ω) [In Progress]
 
 2025-08-26
 - Supplier inquiry untuk HMI 7" (TN/IPS) dan sejenisnya [Done]
