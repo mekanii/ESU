@@ -1027,7 +1027,8 @@ Disadvantages:
 
 #### 2.4.3.2 Output Scope
 ##### a. 400kHz
-The image illustrates the output scope of the 400kHz PWM signal at the output transformer combined with the LC filter. The 400kHz PWM signal exhibits three distinct pulse patterns that repeat cyclically:
+###### a.1 R=500Ω
+The image illustrates the output scope of the 400kHz PWM signal at the output transformer combined with the LC filter and R=500Ω. The 400kHz PWM signal exhibits three distinct pulse patterns that repeat cyclically:
 - Pattern 1: 20 pulses per modulation
 - Pattern 2: 18 pulses per modulation
 - Pattern 3: 17 pulses per modulation
@@ -1068,122 +1069,122 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <tr>
       <td>10</td>
       <td>5</td>
-      <td>48.273</td>
-      <td>-42.206</td>
-      <td>18.234</td>
-      <td>160.31</td>
-      <td>61.456</td>
-      <td>-57.940</td>
-      <td>30.639</td>
-      <td>400.64</td>
+      <td>126.61</td>
+      <td>-147.38</td>
+      <td>62.765</td>
+      <td>138.47</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>20</td>
       <td>10</td>
-      <td>51.766</td>
-      <td>-62.533</td>
-      <td>30.127</td>
-      <td>414.49</td>
-      <td>68.733</td>
-      <td>-63.186</td>
-      <td>34.250</td>
-      <td>400.73</td>
+      <td>166.09</td>
+      <td>-198.50</td>
+      <td>96.124</td>
+      <td>410.10</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>30</td>
       <td>15</td>
-      <td>61.380</td>
-      <td>-78.540</td>
-      <td>39.703</td>
-      <td>413.35</td>
-      <td>79.413</td>
-      <td>-72.800</td>
-      <td>43.956</td>
-      <td>399.87</td>
+      <td>191.10</td>
+      <td>-238.21</td>
+      <td>115.67</td>
+      <td>410.91</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>40</td>
       <td>20</td>
-      <td>71.106</td>
-      <td>-88.593</td>
-      <td>46.299</td>
-      <td>416.97</td>
-      <td>97.440</td>
-      <td>-84.820</td>
-      <td>57.299</td>
-      <td>399.58</td>
+      <td>206.46</td>
+      <td>-263.65</td>
+      <td>126.61</td>
+      <td>412.13</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>50</td>
       <td>25</td>
-      <td>86.213</td>
-      <td>-100.240</td>
-      <td>55.591</td>
-      <td>408.79</td>
-      <td>111.670</td>
-      <td>-97.086</td>
-      <td>67.986</td>
-      <td>399.87</td>
+      <td>231.46</td>
+      <td>-293.26</td>
+      <td>141.38</td>
+      <td>412.13</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>60</td>
       <td>30</td>
-      <td>94.873</td>
-      <td>-110.200</td>
-      <td>60.121</td>
-      <td>405.41</td>
-      <td>123.010</td>
-      <td>-109.400</td>
-      <td>78.276</td>
-      <td>400.06</td>
+      <td>245.08</td>
+      <td>-317.84</td>
+      <td>155.52</td>
+      <td>411.72</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>70</td>
       <td>35</td>
-      <td>98.313</td>
-      <td>-114.430</td>
-      <td>62.467</td>
-      <td>426.80</td>
-      <td>126.940</td>
-      <td>-118.660</td>
-      <td>84.905</td>
-      <td>400.25</td>
+      <td>250.33</td>
+      <td>-329.46</td>
+      <td>165.02</td>
+      <td>413.35</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>80</td>
       <td>40</td>
-      <td>103.530</td>
-      <td>-120.300</td>
-      <td>64.498</td>
-      <td>428.11</td>
-      <td>127.920</td>
-      <td>-125.280</td>
-      <td>87.328</td>
-      <td>400.06</td>
+      <td>266.13</td>
+      <td>-356.89</td>
+      <td>175.21</td>
+      <td>414.18</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>90</td>
       <td>45</td>
-      <td>104.540</td>
-      <td>-124.040</td>
-      <td>66.208</td>
-      <td>428.77</td>
-      <td>125.520</td>
-      <td>-130.500</td>
-      <td>87.591</td>
-      <td>400.06</td>
+      <td>274.02</td>
+      <td>-371.14</td>
+      <td>187.43</td>
+      <td>412.40</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>100</td>
       <td>50</td>
-      <td>109.900</td>
-      <td>-130.000</td>
-      <td>67.718</td>
-      <td>429.55</td>
-      <td><strong>120.060</strong></td>
-      <td><strong>-132.130</strong></td>
-      <td><strong>85.187</strong></td>
-      <td><strong>399.87</strong></td>
+      <td>283.46</td>
+      <td>-386.94</td>
+      <td>196.32</td>
+      <td>412.67</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
       </tr>
       </tbody>
     </table>
@@ -1243,122 +1244,122 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <tr>
       <td>10</td>
       <td>5</td>
-      <td>48.433</td>
-      <td>-43.520</td>
-      <td>17.890</td>
-      <td>46.081</td>
-      <td>61.713</td>
-      <td>-57.720</td>
-      <td>29.600</td>
-      <td>399.58</td>
+      <td>135.92</td>
+      <td>-153.32</td>
+      <td>61.646</td>
+      <td>83.026</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>20</td>
       <td>10</td>
-      <td>54.333</td>
-      <td>-65.593</td>
-      <td>30.809</td>
-      <td>417.50</td>
-      <td>68.786</td>
-      <td>-62.720</td>
-      <td>33.171</td>
-      <td>400.64</td>
+      <td>169.81</td>
+      <td>-204.88</td>
+      <td>96.578</td>
+      <td>414.49</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>30</td>
       <td>15</td>
-      <td>64.113</td>
-      <td>-80.666</td>
-      <td>39.187</td>
-      <td>409.80</td>
-      <td>79.440</td>
-      <td>-72.586</td>
-      <td>43.001</td>
-      <td>398.62</td>
+      <td>196.62</td>
+      <td>-246.56</td>
+      <td>116.55</td>
+      <td>414.90</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>40</td>
       <td>20</td>
-      <td>76.000</td>
-      <td>-92.633</td>
-      <td>46.598</td>
-      <td>409.39</td>
-      <td>97.880</td>
-      <td>-85.366</td>
-      <td>55.341</td>
-      <td>401.60</td>
+      <td>217.20</td>
+      <td>-274.53</td>
+      <td>128.91</td>
+      <td>414.38</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>50</td>
       <td>25</td>
-      <td>92.686</td>
-      <td>-107.880</td>
-      <td>55.419</td>
-      <td>422.36</td>
-      <td>112.080</td>
-      <td>-96.840</td>
-      <td>65.243</td>
-      <td>399.68</td>
+      <td>238.25</td>
+      <td>-309.52</td>
+      <td>147.66</td>
+      <td>413.97</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>60</td>
       <td>30</td>
-      <td>100.170</td>
-      <td>-114.430</td>
-      <td>59.244</td>
-      <td>426.80</td>
-      <td>123.010</td>
-      <td>-109.080</td>
-      <td>74.953</td>
-      <td>400.06</td>
+      <td>254.28</td>
+      <td>-336.17</td>
+      <td>163.74</td>
+      <td>414.49</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>70</td>
       <td>35</td>
-      <td>104.430</td>
-      <td>-120.080</td>
-      <td>61.409</td>
-      <td>427.46</td>
-      <td>126.23</td>
-      <td>-120.11</td>
-      <td>80.381</td>
-      <td>399.87</td>
+      <td>264.42</td>
+      <td>-354.05</td>
+      <td>174.74</td>
+      <td>414.49</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>80</td>
       <td>40</td>
-      <td>109.780</td>
-      <td>-124.920</td>
-      <td>63.326</td>
-      <td>425.71</td>
-      <td>126.280</td>
-      <td>-124.920</td>
-      <td>82.718</td>
-      <td>399.87</td>
+      <td>273.90</td>
+      <td>-371.60</td>
+      <td>185.31</td>
+      <td>414.59</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>90</td>
       <td>45</td>
-      <td>113.340</td>
-      <td>-128.690</td>
-      <td>64.916</td>
-      <td>424.95</td>
-      <td>127.270</td>
-      <td>-133.990</td>
-      <td>83.515</td>
-      <td>399.87</td>
+      <td>283.89</td>
+      <td>-391.50</td>
+      <td>194.50</td>
+      <td>414.38</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>100</td>
       <td>50</td>
-      <td>117.350</td>
-      <td>-134.070</td>
-      <td>66.180</td>
-      <td>424.95</td>
-      <td><strong>126.280</strong></td>
-      <td><strong>-138.880</strong></td>
-      <td><strong>81.670</strong></td>
-      <td><strong>400.06</strong></td>
+      <td>291.34</td>
+      <td>-403.85</td>
+      <td>202.55</td>
+      <td>414.49</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
       </tr>
       </tbody>
     </table>
@@ -1418,122 +1419,122 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <tr>
       <td>10</td>
       <td>5</td>
-      <td>48.926</td>
-      <td>-44.066</td>
-      <td>18.943</td>
-      <td>207.83</td>
-      <td>60.286</td>
-      <td>-59.533</td>
-      <td>28.050</td>
-      <td>400.64</td>
+      <td>147.21</td>
+      <td>-155.08</td>
+      <td>65.493</td>
+      <td>208.33</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>20</td>
       <td>10</td>
-      <td>55.753</td>
-      <td>-69.633</td>
-      <td>32.175</td>
-      <td>415.73</td>
-      <td>68.046</td>
-      <td>-65.400</td>
-      <td>31.979</td>
-      <td>400.16</td>
+      <td>174.86</td>
+      <td>-213.86</td>
+      <td>99.132</td>
+      <td>414.07</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>30</td>
       <td>15</td>
-      <td>70.946</td>
-      <td>-85.666</td>
-      <td>42.184</td>
-      <td>418.55</td>
-      <td>78.620</td>
-      <td>-73.566</td>
-      <td>40.452</td>
-      <td>399.58</td>
+      <td>207.38</td>
+      <td>-259.45</td>
+      <td>120.36</td>
+      <td>414.59</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>40</td>
       <td>20</td>
-      <td>85.313</td>
-      <td>-100.470</td>
-      <td>50.448</td>
-      <td>419.81</td>
-      <td>94.926</td>
-      <td>-83.073</td>
-      <td>51.715</td>
-      <td>400.16</td>
+      <td>243.74</td>
+      <td>-317.20</td>
+      <td>149.96</td>
+      <td>414.28</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>50</td>
       <td>25</td>
-      <td>94.466</td>
-      <td>-110.280</td>
-      <td>56.027</td>
-      <td>424.08</td>
-      <td>108.360</td>
-      <td>-94.573</td>
-      <td>60.278</td>
-      <td>400.64</td>
+      <td>243.74</td>
+      <td>-317.20</td>
+      <td>149.96</td>
+      <td>414.28</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>60</td>
       <td>30</td>
-      <td>100.390</td>
-      <td>-117.300</td>
-      <td>59.483</td>
-      <td>426.91</td>
-      <td>117.220</td>
-      <td>-105.470</td>
-      <td>69.178</td>
-      <td>400.35</td>
+      <td>260.20</td>
+      <td>-344.94</td>
+      <td>166.14</td>
+      <td>414.59</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>70</td>
       <td>35</td>
-      <td>104.900</td>
-      <td>-122.710</td>
-      <td>61.268</td>
-      <td>427.56</td>
-      <td>121.450</td>
-      <td>-113.880</td>
-      <td>74.676</td>
-      <td>400.06</td>
+      <td>268.74</td>
+      <td>-363.26</td>
+      <td>177.25</td>
+      <td>414.49</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>80</td>
       <td>40</td>
-      <td>107.760</td>
-      <td>-127.870</td>
-      <td>62.862</td>
-      <td>428.22</td>
-      <td>120.930</td>
-      <td>-120.880</td>
-      <td>76.880</td>
-      <td>400.06</td>
+      <td>277.96</td>
+      <td>-382.13</td>
+      <td>186.98</td>
+      <td>414.49</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>90</td>
       <td>45</td>
-      <td>110.170</td>
-      <td>-132.270</td>
-      <td>64.130</td>
-      <td>427.13</td>
-      <td>117.540</td>
-      <td>127.220</td>
-      <td>77.012</td>
-      <td>400.16</td>
+      <td>289.16</td>
+      <td>-398.09</td>
+      <td>195.29</td>
+      <td>414.49</td>
+      <td></td>
+      <td>-</td>
+      <td></td>
+      <td></td>
       </tr>
       <tr>
       <td>100</td>
       <td>50</td>
-      <td>112.080</td>
-      <td>-136.180</td>
-      <td>65.200</td>
-      <td>425.71</td>
-      <td><strong>111.420</strong></td>
-      <td><strong>-129.620</strong></td>
-      <td><strong>76.420</strong></td>
-      <td><strong>400.64</strong></td>
+      <td>298.35</td>
+      <td>-412.18</td>
+      <td>203.23</td>
+      <td>414.80</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
       </tr>
       </tbody>
     </table>
@@ -1565,6 +1566,16 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
    **Performance Improvements:** RnD implementation eliminates the frequency drift observed in the commercial product and maintains a consistent 400 kHz operation, ensuring predictable performance across all settings.
 
    **Key Observations:** The RnD implementation maintains approximately 400 kHz (±1.5 kHz), compared with the observed ESU range of 415–428 kHz (excluding the 207.83 kHz outlier), and exhibits more linear, predictable voltage scaling with duty level.
+
+###### a.2 R=100Ω
+The image illustrates the output scope of the 400kHz PWM signal at the output transformer combined with the LC filter and R=100Ω.
+
+For discrete levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
+
+> [!NOTE]
+> 400kHz PWM signal utilize a discrete resolution of 200 levels.
+>
+> In the image below, there are 2 sections (left and right). The **left section** shows the scope measurement of observed ESU product, while the **right section** displays the result of RnD implementation.
 
 ##### b. 25kHz
 
