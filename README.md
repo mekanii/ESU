@@ -247,7 +247,6 @@ The system UART mode is fixed to 8N1, and the baud rate is 115200.
 
 **Frame Structure**
 The data frame consists of 5 data blocks:
-
 ```[HEADER] [LENGTH] [INSTRUCTION] [DATA] [CRC]```
 
 **Frame Components**
