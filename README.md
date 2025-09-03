@@ -270,18 +270,18 @@ The data frame consists of 5 data blocks:
     <tr>
       <td>LENGTH</td>
       <td>1</td>
-      <td>Total bytes after HEADER (INSTRUCTION + DATA + CRC)</td>
-      <td></td>
+      <td>Total bytes after HEADER</td>
+      <td>INSTRUCTION + DATA + CRC</td>
     </tr>
     <tr>
       <td>INSTRUCTION</td>
       <td>1</td>
-      <td>Command type</td>
+      <td>Instruction Code</td>
       <td>0x82 : Write<br>0x83 : Read</td>
     </tr>
     <tr>
       <td>DATA</td>
-      <td>0-249</td>
+      <td>0 - 249</td>
       <td>Payload data</td>
       <td></td>
     </tr>
@@ -289,7 +289,7 @@ The data frame consists of 5 data blocks:
       <td>CRC</td>
       <td>2</td>
       <td>Cyclic Redundancy Check</td>
-      <td>$x^16 + x^15 + x^2 + 1$</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
