@@ -18,6 +18,7 @@
 ### 2.1.2. Output Scope
 - Cut
 - Coag
+
 ## 2.2. Return Electrode Monitor (REM)
 ### 2.2.1. Schematic
 
@@ -68,9 +69,11 @@ Using the formula above, we have the following ADC values for different pad resi
 ### 2.3.1. PWM Generator
 #### 2.3.1.1. Using the Remote Control Module (RMT) of ESP32 for Generating PWM Signals
 The Remote Control Module (RMT) on the ESP32 is a versatile hardware peripheral designed primarily for sending and receiving infrared signals. However, it can also be effectively utilized to generate precise Pulse Width Modulation (PWM) signals.
+
 #### 2.3.1.2. Key Concepts
 - Duty Cycle:<br>The duty cycle of a PWM signal is the percentage of one cycle in which the signal is high (on) versus low (off). It is typically expressed as a value between 0 and 100.
 - Total Period:<br>The total period of the PWM signal is the sum of the HIGH time and LOW time.
+
 #### 2.3.1.3. Configuration
 ##### a. Clock Divider
 The clock divider is a crucial parameter in microcontroller and digital circuit design that determines the frequency of a clock signal by dividing the input clock frequency, which is APB_CLK (80 MHz) for ESP32.
@@ -239,7 +242,60 @@ For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, 
 
 </div>
 
-### 2.3.2. Serial Communication
+### 2.3.2. Communication Protocol
+The system UART mode is fixed to 8N1, and the baud rate is 115200.
+
+**Frame Structure**
+The data frame consists of 5 data blocks:
+
+```[HEADER] [LENGTH] [INSTRUCTION] [DATA] [CRC]```
+
+**Frame Components**
+<table>
+  <thead>
+    <tr>
+      <td>Block</td>
+      <td>Size [byte]</td>
+      <td>Description</td>
+      <td>Example</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HEADER</td>
+      <td>2</td>
+      <td>Frame start marker</td>
+      <td>0x5A 0XA5</td>
+    </tr>
+    <tr>
+      <td>LENGTH</td>
+      <td>1</td>
+      <td>Total bytes after ```HEADER```</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>INSTRUCTION</td>
+      <td>1</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>DATA</td>
+      <td>0-249</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>CRC</td>
+      <td>2</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+#### 
+
 #### 2.3.2.1. 1 Parameters <[command]>
 - Description: Single parameter command for basic system operations.
 - Parameters:
@@ -528,7 +584,7 @@ $Total \ Wire \ Length \ Needed = Total \ Length_{\ p} + Total \ Length_{\ s}$
 
 $Total \ Wire \ Length \ Needed = 16.64 + 17.17 = 33.81 \ m$ -->
 
-##### i. Calculation Results Table for 400kHz and 100kHz
+##### j. Calculation Results Table for 400kHz and 100kHz
 
 <div align="center">
   <table>
@@ -706,7 +762,7 @@ The image illustrates the output scope at output transformer 100kHz with PWM fre
   <img src="pic/PWM/XF/Bipolar/12V/bipolar-xformer-output-400.png" alt="bipolar-xformer-output-400">
 </p> -->
 
-### 2.4.3 LC Filter
+### 2.4.3. LC Filter
 **Type 1 Butterworth Filter: Differential Filter**
 
 A Type 1 Butterworth filter is a second-order low-pass filter that provides a maximally flat frequency response in the passband. The "Type 1" designation typically refers to the specific topology or configuration of the filter circuit. In the context of differential filters, this often means a balanced configuration that processes differential signals (signals with equal and opposite components).
@@ -723,7 +779,7 @@ A differential filter is designed to handle differential signals, which are comm
 - Symmetrical Design<br>
   The filter components are arranged symmetrically to ensure equal processing of both signal components.
 
-#### 2.4.3.1 Design and Calculation
+#### 2.4.3.1. Design and Calculation
 ##### a. Output Class-D LC Filter Frequency Response Properties
 The frequency response of the second-order class-D LC output filter is critical when selecting the component values for the inductor and capacitor. The LC filter response also varies with load impedance. The load impedance determines the damping ratio of the output LC filter and is classified as:
 - Overdamped
@@ -1025,9 +1081,9 @@ Disadvantages:
 
     $L = \frac{ 0.007925 • 70^2 • 13^2} { (3 • 3) + (9 • 16) + (10 • 5) } = 28.14 \text{ µH}$
 
-#### 2.4.3.2 Output Scope
+#### 2.4.3.2. Output Scope
 ##### a. 400kHz
-###### a.1 R=500Ω
+###### a.1. R=500Ω
 The image illustrates the output scope of the 400kHz PWM signal at the output transformer combined with the LC filter and R=500Ω. The 400kHz PWM signal exhibits three distinct pulse patterns that repeat cyclically:
 - Pattern 1: 20 pulses per modulation
 - Pattern 2: 18 pulses per modulation
@@ -1567,7 +1623,7 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
 
    **Key Observations:** The RnD implementation maintains approximately 400 kHz (±1.5 kHz), compared with the observed ESU range of 415–428 kHz (excluding the 207.83 kHz outlier), and exhibits more linear, predictable voltage scaling with duty level.
 
-###### a.2 R=100Ω
+###### a.2. R=100Ω
 The image illustrates the output scope of the 400kHz PWM signal at the output transformer combined with the LC filter and R=100Ω.
 
 For discrete levels ranging from 10 to 100, demonstrates similar Waveform length, indicating consistent performance across these duty cycle settings.
@@ -1815,6 +1871,9 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
   </table>
 </div>
 
+##
+
+##
 <!-- Air Core Axial Inductor
 | N1  | N2  |
 |----:|----:|

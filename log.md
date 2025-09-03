@@ -1,7 +1,14 @@
+2025-09-03
+- firmware coding: feat/crc16_ibm
+- firmware coding: feat/assemble-data-frame
+
+2025-09-02
+- Menulis tabel komparasi output scope (Rload 500Ω) [Need Review]
+- Desain ESU-UI page, button, icon [In Progress]
+
 2025-09-01
 - Firmware coding: feat/return-electrode-monitoring [Need Review]
 - Menulis tabel komparasi output scope (Rload 500Ω) [In Progress]
-
 
 2025-08-29
 - Menulis tabel komparasi output scope (Rload 500Ω) [In Progress]
