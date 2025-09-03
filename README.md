@@ -247,6 +247,7 @@ The system UART mode is fixed to 8N1, and the baud rate is 115200.
 
 **Frame Structure**
 The data frame consists of 5 data blocks:
+
 ```[HEADER] [LENGTH] [INSTRUCTION] [DATA] [CRC]```
 
 **Frame Components**
@@ -256,7 +257,7 @@ The data frame consists of 5 data blocks:
       <td>Block</td>
       <td>Size [byte]</td>
       <td>Description</td>
-      <td>Example</td>
+      <td>Value</td>
     </tr>
   </thead>
   <tbody>
@@ -269,26 +270,26 @@ The data frame consists of 5 data blocks:
     <tr>
       <td>LENGTH</td>
       <td>1</td>
-      <td>Total bytes after ```HEADER```</td>
+      <td>Total bytes after HEADER (INSTRUCTION + DATA + CRC)</td>
       <td></td>
     </tr>
     <tr>
       <td>INSTRUCTION</td>
       <td>1</td>
-      <td></td>
-      <td></td>
+      <td>Command type</td>
+      <td>0x82 : Write<br>0x83 : Read</td>
     </tr>
     <tr>
       <td>DATA</td>
       <td>0-249</td>
-      <td></td>
+      <td>Payload data</td>
       <td></td>
     </tr>
     <tr>
       <td>CRC</td>
       <td>2</td>
-      <td></td>
-      <td></td>
+      <td>Cyclic Redundancy Check</td>
+      <td>$x^16 + x^15 + x^2 + 1$</td>
     </tr>
   </tbody>
 </table>
