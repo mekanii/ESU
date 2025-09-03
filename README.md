@@ -246,11 +246,13 @@ For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, 
 The system UART mode is fixed to 8N1, and the baud rate is 115200.
 
 **Frame Structure**
+
 The data frame consists of 5 data blocks:
 
-```[HEADER] [LENGTH] [INSTRUCTION] [DATA] [CRC]```
+```[HEADER] [LENGTH] [INSTRUCTION] [PAYLOAD] [CRC]```
 
 **Frame Components**
+
 <table>
   <thead>
     <tr>
@@ -280,8 +282,8 @@ The data frame consists of 5 data blocks:
       <td>0x82 : Write<br>0x83 : Read</td>
     </tr>
     <tr>
-      <td>DATA</td>
-      <td>0 - 249</td>
+      <td>PAYLOAD</td>
+      <td>0 - 3</td>
       <td>Payload data</td>
       <td></td>
     </tr>
@@ -294,46 +296,83 @@ The data frame consists of 5 data blocks:
   </tbody>
 </table>
 
-#### 
+#### 2.3.2.1. Read
+**Instruction Code: 0x83**
 
-#### 2.3.2.1. 1 Parameters <[command]>
-- Description: Single parameter command for basic system operations.
+The `PAYLOAD` frame consist 3 - 4 data blocks:
+
+```[VP ADDRESS] [NUMBER OF WORDS] [DATA 1] [DATA 2]```
+
+<table>
+  <thead>
+    <tr>
+      <td>Block</td>
+      <td>Size [byte]</td>
+      <td>Description</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>VP ADDRESS</td>
+      <td>2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NUMBER OF WORDS</td>
+      <td>1 - 2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>DATA 1</td>
+      <td>2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>DATA 2</td>
+      <td>2</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+##### a. 1 Data Block <[COMMAND]>
+- Description: Single data block command for basic system operations.
 - Parameters:
-  - command: Command identifier
+  - COMMAND: Command identifier
 
 
 
-| Command |	Description 	            | Example | Success Response  | Error Response  |
+| COMMAND |	Description 	            | Example | Success Response  | Error Response  |
 |:-------:|:------------------------- |:------- |:-----------------:|:---------------:|
 | 0       | System status query       | 0       | 00                | N/A             |
 | 1       | System reset              | 1       | 00                | 02              |
 | 2       | Stop all RMT transmission |	2	      | 00                | N/A             |
 | Other   | Invalid                   | 3       | N/A               | 02              |
 
-#### 2.3.2.2. 2 Parameters <[command] [data1]>
-##### command = 0
+##### b. 2 Data Blocks <[COMMAND] [DATA 1]>
+###### COMMAND = 0
 - Description: Mode selection command without discrete level adjustment.
 - Parameters:
-  - command: Command identifier, must be 0
-  - data1: Mode selection (0-5)
+  - COMMAND: Command identifier, must be 0
+  - DATA 1: Mode selection (0-5)
 
-| data1 |	Auto-assigned Channel | Description       | Example |	Success Response  |	Error Response  |
-|:-----:|:---------------------:|:----------------- |:------- |:-----------------:|:---------------:|
-| 0     |	Channel 0             |	Pure cut          | 0 0     |	00	              | N/A             |
-| 1     |	Channel 0             |	Cut pattern 1     | 0 1     |	00	              | N/A             |
-| 2     |	Channel 0             |	Cut pattern 2     | 0 2     |	00	              | N/A             |
-| 3     |	Channel 1             |	Coag Spray        | 0 3     |	00	              | N/A             |
-| 4     |	Channel 1             |	Coag Forced       | 0 4     |	00	              | N/A             |
-| 5     |	Channel 1             |	Bipolar Standard  | 0 5     |	00	              | N/A             |
-| Other |	N/A	                  | Invalid           | 0 6     | N/A	              | 02              |
+| DATA 1 |	Auto-assigned Channel | Description       | Example |	Success Response  |	Error Response  |
+|:------:|:----------------------:|:----------------- |:------- |:-----------------:|:---------------:|
+| 0      |	Channel 0             |	Pure cut          | 0 0     |	00	              | N/A             |
+| 1      |	Channel 0             |	Cut pattern 1     | 0 1     |	00	              | N/A             |
+| 2      |	Channel 0             |	Cut pattern 2     | 0 2     |	00	              | N/A             |
+| 3      |	Channel 1             |	Coag Spray        | 0 3     |	00	              | N/A             |
+| 4      |	Channel 1             |	Coag Forced       | 0 4     |	00	              | N/A             |
+| 5      |	Channel 1             |	Bipolar Standard  | 0 5     |	00	              | N/A             |
+| Other  |	N/A	                  | Invalid           | 0 6     | N/A	              | 02              |
 
-#### 2.3.2.3. 3 Parameters <[command] [data1] [data2]>
-##### command = 1
+##### c. 3 Data Blocks <[COMMAND] [DATA 1] [DATA 2]>
+###### COMMAND = 1
 - Description: Mode and discrete level adjustment command.
 - Parameters:
-  - command: Command identifier, must be 1
-  - data1: Mode selection (0-5)
-  - data2: discrete level value (range varies by mode)
+  - COMMAND: Command identifier, must be 1
+  - DATA 1: Mode selection (0-5)
+  - DATA 2: discrete level value (range varies by mode)
 
 | Mode  |	Discrete Level  |	Description         |	Example |	Success Response  |	Error Response  |
 |:-----:|:---------------:|:------------------- |:------- |:-----------------:|:---------------:|
@@ -344,6 +383,8 @@ The data frame consists of 5 data blocks:
 | 4     |	        0 - 500 |	Coag Forced         |	1 4 300 |	00	              | 02              |
 | 5     |	        0 - 200 |	Bipolar Standard    |	1 5 80  |	00	              | 02              |
 | Other |	            N/A	| Invalid	            | 1 6 100 |	N/A	              | 02              |
+
+#### 2.3.2.2. Write
 
 ## 2.4. Power Stage
 ### 2.4.1. HF Switch
