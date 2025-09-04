@@ -346,8 +346,8 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td>System status query</td>
       <td>(byte) dt_50[0]</td>
       <td>
-        <pre>5A A5 08 83 50 00 01 00 [data] CRC:L CRC:H</pre>
-        <pre>5A A5 08 82 50 00 01 00 [data] CRC:L CRC:H</pre>
+        <code>5A A5 08 83 50 00 01 00 [data] CRC:L CRC:H</code>
+        <code>5A A5 08 82 50 00 01 00 [data] CRC:L CRC:H</code>
       </td>
       <td></td>
     </tr>
@@ -356,8 +356,8 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td>System reset</td>
       <td>(byte) dt_50[1]</td>
       <td>
-        <pre>5A A5 08 83 50 01 01 00 [data] CRC:L CRC:H</pre>
-        <pre>5A A5 08 82 50 01 01 00 [data] CRC:L CRC:H</pre>
+        <code>5A A5 08 83 50 01 01 00 [data] CRC:L CRC:H</code>
+        <code>5A A5 08 82 50 01 01 00 [data] CRC:L CRC:H</code>
       </td>
       <td></td>
     </tr>
@@ -366,9 +366,9 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td>Stop all RMT transmission</td>
       <td>(byte) dt_50[2]</td>
       <td>
-        <pre>5A A5 08 83 50 02 01 00 [data] CRC:L CRC:H</pre>
+        <code>5A A5 08 83 50 02 01 00 [data] CRC:L CRC:H</code>
         <br>
-        <pre>5A A5 08 82 50 02 01 00 [data] CRC:L CRC:H</pre>
+        <code>5A A5 08 82 50 02 01 00 [data] CRC:L CRC:H</code>
       </td>
       <td></td>
     </tr>
@@ -393,8 +393,8 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td>Mode Selection Cut</td>
         <td>(int) dt_51[0]</td>
         <td>
-          <pre>5A A5 08 83 50 00 01 00 [data] CRC:L CRC:H</pre>
-          <pre>5A A5 08 82 50 00 01 00 [data] CRC:L CRC:H</pre>
+          <code>5A A5 08 83 50 00 01 00 [data] CRC:L CRC:H</code>
+          <code>5A A5 08 82 50 00 01 00 [data] CRC:L CRC:H</code>
         </td>
         <td></td>
       </tr>
@@ -403,8 +403,8 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td>Mode Selection Coag</td>
         <td>(int) dt_51[1]</td>
         <td>
-          <pre>5A A5 08 83 50 01 01 00 [data] CRC:L CRC:H</pre>
-          <pre>5A A5 08 82 50 01 01 00 [data] CRC:L CRC:H</pre>
+          <code>5A A5 08 83 50 01 01 00 [data] CRC:L CRC:H</code>
+          <code>5A A5 08 82 50 01 01 00 [data] CRC:L CRC:H</code>
         </td>
         <td></td>
       </tr>
