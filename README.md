@@ -335,18 +335,18 @@ The `PAYLOAD` frame consist 3 data blocks:
     <tr>
       <td>VP ADDRESS</td>
       <td>Description</td>
-      <td>DATA</td>
+      <td>Variable</td>
       <td>Data Frame: Read</td>
       <td>Response</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>50 00</td>
+      <td><code>50 00</code></td>
       <td>System status query</td>
       <td>(byte) dt_50[0]</td>
       <td>
-        <pre>5A A5 08 83 50 00 01 00 [dt_50[0]] CRC:L CRC:H</pre>
+        <pre>5A A5 08 83 50 00 01 00 [data] CRC:L CRC:H</pre>
         <pre>5A A5 08 82 50 00 01 00 [data] CRC:L CRC:H</pre>
       </td>
       <td></td>
@@ -356,7 +356,7 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td>System reset</td>
       <td>(byte) dt_50[1]</td>
       <td>
-        <pre>5A A5 08 83 50 01 01 00 [dt_50[1]] CRC:L CRC:H</pre>
+        <pre>5A A5 08 83 50 01 01 00 [data] CRC:L CRC:H</pre>
         <pre>5A A5 08 82 50 01 01 00 [data] CRC:L CRC:H</pre>
       </td>
       <td></td>
@@ -365,7 +365,11 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td>0x50 0x02</td>
       <td>Stop all RMT transmission</td>
       <td>(byte) dt_50[2]</td>
-      <td>0x5A 0xA5 0x08 0x83 0x50 0x02 0x01 0x00 [dt_50[2]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x02 0x01 0x00 [data] 0xCRC:L 0xCRC:H</td>
+      <td>
+        <pre>5A A5 08 83 50 02 01 00 [data] CRC:L CRC:H</pre>
+        <br>
+        <pre>5A A5 08 82 50 02 01 00 [data] CRC:L CRC:H</pre>
+      </td>
       <td></td>
     </tr>
   </tbody>
@@ -378,7 +382,7 @@ The `PAYLOAD` frame consist 3 data blocks:
       <tr>
         <td>VP ADDRESS</td>
         <td>Description</td>
-        <td>DATA</td>
+        <td>Variable</td>
         <td>Data Frame</td>
         <td>Response</td>
       </tr>
@@ -388,19 +392,19 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td>51 00</td>
         <td>Mode Selection Cut</td>
         <td>(int) dt_51[0]</td>
-        <td style="padding: 0;">
-          <pre>5A A5 08 83 50 00 01 00 [dt_51[0]] CRC:L CRC:H</pre>
-          <pre>5A A5 08 82 50 00 01 00 [dt_51[0]] CRC:L CRC:H</pre>
+        <td>
+          <pre>5A A5 08 83 50 00 01 00 [data] CRC:L CRC:H</pre>
+          <pre>5A A5 08 82 50 00 01 00 [data] CRC:L CRC:H</pre>
         </td>
         <td></td>
       </tr>
       <tr>
         <td>51 01</td>
         <td>Mode Selection Coag</td>
-        <td>(byte) dt_51[1]</td>
+        <td>(int) dt_51[1]</td>
         <td>
-          <pre>5A A5 08 83 50 01 01 00 [dt_50[1]] CRC:L CRC:H</pre>
-          <pre>5A A5 08 82 50 01 01 00 [dt_50[1]] CRC:L CRC:H</pre>
+          <pre>5A A5 08 83 50 01 01 00 [data] CRC:L CRC:H</pre>
+          <pre>5A A5 08 82 50 01 01 00 [data] CRC:L CRC:H</pre>
         </td>
         <td></td>
       </tr>
