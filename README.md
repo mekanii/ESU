@@ -347,7 +347,6 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td>(byte) dt_50[0]</td>
       <td>
         <pre>5A A5 08 83 50 00 01 00 [dt_50[0]] CRC:L CRC:H</pre>
-        <br>
         <pre>5A A5 08 82 50 00 01 00 [data] CRC:L CRC:H</pre>
       </td>
       <td></td>
@@ -358,7 +357,6 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td>(byte) dt_50[1]</td>
       <td>
         <pre>5A A5 08 83 50 01 01 00 [dt_50[1]] CRC:L CRC:H</pre>
-        <br>
         <pre>5A A5 08 82 50 01 01 00 [data] CRC:L CRC:H</pre>
       </td>
       <td></td>
@@ -390,9 +388,8 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td>51 00</td>
         <td>Mode Selection Cut</td>
         <td>(int) dt_51[0]</td>
-        <td>
+        <td style="padding: 0;">
           <pre>5A A5 08 83 50 00 01 00 [dt_51[0]] CRC:L CRC:H</pre>
-          <br>
           <pre>5A A5 08 82 50 00 01 00 [dt_51[0]] CRC:L CRC:H</pre>
         </td>
         <td></td>
@@ -403,7 +400,6 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td>(byte) dt_51[1]</td>
         <td>
           <pre>5A A5 08 83 50 01 01 00 [dt_50[1]] CRC:L CRC:H</pre>
-          <br>
           <pre>5A A5 08 82 50 01 01 00 [dt_50[1]] CRC:L CRC:H</pre>
         </td>
         <td></td>
