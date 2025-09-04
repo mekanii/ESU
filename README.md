@@ -342,17 +342,25 @@ The `PAYLOAD` frame consist 3 data blocks:
   </thead>
   <tbody>
     <tr>
-      <td>0x50 0x00</td>
+      <td>50 00</td>
       <td>System status query</td>
       <td>(byte) dt_50[0]</td>
-      <td>0x5A 0xA5 0x08 0x83 0x50 0x00 0x01 0x00 [dt_50[0]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x00 0x01 0x00 [data] 0xCRC:L 0xCRC:H</td>
+      <td>
+        <pre>5A A5 08 83 50 00 01 00 [dt_50[0]] CRC:L CRC:H</pre>
+        <br>
+        <pre>5A A5 08 82 50 00 01 00 [data] CRC:L CRC:H</pre>
+      </td>
       <td></td>
     </tr>
     <tr>
       <td>0x50 0x01</td>
       <td>System reset</td>
       <td>(byte) dt_50[1]</td>
-      <td>0x5A 0xA5 0x08 0x83 0x50 0x01 0x01 0x00 [dt_50[1]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x01 0x01 0x00 [data] 0xCRC:L 0xCRC:H</td>
+      <td>
+        <pre>5A A5 08 83 50 01 01 00 [dt_50[1]] CRC:L CRC:H</pre>
+        <br>
+        <pre>5A A5 08 82 50 01 01 00 [data] CRC:L CRC:H</pre>
+      </td>
       <td></td>
     </tr>
     <tr>
@@ -379,17 +387,25 @@ The `PAYLOAD` frame consist 3 data blocks:
     </thead>
     <tbody>
       <tr>
-        <td>0x51 0x00</td>
+        <td>51 00</td>
         <td>Mode Selection Cut</td>
         <td>(int) dt_51[0]</td>
-        <td>0x5A 0xA5 0x08 0x83 0x50 0x00 0x01 0x00 [dt_51[0]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x00 0x01 0x00 [dt_51[0]] 0xCRC:L 0xCRC:H</td>
+        <td>
+          <pre>5A A5 08 83 50 00 01 00 [dt_51[0]] CRC:L CRC:H</pre>
+          <br>
+          <pre>5A A5 08 82 50 00 01 00 [dt_51[0]] CRC:L CRC:H</pre>
+        </td>
         <td></td>
       </tr>
       <tr>
-        <td>0x51 0x01</td>
+        <td>51 01</td>
         <td>Mode Selection Coag</td>
         <td>(byte) dt_51[1]</td>
-        <td>0x5A 0xA5 0x08 0x83 0x50 0x01 0x01 0x00 [dt_50[1]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x01 0x01 0x00 [dt_50[1]] 0xCRC:L 0xCRC:H</td>
+        <td>
+          <pre>5A A5 08 83 50 01 01 00 [dt_50[1]] CRC:L CRC:H</pre>
+          <br>
+          <pre>5A A5 08 82 50 01 01 00 [dt_50[1]] CRC:L CRC:H</pre>
+        </td>
         <td></td>
       </tr>
     </tbody>
