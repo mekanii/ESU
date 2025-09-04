@@ -243,6 +243,7 @@ For discrete levels ranging from 10 to 100, demonstrates similar PWM frequency, 
 </div>
 
 ### 2.3.2. Communication Protocol
+<!-- 0x5000-0x7FFF can be used as the variable address range; 0x8000-0xFFFF -->
 The system UART mode is fixed to 8N1, and the baud rate is 115200.
 
 **Frame Structure**
@@ -296,12 +297,9 @@ The data frame consists of 5 data blocks:
   </tbody>
 </table>
 
-#### 2.3.2.1. Read
-**Instruction Code: 0x83**
+The `PAYLOAD` frame consist 3 data blocks:
 
-The `PAYLOAD` frame consist 3 - 4 data blocks:
-
-```[VP ADDRESS] [NUMBER OF WORDS] [DATA 1] [DATA 2]```
+```[VP ADDRESS] [NUMBER OF WORDS] [DATA]```
 
 <table>
   <thead>
@@ -315,39 +313,85 @@ The `PAYLOAD` frame consist 3 - 4 data blocks:
     <tr>
       <td>VP ADDRESS</td>
       <td>2</td>
-      <td></td>
+      <td>Variable Pointer address to read from</td>
     </tr>
     <tr>
       <td>NUMBER OF WORDS</td>
-      <td>1 - 2</td>
+      <td>1</td>
+      <td>Number of data words to read (always 1)</td>
+    </tr>
+    <tr>
+      <td>DATA</td>
+      <td>2</td>
+      <td>Data word read from the specified VP address</td>
+    </tr>
+  </tbody>
+</table>
+
+#### 2.3.2.1. Basic System Operations
+<table>
+  <thead>
+    <tr>
+      <td>VP ADDRESS</td>
+      <td>Description</td>
+      <td>DATA</td>
+      <td>Data Frame: Read</td>
+      <td>Response</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0x50 0x00</td>
+      <td>System status query</td>
+      <td>(byte) dt_50[0]</td>
+      <td>0x5A 0xA5 0x08 0x83 0x50 0x00 0x01 0x00 [dt_50[0]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x00 0x01 0x00 [data] 0xCRC:L 0xCRC:H</td>
       <td></td>
     </tr>
     <tr>
-      <td>DATA 1</td>
-      <td>2</td>
+      <td>0x50 0x01</td>
+      <td>System reset</td>
+      <td>(byte) dt_50[1]</td>
+      <td>0x5A 0xA5 0x08 0x83 0x50 0x01 0x01 0x00 [dt_50[1]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x01 0x01 0x00 [data] 0xCRC:L 0xCRC:H</td>
       <td></td>
     </tr>
     <tr>
-      <td>DATA 2</td>
-      <td>2</td>
+      <td>0x50 0x02</td>
+      <td>Stop all RMT transmission</td>
+      <td>(byte) dt_50[2]</td>
+      <td>0x5A 0xA5 0x08 0x83 0x50 0x02 0x01 0x00 [dt_50[2]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x02 0x01 0x00 [data] 0xCRC:L 0xCRC:H</td>
       <td></td>
     </tr>
   </tbody>
 </table>
 
-##### a. 1 Data Block <[COMMAND]>
-- Description: Single data block command for basic system operations.
-- Parameters:
-  - COMMAND: Command identifier
-
-
-
-| COMMAND |	Description 	            | Example | Success Response  | Error Response  |
-|:-------:|:------------------------- |:------- |:-----------------:|:---------------:|
-| 0       | System status query       | 0       | 00                | N/A             |
-| 1       | System reset              | 1       | 00                | 02              |
-| 2       | Stop all RMT transmission |	2	      | 00                | N/A             |
-| Other   | Invalid                   | 3       | N/A               | 02              |
+#### 2.3.2.2. Mode selection command without discrete level adjustment
+<table>
+  <thead>
+    <tr>
+      <td>VP ADDRESS</td>
+      <td>Description</td>
+      <td>DATA</td>
+      <td>Data Frame</td>
+      <td>Response</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0x51 0x00</td>
+      <td>Mode Selection Cut</td>
+      <td>(int) dt_51[0]</td>
+      <td>0x5A 0xA5 0x08 0x83 0x50 0x00 0x01 0x00 [dt_51[0]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x00 0x01 0x00 [dt_51[0]] 0xCRC:L 0xCRC:H</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>0x51 0x01</td>
+      <td>Mode Selection Coag</td>
+      <td>(byte) dt_51[1]</td>
+      <td>0x5A 0xA5 0x08 0x83 0x50 0x01 0x01 0x00 [dt_50[1]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x01 0x01 0x00 [dt_50[1]] 0xCRC:L 0xCRC:H</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ##### b. 2 Data Blocks <[COMMAND] [DATA 1]>
 ###### COMMAND = 0
@@ -359,8 +403,8 @@ The `PAYLOAD` frame consist 3 - 4 data blocks:
 | DATA 1 |	Auto-assigned Channel | Description       | Example |	Success Response  |	Error Response  |
 |:------:|:----------------------:|:----------------- |:------- |:-----------------:|:---------------:|
 | 0      |	Channel 0             |	Pure cut          | 0 0     |	00	              | N/A             |
-| 1      |	Channel 0             |	Cut pattern 1     | 0 1     |	00	              | N/A             |
-| 2      |	Channel 0             |	Cut pattern 2     | 0 2     |	00	              | N/A             |
+| 1      |	Channel 0             |	Cut pattern 2     | 0 1     |	00	              | N/A             |
+| 2      |	Channel 0             |	Cut pattern 3     | 0 2     |	00	              | N/A             |
 | 3      |	Channel 1             |	Coag Spray        | 0 3     |	00	              | N/A             |
 | 4      |	Channel 1             |	Coag Forced       | 0 4     |	00	              | N/A             |
 | 5      |	Channel 1             |	Bipolar Standard  | 0 5     |	00	              | N/A             |
