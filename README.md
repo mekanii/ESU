@@ -333,45 +333,33 @@ The `PAYLOAD` frame consist 3 data blocks:
 <table>
   <thead>
     <tr>
-      <td>VP ADDRESS</td>
-      <td>Description</td>
+      <td>Command</td>
       <td>Variable</td>
-      <td>Data Frame: Read</td>
+      <td>VP ADDRESS</td>
+      <td>Data Frame</td>
       <td>Response</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>50 00</code></td>
       <td>System status query</td>
       <td><code>(byte) dt_50[0]</code></td>
-      <td>
-        <code>5A A5 08 83 50 00 01 00 [data] CRC:L CRC:H</code>
-        <br>
-        <code>5A A5 08 82 50 00 01 00 [data] CRC:L CRC:H</code>
-      </td>
+      <td><code>50 00</code></td>
+      <td><code>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</code></td>
       <td></td>
     </tr>
     <tr>
-      <td><code>50 01</code></td>
       <td>System reset</td>
       <td><code>(byte) dt_50[1]<code></td>
-      <td>
-        <code>5A A5 08 83 50 01 01 00 [data] CRC:L CRC:H</code>
-        <br>
-        <code>5A A5 08 82 50 01 01 00 [data] CRC:L CRC:H</code>
-      </td>
+      <td><code>50 01</code></td>
+      <td><code>5A A5 [INSTRUCTION] 83 50 01 01 00 [DATA] CRC:L CRC:H</code></td>
       <td></td>
     </tr>
     <tr>
-      <td><code>50 02</code></td>
       <td>Stop all RMT transmission</td>
       <td><code>(byte) dt_50[2]</code></td>
-      <td>
-        <code>5A A5 08 83 50 02 01 00 [data] CRC:L CRC:H</code>
-        <br>
-        <code>5A A5 08 82 50 02 01 00 [data] CRC:L CRC:H</code>
-      </td>
+      <td><code>50 02</code></td>
+      <td><code>5A A5 08 [INSTRUCTION] 50 02 01 00 [DATA] CRC:L CRC:H</code></td>
       <td></td>
     </tr>
   </tbody>
@@ -382,34 +370,26 @@ The `PAYLOAD` frame consist 3 data blocks:
   <table>
     <thead>
       <tr>
-        <td>VP ADDRESS</td>
-        <td>Description</td>
+        <td>Command</td>
         <td>Variable</td>
+        <td>VP ADDRESS</td>
         <td>Data Frame</td>
         <td>Response</td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><code>51 00</code></td>
         <td>Mode Selection Cut</td>
         <td><code>(int) dt_51[0]</code></td>
-        <td>
-          <code>5A A5 08 83 50 00 01 00 [data] CRC:L CRC:H</code>
-          <br>
-          <code>5A A5 08 82 50 00 01 00 [data] CRC:L CRC:H</code>
-        </td>
+        <td><code>51 00</code></td>
+        <td><code>5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H</code></td>
         <td></td>
       </tr>
       <tr>
-        <td><code>51 01</code></td>
         <td>Mode Selection Coag</td>
         <td><code>(int) dt_51[1]</code></td>
-        <td>
-          <code>5A A5 08 83 50 01 01 00 [data] CRC:L CRC:H</code>
-          <br>
-          <code>5A A5 08 82 50 01 01 00 [data] CRC:L CRC:H</code>
-        </td>
+        <td><code>51 01</code></td>
+        <td><code>5A A5 08 [INSTRUCTION] 50 01 01 00 [data] CRC:L CRC:H</code></td>
         <td></td>
       </tr>
     </tbody>
