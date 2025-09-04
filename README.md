@@ -329,6 +329,7 @@ The `PAYLOAD` frame consist 3 data blocks:
 </table>
 
 #### 2.3.2.1. Basic System Operations
+
 <table>
   <thead>
     <tr>
@@ -365,33 +366,35 @@ The `PAYLOAD` frame consist 3 data blocks:
 </table>
 
 #### 2.3.2.2. Mode selection command without discrete level adjustment
-<table>
-  <thead>
-    <tr>
-      <td>VP ADDRESS</td>
-      <td>Description</td>
-      <td>DATA</td>
-      <td>Data Frame</td>
-      <td>Response</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0x51 0x00</td>
-      <td>Mode Selection Cut</td>
-      <td>(int) dt_51[0]</td>
-      <td>0x5A 0xA5 0x08 0x83 0x50 0x00 0x01 0x00 [dt_51[0]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x00 0x01 0x00 [dt_51[0]] 0xCRC:L 0xCRC:H</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>0x51 0x01</td>
-      <td>Mode Selection Coag</td>
-      <td>(byte) dt_51[1]</td>
-      <td>0x5A 0xA5 0x08 0x83 0x50 0x01 0x01 0x00 [dt_50[1]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x01 0x01 0x00 [dt_50[1]] 0xCRC:L 0xCRC:H</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<div align=center>
+  <table>
+    <thead>
+      <tr>
+        <td>VP ADDRESS</td>
+        <td>Description</td>
+        <td>DATA</td>
+        <td>Data Frame</td>
+        <td>Response</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0x51 0x00</td>
+        <td>Mode Selection Cut</td>
+        <td>(int) dt_51[0]</td>
+        <td>0x5A 0xA5 0x08 0x83 0x50 0x00 0x01 0x00 [dt_51[0]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x00 0x01 0x00 [dt_51[0]] 0xCRC:L 0xCRC:H</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>0x51 0x01</td>
+        <td>Mode Selection Coag</td>
+        <td>(byte) dt_51[1]</td>
+        <td>0x5A 0xA5 0x08 0x83 0x50 0x01 0x01 0x00 [dt_50[1]] 0xCRC:L 0xCRC:H<br>0x5A 0xA5 0x08 0x82 0x50 0x01 0x01 0x00 [dt_50[1]] 0xCRC:L 0xCRC:H</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ##### b. 2 Data Blocks <[COMMAND] [DATA 1]>
 ###### COMMAND = 0
