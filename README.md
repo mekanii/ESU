@@ -330,22 +330,22 @@ The `PAYLOAD` frame consist 3 data blocks:
 
 #### 2.3.2.1. Basic System Operations
 
-<table>
+<table nowrap>
   <thead>
     <tr>
       <td>Command</td>
       <td>Variable</td>
-      <td>VP&nbsp;ADDRESS</td>
+      <td>VP ADDRESS</td>
       <td>Data Frame</td>
       <td>Response</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td nowrap>System status query</td>
+      <td>System status query</td>
       <td><code>(byte) dt_50[0]</code></td>
-      <td><code>50&nbsp;00</code></td>
-      <td><code>5A&nbsp;A5&nbsp;08&nbsp;[INSTRUCTION]&nbsp;50&nbsp;00&nbsp;01&nbsp;00&nbsp;[DATA]&nbsp;CRC:L&nbsp;CRC:H</code></td>
+      <td><code>50 00</code></td>
+      <td><code>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</code></td>
       <td></td>
     </tr>
     <tr>
