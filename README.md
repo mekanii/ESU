@@ -330,37 +330,37 @@ The `PAYLOAD` frame consist 3 data blocks:
 
 #### 2.3.2.1. Basic System Operations
 
-<table nowrap>
+<table>
   <thead>
     <tr>
-      <td>Command</td>
-      <td>Variable</td>
-      <td>VP ADDRESS</td>
-      <td>Data Frame</td>
-      <td>Response</td>
+      <td nowrap>Command</td>
+      <td nowrap>Variable</td>
+      <td nowrap>VP ADDRESS</td>
+      <td nowrap>Data Frame</td>
+      <td nowrap>Response</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>System status query</td>
-      <td><code>(byte) dt_50[0]</code></td>
-      <td><code>50 00</code></td>
-      <td><code>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</code></td>
-      <td></td>
+      <td nowrap>System status query</td>
+      <td nowrap><code>(byte) dt_50[0]</code></td>
+      <td nowrap><code>50 00</code></td>
+      <td nowrap><code>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</code></td>
+      <td nowrap></td>
     </tr>
     <tr>
-      <td>System reset</td>
-      <td><code>(byte) dt_50[1]<code></td>
-      <td><code>50 01</code></td>
-      <td><code>5A A5 [INSTRUCTION] 83 50 01 01 00 [DATA] CRC:L CRC:H</code></td>
-      <td></td>
+      <td nowrap>System reset</td>
+      <td nowrap><code>(byte) dt_50[1]<code></td>
+      <td nowrap><code>50 01</code></td>
+      <td nowrap><code>5A A5 [INSTRUCTION] 83 50 01 01 00 [DATA] CRC:L CRC:H</code></td>
+      <td nowrap></td>
     </tr>
     <tr>
-      <td>Stop all RMT transmission</td>
-      <td><code>(byte) dt_50[2]</code></td>
-      <td><code>50 02</code></td>
-      <td><code>5A A5 08 [INSTRUCTION] 50 02 01 00 [DATA] CRC:L CRC:H</code></td>
-      <td></td>
+      <td nowrap>Stop all RMT transmission</td>
+      <td nowrap><code>(byte) dt_50[2]</code></td>
+      <td nowrap><code>50 02</code></td>
+      <td nowrap><code>5A A5 08 [INSTRUCTION] 50 02 01 00 [DATA] CRC:L CRC:H</code></td>
+      <td nowrap></td>
     </tr>
   </tbody>
 </table>
