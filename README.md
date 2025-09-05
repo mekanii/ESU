@@ -367,7 +367,7 @@ The `PAYLOAD` frame consist 3 data blocks:
 
 #### 2.3.2.2. Mode selection command without discrete level adjustment
 <div align=center>
-  <table>
+  <table style="width: 0">
     <thead>
       <tr>
         <td>Command</td>
