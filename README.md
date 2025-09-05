@@ -329,9 +329,11 @@ The `PAYLOAD` frame consist 3 data blocks:
 </table>
 
 #### 2.3.2.1. Basic System Operations
+<div  style="overflow-x: scroll;">
 | Command             | Variable          | VP ADDRESS  | Data Frame                                              | Response  |
 |---------------------|-------------------|-------------|---------------------------------------------------------|-----------|
 | System status query | (byte) dt_50[0] | 50 00     | 5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H |     apapap      |
+</div>
 
     <!-- <tr>
       <td>System reset</td>
