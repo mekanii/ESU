@@ -382,7 +382,7 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td>Mode Selection Cut</td>
         <td><pre>(int) dt_51[0]</pre></td>
         <td><pre>51 00</pre></td>
-        <td><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H</pre></td>
+        <td style="white-space: nowrap"><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H</pre></td>
         <td></td>
       </tr>
       <tr>
