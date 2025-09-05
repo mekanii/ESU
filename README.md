@@ -366,8 +366,7 @@ The `PAYLOAD` frame consist 3 data blocks:
 </table>
 
 #### 2.3.2.2. Mode selection command without discrete level adjustment
-<div align=center>
-  <table style="width: 0">
+  <table>
     <thead>
       <tr>
         <td>Command</td>
@@ -382,7 +381,7 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td>Mode Selection Cut</td>
         <td><code>(int) dt_51[0]</code></td>
         <td><code>51 00</code></td>
-        <td style="white-space: nowrap"><code>5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H</code></td>
+        <td><code>5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H</code></td>
         <td></td>
       </tr>
       <tr>
@@ -394,7 +393,6 @@ The `PAYLOAD` frame consist 3 data blocks:
       </tr>
     </tbody>
   </table>
-</div>
 
 ##### b. 2 Data Blocks <[COMMAND] [DATA 1]>
 ###### COMMAND = 0
