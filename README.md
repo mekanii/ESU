@@ -343,23 +343,23 @@ The `PAYLOAD` frame consist 3 data blocks:
   <tbody>
     <tr>
       <td>System status query</td>
-      <td><pre>(byte) dt_50[0]</pre></td>
-      <td><pre>50 00</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><code>(byte) dt_50[0]</code></td>
+      <td><code>50 00</code></td>
+      <td><code>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</code></td>
       <td></td>
     </tr>
     <tr>
       <td>System reset</td>
-      <td><pre>(byte) dt_50[1]<pre></td>
-      <td><pre>50 01</pre></td>
-      <td><pre>5A A5 [INSTRUCTION] 83 50 01 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><code>(byte) dt_50[1]<code></td>
+      <td><code>50 01</code></td>
+      <td><code>5A A5 [INSTRUCTION] 83 50 01 01 00 [DATA] CRC:L CRC:H</code></td>
       <td></td>
     </tr>
     <tr>
       <td>Stop all RMT transmission</td>
-      <td><pre>(byte) dt_50[2]</pre></td>
-      <td><pre>50 02</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 50 02 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><code>(byte) dt_50[2]</code></td>
+      <td><code>50 02</code></td>
+      <td><code>5A A5 08 [INSTRUCTION] 50 02 01 00 [DATA] CRC:L CRC:H</code></td>
       <td></td>
     </tr>
   </tbody>
@@ -380,16 +380,16 @@ The `PAYLOAD` frame consist 3 data blocks:
     <tbody>
       <tr>
         <td>Mode Selection Cut</td>
-        <td><pre>(int) dt_51[0]</pre></td>
-        <td><pre>51 00</pre></td>
-        <td style="white-space: nowrap"><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H</pre></td>
+        <td><code>(int) dt_51[0]</code></td>
+        <td><code>51 00</code></td>
+        <td style="white-space: nowrap"><code>5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H</code></td>
         <td></td>
       </tr>
       <tr>
         <td>Mode Selection Coag</td>
-        <td><pre>(int) dt_51[1]</pre></td>
-        <td><pre>51 01</pre></td>
-        <td><pre>5A A5 08 [INSTRUCTION] 50 01 01 00 [data] CRC:L CRC:H</pre></td>
+        <td><code>(int) dt_51[1]</code></td>
+        <td><code>51 01</code></td>
+        <td><code>5A A5 08 [INSTRUCTION] 50 01 01 00 [data] CRC:L CRC:H</code></td>
         <td></td>
       </tr>
     </tbody>
