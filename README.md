@@ -333,7 +333,7 @@ The `PAYLOAD` frame consist 3 data blocks:
 
 | Command             | Variable          | VP ADDRESS  | Data Frame                                              | Response  |
 |---------------------|-------------------|-------------|---------------------------------------------------------|-----------|
-| System status query | (byte) dt_50[0] | 50 00     | 5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H |     apapap      |
+| <nobr>System status query</nobr> | (byte) dt_50[0] | 50 00     | 5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H |     apapap      |
 
 </div>
 
