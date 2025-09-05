@@ -354,7 +354,7 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td nowrap>System reset</td>
       <td><pre>(byte) dt_50[1]</pre></td>
       <td><pre>50 01</pre></td>
-      <td><pre>5A A5 [INSTRUCTION] 83 50 01 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 83 50 01 01 00 [DATA] CRC:L CRC:H</pre></td>
       <td nowrap></td>
     </tr>
     <tr></tr>
