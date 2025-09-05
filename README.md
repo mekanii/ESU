@@ -341,6 +341,7 @@ The `PAYLOAD` frame consist 3 data blocks:
     </tr>
   </thead>
   <tbody>
+    <tr></tr>
     <tr>
       <td nowrap>System status query</td>
       <td><pre>(byte) dt_50[0]</pre></td>
@@ -348,13 +349,15 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</pre></td>
       <td nowrap></td>
     </tr>
+    <tr></tr>
     <tr>
       <td nowrap>System reset</td>
-      <td><pre>(byte) dt_50[1]<pre></td>
+      <td><pre>(byte) dt_50[1]</pre></td>
       <td><pre>50 01</pre></td>
       <td><pre>5A A5 [INSTRUCTION] 83 50 01 01 00 [DATA] CRC:L CRC:H</pre></td>
       <td nowrap></td>
     </tr>
+    <tr></tr>
     <tr>
       <td nowrap>Stop all RMT transmission</td>
       <td><pre>(byte) dt_50[2]</pre></td>
