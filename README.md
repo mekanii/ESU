@@ -372,27 +372,29 @@ The `PAYLOAD` frame consist 3 data blocks:
   <table>
     <thead>
       <tr>
-        <td>Command</td>
-        <td>Variable</td>
-        <td>VP ADDRESS</td>
-        <td>Data Frame</td>
-        <td>Response</td>
+        <td nowrap>Command</td>
+        <td nowrap>Variable</td>
+        <td nowrap>VP ADDRESS</td>
+        <td nowrap>Data Frame</td>
+        <td nowrap>Response</td>
       </tr>
     </thead>
     <tbody>
+      <tr></tr>
       <tr>
-        <td>Mode Selection Cut</td>
-        <td> <pre>(int) dt_51[0] </pre></td>
-        <td> <pre>51 00 </pre></td>
-        <td> <pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H </pre></td>
-        <td></td>
+        <td nowrap>Mode Selection Cut</td>
+        <td><pre>(int) dt_51[0]</pre></td>
+        <td><pre>51 00</pre></td>
+        <td><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H</pre></td>
+        <td nowrap></td>
       </tr>
+      <tr></tr>
       <tr>
-        <td>Mode Selection Coag</td>
-        <td> <pre>(int) dt_51[1] </pre></td>
-        <td> <pre>51 01 </pre></td>
-        <td> <pre>5A A5 08 [INSTRUCTION] 50 01 01 00 [data] CRC:L CRC:H </pre></td>
-        <td></td>
+        <td nowrap>Mode Selection Coag</td>
+        <td><pre>(int) dt_51[1]</pre></td>
+        <td><pre>51 01</pre></td>
+        <td><pre>5A A5 08 [INSTRUCTION] 50 01 01 00 [data] CRC:L CRC:H</pre></td>
+        <td nowrap></td>
       </tr>
     </tbody>
   </table>
