@@ -329,15 +329,26 @@ The `PAYLOAD` frame consist 3 data blocks:
 </table>
 
 #### 2.3.2.1. Basic System Operations
-<div  style="overflow-x: scroll;">
 
-| Command             | Variable          | VP ADDRESS  | Data Frame                                              | Response  |
-|---------------------|-------------------|-------------|---------------------------------------------------------|-----------|
-| <nobr>System status query</nobr> | (byte) dt_50[0] | 50 00     | 5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H |     apapap      |
-
-</div>
-
-    <!-- <tr>
+<table>
+  <thead>
+    <tr>
+      <td>Command</td>
+      <td>Variable</td>
+      <td>VP ADDRESS</td>
+      <td>Data Frame</td>
+      <td>Response</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>System status query</td>
+      <td><code>(byte) dt_50[0]</code></td>
+      <td><code>50 00</code></td>
+      <td><code>5A&nbsp;A5&nbsp;08&nbsp;[INSTRUCTION]&nbsp;50&nbsp;00&nbsp;01&nbsp;00&nbsp;[DATA]&nbsp;CRC:L&nbsp;CRC:H</code></td>
+      <td></td>
+    </tr>
+    <tr>
       <td>System reset</td>
       <td><code>(byte) dt_50[1]<code></td>
       <td><code>50 01</code></td>
@@ -350,7 +361,9 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td><code>50 02</code></td>
       <td><code>5A A5 08 [INSTRUCTION] 50 02 01 00 [DATA] CRC:L CRC:H</code></td>
       <td></td>
-    </tr> -->
+    </tr>
+  </tbody>
+</table>
 
 #### 2.3.2.2. Mode selection command without discrete level adjustment
   <table>
