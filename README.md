@@ -345,7 +345,7 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td nowrap>System status query</td>
       <td nowrap><code>(byte) dt_50[0]</code></td>
       <td nowrap><code>50 00</code></td>
-      <td nowrap><code>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</code></td>
+      <td nowrap><code nowrap>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</code></td>
       <td nowrap></td>
     </tr>
     <tr>
