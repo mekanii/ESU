@@ -381,14 +381,14 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td>Mode Selection Cut</td>
         <td><code>(int) dt_51[0]</code></td>
         <td><code>51 00</code></td>
-        <td><span style="white-space: nowrap"><code>5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H</code></span></td>
+        <td><span style="white-space: nowrap">5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H</span></td>
         <td></td>
       </tr>
       <tr>
         <td>Mode Selection Coag</td>
         <td><code>(int) dt_51[1]</code></td>
         <td><code>51 01</code></td>
-        <td><span style="white-space: nowrap"><code>5A A5 08 [INSTRUCTION] 50 01 01 00 [data] CRC:L CRC:H</code></span></td>
+        <td><span style="white-space: nowrap">5A A5 08 [INSTRUCTION] 50 01 01 00 [data] CRC:L CRC:H</span></td>
         <td></td>
       </tr>
     </tbody>
