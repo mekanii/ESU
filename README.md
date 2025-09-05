@@ -335,15 +335,15 @@ The `PAYLOAD` frame consist 3 data blocks:
     <tr>
       <td>Command</td>
       <td>Variable</td>
-      <td>VP ADDRESS</td>
+      <td>VP&nbsp;ADDRESS</td>
       <td>Data Frame</td>
       <td>Response</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>System&nbsp;status&nbsp;query</td>
-      <td><code>(byte)&nbsp;dt_50[0]</code></td>
+      <td style="white-space: nowrap">System status query</td>
+      <td><code>(byte) dt_50[0]</code></td>
       <td><code>50&nbsp;00</code></td>
       <td><code>5A&nbsp;A5&nbsp;08&nbsp;[INSTRUCTION]&nbsp;50&nbsp;00&nbsp;01&nbsp;00&nbsp;[DATA]&nbsp;CRC:L&nbsp;CRC:H</code></td>
       <td></td>
