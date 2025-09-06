@@ -376,6 +376,7 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td nowrap>Variable</td>
         <td nowrap>VP ADDRESS</td>
         <td nowrap>Data Frame</td>
+        <td nowrap>DATA</td>
         <td nowrap>Response</td>
       </tr>
     </thead>
@@ -385,7 +386,12 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td nowrap>Mode Selection Cut</td>
         <td><pre>(int) dt_51[0]</pre></td>
         <td><pre>51 00</pre></td>
-        <td><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [data] CRC:L CRC:H</pre></td>
+        <td><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</pre></td>
+        <td nowrap>
+          <pre>0</pre>: 400kHz - Pattern 1<br>
+          <pre>1</pre>: 400kHz - Pattern 2<br>
+          <pre>2</pre>: 400kHz - Pattern 3
+        </td>
         <td nowrap></td>
       </tr>
       <tr></tr>
@@ -393,7 +399,12 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td nowrap>Mode Selection Coag</td>
         <td><pre>(int) dt_51[1]</pre></td>
         <td><pre>51 01</pre></td>
-        <td><pre>5A A5 08 [INSTRUCTION] 50 01 01 00 [data] CRC:L CRC:H</pre></td>
+        <td><pre>5A A5 08 [INSTRUCTION] 50 01 01 00 [DATA] CRC:L CRC:H</pre></td>
+        <td nowrap>
+          <pre>0</pre>: 25kHz<br>
+          <pre>1</pre>: 20kHz<br>
+          <pre>2</pre>: Bipolar Standard
+        </td>
         <td nowrap></td>
       </tr>
     </tbody>
