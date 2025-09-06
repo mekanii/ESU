@@ -388,9 +388,9 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td><pre>51 00</pre></td>
         <td><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</pre></td>
         <td nowrap>
-          <pre>0</pre>: 400kHz - Pattern 1<br>
-          <pre>1</pre>: 400kHz - Pattern 2<br>
-          <pre>2</pre>: 400kHz - Pattern 3
+          <pre>0: 400kHz - Pattern 1</pre>
+          <pre>1: 400kHz - Pattern 2</pre>
+          <pre>2: 400kHz - Pattern 3</pre>
         </td>
         <td nowrap></td>
       </tr>
@@ -401,9 +401,9 @@ The `PAYLOAD` frame consist 3 data blocks:
         <td><pre>51 01</pre></td>
         <td><pre>5A A5 08 [INSTRUCTION] 50 01 01 00 [DATA] CRC:L CRC:H</pre></td>
         <td nowrap>
-          <pre>0</pre>: 25kHz<br>
-          <pre>1</pre>: 20kHz<br>
-          <pre>2</pre>: Bipolar Standard
+          <pre>0: 25kHz</pre>
+          <pre>1: 20kHz</pre>
+          <pre>2: Bipolar Standard</pre>
         </td>
         <td nowrap></td>
       </tr>
