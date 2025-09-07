@@ -1388,7 +1388,7 @@ For discrete levels ranging from 10 to 100, demonstrates similar Waveform length
       <td>196.32</td>
       <td>412.67</td>
       <td></td>
-      <td></td>
+      <td>-</td>
       <td></td>
       <td></td>
       </tr>
