@@ -357,7 +357,7 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td><pre>(byte) dt_50[1]</pre></td>
       <td><pre>50 01</pre></td>
       <td><pre>82</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 83 50 01 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 50 01 01 00 [DATA] CRC:L CRC:H</pre></td>
       <td nowrap></td>
     </tr>
     <tr></tr>
@@ -494,43 +494,6 @@ The `PAYLOAD` frame consist 3 data blocks:
     
   </tbody>
 </table>
-
-##### b. 2 Data Blocks <[COMMAND] [DATA 1]>
-###### COMMAND = 0
-- Description: Mode selection command without discrete level adjustment.
-- Parameters:
-  - COMMAND: Command identifier, must be 0
-  - DATA 1: Mode selection (0-5)
-
-| DATA 1 |	Auto-assigned Channel | Description       | Example |	Success Response  |	Error Response  |
-|:------:|:----------------------:|:----------------- |:------- |:-----------------:|:---------------:|
-| 0      |	Channel 0             |	Pure cut          | 0 0     |	00	              | N/A             |
-| 1      |	Channel 0             |	Cut pattern 2     | 0 1     |	00	              | N/A             |
-| 2      |	Channel 0             |	Cut pattern 3     | 0 2     |	00	              | N/A             |
-| 3      |	Channel 1             |	Coag Spray        | 0 3     |	00	              | N/A             |
-| 4      |	Channel 1             |	Coag Forced       | 0 4     |	00	              | N/A             |
-| 5      |	Channel 1             |	Bipolar Standard  | 0 5     |	00	              | N/A             |
-| Other  |	N/A	                  | Invalid           | 0 6     | N/A	              | 02              |
-
-##### c. 3 Data Blocks <[COMMAND] [DATA 1] [DATA 2]>
-###### COMMAND = 1
-- Description: Mode and discrete level adjustment command.
-- Parameters:
-  - COMMAND: Command identifier, must be 1
-  - DATA 1: Mode selection (0-5)
-  - DATA 2: discrete level value (range varies by mode)
-
-| Mode  |	Discrete Level  |	Description         |	Example |	Success Response  |	Error Response  |
-|:-----:|:---------------:|:------------------- |:------- |:-----------------:|:---------------:|
-| 0     |	        0 - 200 |	Pure cut            |	1 0 100 |	00	              | 02              |
-| 1     |	        0 - 200 |	Cut pattern 1       |	1 1 150 |	00	              | 02              |
-| 2     |	        0 - 200 |	Cut pattern 2       |	1 2 120 |	00	              | 02              |
-| 3     |	        0 - 400 |	Coag Spray          |	1 3 250 |	00	              | 02              |
-| 4     |	        0 - 500 |	Coag Forced         |	1 4 300 |	00	              | 02              |
-| 5     |	        0 - 200 |	Bipolar Standard    |	1 5 80  |	00	              | 02              |
-| Other |	            N/A	| Invalid	            | 1 6 100 |	N/A	              | 02              |
-
-#### 2.3.2.2. Write
 
 ## 2.4. Power Stage
 ### 2.4.1. HF Switch
