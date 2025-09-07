@@ -336,6 +336,7 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td nowrap>Command</td>
       <td nowrap>Variable</td>
       <td nowrap>VP ADDRESS</td>
+      <td>Read/Write</td>
       <td nowrap>Data Frame</td>
       <td nowrap>Response</td>
     </tr>
@@ -346,6 +347,7 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td nowrap>System status query</td>
       <td><pre>(byte) dt_50[0]</pre></td>
       <td><pre>50 00</pre></td>
+      <td>R</td>
       <td><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</pre></td>
       <td nowrap></td>
     </tr>
@@ -354,6 +356,7 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td nowrap>System reset</td>
       <td><pre>(byte) dt_50[1]</pre></td>
       <td><pre>50 01</pre></td>
+      <td>W</td>
       <td><pre>5A A5 08 [INSTRUCTION] 83 50 01 01 00 [DATA] CRC:L CRC:H</pre></td>
       <td nowrap></td>
     </tr>
@@ -362,53 +365,135 @@ The `PAYLOAD` frame consist 3 data blocks:
       <td nowrap>Stop all RMT transmission</td>
       <td><pre>(byte) dt_50[2]</pre></td>
       <td><pre>50 02</pre></td>
+      <td>W</td>
       <td><pre>5A A5 08 [INSTRUCTION] 50 02 01 00 [DATA] CRC:L CRC:H</pre></td>
       <td nowrap></td>
     </tr>
   </tbody>
 </table>
 
-#### 2.3.2.2. Mode selection command without discrete level adjustment
-  <table>
-    <thead>
-      <tr>
-        <td nowrap>Command</td>
-        <td nowrap>Variable</td>
-        <td nowrap>VP ADDRESS</td>
-        <td nowrap>Data Frame</td>
-        <td nowrap>DATA</td>
-        <td nowrap>Response</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr></tr>
-      <tr>
-        <td nowrap>Mode Selection Cut</td>
-        <td><pre>(int) dt_51[0]</pre></td>
-        <td><pre>51 00</pre></td>
-        <td><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</pre></td>
-        <td nowrap>
-          <pre>0: 400kHz - Pattern 1
+#### 2.3.2.2. Mode Selection
+<table>
+  <thead>
+    <tr>
+      <td nowrap>Command</td>
+      <td nowrap>Variable</td>
+      <td nowrap>VP ADDRESS</td>
+      <td>Read/Write</td>
+      <td nowrap>Data Frame</td>
+      <td nowrap>DATA</td>
+      <td nowrap>Response</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr></tr>
+    <tr>
+      <td nowrap>Get/set mode selection Cut</td>
+      <td><pre>(int) dt_51[0]</pre></td>
+      <td><pre>51 00</pre></td>
+      <td>R/W</td>
+      <td><pre>5A A5 08 [INSTRUCTION] 51 00 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td nowrap>
+        <pre>0: 400kHz - Pattern 1
 1: 400kHz - Pattern 2
 2: 400kHz - Pattern 3</pre>
-        </td>
-        <td nowrap></td>
-      </tr>
-      <tr></tr>
-      <tr>
-        <td nowrap>Mode Selection Coag</td>
-        <td><pre>(int) dt_51[1]</pre></td>
-        <td><pre>51 01</pre></td>
-        <td><pre>5A A5 08 [INSTRUCTION] 50 01 01 00 [DATA] CRC:L CRC:H</pre></td>
-        <td nowrap>
-          <pre>0: 25kHz
+      </td>
+      <td nowrap></td>
+    </tr>
+    <tr></tr>
+    <tr>
+      <td nowrap>Get/set mode selection Coag</td>
+      <td><pre>(int) dt_51[1]</pre></td>
+      <td><pre>51 01</pre></td>
+      <td>R/W</td>
+      <td><pre>5A A5 08 [INSTRUCTION] 51 01 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td nowrap>
+        <pre>0: 25kHz
 1: 20kHz
 2: 400kHz - Bipolar Standard</pre>
-        </td>
-        <td nowrap></td>
-      </tr>
-    </tbody>
-  </table>
+      </td>
+      <td nowrap></td>
+    </tr>
+  </tbody>
+</table>
+
+#### 2.3.2.2. Discrete Level Adjustment
+<table>
+  <thead>
+    <tr>
+      <td nowrap>Command</td>
+      <td nowrap>Variable</td>
+      <td nowrap>VP ADDRESS</td>
+      <td>Read/Write</td>
+      <td nowrap>Data Frame</td>
+      <td nowrap>DATA</td>
+      <td nowrap>Response</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr></tr>
+    <tr>
+      <td nowrap>Get/set discrete level 400kHz - Pattern 1</td>
+      <td><pre>(int) dt_52[0]</pre></td>
+      <td><pre>52 00</pre></td>
+      <td>R/W</td>
+      <td><pre>5A A5 08 [INSTRUCTION] 52 00 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td nowrap><pre>0 - 200</pre></td>
+      <td nowrap></td>
+    </tr>
+    <tr></tr>
+    <tr>
+      <td nowrap>Get/set discrete level 400kHz - Pattern 2</td>
+      <td><pre>(int) dt_52[1]</pre></td>
+      <td><pre>52 01</pre></td>
+      <td>R/W</td>
+      <td><pre>5A A5 08 [INSTRUCTION] 52 01 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td nowrap><pre>0 - 200</pre></td>
+      <td nowrap></td>
+    </tr>
+    <tr></tr>
+    <tr>
+      <td nowrap>Get/set discrete level 400kHz - Pattern 3</td>
+      <td><pre>(int) dt_52[3]</pre></td>
+      <td><pre>52 03</pre></td>
+      <td>R/W</td>
+      <td><pre>5A A5 08 [INSTRUCTION] 52 03 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td nowrap><pre>0 - 200</pre></td>
+      <td nowrap></td>
+    </tr>
+    <tr></tr>
+    <tr>
+      <td nowrap>Get/set discrete level 25kHz</td>
+      <td><pre>(int) dt_53[0]</pre></td>
+      <td><pre>53 00</pre></td>
+      <td>R/W</td>
+      <td><pre>5A A5 08 [INSTRUCTION] 53 00 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td nowrap><pre>0 - 800</pre></td>
+      <td nowrap></td>
+    </tr>
+    <tr></tr>
+    <tr>
+      <td nowrap>Get/set discrete level 20kHz</td>
+      <td><pre>(int) dt_53[1]</pre></td>
+      <td><pre>53 01</pre></td>
+      <td>R/W</td>
+      <td><pre>5A A5 08 [INSTRUCTION] 53 01 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td nowrap><pre>0 - 1000</pre></td>
+      <td nowrap></td>
+    </tr>
+    <tr></tr>
+    <tr>
+      <td nowrap>Get/set discrete level 400kHz - Bipolar Standard</td>
+      <td><pre>(int) dt_53[2]</pre></td>
+      <td><pre>53 02</pre></td>
+      <td>R/W</td>
+      <td><pre>5A A5 08 [INSTRUCTION] 53 02 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td nowrap><pre>0 - 200</pre></td>
+      <td nowrap></td>
+    </tr>
+    
+  </tbody>
+</table>
 
 ##### b. 2 Data Blocks <[COMMAND] [DATA 1]>
 ###### COMMAND = 0
