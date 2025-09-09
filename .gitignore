@@ -27,7 +27,8 @@ hardware/~$*.xlsx
 lib_deps/
 *.pioenvs/
 *.pio/
-*.bin
+# PlatformIO build artifacts (but allow other .bin files)
+.pio/build/**/*.bin
 *.elf
 *.hex
 *.map
