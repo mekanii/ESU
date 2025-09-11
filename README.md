@@ -345,28 +345,28 @@ The `PAYLOAD` frame consist 3 data blocks:
     <tr></tr>
     <tr>
       <td nowrap>System status query</td>
-      <td><pre>(byte) dt_50[0]</pre></td>
+      <td><pre>(byte) vp_50[0]</pre></td>
       <td><pre>50 00</pre></td>
       <td><pre>83</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 50 00 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 50 00 01 [DATA:H DATA:L] CRC:L CRC:H</pre></td>
       <td nowrap></td>
     </tr>
     <tr></tr>
     <tr>
       <td nowrap>System reset</td>
-      <td><pre>(byte) dt_50[1]</pre></td>
+      <td><pre>(byte) vp_50[1]</pre></td>
       <td><pre>50 01</pre></td>
       <td><pre>82</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 50 01 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 50 01 01 [DATA:H DATA:L] CRC:L CRC:H</pre></td>
       <td nowrap></td>
     </tr>
     <tr></tr>
     <tr>
       <td nowrap>Stop all RMT transmission</td>
-      <td><pre>(byte) dt_50[2]</pre></td>
+      <td><pre>(byte) vp_50[2]</pre></td>
       <td><pre>50 02</pre></td>
       <td><pre>82</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 50 02 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 50 02 01 [DATA:H DATA:L] CRC:L CRC:H</pre></td>
       <td nowrap></td>
     </tr>
   </tbody>
@@ -389,10 +389,10 @@ The `PAYLOAD` frame consist 3 data blocks:
     <tr></tr>
     <tr>
       <td nowrap>Get/set mode selection Cut</td>
-      <td><pre>(int) dt_51[0]</pre></td>
+      <td><pre>(int) vp_51[0]</pre></td>
       <td><pre>51 00</pre></td>
       <td><pre>82 | 83</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 51 00 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 51 00 01 [DATA:H DATA:L] CRC:L CRC:H</pre></td>
       <td nowrap>
         <pre>0: 400kHz - Pattern 1
 1: 400kHz - Pattern 2
@@ -403,10 +403,10 @@ The `PAYLOAD` frame consist 3 data blocks:
     <tr></tr>
     <tr>
       <td nowrap>Get/set mode selection Coag</td>
-      <td><pre>(int) dt_51[1]</pre></td>
+      <td><pre>(int) vp_51[1]</pre></td>
       <td><pre>51 01</pre></td>
       <td><pre>82 | 83</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 51 01 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 51 01 01 [DATA:H DATA:L] CRC:L CRC:H</pre></td>
       <td nowrap>
         <pre>0: 25kHz
 1: 20kHz
@@ -434,60 +434,60 @@ The `PAYLOAD` frame consist 3 data blocks:
     <tr></tr>
     <tr>
       <td nowrap>Get/set discrete level 400kHz - Pattern 1</td>
-      <td><pre>(int) dt_52[0]</pre></td>
+      <td><pre>(int) vp_52[0]</pre></td>
       <td><pre>52 00</pre></td>
       <td><pre>82 | 83</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 52 00 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 52 00 01 [DATA:H DATA:L] CRC:L CRC:H</pre></td>
       <td nowrap><pre>0 - 200</pre></td>
       <td nowrap></td>
     </tr>
     <tr></tr>
     <tr>
       <td nowrap>Get/set discrete level 400kHz - Pattern 2</td>
-      <td><pre>(int) dt_52[1]</pre></td>
+      <td><pre>(int) vp_52[1]</pre></td>
       <td><pre>52 01</pre></td>
       <td><pre>82 | 83</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 52 01 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 52 01 01 [DATA:H DATA:L] CRC:L CRC:H</pre></td>
       <td nowrap><pre>0 - 200</pre></td>
       <td nowrap></td>
     </tr>
     <tr></tr>
     <tr>
       <td nowrap>Get/set discrete level 400kHz - Pattern 3</td>
-      <td><pre>(int) dt_52[3]</pre></td>
-      <td><pre>52 03</pre></td>
+      <td><pre>(int) vp_52[3]</pre></td>
+      <td><pre>52 02</pre></td>
       <td><pre>82 | 83</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 52 03 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 52 03 01 [DATA:H DATA:L] CRC:L CRC:H</pre></td>
       <td nowrap><pre>0 - 200</pre></td>
       <td nowrap></td>
     </tr>
     <tr></tr>
     <tr>
       <td nowrap>Get/set discrete level 25kHz</td>
-      <td><pre>(int) dt_53[0]</pre></td>
+      <td><pre>(int) vp_53[0]</pre></td>
       <td><pre>53 00</pre></td>
       <td><pre>82 | 83</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 53 00 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 53 00 01 [DATA:H DATA:L] CRC:L CRC:H</pre></td>
       <td nowrap><pre>0 - 800</pre></td>
       <td nowrap></td>
     </tr>
     <tr></tr>
     <tr>
       <td nowrap>Get/set discrete level 20kHz</td>
-      <td><pre>(int) dt_53[1]</pre></td>
+      <td><pre>(int) vp_53[1]</pre></td>
       <td><pre>53 01</pre></td>
       <td><pre>82 | 83</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 53 01 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 53 01 01 [DATA:H DATA:L] CRC:L CRC:H</pre></td>
       <td nowrap><pre>0 - 1000</pre></td>
       <td nowrap></td>
     </tr>
     <tr></tr>
     <tr>
       <td nowrap>Get/set discrete level 400kHz - Bipolar Standard</td>
-      <td><pre>(int) dt_53[2]</pre></td>
-      <td><pre>53 02</pre></td>
+      <td><pre>(int) vp_54[0]</pre></td>
+      <td><pre>54 00</pre></td>
       <td><pre>82 | 83</pre></td>
-      <td><pre>5A A5 08 [INSTRUCTION] 53 02 01 00 [DATA] CRC:L CRC:H</pre></td>
+      <td><pre>5A A5 08 [INSTRUCTION] 54 00 01 [DATA:H DATA:L] CRC:L CRC:H</pre></td>
       <td nowrap><pre>0 - 200</pre></td>
       <td nowrap></td>
     </tr>

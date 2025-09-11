@@ -298,6 +298,13 @@ void readButtons() {
 }
 
 void readSerialData() {
+  // 5A A5 08 [INSTRUCTION] 52 00 01 00 [DATA]
+  // 5A A5 08 [INSTRUCTION] 52 01 01 00 [DATA]
+  // 5A A5 08 [INSTRUCTION] 52 03 01 00 [DATA]
+  // 5A A5 08 [INSTRUCTION] 53 00 01 00 [DATA]
+  // 5A A5 08 [INSTRUCTION] 53 01 01 00 [DATA]
+  // 5A A5 08 [INSTRUCTION] 53 02 01 00 [DATA]
+
   if (Serial.available() > 0) {
     int data0 = 0;
     int data1 = 0;
