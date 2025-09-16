@@ -2,6 +2,8 @@
 #include <driver/rmt.h>
 #include <driver/adc.h>
 #include <esp_adc_cal.h>
+#include <LittleFS.h>
+#include <ArduinoJson.h>
 
 #define RMT_TX_CHANNEL_0  RMT_CHANNEL_0
 #define RMT_TX_CHANNEL_1  RMT_CHANNEL_1
@@ -21,12 +23,34 @@
 #define ADC_WIDTH         ADC_WIDTH_BIT_12
 #define ADC_ATTEN         ADC_ATTEN_DB_12
 
+#define FORMAT_LITTLEFS_IF_FAILED true
+
+// Maximum number of data sets in the array
+#define MAX_DATA_SETS 10
+#define JSON_DOC_SIZE 2048
+
+// LittleFS file path for JSON data
+#define JSON_DATA_FILE "/data.json"
+
+// Current data set index (which object in the array we're working with)
+uint8_t currentDataSetIndex = 0;
+
+// Array to hold all data sets
+uint16_t allVP51[MAX_DATA_SETS][2] = {0};
+uint16_t allVP52[MAX_DATA_SETS][3] = {0};
+uint16_t allVP53[MAX_DATA_SETS][3] = {0};
+
+// Current working arrays (point to current data set)
+uint16_t* vp51 = allVP51[currentDataSetIndex];
+uint16_t* vp52 = allVP52[currentDataSetIndex];
+uint16_t* vp53 = allVP53[currentDataSetIndex];
+
 // 5A A5 PAYLOAD_LENGTH INSTRUCTION VAR_ID_H VAR_ID_L DATA_LENGTH DATA_H DATA_L
 uint8_t rxBuffer[9];
 
-uint16_t vp51[2] = {0, 0};
-uint16_t vp52[3] = {0, 0, 0};
-uint16_t vp53[3] = {0, 0, 0};
+// uint16_t vp51[2] = {0, 0};
+// uint16_t vp52[3] = {0, 0, 0};
+// uint16_t vp53[3] = {0, 0, 0};
 
 const gpio_num_t PWM_0 = (gpio_num_t)1;
 const gpio_num_t PWM_1 = (gpio_num_t)2;
@@ -53,6 +77,281 @@ int duration1 = 0;
 rmt_channel_t channel = RMT_TX_CHANNEL_0;
 rmt_item32_t items[20];
 int item_num = 20;
+
+unsigned char dataFrameTx[8] = {0x5A, 0xA5, 0x05, 0x82, 0x00, 0x00, 0x00, 0x00};
+
+// Initialize LittleFS with proper error handling
+bool initLittleFS() {
+  if (!LittleFS.begin(FORMAT_LITTLEFS_IF_FAILED)) {
+    Serial.println("LittleFS Mount: NG");
+    return false;
+  } else {
+    Serial.println("LittleFS Mount: OK");
+  }
+
+  bool fileExists = LittleFS.exists(JSON_DATA_FILE);
+  Serial.print("File exists: ");
+  Serial.println(fileExists);
+  
+  if (!fileExists) {
+    Serial.println("File doesn't exist");
+    Serial.println("Creating file...");
+    
+    // Create initial JSON structure
+    StaticJsonDocument<JSON_DOC_SIZE> doc;
+    JsonArray dataArray = doc.to<JsonArray>();
+    
+    // Create initial data sets with zeros
+    for (int setIndex = 0; setIndex < MAX_DATA_SETS; setIndex++) {
+      JsonObject dataSet = dataArray.createNestedObject();
+      
+      JsonArray vp51Array = dataSet.createNestedArray("vp51");
+      for (int i = 0; i < 2; i++) {
+        vp51Array.add(0);
+      }
+      
+      JsonArray vp52Array = dataSet.createNestedArray("vp52");
+      for (int i = 0; i < 3; i++) {
+        vp52Array.add(0);
+      }
+      
+      JsonArray vp53Array = dataSet.createNestedArray("vp53");
+      for (int i = 0; i < 3; i++) {
+        vp53Array.add(0);
+      }
+    }
+    
+    // Write initial file
+    File file = LittleFS.open(JSON_DATA_FILE, "w");
+    if (!file) {
+      Serial.println("Failed to create file");
+      return false;
+    }
+    
+    if (serializeJson(doc, file) == 0) {
+      Serial.println("Failed to write initial JSON");
+      file.close();
+      return false;
+    }
+    
+    file.close();
+    Serial.println("Initial JSON file created");
+  } else {
+    Serial.println("File already exists");
+  }
+  
+  return true;
+}
+
+// Helper function to write file (if needed elsewhere)
+/*
+void writeFile(fs::FS &fs, const char * path, const char * message) {
+  File file = fs.open(path, "w");
+  if (!file) {
+    Serial.println("Failed to open file for writing");
+    return;
+  }
+  
+  if (file.print(message)) {
+    Serial.println("File written");
+  } else {
+    Serial.println("Write failed");
+  }
+  
+  file.close();
+}
+*/
+
+// Helper function to read file (if needed elsewhere)
+/*
+String readFile(fs::FS &fs, const char * path) {
+  File file = fs.open(path, "r");
+  if (!file || file.isDirectory()) {
+    Serial.println("Failed to open file for reading");
+    return String();
+  }
+  
+  String fileContent;
+  while (file.available()) {
+    fileContent += String((char)file.read());
+  }
+  
+  file.close();
+  return fileContent;
+}
+*/
+
+// Update current working arrays to point to current data set
+void updateCurrentArrays() {
+  vp51 = allVP51[currentDataSetIndex];
+  vp52 = allVP52[currentDataSetIndex];
+  vp53 = allVP53[currentDataSetIndex];
+}
+
+// Save all data sets to JSON
+bool saveToJSON() {
+  StaticJsonDocument<JSON_DOC_SIZE> doc;
+  
+  // Create array of objects
+  JsonArray dataArray = doc.to<JsonArray>();
+  
+  for (int setIndex = 0; setIndex < MAX_DATA_SETS; setIndex++) {
+    JsonObject dataSet = dataArray.createNestedObject();
+    
+    // Create vp51 array for this data set
+    JsonArray vp51Array = dataSet.createNestedArray("vp51");
+    for (int i = 0; i < 2; i++) {
+      vp51Array.add(allVP51[setIndex][i]);
+    }
+    
+    // Create vp52 array for this data set
+    JsonArray vp52Array = dataSet.createNestedArray("vp52");
+    for (int i = 0; i < 3; i++) {
+      vp52Array.add(allVP52[setIndex][i]);
+    }
+    
+    // Create vp53 array for this data set
+    JsonArray vp53Array = dataSet.createNestedArray("vp53");
+    for (int i = 0; i < 3; i++) {
+      vp53Array.add(allVP53[setIndex][i]);
+    }
+  }
+  
+  // Write to file
+  File file = LittleFS.open(JSON_DATA_FILE, "w");
+  if (!file) {
+    Serial.println("Failed to open JSON file for writing");
+    return false;
+  }
+  
+  if (serializeJson(doc, file) == 0) {
+    Serial.println("Failed to write JSON");
+    file.close();
+    return false;
+  }
+  
+  file.close();
+  Serial.println("JSON data saved");
+  return true;
+}
+
+// Load all data sets from JSON
+bool loadFromJSON() {
+  if (!LittleFS.exists(JSON_DATA_FILE)) {
+    Serial.println("JSON file does not exist");
+    return false;
+  }
+  
+  File file = LittleFS.open(JSON_DATA_FILE, "r");
+  if (!file) {
+    Serial.println("Failed to open JSON file for reading");
+    return false;
+  }
+  
+  StaticJsonDocument<JSON_DOC_SIZE> doc;
+  DeserializationError error = deserializeJson(doc, file);
+  file.close();
+  
+  if (error) {
+    Serial.print("JSON parse failed: ");
+    Serial.println(error.c_str());
+    return false;
+  }
+  
+  if (!doc.is<JsonArray>()) {
+    Serial.println("JSON is not an array");
+    return false;
+  }
+  
+  JsonArray dataArray = doc.as<JsonArray>();
+  int setCount = min(dataArray.size(), (size_t)MAX_DATA_SETS);
+  
+  // Load each data set
+  for (int setIndex = 0; setIndex < setCount; setIndex++) {
+    JsonObject dataSet = dataArray[setIndex];
+    
+    // Load vp51
+    if (dataSet.containsKey("vp51") && dataSet["vp51"].is<JsonArray>()) {
+      JsonArray vp51Array = dataSet["vp51"];
+      for (int i = 0; i < 2 && i < vp51Array.size(); i++) {
+        allVP51[setIndex][i] = vp51Array[i];
+      }
+    }
+    
+    // Load vp52
+    if (dataSet.containsKey("vp52") && dataSet["vp52"].is<JsonArray>()) {
+      JsonArray vp52Array = dataSet["vp52"];
+      for (int i = 0; i < 3 && i < vp52Array.size(); i++) {
+        allVP52[setIndex][i] = vp52Array[i];
+      }
+    }
+    
+    // Load vp53
+    if (dataSet.containsKey("vp53") && dataSet["vp53"].is<JsonArray>()) {
+      JsonArray vp53Array = dataSet["vp53"];
+      for (int i = 0; i < 3 && i < vp53Array.size(); i++) {
+        allVP53[setIndex][i] = vp53Array[i];
+      }
+    }
+  }
+  
+  // Update current working arrays
+  updateCurrentArrays();
+  
+  Serial.println("JSON data loaded");
+  return true;
+}
+
+// Save by pointer: pointer = datasetIndex, saves current vp51, vp52, vp53 to that dataset index
+bool saveByPointer(uint16_t pointer) {
+  uint8_t dataSetIndex = pointer & 0xFF;  // Lower 8 bits = dataset index
+  
+  // Validate data set index
+  if (dataSetIndex >= MAX_DATA_SETS) {
+    Serial.println("Invalid data set index");
+    return false;
+  }
+  
+  // Copy current vp51, vp52, vp53 to the specified dataset index
+  for (int i = 0; i < 2; i++) {
+    allVP51[dataSetIndex][i] = vp51[i];
+  }
+  for (int i = 0; i < 3; i++) {
+    allVP52[dataSetIndex][i] = vp52[i];
+  }
+  for (int i = 0; i < 3; i++) {
+    allVP53[dataSetIndex][i] = vp53[i];
+  }
+  
+  // Save to JSON file
+  return saveToJSON();
+}
+
+// Load by pointer: pointer = datasetIndex, loads vp51, vp52, vp53 from that dataset index
+bool loadByPointer(uint16_t pointer) {
+  uint8_t dataSetIndex = pointer & 0xFF;  // Lower 8 bits = dataset index
+  
+  // Validate data set index
+  if (dataSetIndex >= MAX_DATA_SETS) {
+    Serial.println("Invalid data set index");
+    return false;
+  }
+  
+  // Copy from the specified dataset index to current vp51, vp52, vp53
+  for (int i = 0; i < 2; i++) {
+    vp51[i] = allVP51[dataSetIndex][i];
+  }
+  for (int i = 0; i < 3; i++) {
+    vp52[i] = allVP52[dataSetIndex][i];
+  }
+  for (int i = 0; i < 3; i++) {
+    vp53[i] = allVP53[dataSetIndex][i];
+  }
+  
+  Serial.print("Loaded data set ");
+  Serial.println(dataSetIndex);
+  return true;
+}
 
 void setupADC() {
   adc1_config_width(ADC_WIDTH);
@@ -348,6 +647,40 @@ void readSerialData() {
               vp53[rxBuffer[5]] = value;
             }
             break;
+          case 0x54:
+            switch (rxBuffer[5]) {
+              case 0x00:  // Load all data sets from JSON
+                if (loadFromJSON()) {
+                  Serial.println("All data sets loaded from JSON");
+                } else {
+                  Serial.println("Failed to load from JSON");
+                }
+                break;
+              case 0x01:  // Save all data sets to JSON
+                if (saveToJSON()) {
+                  Serial.println("All data sets saved to JSON");
+                } else {
+                  Serial.println("Failed to save to JSON");
+                }
+                break;
+              case 0x02:  // Load by pointer (dataset index)
+                if (loadByPointer(value)) {
+                  Serial.print("Loaded data set ");
+                  Serial.println(value);
+                } else {
+                  Serial.println("Failed to load by pointer");
+                }
+                break;
+              case 0x03:  // Save by pointer (dataset index)
+                if (saveByPointer(value)) {
+                  Serial.print("Saved current data to set ");
+                  Serial.println(value);
+                } else {
+                  Serial.println("Failed to save by pointer");
+                }
+                break;
+            }
+          break;
         }
       }
     }
@@ -440,6 +773,12 @@ void setup() {
   Serial.begin(115200);
   Serial1.begin(115200, SERIAL_8N1, 18, 17);
 
+  // Initialize LittleFS with proper error handling
+  if (!initLittleFS()) {
+    Serial.println("LittleFS initialization failed!");
+    return;  // Stop execution if LittleFS fails
+  }
+
   rmt_config_t rmt_tx_0;
   rmt_tx_0.channel = RMT_TX_CHANNEL_0;
   rmt_tx_0.gpio_num = PWM_0;
@@ -468,6 +807,37 @@ void setup() {
   rmt_set_tx_intr_en(RMT_TX_CHANNEL_1, 1);
 
   setupButtons();
+  
+  // Load saved data from JSON on startup
+  loadFromJSON();
+
+  dataFrameTx[4] = 0x51;
+  for (int i=0; i<2; i++) {
+    dataFrameTx[5] = i;
+    dataFrameTx[6] = highByte(vp51[i]);
+    dataFrameTx[7] = lowByte(vp51[i]);
+
+    Serial.write(dataFrameTx, 8);
+    Serial1.write(dataFrameTx, 8);
+  }
+  
+  for (int i=0; i<3; i++) {
+    dataFrameTx[4] = 0x52;
+    dataFrameTx[5] = i;
+    dataFrameTx[6] = highByte(vp52[i]);
+    dataFrameTx[7] = lowByte(vp52[i]);
+
+    Serial.write(dataFrameTx, 8);
+    Serial1.write(dataFrameTx, 8);
+
+    dataFrameTx[4] = 0x53;
+    dataFrameTx[5] = i;
+    dataFrameTx[6] = highByte(vp53[i]);
+    dataFrameTx[7] = lowByte(vp53[i]);
+
+    Serial.write(dataFrameTx, 8);
+    Serial1.write(dataFrameTx, 8);
+  }
 }
 
 void loop() {
