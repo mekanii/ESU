@@ -1,6 +1,31 @@
+2025-09-12
+- firmware coding: feat/persistent-data-storage menggunakan littlefs untuk read/write memory [In Progress]
+- HMI: feat/save-load-profiles [In Progress]
+
+2025-09-11
+- firmware coding: feat/read-data-frame [In Progress]
+- firmware coding: feat/persistent-data-storage menggunakan littlefs untuk read/write memory [In Progress]
+
+2025-09-10
+- HMI: feat/incremental-adjustment [Need Review]
+- HMI: feat/button-effect [Need Review]
+
+2025-09-09
+- HMI: desain UI [Need Review]
+- HMI: feat/set-vp-address [Need Review]
+
+2025-09-08
+- HMI: desain UI [In Progress]
+
+2025-09-05
+- HMI: desain UI [In Progress]
+
+2025-09-04
+- firmware coding: feat/buzzer [In Progress]
+
 2025-09-03
-- firmware coding: feat/crc16_ibm
-- firmware coding: feat/assemble-data-frame
+- firmware coding: feat/crc16_ibm [In Progress]
+- firmware coding: feat/assemble-data-frame [In Progress]
 
 2025-09-02
 - Menulis tabel komparasi output scope (Rload 500Ω) [Need Review]

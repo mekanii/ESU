@@ -21,6 +21,13 @@
 #define ADC_WIDTH         ADC_WIDTH_BIT_12
 #define ADC_ATTEN         ADC_ATTEN_DB_12
 
+// 5A A5 PAYLOAD_LENGTH INSTRUCTION VAR_ID_H VAR_ID_L DATA_LENGTH DATA_H DATA_L
+uint8_t rxBuffer[9];
+
+uint16_t vp51[2] = {0, 0};
+uint16_t vp52[3] = {0, 0, 0};
+uint16_t vp53[3] = {0, 0, 0};
+
 const gpio_num_t PWM_0 = (gpio_num_t)1;
 const gpio_num_t PWM_1 = (gpio_num_t)2;
 
@@ -298,97 +305,140 @@ void readButtons() {
 }
 
 void readSerialData() {
-  // 5A A5 08 [INSTRUCTION] 52 00 01 00 [DATA]
-  // 5A A5 08 [INSTRUCTION] 52 01 01 00 [DATA]
-  // 5A A5 08 [INSTRUCTION] 52 03 01 00 [DATA]
-  // 5A A5 08 [INSTRUCTION] 53 00 01 00 [DATA]
-  // 5A A5 08 [INSTRUCTION] 53 01 01 00 [DATA]
-  // 5A A5 08 [INSTRUCTION] 53 02 01 00 [DATA]
+  if (Serial1.available()) {  // Ensure we have complete frame
+    for (int i = 0; i < 9; i++) {
+      rxBuffer[i] = Serial1.read();
+    }
 
-  if (Serial.available() > 0) {
-    int data0 = 0;
-    int data1 = 0;
-    int data2 = 0;
+    for (int i = 0; i < 9; i++) {
+      if (rxBuffer[i] < 0x10) Serial.print('0');
+      Serial.print(rxBuffer[i], HEX);
+      Serial.print(' ');
+    }
+    Serial.println();
 
-    String serialData = Serial.readStringUntil('\n');
+    // rxBuffer[0]: HEADER
+    // rxBuffer[1]: HEADER
+    // rxBuffer[2]: PAYLOAD_LENGTH
+    // rxBuffer[3]: INSTRUCTION
+    // rxBuffer[4]: VAR_ID_H
+    // rxBuffer[5]: VAR_ID_L
+    // rxBuffer[6]: DATA_LENGTH
+    // rxBuffer[7]: DATA_H
+    // rxBuffer[8]: DATA_L
     
-    int firstSpaceIndex = serialData.indexOf(' ');
-    int secondSpaceIndex = serialData.indexOf(' ', firstSpaceIndex + 1);
-
-    if (firstSpaceIndex > 0 && secondSpaceIndex > firstSpaceIndex) {
-      // Three data values
-      int data0 = serialData.substring(0, firstSpaceIndex).toInt();
-      int data1 = serialData.substring(firstSpaceIndex + 1, secondSpaceIndex).toInt();
-      int data2 = serialData.substring(secondSpaceIndex + 1).toInt();
-
-      if (data0 == 1) {
-        if (data1 == 0 || data1 == 1 || data1 == 2 ||data1 == 5 ) {
-          if (data2 >= 0 && data2 <= 200) {
-            rmtStop();
-            dutyCycles[data1] = data2;
-            Serial.println("00");
-          } else {
-            Serial.println("02");
-          }
+    if (rxBuffer[0] == 0x5A && rxBuffer[1] == 0xA5) {  // Check header
+      if (rxBuffer[3] == 0x83) {
+        uint16_t value = (rxBuffer[7] << 8) | rxBuffer[8];
+        switch (rxBuffer[4]) {
+          case 0x50:
+            break;
+          case 0x51:
+            if (rxBuffer[5] == 0x00 || rxBuffer[5] == 0x01) {
+              vp51[rxBuffer[5]] = value;
+            }
+            break;
+          case 0x52:
+            if (rxBuffer[5] == 0x00 || rxBuffer[5] == 0x01 || rxBuffer[5] == 0x02) {
+              vp52[rxBuffer[5]] = value;
+            }
+            break;
+          case 0x53:
+            if (rxBuffer[5] == 0x00 || rxBuffer[5] == 0x01 || rxBuffer[5] == 0x02) {
+              vp53[rxBuffer[5]] = value;
+            }
+            break;
         }
-        else if (data1 == 3) {
-          if (data2 >= 0 && data2 <= 400) {
-            rmtStop();
-            dutyCycles[data1] = data2;
-            Serial.println("00");
-          } else {
-            Serial.println("02");
-          }
-        }
-        else if (data1 == 4) {
-          if (data2 >= 0 && data2 <= 500) {
-            rmtStop();
-            dutyCycles[data1] = data2;
-            Serial.println("00");
-          } else {
-            Serial.println("02");
-          }
-        }
-        else {
-          Serial.println("02");
-        }
-      }
-    } else if (firstSpaceIndex > 0) {
-      // Two data values (fallback to current logic)
-      int data0 = serialData.substring(0, firstSpaceIndex).toInt();
-      int data1 = serialData.substring(firstSpaceIndex + 1).toInt();
-      
-      if (data0 == 0) {
-        if (data1 == 0 || data1 == 1 || data1 == 2) {
-          rmtStop();
-          currentMode[0] = data1;
-          Serial.println("00");
-        } else if (data1 == 3 || data1 == 4 || data1 == 5) {
-          rmtStop();
-          currentMode[1] = data1;
-          Serial.println("00");
-        } else {
-          Serial.println("02");
-        }
-      } else {
-        Serial.println("02");
-      }
-    } else {
-      int data0 = serialData.toInt();
-      if (data0 == 2) {
-        rmtStop();
-        Serial.println("00");
-      } else {
-        Serial.println("02");
       }
     }
   }
+
+  // if (Serial.available() > 0) {
+  //   int data0 = 0;
+  //   int data1 = 0;
+  //   int data2 = 0;
+
+  //   String serialData = Serial.readStringUntil('\n');
+    
+  //   int firstSpaceIndex = serialData.indexOf(' ');
+  //   int secondSpaceIndex = serialData.indexOf(' ', firstSpaceIndex + 1);
+
+  //   if (firstSpaceIndex > 0 && secondSpaceIndex > firstSpaceIndex) {
+  //     // Three data values
+  //     int data0 = serialData.substring(0, firstSpaceIndex).toInt();
+  //     int data1 = serialData.substring(firstSpaceIndex + 1, secondSpaceIndex).toInt();
+  //     int data2 = serialData.substring(secondSpaceIndex + 1).toInt();
+
+  //     if (data0 == 1) {
+  //       if (data1 == 0 || data1 == 1 || data1 == 2 ||data1 == 5 ) {
+  //         if (data2 >= 0 && data2 <= 200) {
+  //           rmtStop();
+  //           dutyCycles[data1] = data2;
+  //           Serial.println("00");
+  //         } else {
+  //           Serial.println("02");
+  //         }
+  //       }
+  //       else if (data1 == 3) {
+  //         if (data2 >= 0 && data2 <= 400) {
+  //           rmtStop();
+  //           dutyCycles[data1] = data2;
+  //           Serial.println("00");
+  //         } else {
+  //           Serial.println("02");
+  //         }
+  //       }
+  //       else if (data1 == 4) {
+  //         if (data2 >= 0 && data2 <= 500) {
+  //           rmtStop();
+  //           dutyCycles[data1] = data2;
+  //           Serial.println("00");
+  //         } else {
+  //           Serial.println("02");
+  //         }
+  //       }
+  //       else {
+  //         Serial.println("02");
+  //       }
+  //     }
+  //   } else if (firstSpaceIndex > 0) {
+  //     // Two data values (fallback to current logic)
+  //     int data0 = serialData.substring(0, firstSpaceIndex).toInt();
+  //     int data1 = serialData.substring(firstSpaceIndex + 1).toInt();
+      
+  //     if (data0 == 0) {
+  //       if (data1 == 0 || data1 == 1 || data1 == 2) {
+  //         rmtStop();
+  //         currentMode[0] = data1;
+  //         Serial.println("00");
+  //       } else if (data1 == 3 || data1 == 4 || data1 == 5) {
+  //         rmtStop();
+  //         currentMode[1] = data1;
+  //         Serial.println("00");
+  //       } else {
+  //         Serial.println("02");
+  //       }
+  //     } else {
+  //       Serial.println("02");
+  //     }
+  //   } else {
+  //     int data0 = serialData.toInt();
+  //     if (data0 == 2) {
+  //       rmtStop();
+  //       Serial.println("00");
+  //     } else {
+  //       Serial.println("02");
+  //     }
+  //   }
+  // }
 }
 
 void setup() {
   setupRelay();
+  setupADC();
 
   Serial.begin(115200);
+  Serial1.begin(115200, SERIAL_8N1, 18, 17);
 
   rmt_config_t rmt_tx_0;
   rmt_tx_0.channel = RMT_TX_CHANNEL_0;
