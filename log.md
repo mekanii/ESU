@@ -1,3 +1,7 @@
+2025-09-16
+- firmware coding: feat/persistent-data-storage menggunakan littlefs untuk read/write memory [In Progress]
+- HMI: feat/save-load-profiles [In Progress]
+
 2025-09-12
 - firmware coding: feat/persistent-data-storage menggunakan littlefs untuk read/write memory [In Progress]
 - HMI: feat/save-load-profiles [In Progress]

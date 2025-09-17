@@ -32,18 +32,15 @@
 // LittleFS file path for JSON data
 #define JSON_DATA_FILE "/data.json"
 
-// Current data set index (which object in the array we're working with)
-uint8_t currentDataSetIndex = 0;
-
 // Array to hold all data sets
 uint16_t allVP51[MAX_DATA_SETS][2] = {0};
 uint16_t allVP52[MAX_DATA_SETS][3] = {0};
 uint16_t allVP53[MAX_DATA_SETS][3] = {0};
 
 // Current working arrays (point to current data set)
-uint16_t* vp51 = allVP51[currentDataSetIndex];
-uint16_t* vp52 = allVP52[currentDataSetIndex];
-uint16_t* vp53 = allVP53[currentDataSetIndex];
+uint16_t vp51[2] = {0, 0};
+uint16_t vp52[3] = {0, 0, 0};
+uint16_t vp53[3] = {0, 0, 0};
 
 // 5A A5 PAYLOAD_LENGTH INSTRUCTION VAR_ID_H VAR_ID_L DATA_LENGTH DATA_H DATA_L
 uint8_t rxBuffer[9];
@@ -78,7 +75,7 @@ rmt_channel_t channel = RMT_TX_CHANNEL_0;
 rmt_item32_t items[20];
 int item_num = 20;
 
-unsigned char dataFrameTx[8] = {0x5A, 0xA5, 0x05, 0x82, 0x00, 0x00, 0x00, 0x00};
+unsigned char dataFrameTx[16] = {0x5A, 0xA5, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
 // Initialize LittleFS with proper error handling
 bool initLittleFS() {
@@ -102,20 +99,20 @@ bool initLittleFS() {
     JsonArray dataArray = doc.to<JsonArray>();
     
     // Create initial data sets with zeros
-    for (int setIndex = 0; setIndex < MAX_DATA_SETS; setIndex++) {
-      JsonObject dataSet = dataArray.createNestedObject();
+    for (int datasetIndex = 0; datasetIndex < MAX_DATA_SETS; datasetIndex++) {
+      JsonObject dataset = dataArray.createNestedObject();
       
-      JsonArray vp51Array = dataSet.createNestedArray("vp51");
+      JsonArray vp51Array = dataset.createNestedArray("vp51");
       for (int i = 0; i < 2; i++) {
         vp51Array.add(0);
       }
       
-      JsonArray vp52Array = dataSet.createNestedArray("vp52");
+      JsonArray vp52Array = dataset.createNestedArray("vp52");
       for (int i = 0; i < 3; i++) {
         vp52Array.add(0);
       }
       
-      JsonArray vp53Array = dataSet.createNestedArray("vp53");
+      JsonArray vp53Array = dataset.createNestedArray("vp53");
       for (int i = 0; i < 3; i++) {
         vp53Array.add(0);
       }
@@ -181,11 +178,93 @@ String readFile(fs::FS &fs, const char * path) {
 }
 */
 
-// Update current working arrays to point to current data set
-void updateCurrentArrays() {
-  vp51 = allVP51[currentDataSetIndex];
-  vp52 = allVP52[currentDataSetIndex];
-  vp53 = allVP53[currentDataSetIndex];
+bool switchMainPage() {
+  dataFrameTx[2] = 0x07;  // PAYLOAD_LENGTH
+  dataFrameTx[3] = 0x82;  // INSTRUCTION
+  dataFrameTx[4] = 0x00;  // VAR_ID:H (SYSTEM_VAR_ID:PIC_SET)
+  dataFrameTx[5] = 0x84;  // VAR_ID:L (SYSTEM_VAR_ID:PIC_SET)
+  dataFrameTx[6] = 0x5A;  // ENABLE_PAGE_OPERATION_ONCE
+  dataFrameTx[7] = 0x01;  // PROCESSING_MODE (0X01 PAGE SWITCH)
+  dataFrameTx[8] = 0x00;  // DATA:H
+
+  if (vp51[0] == 0 && vp51[1] == 0) {dataFrameTx[9] = 0x00; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 1 && vp51[1] == 0) {dataFrameTx[9] = 0x01; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 2 && vp51[1] == 0) {dataFrameTx[9] = 0x02; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 0 && vp51[1] == 1) {dataFrameTx[9] = 0x03; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 1 && vp51[1] == 1) {dataFrameTx[9] = 0x04; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 2 && vp51[1] == 1) {dataFrameTx[9] = 0x05; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 0 && vp51[1] == 2) {dataFrameTx[9] = 0x06; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 1 && vp51[1] == 2) {dataFrameTx[9] = 0x07; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 2 && vp51[1] == 2) {dataFrameTx[9] = 0x08; Serial1.write(dataFrameTx, 10); return true;}
+  else {dataFrameTx[9] = 0x00; Serial1.write(dataFrameTx, 10); return false;}
+}
+
+bool setMainPageVp() {
+  dataFrameTx[2] = 0x05;                // PAYLOAD_LENGTH (BYTE)
+  dataFrameTx[3] = 0x82;                // INSTRUCTION
+  dataFrameTx[4] = 0x51;                // VAR_ID:H
+  dataFrameTx[5] = 0x00;                // VAR_ID:L
+  dataFrameTx[6] = highByte(vp51[0]);   // DATA:H
+  dataFrameTx[7] = lowByte(vp51[0]);    // DATA:L
+  Serial1.write(dataFrameTx, 8);
+  
+  dataFrameTx[2] = 0x05;
+  dataFrameTx[3] = 0x82;
+  dataFrameTx[4] = 0x51;
+  dataFrameTx[5] = 0x01;
+  dataFrameTx[6] = highByte(vp51[1]);
+  dataFrameTx[7] = lowByte(vp51[1]);
+  Serial1.write(dataFrameTx, 8);
+
+  dataFrameTx[2] = 0x05;
+  dataFrameTx[3] = 0x82;
+  dataFrameTx[4] = 0x52;
+  dataFrameTx[5] = 0x00;
+  dataFrameTx[6] = highByte(vp52[0]);
+  dataFrameTx[7] = lowByte(vp52[0]);
+  Serial1.write(dataFrameTx, 8);
+
+  dataFrameTx[2] = 0x05;
+  dataFrameTx[3] = 0x82;
+  dataFrameTx[4] = 0x52;
+  dataFrameTx[5] = 0x01;
+  dataFrameTx[6] = highByte(vp52[1]);
+  dataFrameTx[7] = lowByte(vp52[1]);
+  Serial1.write(dataFrameTx, 8);
+
+  dataFrameTx[2] = 0x05;
+  dataFrameTx[3] = 0x82;
+  dataFrameTx[4] = 0x52;
+  dataFrameTx[5] = 0x02;
+  dataFrameTx[6] = highByte(vp52[2]);
+  dataFrameTx[7] = lowByte(vp52[2]);
+  Serial1.write(dataFrameTx, 8);
+
+  dataFrameTx[2] = 0x05;
+  dataFrameTx[3] = 0x82;
+  dataFrameTx[4] = 0x53;
+  dataFrameTx[5] = 0x00;
+  dataFrameTx[6] = highByte(vp53[0]);
+  dataFrameTx[7] = lowByte(vp53[0]);
+  Serial1.write(dataFrameTx, 8);
+
+  dataFrameTx[2] = 0x05;
+  dataFrameTx[3] = 0x82;
+  dataFrameTx[4] = 0x53;
+  dataFrameTx[5] = 0x01;
+  dataFrameTx[6] = highByte(vp53[1]);
+  dataFrameTx[7] = lowByte(vp53[1]);
+  Serial1.write(dataFrameTx, 8);
+
+  dataFrameTx[2] = 0x05;
+  dataFrameTx[3] = 0x82;
+  dataFrameTx[4] = 0x53;
+  dataFrameTx[5] = 0x02;
+  dataFrameTx[6] = highByte(vp53[2]);
+  dataFrameTx[7] = lowByte(vp53[2]);
+  Serial1.write(dataFrameTx, 8);
+
+  return true;
 }
 
 // Save all data sets to JSON
@@ -195,26 +274,26 @@ bool saveToJSON() {
   // Create array of objects
   JsonArray dataArray = doc.to<JsonArray>();
   
-  for (int setIndex = 0; setIndex < MAX_DATA_SETS; setIndex++) {
-    JsonObject dataSet = dataArray.createNestedObject();
+  for (int datasetIndex = 0; datasetIndex < MAX_DATA_SETS; datasetIndex++) {
+    JsonObject dataset = dataArray.createNestedObject();
     
     // Create vp51 array for this data set
-    JsonArray vp51Array = dataSet.createNestedArray("vp51");
-    for (int i = 0; i < 2; i++) {
-      vp51Array.add(allVP51[setIndex][i]);
-    }
+    JsonArray vp51Array = dataset.createNestedArray("vp51");
+    vp51Array.add(allVP51[datasetIndex][0]);
+    vp51Array.add(allVP51[datasetIndex][1]);
     
     // Create vp52 array for this data set
-    JsonArray vp52Array = dataSet.createNestedArray("vp52");
-    for (int i = 0; i < 3; i++) {
-      vp52Array.add(allVP52[setIndex][i]);
-    }
+    JsonArray vp52Array = dataset.createNestedArray("vp52");
+    vp52Array.add(allVP52[datasetIndex][0]);
+    vp52Array.add(allVP52[datasetIndex][1]);
+    vp52Array.add(allVP52[datasetIndex][2]);
+    
     
     // Create vp53 array for this data set
-    JsonArray vp53Array = dataSet.createNestedArray("vp53");
-    for (int i = 0; i < 3; i++) {
-      vp53Array.add(allVP53[setIndex][i]);
-    }
+    JsonArray vp53Array = dataset.createNestedArray("vp53");
+    vp53Array.add(allVP53[datasetIndex][0]);
+    vp53Array.add(allVP53[datasetIndex][1]);
+    vp53Array.add(allVP53[datasetIndex][2]);
   }
   
   // Write to file
@@ -267,89 +346,88 @@ bool loadFromJSON() {
   int setCount = min(dataArray.size(), (size_t)MAX_DATA_SETS);
   
   // Load each data set
-  for (int setIndex = 0; setIndex < setCount; setIndex++) {
-    JsonObject dataSet = dataArray[setIndex];
+  for (int datasetIndex = 0; datasetIndex < setCount; datasetIndex++) {
+    JsonObject dataset = dataArray[datasetIndex];
     
     // Load vp51
-    if (dataSet.containsKey("vp51") && dataSet["vp51"].is<JsonArray>()) {
-      JsonArray vp51Array = dataSet["vp51"];
-      for (int i = 0; i < 2 && i < vp51Array.size(); i++) {
-        allVP51[setIndex][i] = vp51Array[i];
-      }
+    if (dataset.containsKey("vp51") && dataset["vp51"].is<JsonArray>()) {
+      allVP51[datasetIndex][0] = dataset["vp51"][0];
+      allVP51[datasetIndex][1] = dataset["vp51"][1];
     }
     
     // Load vp52
-    if (dataSet.containsKey("vp52") && dataSet["vp52"].is<JsonArray>()) {
-      JsonArray vp52Array = dataSet["vp52"];
-      for (int i = 0; i < 3 && i < vp52Array.size(); i++) {
-        allVP52[setIndex][i] = vp52Array[i];
-      }
+    if (dataset.containsKey("vp52") && dataset["vp52"].is<JsonArray>()) {
+      allVP52[datasetIndex][0] = dataset["vp52"][0];
+      allVP52[datasetIndex][1] = dataset["vp52"][1];
+      allVP52[datasetIndex][2] = dataset["vp52"][2];
     }
     
     // Load vp53
-    if (dataSet.containsKey("vp53") && dataSet["vp53"].is<JsonArray>()) {
-      JsonArray vp53Array = dataSet["vp53"];
-      for (int i = 0; i < 3 && i < vp53Array.size(); i++) {
-        allVP53[setIndex][i] = vp53Array[i];
-      }
+    if (dataset.containsKey("vp53") && dataset["vp53"].is<JsonArray>()) {
+      allVP53[datasetIndex][0] = dataset["vp53"][0];
+      allVP53[datasetIndex][1] = dataset["vp53"][1];
+      allVP53[datasetIndex][2] = dataset["vp53"][2];
     }
   }
   
   // Update current working arrays
-  updateCurrentArrays();
+  vp51[0] = allVP51[0][0];
+  vp51[1] = allVP51[0][1];
+  vp52[0] = allVP52[0][0];
+  vp52[1] = allVP52[0][1];
+  vp52[2] = allVP52[0][2];
+  vp53[0] = allVP53[0][0];
+  vp53[1] = allVP53[0][1];
+  vp53[2] = allVP53[0][2];
   
   Serial.println("JSON data loaded");
   return true;
 }
 
 // Save by pointer: pointer = datasetIndex, saves current vp51, vp52, vp53 to that dataset index
-bool saveByPointer(uint16_t pointer) {
-  uint8_t dataSetIndex = pointer & 0xFF;  // Lower 8 bits = dataset index
+bool saveByPointer(uint16_t datasetIndex) {
   
   // Validate data set index
-  if (dataSetIndex >= MAX_DATA_SETS) {
+  if (datasetIndex >= MAX_DATA_SETS) {
     Serial.println("Invalid data set index");
     return false;
   }
   
   // Copy current vp51, vp52, vp53 to the specified dataset index
-  for (int i = 0; i < 2; i++) {
-    allVP51[dataSetIndex][i] = vp51[i];
-  }
-  for (int i = 0; i < 3; i++) {
-    allVP52[dataSetIndex][i] = vp52[i];
-  }
-  for (int i = 0; i < 3; i++) {
-    allVP53[dataSetIndex][i] = vp53[i];
-  }
+  allVP51[datasetIndex][0] = vp51[0];
+  allVP51[datasetIndex][1] = vp51[1];
+  allVP52[datasetIndex][0] = vp52[0];
+  allVP52[datasetIndex][1] = vp52[1];
+  allVP52[datasetIndex][2] = vp52[2];
+  allVP53[datasetIndex][0] = vp53[0];
+  allVP53[datasetIndex][1] = vp53[1];
+  allVP53[datasetIndex][2] = vp53[2];
   
   // Save to JSON file
   return saveToJSON();
 }
 
 // Load by pointer: pointer = datasetIndex, loads vp51, vp52, vp53 from that dataset index
-bool loadByPointer(uint16_t pointer) {
-  uint8_t dataSetIndex = pointer & 0xFF;  // Lower 8 bits = dataset index
+bool loadByPointer(uint16_t datasetIndex) {
   
   // Validate data set index
-  if (dataSetIndex >= MAX_DATA_SETS) {
+  if (datasetIndex >= MAX_DATA_SETS) {
     Serial.println("Invalid data set index");
     return false;
   }
   
-  // Copy from the specified dataset index to current vp51, vp52, vp53
-  for (int i = 0; i < 2; i++) {
-    vp51[i] = allVP51[dataSetIndex][i];
-  }
-  for (int i = 0; i < 3; i++) {
-    vp52[i] = allVP52[dataSetIndex][i];
-  }
-  for (int i = 0; i < 3; i++) {
-    vp53[i] = allVP53[dataSetIndex][i];
-  }
+  vp51[0] = allVP51[datasetIndex][0];
+  vp51[1] = allVP51[datasetIndex][1];
+  vp52[0] = allVP52[datasetIndex][0];
+  vp52[1] = allVP52[datasetIndex][1];
+  vp52[2] = allVP52[datasetIndex][2];
+  vp53[0] = allVP53[datasetIndex][0];
+  vp53[1] = allVP53[datasetIndex][1];
+  vp53[2] = allVP53[datasetIndex][2];
+  
   
   Serial.print("Loaded data set ");
-  Serial.println(dataSetIndex);
+  Serial.println(datasetIndex);
   return true;
 }
 
@@ -614,6 +692,7 @@ void readSerialData() {
       Serial.print(rxBuffer[i], HEX);
       Serial.print(' ');
     }
+
     Serial.println();
 
     // rxBuffer[0]: HEADER
@@ -670,6 +749,8 @@ void readSerialData() {
                 } else {
                   Serial.println("Failed to load by pointer");
                 }
+                switchMainPage();
+                setMainPageVp();
                 break;
               case 0x03:  // Save by pointer (dataset index)
                 if (saveByPointer(value)) {
@@ -678,6 +759,7 @@ void readSerialData() {
                 } else {
                   Serial.println("Failed to save by pointer");
                 }
+                switchMainPage();
                 break;
             }
           break;
@@ -811,33 +893,8 @@ void setup() {
   // Load saved data from JSON on startup
   loadFromJSON();
 
-  dataFrameTx[4] = 0x51;
-  for (int i=0; i<2; i++) {
-    dataFrameTx[5] = i;
-    dataFrameTx[6] = highByte(vp51[i]);
-    dataFrameTx[7] = lowByte(vp51[i]);
-
-    Serial.write(dataFrameTx, 8);
-    Serial1.write(dataFrameTx, 8);
-  }
-  
-  for (int i=0; i<3; i++) {
-    dataFrameTx[4] = 0x52;
-    dataFrameTx[5] = i;
-    dataFrameTx[6] = highByte(vp52[i]);
-    dataFrameTx[7] = lowByte(vp52[i]);
-
-    Serial.write(dataFrameTx, 8);
-    Serial1.write(dataFrameTx, 8);
-
-    dataFrameTx[4] = 0x53;
-    dataFrameTx[5] = i;
-    dataFrameTx[6] = highByte(vp53[i]);
-    dataFrameTx[7] = lowByte(vp53[i]);
-
-    Serial.write(dataFrameTx, 8);
-    Serial1.write(dataFrameTx, 8);
-  }
+  switchMainPage();
+  setMainPageVp();
 }
 
 void loop() {
