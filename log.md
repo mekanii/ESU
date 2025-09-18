@@ -1,4 +1,10 @@
 2025-09-16
+- • firmware coding: feat/persistent-data-storage menggunakan littlefs untuk read/write memory [Done]
+- • HMI: feat/save-load-profiles [Done]
+- • Refactor firmware code: config, data_manager, hardware_control, display_comm, main [Done]
+- • Rework UI: main, menu, save/load user profiles [In Progress]
+
+2025-09-16
 - firmware coding: feat/persistent-data-storage menggunakan littlefs untuk read/write memory [In Progress]
 - HMI: feat/save-load-profiles [In Progress]
 
