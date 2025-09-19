@@ -1,3 +1,4 @@
+#include "config.h"
 #include "display_comm.h"
 #include "data_manager.h"
 
@@ -6,6 +7,9 @@ unsigned char dataFrameTx[16] = {0x5A, 0xA5, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 
 // 5A A5 PAYLOAD_LENGTH INSTRUCTION VAR_ID_H VAR_ID_L DATA_LENGTH DATA_H DATA_L
 uint8_t rxBuffer[9];
+
+uint16_t sp22x = SP22_DEFAULT_X;
+uint16_t sp23x = SP23_DEFAULT_X;
 
 bool switchMainPage() {
   dataFrameTx[2] = 0x07;  // PAYLOAD_LENGTH
@@ -134,11 +138,159 @@ void readSerialData() {
           case 0x52:
             if (rxBuffer[5] == 0x00 || rxBuffer[5] == 0x01 || rxBuffer[5] == 0x02) {
               vp52[rxBuffer[5]] = value;
+              if (value < 10) {
+                if (sp22x != SP22_DEFAULT_X) {
+                  sp22x = SP22_DEFAULT_X;
+
+                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
+                  dataFrameTx[4] = 0x22;                      // SP:H
+                  dataFrameTx[5] = (rxBuffer[5] + 0x01);      // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp22x);           // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp22x);            // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP22_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP22_DEFAULT_Y);   // DATA:L (y)
+                  Serial1.write(dataFrameTx, 10);
+                }
+              }
+              else if (value < 20) {
+                if (sp22x != (SP22_DEFAULT_X + 20)) {         // LEFT -65 RIGHT +20
+                  sp22x = SP22_DEFAULT_X + 20;
+                  
+                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
+                  dataFrameTx[4] = 0x22;                      // SP:H
+                  dataFrameTx[5] = (rxBuffer[5] + 0x01);      // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp22x);           // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp22x);            // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP22_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP22_DEFAULT_Y);   // DATA:L (y)
+                  Serial1.write(dataFrameTx, 10);
+                }
+              }
+              else if (value < 100) {
+                if (sp22x != SP22_DEFAULT_X + 40) {         // LEFT -35 RIGHT +40
+                  sp22x = SP22_DEFAULT_X + 40;
+                  
+                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
+                  dataFrameTx[4] = 0x22;                      // SP:H
+                  dataFrameTx[5] = (rxBuffer[5] + 0x01);      // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp22x);           // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp22x);            // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP22_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP22_DEFAULT_Y);   // DATA:L (y)
+                  Serial1.write(dataFrameTx, 10);
+                }
+              }
+              else if (value < 200){
+                if (sp22x != SP22_DEFAULT_X + 60) {         // LEFT -85 RIGHT +60
+                  sp22x = SP22_DEFAULT_X + 60;
+                  
+                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
+                  dataFrameTx[4] = 0x22;                      // SP:H
+                  dataFrameTx[5] = (rxBuffer[5] + 0x01);      // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp22x);           // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp22x);            // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP22_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP22_DEFAULT_Y);   // DATA:L (y)
+                  Serial1.write(dataFrameTx, 10);
+                }
+              } else {  // default
+                if (sp22x != SP22_DEFAULT_X) {
+                  sp22x = SP22_DEFAULT_X;
+
+                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
+                  dataFrameTx[4] = 0x22;                      // SP:H
+                  dataFrameTx[5] = (rxBuffer[5] + 0x01);      // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp22x);           // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp22x);            // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP22_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP22_DEFAULT_Y);   // DATA:L (y)
+                  Serial1.write(dataFrameTx, 10);
+                }
+              }
             }
             break;
           case 0x53:
             if (rxBuffer[5] == 0x00 || rxBuffer[5] == 0x01 || rxBuffer[5] == 0x02) {
               vp53[rxBuffer[5]] = value;
+              if (value < 10) {
+                if (sp23x != SP23_DEFAULT_X) {
+                  sp23x = SP23_DEFAULT_X;
+
+                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
+                  dataFrameTx[4] = 0x23;                      // SP:H
+                  dataFrameTx[5] = (rxBuffer[5] + 0x01);      // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp23x);           // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp23x);            // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP23_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP23_DEFAULT_Y);   // DATA:L (y)
+                  Serial1.write(dataFrameTx, 10);
+                }
+              }
+              else if (value < 20) {
+                if (sp23x != (SP23_DEFAULT_X - 65)) {
+                  sp23x = SP23_DEFAULT_X - 65;
+                  
+                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
+                  dataFrameTx[4] = 0x23;                      // SP:H
+                  dataFrameTx[5] = (rxBuffer[5] + 0x01);      // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp23x);           // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp23x);            // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP23_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP23_DEFAULT_Y);   // DATA:L (y)
+                  Serial1.write(dataFrameTx, 10);
+                }
+              }
+              else if (value < 100) {
+                if (sp23x != SP23_DEFAULT_X - 35) {
+                  sp23x = SP23_DEFAULT_X - 35;
+                  
+                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
+                  dataFrameTx[4] = 0x23;                      // SP:H
+                  dataFrameTx[5] = (rxBuffer[5] + 0x01);      // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp23x);           // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp23x);            // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP23_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP23_DEFAULT_Y);   // DATA:L (y)
+                  Serial1.write(dataFrameTx, 10);
+                }
+              }
+              else if (value < 200){
+                if (sp23x != SP23_DEFAULT_X - 85) {
+                  sp23x = SP23_DEFAULT_X - 85;
+                  
+                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
+                  dataFrameTx[4] = 0x23;                      // SP:H
+                  dataFrameTx[5] = (rxBuffer[5] + 0x01);      // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp23x);           // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp23x);            // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP23_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP23_DEFAULT_Y);   // DATA:L (y)
+                  Serial1.write(dataFrameTx, 10);
+                }
+              } else {  // default
+                if (sp23x != SP23_DEFAULT_X) {
+                  sp23x = SP23_DEFAULT_X;
+
+                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
+                  dataFrameTx[4] = 0x23;                      // SP:H
+                  dataFrameTx[5] = (rxBuffer[5] + 0x01);      // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp23x);           // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp23x);            // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP23_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP23_DEFAULT_Y);   // DATA:L (y)
+                  Serial1.write(dataFrameTx, 10);
+                }
+              }
             }
             break;
           case 0x54:

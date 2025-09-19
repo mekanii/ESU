@@ -35,6 +35,12 @@
 #define JSON_DOC_SIZE 2048
 #define JSON_DATA_FILE "/data.json"
 
+// Display Properties
+#define SP22_DEFAULT_X 210
+#define SP22_DEFAULT_Y 125
+#define SP23_DEFAULT_X 760
+#define SP23_DEFAULT_Y 125
+
 // PWM configuration
 const gpio_num_t PWM_0 = (gpio_num_t)1;
 const gpio_num_t PWM_1 = (gpio_num_t)2;
