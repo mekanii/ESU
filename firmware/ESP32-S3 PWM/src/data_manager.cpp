@@ -1,14 +1,14 @@
 #include "data_manager.h"
 
 // Initialize data arrays
-uint16_t allVP51[MAX_DATA_SETS][2] = {0};
-uint16_t allVP52[MAX_DATA_SETS][3] = {0};
-uint16_t allVP53[MAX_DATA_SETS][3] = {0};
+uint16_t allVP81[MAX_DATA_SETS][2] = {0};
+uint16_t allVP82[MAX_DATA_SETS][3] = {0};
+uint16_t allVP83[MAX_DATA_SETS][3] = {0};
 
 // Current working arrays (point to current data set)
-uint16_t vp51[2] = {0, 0};
-uint16_t vp52[3] = {0, 0, 0};
-uint16_t vp53[3] = {0, 0, 0};
+uint16_t vp81[2] = {0, 0};
+uint16_t vp82[3] = {0, 0, 0};
+uint16_t vp83[3] = {0, 0, 0};
 
 // Initialize LittleFS with proper error handling
 bool initLittleFS() {
@@ -35,17 +35,17 @@ bool initLittleFS() {
     for (int datasetIndex = 0; datasetIndex < MAX_DATA_SETS; datasetIndex++) {
       JsonObject dataset = dataArray.createNestedObject();
       
-      JsonArray vp51Array = dataset.createNestedArray("vp51");
+      JsonArray vp51Array = dataset.createNestedArray("vp81");
       for (int i = 0; i < 2; i++) {
         vp51Array.add(0);
       }
       
-      JsonArray vp52Array = dataset.createNestedArray("vp52");
+      JsonArray vp52Array = dataset.createNestedArray("vp82");
       for (int i = 0; i < 3; i++) {
         vp52Array.add(0);
       }
       
-      JsonArray vp53Array = dataset.createNestedArray("vp53");
+      JsonArray vp53Array = dataset.createNestedArray("vp83");
       for (int i = 0; i < 3; i++) {
         vp53Array.add(0);
       }
@@ -83,23 +83,23 @@ bool saveToJSON() {
   for (int datasetIndex = 0; datasetIndex < MAX_DATA_SETS; datasetIndex++) {
     JsonObject dataset = dataArray.createNestedObject();
     
-    // Create vp51 array for this data set
-    JsonArray vp51Array = dataset.createNestedArray("vp51");
-    vp51Array.add(allVP51[datasetIndex][0]);
-    vp51Array.add(allVP51[datasetIndex][1]);
+    // Create vp81 array for this data set
+    JsonArray vp51Array = dataset.createNestedArray("vp81");
+    vp51Array.add(allVP81[datasetIndex][0]);
+    vp51Array.add(allVP81[datasetIndex][1]);
     
-    // Create vp52 array for this data set
-    JsonArray vp52Array = dataset.createNestedArray("vp52");
-    vp52Array.add(allVP52[datasetIndex][0]);
-    vp52Array.add(allVP52[datasetIndex][1]);
-    vp52Array.add(allVP52[datasetIndex][2]);
+    // Create vp82 array for this data set
+    JsonArray vp52Array = dataset.createNestedArray("vp82");
+    vp52Array.add(allVP82[datasetIndex][0]);
+    vp52Array.add(allVP82[datasetIndex][1]);
+    vp52Array.add(allVP82[datasetIndex][2]);
     
     
-    // Create vp53 array for this data set
-    JsonArray vp53Array = dataset.createNestedArray("vp53");
-    vp53Array.add(allVP53[datasetIndex][0]);
-    vp53Array.add(allVP53[datasetIndex][1]);
-    vp53Array.add(allVP53[datasetIndex][2]);
+    // Create vp83 array for this data set
+    JsonArray vp53Array = dataset.createNestedArray("vp83");
+    vp53Array.add(allVP83[datasetIndex][0]);
+    vp53Array.add(allVP83[datasetIndex][1]);
+    vp53Array.add(allVP83[datasetIndex][2]);
   }
   
   // Write to file
@@ -155,42 +155,42 @@ bool loadFromJSON() {
   for (int datasetIndex = 0; datasetIndex < setCount; datasetIndex++) {
     JsonObject dataset = dataArray[datasetIndex];
     
-    // Load vp51
-    if (dataset.containsKey("vp51") && dataset["vp51"].is<JsonArray>()) {
-      allVP51[datasetIndex][0] = dataset["vp51"][0];
-      allVP51[datasetIndex][1] = dataset["vp51"][1];
+    // Load vp81
+    if (dataset.containsKey("vp81") && dataset["vp81"].is<JsonArray>()) {
+      allVP81[datasetIndex][0] = dataset["vp81"][0];
+      allVP81[datasetIndex][1] = dataset["vp81"][1];
     }
     
-    // Load vp52
-    if (dataset.containsKey("vp52") && dataset["vp52"].is<JsonArray>()) {
-      allVP52[datasetIndex][0] = dataset["vp52"][0];
-      allVP52[datasetIndex][1] = dataset["vp52"][1];
-      allVP52[datasetIndex][2] = dataset["vp52"][2];
+    // Load vp82
+    if (dataset.containsKey("vp82") && dataset["vp82"].is<JsonArray>()) {
+      allVP82[datasetIndex][0] = dataset["vp82"][0];
+      allVP82[datasetIndex][1] = dataset["vp82"][1];
+      allVP82[datasetIndex][2] = dataset["vp82"][2];
     }
     
-    // Load vp53
-    if (dataset.containsKey("vp53") && dataset["vp53"].is<JsonArray>()) {
-      allVP53[datasetIndex][0] = dataset["vp53"][0];
-      allVP53[datasetIndex][1] = dataset["vp53"][1];
-      allVP53[datasetIndex][2] = dataset["vp53"][2];
+    // Load vp83
+    if (dataset.containsKey("vp83") && dataset["vp83"].is<JsonArray>()) {
+      allVP83[datasetIndex][0] = dataset["vp83"][0];
+      allVP83[datasetIndex][1] = dataset["vp83"][1];
+      allVP83[datasetIndex][2] = dataset["vp83"][2];
     }
   }
   
   // Update current working arrays
-  vp51[0] = allVP51[0][0];
-  vp51[1] = allVP51[0][1];
-  vp52[0] = allVP52[0][0];
-  vp52[1] = allVP52[0][1];
-  vp52[2] = allVP52[0][2];
-  vp53[0] = allVP53[0][0];
-  vp53[1] = allVP53[0][1];
-  vp53[2] = allVP53[0][2];
+  vp81[0] = allVP81[0][0];
+  vp81[1] = allVP81[0][1];
+  vp82[0] = allVP82[0][0];
+  vp82[1] = allVP82[0][1];
+  vp82[2] = allVP82[0][2];
+  vp83[0] = allVP83[0][0];
+  vp83[1] = allVP83[0][1];
+  vp83[2] = allVP83[0][2];
   
   Serial.println("JSON data loaded");
   return true;
 }
 
-// Save by pointer: pointer = datasetIndex, saves current vp51, vp52, vp53 to that dataset index
+// Save by pointer: pointer = datasetIndex, saves current vp81, vp82, vp83 to that dataset index
 bool saveByPointer(uint16_t datasetIndex) {
   
   // Validate data set index
@@ -199,21 +199,21 @@ bool saveByPointer(uint16_t datasetIndex) {
     return false;
   }
   
-  // Copy current vp51, vp52, vp53 to the specified dataset index
-  allVP51[datasetIndex][0] = vp51[0];
-  allVP51[datasetIndex][1] = vp51[1];
-  allVP52[datasetIndex][0] = vp52[0];
-  allVP52[datasetIndex][1] = vp52[1];
-  allVP52[datasetIndex][2] = vp52[2];
-  allVP53[datasetIndex][0] = vp53[0];
-  allVP53[datasetIndex][1] = vp53[1];
-  allVP53[datasetIndex][2] = vp53[2];
+  // Copy current vp81, vp82, vp83 to the specified dataset index
+  allVP81[datasetIndex][0] = vp81[0];
+  allVP81[datasetIndex][1] = vp81[1];
+  allVP82[datasetIndex][0] = vp82[0];
+  allVP82[datasetIndex][1] = vp82[1];
+  allVP82[datasetIndex][2] = vp82[2];
+  allVP83[datasetIndex][0] = vp83[0];
+  allVP83[datasetIndex][1] = vp83[1];
+  allVP83[datasetIndex][2] = vp83[2];
   
   // Save to JSON file
   return saveToJSON();
 }
 
-// Load by pointer: pointer = datasetIndex, loads vp51, vp52, vp53 from that dataset index
+// Load by pointer: pointer = datasetIndex, loads vp81, vp82, vp83 from that dataset index
 bool loadByPointer(uint16_t datasetIndex) {
   
   // Validate data set index
@@ -222,14 +222,14 @@ bool loadByPointer(uint16_t datasetIndex) {
     return false;
   }
   
-  vp51[0] = allVP51[datasetIndex][0];
-  vp51[1] = allVP51[datasetIndex][1];
-  vp52[0] = allVP52[datasetIndex][0];
-  vp52[1] = allVP52[datasetIndex][1];
-  vp52[2] = allVP52[datasetIndex][2];
-  vp53[0] = allVP53[datasetIndex][0];
-  vp53[1] = allVP53[datasetIndex][1];
-  vp53[2] = allVP53[datasetIndex][2];
+  vp81[0] = allVP81[datasetIndex][0];
+  vp81[1] = allVP81[datasetIndex][1];
+  vp82[0] = allVP82[datasetIndex][0];
+  vp82[1] = allVP82[datasetIndex][1];
+  vp82[2] = allVP82[datasetIndex][2];
+  vp83[0] = allVP83[datasetIndex][0];
+  vp83[1] = allVP83[datasetIndex][1];
+  vp83[2] = allVP83[datasetIndex][2];
   
   
   Serial.print("Loaded data set ");

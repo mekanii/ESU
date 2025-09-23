@@ -85,7 +85,7 @@ void fire(int mode) {
     // Set up the PWM signal
     switch (mode) {
       case 0:
-        duration0 = vp52[0];
+        duration0 = vp82[0];
         duration1 = totalPeriods[0] - duration0;
         items[0].duration0 = duration0;
         items[0].level0 = 1;
@@ -97,7 +97,7 @@ void fire(int mode) {
         channel = RMT_TX_CHANNEL_0;
         break;
       case 1:
-        duration0 = vp52[1];
+        duration0 = vp82[1];
         duration1 = totalPeriods[1] - duration0;
         for (int i = 0; i < 20; i++) {
           items[i].duration0 = duration0;
@@ -110,7 +110,7 @@ void fire(int mode) {
         channel = RMT_TX_CHANNEL_0;
         break;
       case 2:
-        duration0 = vp52[3];
+        duration0 = vp82[3];
         duration1 = totalPeriods[2] - duration0;
         for (int i = 0; i < 20; i++) {
           items[i].duration0 = duration0;
@@ -123,7 +123,7 @@ void fire(int mode) {
         channel = RMT_TX_CHANNEL_0;
         break;
       case 3:
-      duration0 = vp53[0];
+      duration0 = vp83[0];
         duration1 = totalPeriods[3] - duration0;
         items[0].duration0 = duration0;
         items[0].level0 = 1;
@@ -135,7 +135,7 @@ void fire(int mode) {
         channel = RMT_TX_CHANNEL_1;
         break;
       case 4:
-        duration0 = vp53[1];
+        duration0 = vp83[1];
         duration1 = totalPeriods[4] - duration0;
         items[0].duration0 = duration0;
         items[0].level0 = 1;
@@ -147,7 +147,7 @@ void fire(int mode) {
         channel = RMT_TX_CHANNEL_1;
         break;
       case 5:
-        duration0 = vp53[2];
+        duration0 = vp83[2];
         duration1 = totalPeriods[1] - duration0;
         for (int i = 0; i < 20; i++) {
           items[i].duration0 = duration0;
@@ -161,6 +161,7 @@ void fire(int mode) {
         break;
       default:
         // Default to mode 1 if invalid mode is provided
+        duration0 = vp82[0];
         duration1 = totalPeriods[0] - duration0;
         for (int i = 0; i < 20; i++) {
           items[i].duration0 = duration0;
@@ -270,12 +271,12 @@ void readButtons() {
   // Check if mode 1 button (SENS_CUT) was just pressed
   if (updateButtonState(0, SENS_CUT) || updateButtonState(2, MSD1)) {
     // Fire update once when button is first pressed (RMT will auto-loop)
-    fire(vp51[0]);
+    fire(vp81[0]);
   }
 
   // Check if mode 3 button (SENS_COAG) was just pressed
   if (updateButtonState(1, SENS_COAG) || updateButtonState(3, MSD2)) {
     // Fire update once when button is first pressed (RMT will auto-loop)
-    fire(vp51[1]);
+    fire(vp81[1]);
   }
 }
