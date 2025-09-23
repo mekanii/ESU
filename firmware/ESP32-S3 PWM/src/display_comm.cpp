@@ -8,8 +8,8 @@ unsigned char dataFrameTx[16] = {0x5A, 0xA5, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 // 5A A5 PAYLOAD_LENGTH INSTRUCTION VAR_ID_H VAR_ID_L DATA_LENGTH DATA_H DATA_L
 uint8_t rxBuffer[9];
 
-uint16_t sp20_30_40_x = SP20_30_40_DEFAULT_X;
-uint16_t sp50_60_70_x = SP50_60_70_DEFAULT_X;
+uint16_t sp80_90_A0_x = SP80_90_A0_DEFAULT_X;
+uint16_t spB0_C0_D0_x = SPB0_C0_D0_DEFAULT_X;
 
 bool switchMainPage() {
   dataFrameTx[2] = 0x07;  // PAYLOAD_LENGTH
@@ -20,81 +20,81 @@ bool switchMainPage() {
   dataFrameTx[7] = 0x01;  // PROCESSING_MODE (0X01 PAGE SWITCH)
   dataFrameTx[8] = 0x00;  // DATA:H
 
-  if (vp81[0] == 0 && vp81[1] == 0) {dataFrameTx[9] = 0x00; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp81[0] == 1 && vp81[1] == 0) {dataFrameTx[9] = 0x01; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp81[0] == 2 && vp81[1] == 0) {dataFrameTx[9] = 0x02; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp81[0] == 0 && vp81[1] == 1) {dataFrameTx[9] = 0x03; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp81[0] == 1 && vp81[1] == 1) {dataFrameTx[9] = 0x04; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp81[0] == 2 && vp81[1] == 1) {dataFrameTx[9] = 0x05; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp81[0] == 0 && vp81[1] == 2) {dataFrameTx[9] = 0x06; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp81[0] == 1 && vp81[1] == 2) {dataFrameTx[9] = 0x07; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp81[0] == 2 && vp81[1] == 2) {dataFrameTx[9] = 0x08; Serial1.write(dataFrameTx, 10); return true;}
+  if (vp51[0] == 0 && vp51[1] == 0) {dataFrameTx[9] = 0x00; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 1 && vp51[1] == 0) {dataFrameTx[9] = 0x01; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 2 && vp51[1] == 0) {dataFrameTx[9] = 0x02; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 0 && vp51[1] == 1) {dataFrameTx[9] = 0x03; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 1 && vp51[1] == 1) {dataFrameTx[9] = 0x04; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 2 && vp51[1] == 1) {dataFrameTx[9] = 0x05; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 0 && vp51[1] == 2) {dataFrameTx[9] = 0x06; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 1 && vp51[1] == 2) {dataFrameTx[9] = 0x07; Serial1.write(dataFrameTx, 10); return true;}
+  else if (vp51[0] == 2 && vp51[1] == 2) {dataFrameTx[9] = 0x08; Serial1.write(dataFrameTx, 10); return true;}
   else {dataFrameTx[9] = 0x00; Serial1.write(dataFrameTx, 10); return false;}
 }
 
 bool setMainPageVp() {
   dataFrameTx[2] = 0x05;                // PAYLOAD_LENGTH (BYTE)
   dataFrameTx[3] = 0x82;                // INSTRUCTION
-  dataFrameTx[4] = 0x81;                // VAR_ID:H
+  dataFrameTx[4] = 0x51;                // VAR_ID:H
   dataFrameTx[5] = 0x00;                // VAR_ID:L
-  dataFrameTx[6] = highByte(vp81[0]);   // DATA:H
-  dataFrameTx[7] = lowByte(vp81[0]);    // DATA:L
+  dataFrameTx[6] = highByte(vp51[0]);   // DATA:H
+  dataFrameTx[7] = lowByte(vp51[0]);    // DATA:L
   Serial1.write(dataFrameTx, 8);
   
   dataFrameTx[2] = 0x05;
   dataFrameTx[3] = 0x82;
-  dataFrameTx[4] = 0x81;
+  dataFrameTx[4] = 0x51;
   dataFrameTx[5] = 0x01;
-  dataFrameTx[6] = highByte(vp81[1]);
-  dataFrameTx[7] = lowByte(vp81[1]);
+  dataFrameTx[6] = highByte(vp51[1]);
+  dataFrameTx[7] = lowByte(vp51[1]);
   Serial1.write(dataFrameTx, 8);
 
   dataFrameTx[2] = 0x05;
   dataFrameTx[3] = 0x82;
-  dataFrameTx[4] = 0x82;
+  dataFrameTx[4] = 0x52;
   dataFrameTx[5] = 0x00;
-  dataFrameTx[6] = highByte(vp82[0]);
-  dataFrameTx[7] = lowByte(vp82[0]);
+  dataFrameTx[6] = highByte(vp52[0]);
+  dataFrameTx[7] = lowByte(vp52[0]);
   Serial1.write(dataFrameTx, 8);
 
   dataFrameTx[2] = 0x05;
   dataFrameTx[3] = 0x82;
-  dataFrameTx[4] = 0x82;
+  dataFrameTx[4] = 0x52;
   dataFrameTx[5] = 0x01;
-  dataFrameTx[6] = highByte(vp82[1]);
-  dataFrameTx[7] = lowByte(vp82[1]);
+  dataFrameTx[6] = highByte(vp52[1]);
+  dataFrameTx[7] = lowByte(vp52[1]);
   Serial1.write(dataFrameTx, 8);
 
   dataFrameTx[2] = 0x05;
   dataFrameTx[3] = 0x82;
-  dataFrameTx[4] = 0x82;
+  dataFrameTx[4] = 0x52;
   dataFrameTx[5] = 0x02;
-  dataFrameTx[6] = highByte(vp82[2]);
-  dataFrameTx[7] = lowByte(vp82[2]);
+  dataFrameTx[6] = highByte(vp52[2]);
+  dataFrameTx[7] = lowByte(vp52[2]);
   Serial1.write(dataFrameTx, 8);
 
   dataFrameTx[2] = 0x05;
   dataFrameTx[3] = 0x82;
-  dataFrameTx[4] = 0x83;
+  dataFrameTx[4] = 0x53;
   dataFrameTx[5] = 0x00;
-  dataFrameTx[6] = highByte(vp83[0]);
-  dataFrameTx[7] = lowByte(vp83[0]);
+  dataFrameTx[6] = highByte(vp53[0]);
+  dataFrameTx[7] = lowByte(vp53[0]);
   Serial1.write(dataFrameTx, 8);
 
   dataFrameTx[2] = 0x05;
   dataFrameTx[3] = 0x82;
-  dataFrameTx[4] = 0x83;
+  dataFrameTx[4] = 0x53;
   dataFrameTx[5] = 0x01;
-  dataFrameTx[6] = highByte(vp83[1]);
-  dataFrameTx[7] = lowByte(vp83[1]);
+  dataFrameTx[6] = highByte(vp53[1]);
+  dataFrameTx[7] = lowByte(vp53[1]);
   Serial1.write(dataFrameTx, 8);
 
   dataFrameTx[2] = 0x05;
   dataFrameTx[3] = 0x82;
-  dataFrameTx[4] = 0x83;
+  dataFrameTx[4] = 0x53;
   dataFrameTx[5] = 0x02;
-  dataFrameTx[6] = highByte(vp83[2]);
-  dataFrameTx[7] = lowByte(vp83[2]);
+  dataFrameTx[6] = highByte(vp53[2]);
+  dataFrameTx[7] = lowByte(vp53[2]);
   Serial1.write(dataFrameTx, 8);
 
   return true;
@@ -128,172 +128,172 @@ void readSerialData() {
       if (rxBuffer[3] == 0x83) {
         uint16_t value = (rxBuffer[7] << 8) | rxBuffer[8];
         switch (rxBuffer[4]) {
-          case 0x80:
+          case 0x50:
             break;
-          case 0x81:
+          case 0x51:
             if (rxBuffer[5] == 0x00 || rxBuffer[5] == 0x01) {
-              vp81[rxBuffer[5]] = value;
+              vp51[rxBuffer[5]] = value;
             }
             break;
-          case 0x82:
+          case 0x52:
             if (rxBuffer[5] == 0x00 || rxBuffer[5] == 0x01 || rxBuffer[5] == 0x02) {
-              vp82[rxBuffer[5]] = value;
+              vp52[rxBuffer[5]] = value;
               if (value < 10) {
-                if (sp20_30_40_x != SP20_30_40_DEFAULT_X) {
-                  sp20_30_40_x = SP20_30_40_DEFAULT_X;
+                if (sp80_90_A0_x != SP80_90_A0_DEFAULT_X) {
+                  sp80_90_A0_x = SP80_90_A0_DEFAULT_X;
 
-                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
-                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
-                  dataFrameTx[4] = (rxBuffer[5] << 4) | 0x20; // SP:H
-                  dataFrameTx[5] = 0x01;                      // SP:L (OFFSET 0x01)
-                  dataFrameTx[6] = highByte(sp20_30_40_x);          // DATA:H (x)
-                  dataFrameTx[7] = lowByte(sp20_30_40_x);           // DATA:L (x)
-                  dataFrameTx[8] = highByte(SP20_30_40_DEFAULT_Y);  // DATA:H (y)
-                  dataFrameTx[9] = lowByte(SP20_30_40_DEFAULT_Y);   // DATA:L (y)
+                  dataFrameTx[2] = 0x07;                        // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                        // INSTRUCTION
+                  dataFrameTx[4] = (rxBuffer[5] & 0x03) | 0x80; // SP:H
+                  dataFrameTx[5] = 0x01;                        // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp80_90_A0_x);          // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp80_90_A0_x);           // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP80_90_A0_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP80_90_A0_DEFAULT_Y);   // DATA:L (y)
                   Serial1.write(dataFrameTx, 10);
                 }
               }
               else if (value < 20) {
-                if (sp20_30_40_x != (SP20_30_40_DEFAULT_X + 20)) {         // LEFT -65 RIGHT +20
-                  sp20_30_40_x = SP20_30_40_DEFAULT_X + 20;
+                if (sp80_90_A0_x != (SP80_90_A0_DEFAULT_X + 20)) {         // LEFT -65 RIGHT +20
+                  sp80_90_A0_x = SP80_90_A0_DEFAULT_X + 20;
                   
-                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
-                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
-                  dataFrameTx[4] = (rxBuffer[5] << 4) | 0x20; // SP:H
-                  dataFrameTx[5] = 0x01;                      // SP:L (OFFSET 0x01)
-                  dataFrameTx[6] = highByte(sp20_30_40_x);           // DATA:H (x)
-                  dataFrameTx[7] = lowByte(sp20_30_40_x);            // DATA:L (x)
-                  dataFrameTx[8] = highByte(SP20_30_40_DEFAULT_Y);  // DATA:H (y)
-                  dataFrameTx[9] = lowByte(SP20_30_40_DEFAULT_Y);   // DATA:L (y)
+                  dataFrameTx[2] = 0x07;                        // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                        // INSTRUCTION
+                  dataFrameTx[4] = (rxBuffer[5] & 0x03) | 0x80; // SP:H
+                  dataFrameTx[5] = 0x01;                        // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp80_90_A0_x);          // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp80_90_A0_x);           // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP80_90_A0_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP80_90_A0_DEFAULT_Y);   // DATA:L (y)
                   Serial1.write(dataFrameTx, 10);
                 }
               }
               else if (value < 100) {
-                if (sp20_30_40_x != SP20_30_40_DEFAULT_X + 40) {         // LEFT -35 RIGHT +40
-                  sp20_30_40_x = SP20_30_40_DEFAULT_X + 40;
+                if (sp80_90_A0_x != SP80_90_A0_DEFAULT_X + 40) {         // LEFT -35 RIGHT +40
+                  sp80_90_A0_x = SP80_90_A0_DEFAULT_X + 40;
                   
-                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
-                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
-                  dataFrameTx[4] = (rxBuffer[5] << 4) | 0x20; // SP:H
-                  dataFrameTx[5] = 0x01;                      // SP:L (OFFSET 0x01)
-                  dataFrameTx[6] = highByte(sp20_30_40_x);           // DATA:H (x)
-                  dataFrameTx[7] = lowByte(sp20_30_40_x);            // DATA:L (x)
-                  dataFrameTx[8] = highByte(SP20_30_40_DEFAULT_Y);  // DATA:H (y)
-                  dataFrameTx[9] = lowByte(SP20_30_40_DEFAULT_Y);   // DATA:L (y)
+                  dataFrameTx[2] = 0x07;                        // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                        // INSTRUCTION
+                  dataFrameTx[4] = (rxBuffer[5] & 0x03) | 0x80; // SP:H
+                  dataFrameTx[5] = 0x01;                        // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp80_90_A0_x);          // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp80_90_A0_x);           // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP80_90_A0_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP80_90_A0_DEFAULT_Y);   // DATA:L (y)
                   Serial1.write(dataFrameTx, 10);
                 }
               }
               else if (value < 200){
-                if (sp20_30_40_x != SP20_30_40_DEFAULT_X + 60) {         // LEFT -85 RIGHT +60
-                  sp20_30_40_x = SP20_30_40_DEFAULT_X + 60;
+                if (sp80_90_A0_x != SP80_90_A0_DEFAULT_X + 60) {         // LEFT -85 RIGHT +60
+                  sp80_90_A0_x = SP80_90_A0_DEFAULT_X + 60;
                   
-                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
-                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
-                  dataFrameTx[4] = (rxBuffer[5] << 4) | 0x20; // SP:H
-                  dataFrameTx[5] = 0x01;                      // SP:L (OFFSET 0x01)
-                  dataFrameTx[6] = highByte(sp20_30_40_x);           // DATA:H (x)
-                  dataFrameTx[7] = lowByte(sp20_30_40_x);            // DATA:L (x)
-                  dataFrameTx[8] = highByte(SP20_30_40_DEFAULT_Y);  // DATA:H (y)
-                  dataFrameTx[9] = lowByte(SP20_30_40_DEFAULT_Y);   // DATA:L (y)
+                  dataFrameTx[2] = 0x07;                        // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                        // INSTRUCTION
+                  dataFrameTx[4] = (rxBuffer[5] & 0x03) | 0x80; // SP:H
+                  dataFrameTx[5] = 0x01;                        // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp80_90_A0_x);          // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp80_90_A0_x);           // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP80_90_A0_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP80_90_A0_DEFAULT_Y);   // DATA:L (y)
                   Serial1.write(dataFrameTx, 10);
                 }
               } else {  // default
-                if (sp20_30_40_x != SP20_30_40_DEFAULT_X) {
-                  sp20_30_40_x = SP20_30_40_DEFAULT_X;
+                if (sp80_90_A0_x != SP80_90_A0_DEFAULT_X) {
+                  sp80_90_A0_x = SP80_90_A0_DEFAULT_X;
 
-                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
-                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
-                  dataFrameTx[4] = (rxBuffer[5] << 4) | 0x50; // SP:H
-                  dataFrameTx[5] = 0x01;                      // SP:L (OFFSET 0x01)
-                  dataFrameTx[6] = highByte(sp20_30_40_x);           // DATA:H (x)
-                  dataFrameTx[7] = lowByte(sp20_30_40_x);            // DATA:L (x)
-                  dataFrameTx[8] = highByte(SP20_30_40_DEFAULT_Y);  // DATA:H (y)
-                  dataFrameTx[9] = lowByte(SP20_30_40_DEFAULT_Y);   // DATA:L (y)
+                  dataFrameTx[2] = 0x07;                        // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                        // INSTRUCTION
+                  dataFrameTx[4] = (rxBuffer[5] & 0x03) | 0x80; // SP:H
+                  dataFrameTx[5] = 0x01;                        // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(sp80_90_A0_x);          // DATA:H (x)
+                  dataFrameTx[7] = lowByte(sp80_90_A0_x);           // DATA:L (x)
+                  dataFrameTx[8] = highByte(SP80_90_A0_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SP80_90_A0_DEFAULT_Y);   // DATA:L (y)
                   Serial1.write(dataFrameTx, 10);
                 }
               }
             }
             break;
-          case 0x83:
+          case 0x53:
             if (rxBuffer[5] == 0x00 || rxBuffer[5] == 0x01 || rxBuffer[5] == 0x02) {
-              vp83[rxBuffer[5]] = value;
+              vp53[rxBuffer[5]] = value;
               if (value < 10) {
-                if (sp50_60_70_x != SP50_60_70_DEFAULT_X) {
-                  sp50_60_70_x = SP50_60_70_DEFAULT_X;
+                if (spB0_C0_D0_x != SPB0_C0_D0_DEFAULT_X) {
+                  spB0_C0_D0_x = SPB0_C0_D0_DEFAULT_X;
 
-                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
-                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
-                  dataFrameTx[4] = (rxBuffer[5] << 4) | 0x50; // SP:H
-                  dataFrameTx[5] = 0x01;                      // SP:L (OFFSET 0x01)
-                  dataFrameTx[6] = highByte(sp50_60_70_x);           // DATA:H (x)
-                  dataFrameTx[7] = lowByte(sp50_60_70_x);            // DATA:L (x)
-                  dataFrameTx[8] = highByte(SP50_60_70_DEFAULT_Y);  // DATA:H (y)
-                  dataFrameTx[9] = lowByte(SP50_60_70_DEFAULT_Y);   // DATA:L (y)
+                  dataFrameTx[2] = 0x07;                        // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                        // INSTRUCTION
+                  dataFrameTx[4] = (rxBuffer[5] & 0x03) + 0x83; // SP:H
+                  dataFrameTx[5] = 0x01;                        // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(spB0_C0_D0_x);          // DATA:H (x)
+                  dataFrameTx[7] = lowByte(spB0_C0_D0_x);           // DATA:L (x)
+                  dataFrameTx[8] = highByte(SPB0_C0_D0_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SPB0_C0_D0_DEFAULT_Y);   // DATA:L (y)
                   Serial1.write(dataFrameTx, 10);
                 }
               }
               else if (value < 20) {
-                if (sp50_60_70_x != (SP50_60_70_DEFAULT_X - 65)) {
-                  sp50_60_70_x = SP50_60_70_DEFAULT_X - 65;
+                if (spB0_C0_D0_x != (SPB0_C0_D0_DEFAULT_X + 20)) {
+                  spB0_C0_D0_x = SPB0_C0_D0_DEFAULT_X + 20;
                   
-                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
-                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
-                  dataFrameTx[4] = (rxBuffer[5] << 4) | 0x50; // SP:H
-                  dataFrameTx[5] = 0x01;                      // SP:L (OFFSET 0x01)
-                  dataFrameTx[6] = highByte(sp50_60_70_x);           // DATA:H (x)
-                  dataFrameTx[7] = lowByte(sp50_60_70_x);            // DATA:L (x)
-                  dataFrameTx[8] = highByte(SP50_60_70_DEFAULT_Y);  // DATA:H (y)
-                  dataFrameTx[9] = lowByte(SP50_60_70_DEFAULT_Y);   // DATA:L (y)
+                  dataFrameTx[2] = 0x07;                        // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                        // INSTRUCTION
+                  dataFrameTx[4] = (rxBuffer[5] & 0x03) + 0x83; // SP:H
+                  dataFrameTx[5] = 0x01;                        // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(spB0_C0_D0_x);          // DATA:H (x)
+                  dataFrameTx[7] = lowByte(spB0_C0_D0_x);           // DATA:L (x)
+                  dataFrameTx[8] = highByte(SPB0_C0_D0_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SPB0_C0_D0_DEFAULT_Y);   // DATA:L (y)
                   Serial1.write(dataFrameTx, 10);
                 }
               }
               else if (value < 100) {
-                if (sp50_60_70_x != SP50_60_70_DEFAULT_X - 35) {
-                  sp50_60_70_x = SP50_60_70_DEFAULT_X - 35;
+                if (spB0_C0_D0_x != SPB0_C0_D0_DEFAULT_X + 40) {
+                  spB0_C0_D0_x = SPB0_C0_D0_DEFAULT_X + 40;
                   
-                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
-                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
-                  dataFrameTx[4] = (rxBuffer[5] << 4) | 0x50; // SP:H
-                  dataFrameTx[5] = 0x01;                      // SP:L (OFFSET 0x01)
-                  dataFrameTx[6] = highByte(sp50_60_70_x);           // DATA:H (x)
-                  dataFrameTx[7] = lowByte(sp50_60_70_x);            // DATA:L (x)
-                  dataFrameTx[8] = highByte(SP50_60_70_DEFAULT_Y);  // DATA:H (y)
-                  dataFrameTx[9] = lowByte(SP50_60_70_DEFAULT_Y);   // DATA:L (y)
+                  dataFrameTx[2] = 0x07;                        // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                        // INSTRUCTION
+                  dataFrameTx[4] = (rxBuffer[5] & 0x03) + 0x83; // SP:H
+                  dataFrameTx[5] = 0x01;                        // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(spB0_C0_D0_x);          // DATA:H (x)
+                  dataFrameTx[7] = lowByte(spB0_C0_D0_x);           // DATA:L (x)
+                  dataFrameTx[8] = highByte(SPB0_C0_D0_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SPB0_C0_D0_DEFAULT_Y);   // DATA:L (y)
                   Serial1.write(dataFrameTx, 10);
                 }
               }
               else if (value < 200){
-                if (sp50_60_70_x != SP50_60_70_DEFAULT_X - 85) {
-                  sp50_60_70_x = SP50_60_70_DEFAULT_X - 85;
+                if (spB0_C0_D0_x != SPB0_C0_D0_DEFAULT_X + 60) {
+                  spB0_C0_D0_x = SPB0_C0_D0_DEFAULT_X + 60;
                   
-                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
-                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
-                  dataFrameTx[4] = (rxBuffer[5] << 4) | 0x50; // SP:H
-                  dataFrameTx[5] = 0x01;                      // SP:L (OFFSET 0x01)
-                  dataFrameTx[6] = highByte(sp50_60_70_x);           // DATA:H (x)
-                  dataFrameTx[7] = lowByte(sp50_60_70_x);            // DATA:L (x)
-                  dataFrameTx[8] = highByte(SP50_60_70_DEFAULT_Y);  // DATA:H (y)
-                  dataFrameTx[9] = lowByte(SP50_60_70_DEFAULT_Y);   // DATA:L (y)
+                  dataFrameTx[2] = 0x07;                        // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                        // INSTRUCTION
+                  dataFrameTx[4] = (rxBuffer[5] & 0x03) + 0x83; // SP:H
+                  dataFrameTx[5] = 0x01;                        // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(spB0_C0_D0_x);          // DATA:H (x)
+                  dataFrameTx[7] = lowByte(spB0_C0_D0_x);           // DATA:L (x)
+                  dataFrameTx[8] = highByte(SPB0_C0_D0_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SPB0_C0_D0_DEFAULT_Y);   // DATA:L (y)
                   Serial1.write(dataFrameTx, 10);
                 }
               } else {  // default
-                if (sp50_60_70_x != SP50_60_70_DEFAULT_X) {
-                  sp50_60_70_x = SP50_60_70_DEFAULT_X;
+                if (spB0_C0_D0_x != SPB0_C0_D0_DEFAULT_X) {
+                  spB0_C0_D0_x = SPB0_C0_D0_DEFAULT_X;
 
-                  dataFrameTx[2] = 0x07;                      // PAYLOAD_LENGTH (BYTE)
-                  dataFrameTx[3] = 0x82;                      // INSTRUCTION
-                  dataFrameTx[4] = (rxBuffer[5] << 4) | 0x20; // SP:H
-                  dataFrameTx[5] = 0x01;                      // SP:L (OFFSET 0x01)
-                  dataFrameTx[6] = highByte(sp50_60_70_x);           // DATA:H (x)
-                  dataFrameTx[7] = lowByte(sp50_60_70_x);            // DATA:L (x)
-                  dataFrameTx[8] = highByte(SP50_60_70_DEFAULT_Y);  // DATA:H (y)
-                  dataFrameTx[9] = lowByte(SP50_60_70_DEFAULT_Y);   // DATA:L (y)
+                  dataFrameTx[2] = 0x07;                        // PAYLOAD_LENGTH (BYTE)
+                  dataFrameTx[3] = 0x82;                        // INSTRUCTION
+                  dataFrameTx[4] = (rxBuffer[5] & 0x03) + 0x83; // SP:H
+                  dataFrameTx[5] = 0x01;                        // SP:L (OFFSET 0x01)
+                  dataFrameTx[6] = highByte(spB0_C0_D0_x);          // DATA:H (x)
+                  dataFrameTx[7] = lowByte(spB0_C0_D0_x);           // DATA:L (x)
+                  dataFrameTx[8] = highByte(SPB0_C0_D0_DEFAULT_Y);  // DATA:H (y)
+                  dataFrameTx[9] = lowByte(SPB0_C0_D0_DEFAULT_Y);   // DATA:L (y)
                   Serial1.write(dataFrameTx, 10);
                 }
               }
             }
             break;
-          case 0x84:
+          case 0x54:
             switch (rxBuffer[5]) {
               case 0x00:  // Load all data sets from JSON
                 if (loadFromJSON()) {

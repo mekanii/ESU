@@ -36,11 +36,11 @@
 #define JSON_DATA_FILE "/data.json"
 
 // Display Properties
-#define SP20_30_40_DEFAULT_X 210
-#define SP20_30_40_DEFAULT_Y 125
+#define SP80_90_A0_DEFAULT_X 210
+#define SP80_90_A0_DEFAULT_Y 125
 
-#define SP50_60_70_DEFAULT_X 210
-#define SP50_60_70_DEFAULT_Y 125
+#define SPB0_C0_D0_DEFAULT_X 660
+#define SPB0_C0_D0_DEFAULT_Y 125
 
 // PWM configuration
 const gpio_num_t PWM_0 = (gpio_num_t)1;

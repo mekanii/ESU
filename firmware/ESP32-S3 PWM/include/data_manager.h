@@ -7,14 +7,14 @@
 #include "config.h"
 
 // Data arrays
-extern uint16_t allVP81[MAX_DATA_SETS][2];
-extern uint16_t allVP82[MAX_DATA_SETS][3];
-extern uint16_t allVP83[MAX_DATA_SETS][3];
+extern uint16_t allVP51[MAX_DATA_SETS][2];
+extern uint16_t allVP52[MAX_DATA_SETS][3];
+extern uint16_t allVP53[MAX_DATA_SETS][3];
 
 // Current working arrays
-extern uint16_t vp81[2];
-extern uint16_t vp82[3];
-extern uint16_t vp83[3];
+extern uint16_t vp51[2];
+extern uint16_t vp52[3];
+extern uint16_t vp53[3];
 
 // Function declarations
 bool initLittleFS();

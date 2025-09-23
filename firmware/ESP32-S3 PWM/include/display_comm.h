@@ -7,8 +7,8 @@
 // Data frame for display communication
 extern unsigned char dataFrameTx[16];
 extern uint8_t rxBuffer[9];
-extern uint16_t sp20_30_40_x;
-extern uint16_t sp50_60_70_x;
+extern uint16_t sp80_90_A0_x;
+extern uint16_t spB0_C0_D0_x;
 
 // Function declarations
 bool switchMainPage();
