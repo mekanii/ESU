@@ -1,3 +1,8 @@
+2025-09-23
+- HMI: feat/SP-address-control untuk center alignment text [Done]
+
+2025-09-19
+
 2025-09-18
 - Rework UI: main, menu, save/load user profiles [In Progress]
 - HMI: feat/center-alignment-text [In Progress]
