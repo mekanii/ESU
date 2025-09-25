@@ -310,23 +310,25 @@ void readSerialData() {
                 }
                 break;
               case 0x02:  // Load by pointer (dataset index)
-                if (loadByPointer(value)) {
+                if (value != KEY_CANCEL ? loadByPointer(value) : false) {
                   Serial.print("Loaded data set ");
                   Serial.println(value);
+
+                  switchMainPage();
+                  setMainPageVp();
                 } else {
-                  Serial.println("Failed to load by pointer");
+                  Serial.println(value == KEY_CANCEL ? "Loading was cancelled by user" : "Failed to load by pointer");
                 }
-                switchMainPage();
-                setMainPageVp();
                 break;
               case 0x03:  // Save by pointer (dataset index)
-                if (saveByPointer(value)) {
+                if (value != KEY_CANCEL ? saveByPointer(value) : false) {
                   Serial.print("Saved current data to set ");
                   Serial.println(value);
+                  
+                  switchMainPage();
                 } else {
-                  Serial.println("Failed to save by pointer");
+                  Serial.println(value == KEY_CANCEL ? "Save was cancelled by user" : "Failed to save by pointer");
                 }
-                switchMainPage();
                 break;
             }
           break;

@@ -42,6 +42,8 @@
 #define SPB0_C0_D0_DEFAULT_X 660
 #define SPB0_C0_D0_DEFAULT_Y 125
 
+#define KEY_CANCEL  0x00F0
+
 // PWM configuration
 const gpio_num_t PWM_0 = (gpio_num_t)1;
 const gpio_num_t PWM_1 = (gpio_num_t)2;
