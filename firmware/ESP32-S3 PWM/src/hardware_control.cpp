@@ -124,7 +124,7 @@ void fire(int mode) {
         channel = RMT_TX_CHANNEL_0;
         break;
       case 3:
-      duration0 = vp53[0];
+      duration0 = vp52[3];
         duration1 = totalPeriods[3] - duration0;
         items[0].duration0 = duration0;
         items[0].level0 = 1;
@@ -136,7 +136,7 @@ void fire(int mode) {
         channel = RMT_TX_CHANNEL_1;
         break;
       case 4:
-        duration0 = vp53[1];
+        duration0 = vp52[4];
         duration1 = totalPeriods[4] - duration0;
         items[0].duration0 = duration0;
         items[0].level0 = 1;
@@ -148,7 +148,7 @@ void fire(int mode) {
         channel = RMT_TX_CHANNEL_1;
         break;
       case 5:
-        duration0 = vp53[2];
+        duration0 = vp52[5];
         duration1 = totalPeriods[1] - duration0;
         for (int i = 0; i < 20; i++) {
           items[i].duration0 = duration0;
@@ -268,45 +268,90 @@ bool updateButtonState(int buttonIndex, int buttonPin) {
   return buttonJustPressed;
 }
 
+void getVp51() {
+  dataFrameTx[2] = 0x04;
+  dataFrameTx[3] = 0x83;
+  dataFrameTx[4] = 0x51;
+  dataFrameTx[5] = 0x00;
+  dataFrameTx[6] = 0x02;
+  Serial1.write(dataFrameTx, 7);
+  
+  unsigned long startTime = millis();
+  const unsigned long timeout = 100; // 0.1 second timeout
+  int bytesReceived = 0;
+
+  while (bytesReceived < 11 && (millis() - startTime) < timeout) {
+    if (Serial1.available()) {
+      rxBuffer[bytesReceived] = Serial1.read();
+      bytesReceived++;
+    }
+  }
+
+  if (bytesReceived == 11) {
+    for (int i = 0; i < 11; i++) {
+      if (rxBuffer[i] < 0x10) Serial.print('0');
+      Serial.print(rxBuffer[i], HEX);
+      Serial.print(' ');
+    }
+    Serial.println();
+
+    vp51[0] = (rxBuffer[7] << 8) | rxBuffer[8];
+    vp51[1] = (rxBuffer[9] << 8) | rxBuffer[10];
+    
+  } else {
+    Serial.println("Response timeout or incomplete data");
+  }
+}
+
+void getVp52() {
+  dataFrameTx[2] = 0x04;
+  dataFrameTx[3] = 0x83;
+  dataFrameTx[4] = 0x52;
+  dataFrameTx[5] = 0x00;
+  dataFrameTx[6] = 0x06;
+  Serial1.write(dataFrameTx, 7);
+  
+  unsigned long startTime = millis();
+  const unsigned long timeout = 100; // 0.1 second timeout
+  int bytesReceived = 0;
+
+  while (bytesReceived < 19 && (millis() - startTime) < timeout) {
+    if (Serial1.available()) {
+      rxBuffer[bytesReceived] = Serial1.read();
+      bytesReceived++;
+    }
+  }
+
+  if (bytesReceived == 19) {
+    for (int i = 0; i < 19; i++) {
+      if (rxBuffer[i] < 0x10) Serial.print('0');
+      Serial.print(rxBuffer[i], HEX);
+      Serial.print(' ');
+    }
+    Serial.println();
+
+    vp52[0] = (rxBuffer[7] << 8) | rxBuffer[8];
+    vp52[1] = (rxBuffer[9] << 8) | rxBuffer[10];
+    vp52[2] = (rxBuffer[11] << 8) | rxBuffer[12];
+  } else {
+    Serial.println("Response timeout or incomplete data");
+  }
+}
+
 void readButtons() {
   // Check if mode 1 button (SENS_CUT) was just pressed
   if (updateButtonState(0, SENS_CUT) || updateButtonState(2, MSD1)) {
+    getVp51();
+    getVp52();
     // Fire update once when button is first pressed (RMT will auto-loop)
-    // fire(vp51[0]);
-    dataFrameTx[2] = 0x04;
-    dataFrameTx[3] = 0x83;
-    dataFrameTx[4] = 0x52;
-    dataFrameTx[5] = 0x00;
-    dataFrameTx[6] = 0x06;
-    Serial1.write(dataFrameTx, 7);
-    
-    unsigned long startTime = millis();
-    const unsigned long timeout = 1000; // 1 second timeout
-    int bytesReceived = 0;
-
-    while (bytesReceived < 19 && (millis() - startTime) < timeout) {
-      if (Serial1.available()) {
-        rxBuffer[bytesReceived] = Serial1.read();
-        bytesReceived++;
-      }
-    }
-
-    if (bytesReceived == 19) {
-      for (int i = 0; i < 19; i++) {
-        if (rxBuffer[i] < 0x10) Serial.print('0');
-        Serial.print(rxBuffer[i], HEX);
-        Serial.print(' ');
-      }
-      Serial.println();
-    } else {
-      Serial.println("Response timeout or incomplete data");
-    }
-
+    fire(vp51[0]);
   }
 
   // Check if mode 3 button (SENS_COAG) was just pressed
   if (updateButtonState(1, SENS_COAG) || updateButtonState(3, MSD2)) {
+    getVp51();
+    getVp52();
     // Fire update once when button is first pressed (RMT will auto-loop)
-    // fire(vp51[1]);
+    fire(vp51[1]);
   }
 }

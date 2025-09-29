@@ -3,12 +3,10 @@
 // Initialize data arrays
 uint16_t allVP51[MAX_DATA_SETS][2] = {0};
 uint16_t allVP52[MAX_DATA_SETS][3] = {0};
-uint16_t allVP53[MAX_DATA_SETS][3] = {0};
 
 // Current working arrays (point to current data set)
 uint16_t vp51[2] = {0, 0};
-uint16_t vp52[3] = {0, 0, 0};
-uint16_t vp53[3] = {0, 0, 0};
+uint16_t vp52[6] = {0, 0, 0, 0, 0, 0};
 
 // Initialize LittleFS with proper error handling
 bool initLittleFS() {
@@ -93,13 +91,9 @@ bool saveToJSON() {
     vp52Array.add(allVP52[datasetIndex][0]);
     vp52Array.add(allVP52[datasetIndex][1]);
     vp52Array.add(allVP52[datasetIndex][2]);
-    
-    
-    // Create vp53 array for this data set
-    JsonArray vp53Array = dataset.createNestedArray("vp53");
-    vp53Array.add(allVP53[datasetIndex][0]);
-    vp53Array.add(allVP53[datasetIndex][1]);
-    vp53Array.add(allVP53[datasetIndex][2]);
+    vp52Array.add(allVP52[datasetIndex][3]);
+    vp52Array.add(allVP52[datasetIndex][4]);
+    vp52Array.add(allVP52[datasetIndex][5]);
   }
   
   // Write to file
@@ -166,13 +160,9 @@ bool loadFromJSON() {
       allVP52[datasetIndex][0] = dataset["vp52"][0];
       allVP52[datasetIndex][1] = dataset["vp52"][1];
       allVP52[datasetIndex][2] = dataset["vp52"][2];
-    }
-    
-    // Load vp53
-    if (dataset.containsKey("vp53") && dataset["vp53"].is<JsonArray>()) {
-      allVP53[datasetIndex][0] = dataset["vp53"][0];
-      allVP53[datasetIndex][1] = dataset["vp53"][1];
-      allVP53[datasetIndex][2] = dataset["vp53"][2];
+      allVP52[datasetIndex][3] = dataset["vp52"][3];
+      allVP52[datasetIndex][4] = dataset["vp52"][4];
+      allVP52[datasetIndex][5] = dataset["vp52"][5];
     }
   }
   
@@ -182,9 +172,9 @@ bool loadFromJSON() {
   vp52[0] = allVP52[0][0];
   vp52[1] = allVP52[0][1];
   vp52[2] = allVP52[0][2];
-  vp53[0] = allVP53[0][0];
-  vp53[1] = allVP53[0][1];
-  vp53[2] = allVP53[0][2];
+  vp52[3] = allVP52[0][3];
+  vp52[4] = allVP52[0][4];
+  vp52[5] = allVP52[0][5];
   
   Serial.println("JSON data loaded");
   return true;
@@ -205,9 +195,10 @@ bool saveByPointer(uint16_t datasetIndex) {
   allVP52[datasetIndex][0] = vp52[0];
   allVP52[datasetIndex][1] = vp52[1];
   allVP52[datasetIndex][2] = vp52[2];
-  allVP53[datasetIndex][0] = vp53[0];
-  allVP53[datasetIndex][1] = vp53[1];
-  allVP53[datasetIndex][2] = vp53[2];
+  allVP52[datasetIndex][3] = vp52[3];
+  allVP52[datasetIndex][4] = vp52[4];
+  allVP52[datasetIndex][5] = vp52[5];
+  
   
   // Save to JSON file
   return saveToJSON();
@@ -227,9 +218,9 @@ bool loadByPointer(uint16_t datasetIndex) {
   vp52[0] = allVP52[datasetIndex][0];
   vp52[1] = allVP52[datasetIndex][1];
   vp52[2] = allVP52[datasetIndex][2];
-  vp53[0] = allVP53[datasetIndex][0];
-  vp53[1] = allVP53[datasetIndex][1];
-  vp53[2] = allVP53[datasetIndex][2];
+  vp52[3] = allVP52[datasetIndex][3];
+  vp52[4] = allVP52[datasetIndex][4];
+  vp52[5] = allVP52[datasetIndex][5];
   
   
   Serial.print("Loaded data set ");
