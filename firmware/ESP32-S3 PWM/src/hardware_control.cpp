@@ -259,6 +259,7 @@ bool updateButtonState(int buttonIndex, int buttonPin) {
           // Stop RMT transmission when button is released
           rmt_tx_stop(RMT_TX_CHANNEL_0);
           rmt_tx_stop(RMT_TX_CHANNEL_1);
+          switchMainPage();
         }
       }
     }
@@ -344,6 +345,7 @@ void readButtons() {
     getVp51();
     getVp52();
     // Fire update once when button is first pressed (RMT will auto-loop)
+    fireSignalState(0);
     fire(vp51[0]);
   }
 
@@ -352,6 +354,7 @@ void readButtons() {
     getVp51();
     getVp52();
     // Fire update once when button is first pressed (RMT will auto-loop)
+    fireSignalState(1);
     fire(vp51[1]);
   }
 }

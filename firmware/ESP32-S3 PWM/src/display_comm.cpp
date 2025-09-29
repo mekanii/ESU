@@ -20,7 +20,7 @@ bool switchMainPage() {
   dataFrameTx[7] = 0x01;  // PROCESSING_MODE (0X01 PAGE SWITCH)
   dataFrameTx[8] = 0x00;  // DATA:H
 
-  if (vp51[0] == 0 && vp51[1] == 0) {dataFrameTx[9] = 0x00; Serial1.write(dataFrameTx, 10); return true;}
+       if (vp51[0] == 0 && vp51[1] == 0) {dataFrameTx[9] = 0x00; Serial1.write(dataFrameTx, 10); return true;}
   else if (vp51[0] == 1 && vp51[1] == 0) {dataFrameTx[9] = 0x01; Serial1.write(dataFrameTx, 10); return true;}
   else if (vp51[0] == 2 && vp51[1] == 0) {dataFrameTx[9] = 0x02; Serial1.write(dataFrameTx, 10); return true;}
   else if (vp51[0] == 0 && vp51[1] == 1) {dataFrameTx[9] = 0x03; Serial1.write(dataFrameTx, 10); return true;}
@@ -29,7 +29,28 @@ bool switchMainPage() {
   else if (vp51[0] == 0 && vp51[1] == 2) {dataFrameTx[9] = 0x06; Serial1.write(dataFrameTx, 10); return true;}
   else if (vp51[0] == 1 && vp51[1] == 2) {dataFrameTx[9] = 0x07; Serial1.write(dataFrameTx, 10); return true;}
   else if (vp51[0] == 2 && vp51[1] == 2) {dataFrameTx[9] = 0x08; Serial1.write(dataFrameTx, 10); return true;}
-  else {dataFrameTx[9] = 0x00; Serial1.write(dataFrameTx, 10); return false;}
+  else {return false;}
+}
+
+bool fireSignalState(bool mode) {
+  dataFrameTx[2] = 0x07;  // PAYLOAD_LENGTH
+  dataFrameTx[3] = 0x82;  // INSTRUCTION
+  dataFrameTx[4] = 0x00;  // VAR_ID:H (SYSTEM_VAR_ID:PIC_SET)
+  dataFrameTx[5] = 0x84;  // VAR_ID:L (SYSTEM_VAR_ID:PIC_SET)
+  dataFrameTx[6] = 0x5A;  // ENABLE_PAGE_OPERATION_ONCE
+  dataFrameTx[7] = 0x01;  // PROCESSING_MODE (0X01 PAGE SWITCH)
+  dataFrameTx[8] = 0x00;  // DATA:H
+
+       if (vp51[0] == 0 && vp51[1] == 0) { dataFrameTx[9] = mode == 0 ? 0x0D : 0x0E; Serial1.write(dataFrameTx, 10); return true; }
+  else if (vp51[0] == 1 && vp51[1] == 0) { dataFrameTx[9] = mode == 0 ? 0x1F : 0x10; Serial1.write(dataFrameTx, 10); return true; }
+  else if (vp51[0] == 2 && vp51[1] == 0) { dataFrameTx[9] = mode == 0 ? 0x11 : 0x12; Serial1.write(dataFrameTx, 10); return true; }
+  else if (vp51[0] == 0 && vp51[1] == 1) { dataFrameTx[9] = mode == 0 ? 0x13 : 0x14; Serial1.write(dataFrameTx, 10); return true; }
+  else if (vp51[0] == 1 && vp51[1] == 1) { dataFrameTx[9] = mode == 0 ? 0x15 : 0x16; Serial1.write(dataFrameTx, 10); return true; }
+  else if (vp51[0] == 2 && vp51[1] == 1) { dataFrameTx[9] = mode == 0 ? 0x17 : 0x18; Serial1.write(dataFrameTx, 10); return true; }
+  else if (vp51[0] == 0 && vp51[1] == 2) { dataFrameTx[9] = mode == 0 ? 0x19 : 0x1A; Serial1.write(dataFrameTx, 10); return true; }
+  else if (vp51[0] == 1 && vp51[1] == 2) { dataFrameTx[9] = mode == 0 ? 0x1B : 0x1C; Serial1.write(dataFrameTx, 10); return true; }
+  else if (vp51[0] == 2 && vp51[1] == 2) { dataFrameTx[9] = mode == 0 ? 0x1D : 0x1E; Serial1.write(dataFrameTx, 10); return true; }
+  else { return false; }
 }
 
 bool setMainPageVp() {
