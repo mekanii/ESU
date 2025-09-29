@@ -20,16 +20,48 @@ bool switchMainPage() {
   dataFrameTx[7] = 0x01;  // PROCESSING_MODE (0X01 PAGE SWITCH)
   dataFrameTx[8] = 0x00;  // DATA:H
 
-       if (vp51[0] == 0 && vp51[1] == 0) {dataFrameTx[9] = 0x00; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp51[0] == 1 && vp51[1] == 0) {dataFrameTx[9] = 0x01; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp51[0] == 2 && vp51[1] == 0) {dataFrameTx[9] = 0x02; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp51[0] == 0 && vp51[1] == 1) {dataFrameTx[9] = 0x03; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp51[0] == 1 && vp51[1] == 1) {dataFrameTx[9] = 0x04; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp51[0] == 2 && vp51[1] == 1) {dataFrameTx[9] = 0x05; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp51[0] == 0 && vp51[1] == 2) {dataFrameTx[9] = 0x06; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp51[0] == 1 && vp51[1] == 2) {dataFrameTx[9] = 0x07; Serial1.write(dataFrameTx, 10); return true;}
-  else if (vp51[0] == 2 && vp51[1] == 2) {dataFrameTx[9] = 0x08; Serial1.write(dataFrameTx, 10); return true;}
+       if (vp51[0] == 0 && vp51[1] == 0) {dataFrameTx[9] = 0x00; Serial1.write(dataFrameTx, 10);}
+  else if (vp51[0] == 1 && vp51[1] == 0) {dataFrameTx[9] = 0x01; Serial1.write(dataFrameTx, 10);}
+  else if (vp51[0] == 2 && vp51[1] == 0) {dataFrameTx[9] = 0x02; Serial1.write(dataFrameTx, 10);}
+  else if (vp51[0] == 0 && vp51[1] == 1) {dataFrameTx[9] = 0x03; Serial1.write(dataFrameTx, 10);}
+  else if (vp51[0] == 1 && vp51[1] == 1) {dataFrameTx[9] = 0x04; Serial1.write(dataFrameTx, 10);}
+  else if (vp51[0] == 2 && vp51[1] == 1) {dataFrameTx[9] = 0x05; Serial1.write(dataFrameTx, 10);}
+  else if (vp51[0] == 0 && vp51[1] == 2) {dataFrameTx[9] = 0x06; Serial1.write(dataFrameTx, 10);}
+  else if (vp51[0] == 1 && vp51[1] == 2) {dataFrameTx[9] = 0x07; Serial1.write(dataFrameTx, 10);}
+  else if (vp51[0] == 2 && vp51[1] == 2) {dataFrameTx[9] = 0x08; Serial1.write(dataFrameTx, 10);}
   else {return false;}
+
+  unsigned long startTime = millis();
+  const unsigned long timeout = 100; // 0.1 second timeout
+  int bytesReceived = 0;
+
+  while (bytesReceived < 6 && (millis() - startTime) < timeout) {
+    if (Serial1.available()) {
+      rxBuffer[bytesReceived] = Serial1.read();
+      bytesReceived++;
+    }
+  }
+
+  if (bytesReceived == 6) {
+    if (DEBUG_2_SERIAL) {
+      for (int i = 0; i < 6; i++) {
+        if (rxBuffer[i] < 0x10) Serial.print('0');
+        Serial.print(rxBuffer[i], HEX);
+        Serial.print(' ');
+      }
+      Serial.println();
+    }
+    
+    return rxBuffer[0] == 0x5A && rxBuffer[1] == 0xA5 && rxBuffer[3] == 0x82 && rxBuffer[4] == 0x4F && rxBuffer[5] == 0x4B ? true : false;
+
+  } else {
+    if (DEBUG_2_SERIAL) {
+      Serial.println("Response timeout or incomplete data");
+    }
+    return false;
+  }
+
+  return false;
 }
 
 bool fireSignalState(bool mode) {
@@ -41,16 +73,48 @@ bool fireSignalState(bool mode) {
   dataFrameTx[7] = 0x01;  // PROCESSING_MODE (0X01 PAGE SWITCH)
   dataFrameTx[8] = 0x00;  // DATA:H
 
-       if (vp51[0] == 0 && vp51[1] == 0) { dataFrameTx[9] = mode == 0 ? 0x0D : 0x0E; Serial1.write(dataFrameTx, 10); return true; }
-  else if (vp51[0] == 1 && vp51[1] == 0) { dataFrameTx[9] = mode == 0 ? 0x1F : 0x10; Serial1.write(dataFrameTx, 10); return true; }
-  else if (vp51[0] == 2 && vp51[1] == 0) { dataFrameTx[9] = mode == 0 ? 0x11 : 0x12; Serial1.write(dataFrameTx, 10); return true; }
-  else if (vp51[0] == 0 && vp51[1] == 1) { dataFrameTx[9] = mode == 0 ? 0x13 : 0x14; Serial1.write(dataFrameTx, 10); return true; }
-  else if (vp51[0] == 1 && vp51[1] == 1) { dataFrameTx[9] = mode == 0 ? 0x15 : 0x16; Serial1.write(dataFrameTx, 10); return true; }
-  else if (vp51[0] == 2 && vp51[1] == 1) { dataFrameTx[9] = mode == 0 ? 0x17 : 0x18; Serial1.write(dataFrameTx, 10); return true; }
-  else if (vp51[0] == 0 && vp51[1] == 2) { dataFrameTx[9] = mode == 0 ? 0x19 : 0x1A; Serial1.write(dataFrameTx, 10); return true; }
-  else if (vp51[0] == 1 && vp51[1] == 2) { dataFrameTx[9] = mode == 0 ? 0x1B : 0x1C; Serial1.write(dataFrameTx, 10); return true; }
-  else if (vp51[0] == 2 && vp51[1] == 2) { dataFrameTx[9] = mode == 0 ? 0x1D : 0x1E; Serial1.write(dataFrameTx, 10); return true; }
+       if (vp51[0] == 0 && vp51[1] == 0) { dataFrameTx[9] = mode == 0 ? 0x0D : 0x0E; Serial1.write(dataFrameTx, 10); }
+  else if (vp51[0] == 1 && vp51[1] == 0) { dataFrameTx[9] = mode == 0 ? 0x0F : 0x10; Serial1.write(dataFrameTx, 10); }
+  else if (vp51[0] == 2 && vp51[1] == 0) { dataFrameTx[9] = mode == 0 ? 0x11 : 0x12; Serial1.write(dataFrameTx, 10); }
+  else if (vp51[0] == 0 && vp51[1] == 1) { dataFrameTx[9] = mode == 0 ? 0x13 : 0x14; Serial1.write(dataFrameTx, 10); }
+  else if (vp51[0] == 1 && vp51[1] == 1) { dataFrameTx[9] = mode == 0 ? 0x15 : 0x16; Serial1.write(dataFrameTx, 10); }
+  else if (vp51[0] == 2 && vp51[1] == 1) { dataFrameTx[9] = mode == 0 ? 0x17 : 0x18; Serial1.write(dataFrameTx, 10); }
+  else if (vp51[0] == 0 && vp51[1] == 2) { dataFrameTx[9] = mode == 0 ? 0x19 : 0x1A; Serial1.write(dataFrameTx, 10); }
+  else if (vp51[0] == 1 && vp51[1] == 2) { dataFrameTx[9] = mode == 0 ? 0x1B : 0x1C; Serial1.write(dataFrameTx, 10); }
+  else if (vp51[0] == 2 && vp51[1] == 2) { dataFrameTx[9] = mode == 0 ? 0x1D : 0x1E; Serial1.write(dataFrameTx, 10); }
   else { return false; }
+
+  unsigned long startTime = millis();
+  const unsigned long timeout = 100; // 0.1 second timeout
+  int bytesReceived = 0;
+
+  while (bytesReceived < 6 && (millis() - startTime) < timeout) {
+    if (Serial1.available()) {
+      rxBuffer[bytesReceived] = Serial1.read();
+      bytesReceived++;
+    }
+  }
+
+  if (bytesReceived == 6) {
+    if (DEBUG_2_SERIAL) {
+      for (int i = 0; i < 6; i++) {
+        if (rxBuffer[i] < 0x10) Serial.print('0');
+        Serial.print(rxBuffer[i], HEX);
+        Serial.print(' ');
+      }
+      Serial.println();
+    }
+    
+    return rxBuffer[0] == 0x5A && rxBuffer[1] == 0xA5 && rxBuffer[3] == 0x82 && rxBuffer[4] == 0x4F && rxBuffer[5] == 0x4B ? true : false;
+
+  } else {
+    if (DEBUG_2_SERIAL) {
+      Serial.println("Response timeout or incomplete data");
+    }
+    return false;
+  }
+
+  return false;
 }
 
 bool setMainPageVp() {
@@ -121,19 +185,113 @@ bool setMainPageVp() {
   return true;
 }
 
+bool getVp51() {
+  dataFrameTx[2] = 0x04;
+  dataFrameTx[3] = 0x83;
+  dataFrameTx[4] = 0x51;
+  dataFrameTx[5] = 0x00;
+  dataFrameTx[6] = 0x02;
+  Serial1.write(dataFrameTx, 7);
+  
+  unsigned long startTime = millis();
+  const unsigned long timeout = 100; // 0.1 second timeout
+  int bytesReceived = 0;
+
+  while (bytesReceived < 11 && (millis() - startTime) < timeout) {
+    if (Serial1.available()) {
+      rxBuffer[bytesReceived] = Serial1.read();
+      bytesReceived++;
+    }
+  }
+
+  if (bytesReceived == 11) {
+    if (DEBUG_2_SERIAL) {
+      for (int i = 0; i < 11; i++) {
+        if (rxBuffer[i] < 0x10) Serial.print('0');
+        Serial.print(rxBuffer[i], HEX);
+        Serial.print(' ');
+      }
+      Serial.println();
+    }
+    
+    if (rxBuffer[0] == 0x5A && rxBuffer[1] == 0xA5 && rxBuffer[3] == 0x83 && rxBuffer[4] == 0x51 && rxBuffer[6] == 0x02) {
+      vp51[0] = (rxBuffer[7] << 8) | rxBuffer[8];
+      vp51[1] = (rxBuffer[9] << 8) | rxBuffer[10];
+      return true;
+    }
+  } else {
+    if (DEBUG_2_SERIAL) {
+      Serial.println("Response timeout or incomplete data");
+    }
+    return false;
+  }
+
+  return false;
+}
+
+bool getVp52() {
+  dataFrameTx[2] = 0x04;
+  dataFrameTx[3] = 0x83;
+  dataFrameTx[4] = 0x52;
+  dataFrameTx[5] = 0x00;
+  dataFrameTx[6] = 0x06;
+  Serial1.write(dataFrameTx, 7);
+  
+  unsigned long startTime = millis();
+  const unsigned long timeout = 100; // 0.1 second timeout
+  int bytesReceived = 0;
+
+  while (bytesReceived < 19 && (millis() - startTime) < timeout) {
+    if (Serial1.available()) {
+      rxBuffer[bytesReceived] = Serial1.read();
+      bytesReceived++;
+    }
+  }
+
+  if (bytesReceived == 19) {
+    if (DEBUG_2_SERIAL) {
+      for (int i = 0; i < 19; i++) {
+        if (rxBuffer[i] < 0x10) Serial.print('0');
+        Serial.print(rxBuffer[i], HEX);
+        Serial.print(' ');
+      }
+      Serial.println();
+    }
+
+    if (rxBuffer[0] == 0x5A && rxBuffer[1] == 0xA5 && rxBuffer[3] == 0x83 && rxBuffer[4] == 0x52 && rxBuffer[6] == 0x06) {
+      vp52[0] = (rxBuffer[7] << 8) | rxBuffer[8];
+      vp52[1] = (rxBuffer[9] << 8) | rxBuffer[10];
+      vp52[2] = (rxBuffer[11] << 8) | rxBuffer[12];
+      vp52[0] = (rxBuffer[13] << 8) | rxBuffer[14];
+      vp52[1] = (rxBuffer[15] << 8) | rxBuffer[16];
+      vp52[2] = (rxBuffer[17] << 8) | rxBuffer[18];
+      return true;
+    }
+  } else {
+    if (DEBUG_2_SERIAL) {
+      Serial.println("Response timeout or incomplete data");
+    }
+    return false;
+  }
+
+  return false;
+}
+
 void readSerialData() {
   if (Serial1.available()) {  // Ensure we have complete frame
     for (int i = 0; i < 9; i++) {
       rxBuffer[i] = Serial1.read();
     }
 
-    for (int i = 0; i < 9; i++) {
-      if (rxBuffer[i] < 0x10) Serial.print('0');
-      Serial.print(rxBuffer[i], HEX);
-      Serial.print(' ');
-    }
+    if (DEBUG_2_SERIAL) {
+      for (int i = 0; i < 9; i++) {
+        if (rxBuffer[i] < 0x10) Serial.print('0');
+        Serial.print(rxBuffer[i], HEX);
+        Serial.print(' ');
+      }
 
-    Serial.println();
+      Serial.println();
+    }
 
     // rxBuffer[0]: HEADER
     // rxBuffer[1]: HEADER
@@ -149,13 +307,14 @@ void readSerialData() {
       if (rxBuffer[3] == 0x83) {
         uint16_t value = (rxBuffer[7] << 8) | rxBuffer[8];
         switch (rxBuffer[4]) {
-          case 0x50:
-            break;
+          /*
           case 0x51:
             if (rxBuffer[5] == 0x00 || rxBuffer[5] == 0x01) {
               vp51[rxBuffer[5]] = value;
             }
             break;
+          */
+          /*
           case 0x52:
             if (rxBuffer[5] == 0x00 || rxBuffer[5] == 0x01 || rxBuffer[5] == 0x02) {
               vp52[rxBuffer[5]] = value;
@@ -311,6 +470,7 @@ void readSerialData() {
               }
             }
             break;
+          */
           case 0x54:
             switch (rxBuffer[5]) {
               case 0x00:  // Load all data sets from JSON

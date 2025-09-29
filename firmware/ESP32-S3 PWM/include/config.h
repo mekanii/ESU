@@ -5,6 +5,8 @@
 #include <driver/rmt.h>
 #include <driver/adc.h>
 
+#define DEBUG_2_SERIAL    true
+
 // RMT Channel definitions
 #define RMT_TX_CHANNEL_0  RMT_CHANNEL_0
 #define RMT_TX_CHANNEL_1  RMT_CHANNEL_1

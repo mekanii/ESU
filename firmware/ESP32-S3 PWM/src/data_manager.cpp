@@ -11,19 +11,27 @@ uint16_t vp52[6] = {0, 0, 0, 0, 0, 0};
 // Initialize LittleFS with proper error handling
 bool initLittleFS() {
   if (!LittleFS.begin(FORMAT_LITTLEFS_IF_FAILED)) {
-    Serial.println("LittleFS Mount: NG");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("LittleFS Mount: NG");
+    }
     return false;
   } else {
-    Serial.println("LittleFS Mount: OK");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("LittleFS Mount: OK");
+    }
   }
 
   bool fileExists = LittleFS.exists(JSON_DATA_FILE);
-  Serial.print("File exists: ");
-  Serial.println(fileExists);
+  if (DEBUG_2_SERIAL) {
+    Serial.print("File exists: ");
+    Serial.println(fileExists);
+  }
   
   if (!fileExists) {
-    Serial.println("File doesn't exist");
-    Serial.println("Creating file...");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("File doesn't exist");
+      Serial.println("Creating file...");
+    }
     
     // Create initial JSON structure
     StaticJsonDocument<JSON_DOC_SIZE> doc;
@@ -52,20 +60,28 @@ bool initLittleFS() {
     // Write initial file
     File file = LittleFS.open(JSON_DATA_FILE, "w");
     if (!file) {
-      Serial.println("Failed to create file");
+      if (DEBUG_2_SERIAL) {
+        Serial.println("Failed to create file");
+      }
       return false;
     }
     
     if (serializeJson(doc, file) == 0) {
-      Serial.println("Failed to write initial JSON");
+      if (DEBUG_2_SERIAL) {
+        Serial.println("Failed to write initial JSON");
+      }
       file.close();
       return false;
     }
     
     file.close();
-    Serial.println("Initial JSON file created");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("Initial JSON file created");
+    }
   } else {
-    Serial.println("File already exists");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("File already exists");
+    }
   }
   
   return true;
@@ -99,31 +115,41 @@ bool saveToJSON() {
   // Write to file
   File file = LittleFS.open(JSON_DATA_FILE, "w");
   if (!file) {
-    Serial.println("Failed to open JSON file for writing");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("Failed to open JSON file for writing");
+    }
     return false;
   }
   
   if (serializeJson(doc, file) == 0) {
-    Serial.println("Failed to write JSON");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("Failed to write JSON");
+    }
     file.close();
     return false;
   }
   
   file.close();
-  Serial.println("JSON data saved");
+  if (DEBUG_2_SERIAL) {
+    Serial.println("JSON data saved");
+  }
   return true;
 }
 
 // Load all data sets from JSON
 bool loadFromJSON() {
   if (!LittleFS.exists(JSON_DATA_FILE)) {
-    Serial.println("JSON file does not exist");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("JSON file does not exist");
+    }
     return false;
   }
   
   File file = LittleFS.open(JSON_DATA_FILE, "r");
   if (!file) {
-    Serial.println("Failed to open JSON file for reading");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("Failed to open JSON file for reading");
+    }
     return false;
   }
   
@@ -132,13 +158,17 @@ bool loadFromJSON() {
   file.close();
   
   if (error) {
-    Serial.print("JSON parse failed: ");
-    Serial.println(error.c_str());
+    if (DEBUG_2_SERIAL) {
+      Serial.print("JSON parse failed: ");
+      Serial.println(error.c_str());
+    }
     return false;
   }
   
   if (!doc.is<JsonArray>()) {
-    Serial.println("JSON is not an array");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("JSON is not an array");
+    }
     return false;
   }
   
@@ -176,7 +206,9 @@ bool loadFromJSON() {
   vp52[4] = allVP52[0][4];
   vp52[5] = allVP52[0][5];
   
-  Serial.println("JSON data loaded");
+  if (DEBUG_2_SERIAL) {
+    Serial.println("JSON data loaded");
+  }
   return true;
 }
 
@@ -185,7 +217,9 @@ bool saveByPointer(uint16_t datasetIndex) {
   
   // Validate data set index
   if (datasetIndex >= MAX_DATA_SETS) {
-    Serial.println("Invalid data set index");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("Invalid data set index");
+    }
     return false;
   }
   
@@ -209,7 +243,9 @@ bool loadByPointer(uint16_t datasetIndex) {
   
   // Validate data set index
   if (datasetIndex >= MAX_DATA_SETS) {
-    Serial.println("Invalid data set index");
+    if (DEBUG_2_SERIAL) {
+      Serial.println("Invalid data set index");
+    }
     return false;
   }
   
@@ -222,8 +258,9 @@ bool loadByPointer(uint16_t datasetIndex) {
   vp52[4] = allVP52[datasetIndex][4];
   vp52[5] = allVP52[datasetIndex][5];
   
-  
-  Serial.print("Loaded data set ");
-  Serial.println(datasetIndex);
+  if (DEBUG_2_SERIAL) {
+    Serial.print("Loaded data set ");
+    Serial.println(datasetIndex);
+  }
   return true;
 }

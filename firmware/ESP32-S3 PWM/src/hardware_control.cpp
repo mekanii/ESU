@@ -6,8 +6,10 @@
 // Button state variables (only 2 buttons now: mode1, mode3)
 bool lastButtonState[4] = {HIGH, HIGH, HIGH, HIGH};
 bool currentButtonState[4] = {HIGH, HIGH, HIGH, HIGH};
+static bool buttonReadyOnPress[4] = {false, false, false, false};
 bool buttonPressed[4] = {false, false, false, false};  // Track if button is currently pressed
 unsigned long lastDebounceTime[4] = {0, 0, 0, 0};
+
 
 // Default duty cycles for each mode (pure, cut1, cut2, spray, forced, standard)
 // uint16_t dutyCycles[6] = {50, 50, 50, 50, 50, 50};
@@ -257,9 +259,11 @@ bool updateButtonState(int buttonIndex, int buttonPin) {
         if (buttonPressed[buttonIndex]) {  // Only stop if this button was actually active
           buttonPressed[buttonIndex] = false;
           // Stop RMT transmission when button is released
-          rmt_tx_stop(RMT_TX_CHANNEL_0);
-          rmt_tx_stop(RMT_TX_CHANNEL_1);
-          switchMainPage();
+          rmtStop();
+          if (buttonReadyOnPress[buttonIndex]) {
+            switchMainPage();
+          }
+          buttonReadyOnPress[buttonIndex] = false;
         }
       }
     }
@@ -269,92 +273,60 @@ bool updateButtonState(int buttonIndex, int buttonPin) {
   return buttonJustPressed;
 }
 
-void getVp51() {
-  dataFrameTx[2] = 0x04;
-  dataFrameTx[3] = 0x83;
-  dataFrameTx[4] = 0x51;
-  dataFrameTx[5] = 0x00;
-  dataFrameTx[6] = 0x02;
-  Serial1.write(dataFrameTx, 7);
-  
-  unsigned long startTime = millis();
-  const unsigned long timeout = 100; // 0.1 second timeout
-  int bytesReceived = 0;
-
-  while (bytesReceived < 11 && (millis() - startTime) < timeout) {
-    if (Serial1.available()) {
-      rxBuffer[bytesReceived] = Serial1.read();
-      bytesReceived++;
-    }
-  }
-
-  if (bytesReceived == 11) {
-    for (int i = 0; i < 11; i++) {
-      if (rxBuffer[i] < 0x10) Serial.print('0');
-      Serial.print(rxBuffer[i], HEX);
-      Serial.print(' ');
-    }
-    Serial.println();
-
-    vp51[0] = (rxBuffer[7] << 8) | rxBuffer[8];
-    vp51[1] = (rxBuffer[9] << 8) | rxBuffer[10];
-    
-  } else {
-    Serial.println("Response timeout or incomplete data");
-  }
-}
-
-void getVp52() {
-  dataFrameTx[2] = 0x04;
-  dataFrameTx[3] = 0x83;
-  dataFrameTx[4] = 0x52;
-  dataFrameTx[5] = 0x00;
-  dataFrameTx[6] = 0x06;
-  Serial1.write(dataFrameTx, 7);
-  
-  unsigned long startTime = millis();
-  const unsigned long timeout = 100; // 0.1 second timeout
-  int bytesReceived = 0;
-
-  while (bytesReceived < 19 && (millis() - startTime) < timeout) {
-    if (Serial1.available()) {
-      rxBuffer[bytesReceived] = Serial1.read();
-      bytesReceived++;
-    }
-  }
-
-  if (bytesReceived == 19) {
-    for (int i = 0; i < 19; i++) {
-      if (rxBuffer[i] < 0x10) Serial.print('0');
-      Serial.print(rxBuffer[i], HEX);
-      Serial.print(' ');
-    }
-    Serial.println();
-
-    vp52[0] = (rxBuffer[7] << 8) | rxBuffer[8];
-    vp52[1] = (rxBuffer[9] << 8) | rxBuffer[10];
-    vp52[2] = (rxBuffer[11] << 8) | rxBuffer[12];
-  } else {
-    Serial.println("Response timeout or incomplete data");
-  }
-}
-
 void readButtons() {
   // Check if mode 1 button (SENS_CUT) was just pressed
   if (updateButtonState(0, SENS_CUT) || updateButtonState(2, MSD1)) {
-    getVp51();
-    getVp52();
+    if (!getVp51()) {
+      buttonReadyOnPress[0] = false;
+      buttonReadyOnPress[2] = false;
+      return;
+    }
+
+    if (!getVp52()) {
+      buttonReadyOnPress[0] = false;
+      buttonReadyOnPress[2] = false;
+      return;
+    }
+
+    if (!fireSignalState(0)) {
+      buttonReadyOnPress[0] = false;
+      buttonReadyOnPress[2] = false;
+      return;
+    }
+
+    buttonReadyOnPress[0] = true;
+    buttonReadyOnPress[2] = true;
+    
     // Fire update once when button is first pressed (RMT will auto-loop)
-    fireSignalState(0);
     fire(vp51[0]);
+    // return true;
   }
 
   // Check if mode 3 button (SENS_COAG) was just pressed
   if (updateButtonState(1, SENS_COAG) || updateButtonState(3, MSD2)) {
-    getVp51();
-    getVp52();
+    if (!getVp51()) {
+      buttonReadyOnPress[1] = false;
+      buttonReadyOnPress[3] = false;
+      return;
+    }
+
+    if (!getVp52()) {
+      buttonReadyOnPress[1] = false;
+      buttonReadyOnPress[3] = false;
+      return;
+    }
+
+    if (!fireSignalState(1)) {
+      buttonReadyOnPress[1] = false;
+      buttonReadyOnPress[3] = false;
+      return;
+    }
+
+    buttonReadyOnPress[1] = true;
+    buttonReadyOnPress[3] = true;
+
     // Fire update once when button is first pressed (RMT will auto-loop)
-    fireSignalState(1);
     fire(vp51[1]);
+    // return true;
   }
 }
