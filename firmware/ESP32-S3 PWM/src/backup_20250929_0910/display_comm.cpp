@@ -6,7 +6,7 @@
 unsigned char dataFrameTx[16] = {0x5A, 0xA5, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
 // 5A A5 PAYLOAD_LENGTH INSTRUCTION VAR_ID_H VAR_ID_L DATA_LENGTH DATA_H DATA_L
-uint8_t rxBuffer[32];
+uint8_t rxBuffer[9];
 
 uint16_t sp80_90_A0_x = SP80_90_A0_DEFAULT_X;
 uint16_t spB0_C0_D0_x = SPB0_C0_D0_DEFAULT_X;

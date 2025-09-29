@@ -6,7 +6,6 @@
 #include <driver/adc.h>
 #include "config.h"
 
-
 // Button state variables
 extern bool lastButtonState[4];
 extern bool currentButtonState[4];

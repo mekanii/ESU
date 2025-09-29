@@ -1,7 +1,6 @@
 #include "hardware_control.h"
 #include "config.h"
 #include "data_manager.h"
-#include "display_comm.h"
 
 // Button state variables (only 2 buttons now: mode1, mode3)
 bool lastButtonState[4] = {HIGH, HIGH, HIGH, HIGH};
@@ -272,41 +271,12 @@ void readButtons() {
   // Check if mode 1 button (SENS_CUT) was just pressed
   if (updateButtonState(0, SENS_CUT) || updateButtonState(2, MSD1)) {
     // Fire update once when button is first pressed (RMT will auto-loop)
-    // fire(vp51[0]);
-    dataFrameTx[2] = 0x04;
-    dataFrameTx[3] = 0x83;
-    dataFrameTx[4] = 0x52;
-    dataFrameTx[5] = 0x00;
-    dataFrameTx[6] = 0x06;
-    Serial1.write(dataFrameTx, 7);
-    
-    unsigned long startTime = millis();
-    const unsigned long timeout = 1000; // 1 second timeout
-    int bytesReceived = 0;
-
-    while (bytesReceived < 19 && (millis() - startTime) < timeout) {
-      if (Serial1.available()) {
-        rxBuffer[bytesReceived] = Serial1.read();
-        bytesReceived++;
-      }
-    }
-
-    if (bytesReceived == 19) {
-      for (int i = 0; i < 19; i++) {
-        if (rxBuffer[i] < 0x10) Serial.print('0');
-        Serial.print(rxBuffer[i], HEX);
-        Serial.print(' ');
-      }
-      Serial.println();
-    } else {
-      Serial.println("Response timeout or incomplete data");
-    }
-
+    fire(vp51[0]);
   }
 
   // Check if mode 3 button (SENS_COAG) was just pressed
   if (updateButtonState(1, SENS_COAG) || updateButtonState(3, MSD2)) {
     // Fire update once when button is first pressed (RMT will auto-loop)
-    // fire(vp51[1]);
+    fire(vp51[1]);
   }
 }
