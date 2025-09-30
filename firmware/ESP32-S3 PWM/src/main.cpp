@@ -63,8 +63,16 @@ void setup() {
 }
 
 void loop() {
+  static bool errorREM = false;
   readSerialData();  // Keep serial input functionality
+
   if(readREM() < REM_UPPER_LIMIT) {
+    errorREM = false;
     readButtons();   // Add button input functionality
+  } else {
+    if (!errorREM) {
+      buzzerError();
+      errorREM = true;
+    }
   }
 }
