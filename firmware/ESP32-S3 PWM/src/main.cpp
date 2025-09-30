@@ -10,10 +10,12 @@
 #include "data_manager.h"
 #include "display_comm.h"
 #include "hardware_control.h"
+#include "buzzer.h"
 
 void setup() {
   setupRelay();
   setupADC();
+  setupBuzzer();
 
   Serial.begin(115200);
   Serial1.begin(115200, SERIAL_8N1, 18, 17);
@@ -63,6 +65,6 @@ void setup() {
 void loop() {
   readSerialData();  // Keep serial input functionality
   if(readREM() < REM_UPPER_LIMIT) {
-    readButtons();     // Add button input functionality
+    readButtons();   // Add button input functionality
   }
 }

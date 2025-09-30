@@ -28,12 +28,13 @@ extern uint16_t duration1;
 // Function declarations
 void setupADC();
 int readREM();
-bool setRelay(int mode);
-void fire(int mode);
+void rmtStart(uint8_t signalType);
 void rmtStop();
+bool setRelay(uint8_t mode);
+void fire(uint8_t mode);
 void setupRelay();
 void setupButtons();
-bool updateButtonState(int buttonIndex, int buttonPin);
+bool updateButtonState(uint8_t buttonIndex, uint8_t buttonPin);
 void readButtons();
 
 #endif // HARDWARE_CONTROL_H

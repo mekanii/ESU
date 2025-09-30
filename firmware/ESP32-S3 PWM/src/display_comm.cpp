@@ -262,9 +262,9 @@ bool getVp52() {
       vp52[0] = (rxBuffer[7] << 8) | rxBuffer[8];
       vp52[1] = (rxBuffer[9] << 8) | rxBuffer[10];
       vp52[2] = (rxBuffer[11] << 8) | rxBuffer[12];
-      vp52[0] = (rxBuffer[13] << 8) | rxBuffer[14];
-      vp52[1] = (rxBuffer[15] << 8) | rxBuffer[16];
-      vp52[2] = (rxBuffer[17] << 8) | rxBuffer[18];
+      vp52[3] = (rxBuffer[13] << 8) | rxBuffer[14];
+      vp52[4] = (rxBuffer[15] << 8) | rxBuffer[16];
+      vp52[5] = (rxBuffer[17] << 8) | rxBuffer[18];
       return true;
     }
   } else {

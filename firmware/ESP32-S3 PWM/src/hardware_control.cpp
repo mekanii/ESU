@@ -2,6 +2,7 @@
 #include "config.h"
 #include "data_manager.h"
 #include "display_comm.h"
+#include "buzzer.h"
 
 // Button state variables (only 2 buttons now: mode1, mode3)
 bool lastButtonState[4] = {HIGH, HIGH, HIGH, HIGH};
@@ -9,10 +10,6 @@ bool currentButtonState[4] = {HIGH, HIGH, HIGH, HIGH};
 static bool buttonReadyOnPress[4] = {false, false, false, false};
 bool buttonPressed[4] = {false, false, false, false};  // Track if button is currently pressed
 unsigned long lastDebounceTime[4] = {0, 0, 0, 0};
-
-
-// Default duty cycles for each mode (pure, cut1, cut2, spray, forced, standard)
-// uint16_t dutyCycles[6] = {50, 50, 50, 50, 50, 50};
 
 // Total periods for each mode (pure, cut1, cut2, spray, forced, standard)
 uint16_t totalPeriods[6] = {200, 200, 200, 800, 1000, 200};
@@ -39,151 +36,66 @@ int readREM() {
   return adc_value;
 }
 
-bool setRelay(int mode) {
-  switch (mode) {
-    case 0:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, LOW);
-      break;
-    case 1:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, LOW);
-      break;
-    case 2:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, LOW);
-      break;
-    case 3:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, HIGH);
-      break;
-    case 4:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, HIGH);
-      break;
-    case 5:
-      digitalWrite(CTL_RLY_1, HIGH);
-      digitalWrite(CTL_RLY_2, HIGH);
-      break;
-    default:
-      digitalWrite(CTL_RLY_1, LOW);
-      digitalWrite(CTL_RLY_2, LOW);
-      break;
+void rmtStart(uint8_t signalType) {
+  if (signalType == 0 || signalType == 1 || signalType == 2) {
+    item_num = signalType == 0 ? 1 : 20;
+    for (int i = 0; i < item_num; i++) {
+      items[i].duration0 = vp52[signalType];
+      items[i].level0 = i < (signalType == 0 ? 1 : (signalType == 1 ? 18 : 17)) ? 1 : 0;
+      items[i].duration1 = totalPeriods[signalType] - vp52[signalType];
+      items[i].level1 = 0;
+    }
+    channel = RMT_TX_CHANNEL_0;
+  } else if (signalType == 3 || signalType == 4) {
+    item_num = 1;
+    items[0].duration0 = vp52[signalType];
+    items[0].level0 = 1;
+    items[0].duration1 = totalPeriods[signalType] - vp52[signalType];
+    items[0].level1 = 0;
+    channel = RMT_TX_CHANNEL_1;
+  } else if (signalType == 5) {
+    item_num = 20;
+    for (int i = 0; i < 20; i++) {
+      items[i].duration0 = vp52[signalType];
+      items[i].level0 = i < 18 ? 1 : 0;
+      items[i].duration1 = totalPeriods[1] - vp52[signalType];
+      items[i].level1 = 0;
+    }
+    channel = RMT_TX_CHANNEL_0;
+  }
+  rmt_write_items(channel, items, item_num, true);
+}
+
+void rmtStop() {
+  rmt_tx_stop(RMT_TX_CHANNEL_0);
+  rmt_tx_stop(RMT_TX_CHANNEL_1);
+  buzzerOff();
+}
+
+bool setRelay(uint8_t mode) {
+  if (mode == 0 || mode == 1 || mode == 2) {
+    digitalWrite(CTL_RLY_1, LOW);
+    digitalWrite(CTL_RLY_2, LOW);
+  } else if (mode == 3 || mode == 4) {
+    digitalWrite(CTL_RLY_1, LOW);
+    digitalWrite(CTL_RLY_2, HIGH);
+  } else if (mode == 5){
+    digitalWrite(CTL_RLY_1, HIGH);
+    digitalWrite(CTL_RLY_2, HIGH);
   }
 
   delay(100);
   return true;
 }
 
-void fire(int mode) {
+void fire(uint8_t mode) {
   // Stop any ongoing transmission before starting a new one
-  rmt_tx_stop(RMT_TX_CHANNEL_0);
-  rmt_tx_stop(RMT_TX_CHANNEL_1);
-
-  // Calculate durations based on duty cycle
-  // duration0 = dutyCycles[mode];
+  rmtStop();
 
   // Wait for setRelay to complete and return true
   if (setRelay(mode)) {
-    // Set up the PWM signal
-    switch (mode) {
-      case 0:
-        duration0 = vp52[0];
-        duration1 = totalPeriods[0] - duration0;
-        items[0].duration0 = duration0;
-        items[0].level0 = 1;
-        items[0].duration1 = duration1;
-        items[0].level1 = 0;
-
-        item_num = 1;
-
-        channel = RMT_TX_CHANNEL_0;
-        break;
-      case 1:
-        duration0 = vp52[1];
-        duration1 = totalPeriods[1] - duration0;
-        for (int i = 0; i < 20; i++) {
-          items[i].duration0 = duration0;
-          items[i].level0 = i < 18 ? 1 : 0;
-          items[i].duration1 = duration1;
-          items[i].level1 = 0;
-        }
-        item_num = 20;
-
-        channel = RMT_TX_CHANNEL_0;
-        break;
-      case 2:
-        duration0 = vp52[3];
-        duration1 = totalPeriods[2] - duration0;
-        for (int i = 0; i < 20; i++) {
-          items[i].duration0 = duration0;
-          items[i].level0 = i < 17 ? 1 : 0;
-          items[i].duration1 = duration1;
-          items[i].level1 = 0;
-        }
-        item_num = 20;
-
-        channel = RMT_TX_CHANNEL_0;
-        break;
-      case 3:
-      duration0 = vp52[3];
-        duration1 = totalPeriods[3] - duration0;
-        items[0].duration0 = duration0;
-        items[0].level0 = 1;
-        items[0].duration1 = duration1;
-        items[0].level1 = 0;
-
-        item_num = 1;
-
-        channel = RMT_TX_CHANNEL_1;
-        break;
-      case 4:
-        duration0 = vp52[4];
-        duration1 = totalPeriods[4] - duration0;
-        items[0].duration0 = duration0;
-        items[0].level0 = 1;
-        items[0].duration1 = duration1;
-        items[0].level1 = 0;
-
-        item_num = 1;
-
-        channel = RMT_TX_CHANNEL_1;
-        break;
-      case 5:
-        duration0 = vp52[5];
-        duration1 = totalPeriods[1] - duration0;
-        for (int i = 0; i < 20; i++) {
-          items[i].duration0 = duration0;
-          items[i].level0 = i < 18 ? 1 : 0;
-          items[i].duration1 = duration1;
-          items[i].level1 = 0;
-        }
-        item_num = 20;
-
-        channel = RMT_TX_CHANNEL_0;
-        break;
-      default:
-        // Default to mode 1 if invalid mode is provided
-        duration0 = vp52[0];
-        duration1 = totalPeriods[0] - duration0;
-        for (int i = 0; i < 20; i++) {
-          items[i].duration0 = duration0;
-          items[i].level0 = i < 18 ? 1 : 0;
-          items[i].duration1 = duration1;
-          items[i].level1 = 0;
-        }
-        item_num = 20;
-        channel = RMT_TX_CHANNEL_0;
-        break;
-    }
-
-    rmt_write_items(channel, items, item_num, true);
+    rmtStart(mode);
   }
-}
-
-void rmtStop() {
-  rmt_tx_stop(RMT_TX_CHANNEL_0);
-  rmt_tx_stop(RMT_TX_CHANNEL_1);
 }
 
 void setupRelay() {
@@ -220,7 +132,7 @@ void setupButtons() {
   currentButtonState[3] = lastButtonState[3];
 }
 
-bool updateButtonState(int buttonIndex, int buttonPin) {
+bool updateButtonState(uint8_t buttonIndex, uint8_t buttonPin) {
   bool reading = digitalRead(buttonPin);
   bool buttonJustPressed = false;
 
@@ -279,18 +191,21 @@ void readButtons() {
     if (!getVp51()) {
       buttonReadyOnPress[0] = false;
       buttonReadyOnPress[2] = false;
+      buzzerError();
       return;
     }
 
     if (!getVp52()) {
       buttonReadyOnPress[0] = false;
       buttonReadyOnPress[2] = false;
+      buzzerError();
       return;
     }
 
     if (!fireSignalState(0)) {
       buttonReadyOnPress[0] = false;
       buttonReadyOnPress[2] = false;
+      buzzerError();
       return;
     }
 
@@ -299,7 +214,7 @@ void readButtons() {
     
     // Fire update once when button is first pressed (RMT will auto-loop)
     fire(vp51[0]);
-    // return true;
+    buzzerCut();
   }
 
   // Check if mode 3 button (SENS_COAG) was just pressed
@@ -307,18 +222,21 @@ void readButtons() {
     if (!getVp51()) {
       buttonReadyOnPress[1] = false;
       buttonReadyOnPress[3] = false;
+      buzzerError();
       return;
     }
 
     if (!getVp52()) {
       buttonReadyOnPress[1] = false;
       buttonReadyOnPress[3] = false;
+      buzzerError();
       return;
     }
 
     if (!fireSignalState(1)) {
       buttonReadyOnPress[1] = false;
       buttonReadyOnPress[3] = false;
+      buzzerError();
       return;
     }
 
@@ -326,7 +244,7 @@ void readButtons() {
     buttonReadyOnPress[3] = true;
 
     // Fire update once when button is first pressed (RMT will auto-loop)
-    fire(vp51[1]);
-    // return true;
+    fire(vp51[1] + 3);
+    buzzerCoag();
   }
 }
