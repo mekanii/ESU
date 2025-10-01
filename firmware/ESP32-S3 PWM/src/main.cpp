@@ -20,11 +20,13 @@ void setup() {
   Serial.begin(115200);
   Serial1.begin(115200, SERIAL_8N1, 18, 17);
 
-  // // Initialize LittleFS with proper error handling
-  // if (!initLittleFS()) {
-  //   Serial.println("LittleFS initialization failed!");
-  //   return;  // Stop execution if LittleFS fails
-  // }
+  if (LITTLEFS_EN) {
+    // Initialize LittleFS with proper error handling
+    if (!initLittleFS()) {
+      Serial.println("LittleFS initialization failed!");
+      return;  // Stop execution if LittleFS fails
+    }
+  }
 
   rmt_config_t rmt_tx_0;
   rmt_tx_0.channel = RMT_TX_CHANNEL_0;
@@ -55,11 +57,13 @@ void setup() {
 
   setupButtons();
   
-  // // Load saved data from JSON on startup
-  // loadFromJSON();
-
-  // switchMainPage();
-  // setMainPageVp();
+  if (LITTLEFS_EN) {
+    // Load saved data from JSON on startup
+    loadFromJSON();
+  
+    switchMainPage();
+    setMainPageVp();
+  }
 }
 
 void loop() {

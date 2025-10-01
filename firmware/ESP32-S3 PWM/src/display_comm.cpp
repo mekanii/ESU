@@ -292,16 +292,6 @@ void readSerialData() {
 
       Serial.println();
     }
-
-    // rxBuffer[0]: HEADER
-    // rxBuffer[1]: HEADER
-    // rxBuffer[2]: PAYLOAD_LENGTH
-    // rxBuffer[3]: INSTRUCTION
-    // rxBuffer[4]: VAR_ID_H
-    // rxBuffer[5]: VAR_ID_L
-    // rxBuffer[6]: DATA_LENGTH
-    // rxBuffer[7]: DATA_H
-    // rxBuffer[8]: DATA_L
     
     if (rxBuffer[0] == 0x5A && rxBuffer[1] == 0xA5) {  // Check header
       if (rxBuffer[3] == 0x83) {
