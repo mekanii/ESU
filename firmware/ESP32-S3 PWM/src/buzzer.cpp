@@ -27,19 +27,21 @@ void buzzerOff()
 
 void buzzerCut()
 {
-  buzzerPlay(4000);
+  // buzzerPlay(4000);
+  buzzerPlay(300);
 }
 
 void buzzerCoag()
 {
-	buzzerPlay(4500);
+	// buzzerPlay(4500);
+  buzzerPlay(400);
 }
 
 void buzzerError()
 {
-	buzzerPlay(2000);
+	buzzerPlay(600);
 	delay(200);
-	buzzerPlay(3000);
+	buzzerPlay(750);
   delay(200);
   buzzerOff();
 }

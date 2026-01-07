@@ -1,0 +1,270 @@
+ERC report (2025-10-01T14:30:04+0700, Encoding UTF8)
+
+***** Sheet /
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(184.1500 mm, 76.2000 mm): Symbol CR2 Pin 2 [2, Unspecified, Line]
+    @(173.9900 mm, 77.4700 mm): Symbol D4 Pin 2 [A, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(184.1500 mm, 76.2000 mm): Symbol CR2 Pin 2 [2, Unspecified, Line]
+    @(219.7100 mm, 76.2000 mm): Symbol K2 Pin 11A [Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(184.1500 mm, 76.2000 mm): Symbol CR2 Pin 2 [2, Unspecified, Line]
+    @(219.7100 mm, 76.2000 mm): Symbol K2 Hidden pin 11B [Passive, Line]
+[lib_symbol_issues]: The current configuration does not include the library 'STTH1002CT'
+    ; warning
+    @(184.1500 mm, 81.2800 mm): Symbol CR2 [STTH1002CT]
+[duplicate_reference]: Duplicate items C6
+
+    ; error
+    @(207.0100 mm, 90.1700 mm): Symbol C6 [C]
+    @(430.5300 mm, 173.9900 mm): Symbol C6 [C]
+[pin_to_pin]: Pins of type Passive and Unspecified are connected
+    ; warning
+    @(207.0100 mm, 86.3600 mm): Symbol C6 Pin 1 [Passive, Line]
+    @(184.1500 mm, 76.2000 mm): Symbol CR2 Pin 2 [2, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+    @(123.1900 mm, 109.2200 mm): Symbol L1 Pin 1 [1, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+    @(143.5100 mm, 109.2200 mm): Symbol L3 Pin 1 [1, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+    @(163.8300 mm, 109.2200 mm): Symbol L5 Pin 1 [1, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+    @(123.1900 mm, 104.1400 mm): Symbol Q1 Pin 3 [S, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+    @(143.5100 mm, 104.1400 mm): Symbol Q2 Pin 3 [S, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+    @(163.8300 mm, 104.1400 mm): Symbol Q3 Pin 3 [S, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(184.1500 mm, 97.7900 mm): Symbol CR1 Pin 2 [2, Unspecified, Line]
+    @(181.6100 mm, 85.0900 mm): Symbol CR2 Pin 1 [1, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(184.1500 mm, 97.7900 mm): Symbol CR1 Pin 2 [2, Unspecified, Line]
+    @(186.6900 mm, 85.0900 mm): Symbol CR2 Pin 3 [3, Unspecified, Line]
+[lib_symbol_issues]: The current configuration does not include the library 'STTH1002CT'
+    ; warning
+    @(184.1500 mm, 102.8700 mm): Symbol CR1 [STTH1002CT]
+[pin_to_pin]: Pins of type Passive and Unspecified are connected
+    ; warning
+    @(196.8500 mm, 86.3600 mm): Symbol C5 Pin 1 [Passive, Line]
+    @(184.1500 mm, 76.2000 mm): Symbol CR2 Pin 2 [2, Unspecified, Line]
+[duplicate_reference]: Duplicate items L2
+
+    ; error
+    @(304.8000 mm, 80.0100 mm): Symbol L2 [L]
+    @(123.1900 mm, 90.1700 mm): Symbol L2 [L]
+[duplicate_reference]: Duplicate items L1
+
+    ; error
+    @(304.8000 mm, 69.8500 mm): Symbol L1 [L]
+    @(123.1900 mm, 113.0300 mm): Symbol L1 [L]
+[duplicate_reference]: Duplicate items D1
+
+    ; error
+    @(308.6100 mm, 137.1600 mm): Symbol D1 [1N4148]
+    @(113.0300 mm, 102.8700 mm): Symbol D1 [1N47xxA]
+[duplicate_reference]: Duplicate items L4
+
+    ; error
+    @(417.8300 mm, 173.9900 mm): Symbol L4 [L]
+    @(143.5100 mm, 90.1700 mm): Symbol L4 [L]
+[duplicate_reference]: Duplicate items C5
+
+    ; error
+    @(430.5300 mm, 151.1300 mm): Symbol C5 [C]
+    @(196.8500 mm, 90.1700 mm): Symbol C5 [C]
+[duplicate_reference]: Duplicate items D2
+
+    ; error
+    @(384.8100 mm, 137.1600 mm): Symbol D2 [1N4148]
+    @(133.3500 mm, 102.8700 mm): Symbol D2 [1N47xxA]
+[duplicate_reference]: Duplicate items L3
+
+    ; error
+    @(417.8300 mm, 151.1300 mm): Symbol L3 [L]
+    @(143.5100 mm, 113.0300 mm): Symbol L3 [L]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+    @(113.0300 mm, 106.6800 mm): Symbol D1 Pin 2 [A, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+    @(133.3500 mm, 106.6800 mm): Symbol D2 Pin 2 [A, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+    @(153.6700 mm, 106.6800 mm): Symbol D3 Pin 2 [A, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+    @(173.9900 mm, 105.4100 mm): Symbol D6 Pin 2 [A2, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+    @(74.9300 mm, 171.4500 mm): Symbol R5 Pin 1 [Passive, Line]
+[duplicate_reference]: Duplicate items R1
+
+    ; error
+    @(113.0300 mm, 90.1700 mm): Symbol R1 [R]
+    @(323.8500 mm, 74.9300 mm): Symbol R1 [R_US]
+[duplicate_reference]: Duplicate items C1
+
+    ; error
+    @(78.7400 mm, 76.2000 mm): Symbol C1 [C]
+    @(311.1500 mm, 74.9300 mm): Symbol C1 [C]
+[duplicate_reference]: Duplicate items H1
+
+    ; error
+    @(17.7800 mm, 30.4800 mm): Symbol H1 [MountingHole_Pad]
+    @(54.6100 mm, 237.4900 mm): Symbol H1 [MountingHole_Pad]
+[duplicate_reference]: Duplicate items H2
+
+    ; error
+    @(22.8600 mm, 30.4800 mm): Symbol H2 [MountingHole_Pad]
+    @(59.6900 mm, 237.4900 mm): Symbol H2 [MountingHole_Pad]
+[duplicate_reference]: Duplicate items H3
+
+    ; error
+    @(27.9400 mm, 30.4800 mm): Symbol H3 [MountingHole_Pad]
+    @(64.7700 mm, 237.4900 mm): Symbol H3 [MountingHole_Pad]
+[duplicate_reference]: Duplicate items H4
+
+    ; error
+    @(33.0200 mm, 30.4800 mm): Symbol H4 [MountingHole_Pad]
+    @(69.8500 mm, 237.4900 mm): Symbol H4 [MountingHole_Pad]
+[pin_to_pin]: Pins of type Power input and Unspecified are connected
+    ; warning
+    @(113.0300 mm, 121.9200 mm): Symbol #PWR05 Pin 1 [Power input, Line]
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+[pin_to_pin]: Pins of type Power input and Unspecified are connected
+    ; warning
+    @(113.0300 mm, 121.9200 mm): Symbol #PWR05 Pin 1 [Power input, Line]
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+[pin_to_pin]: Pins of type Power input and Unspecified are connected
+    ; warning
+    @(74.9300 mm, 176.5300 mm): Symbol #PWR03 Pin 1 [Power input, Line]
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+[pin_to_pin]: Pins of type Power input and Unspecified are connected
+    ; warning
+    @(74.9300 mm, 176.5300 mm): Symbol #PWR03 Pin 1 [Power input, Line]
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+[pin_to_pin]: Pins of type Passive and Unspecified are connected
+    ; warning
+    @(100.3300 mm, 171.4500 mm): Symbol C3 Pin 2 [Passive, Line]
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+[pin_to_pin]: Pins of type Passive and Unspecified are connected
+    ; warning
+    @(100.3300 mm, 171.4500 mm): Symbol C3 Pin 2 [Passive, Line]
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+[duplicate_reference]: Duplicate items C2
+
+    ; error
+    @(87.6300 mm, 167.6400 mm): Symbol C2 [C_Polarized]
+    @(317.5000 mm, 69.8500 mm): Symbol C2 [C]
+[pin_to_pin]: Pins of type Passive and Unspecified are connected
+    ; warning
+    @(87.6300 mm, 171.4500 mm): Symbol C2 Pin 2 [Passive, Line]
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+[pin_to_pin]: Pins of type Passive and Unspecified are connected
+    ; warning
+    @(87.6300 mm, 171.4500 mm): Symbol C2 Pin 2 [Passive, Line]
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+[duplicate_reference]: Duplicate items C3
+
+    ; error
+    @(100.3300 mm, 167.6400 mm): Symbol C3 [C]
+    @(317.5000 mm, 80.0100 mm): Symbol C3 [C]
+[duplicate_reference]: Duplicate items C4
+
+    ; error
+    @(113.0300 mm, 167.6400 mm): Symbol C4 [C]
+    @(424.1800 mm, 162.5600 mm): Symbol C4 [C]
+[pin_to_pin]: Pins of type Passive and Unspecified are connected
+    ; warning
+    @(113.0300 mm, 171.4500 mm): Symbol C4 Pin 2 [Passive, Line]
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+[pin_to_pin]: Pins of type Passive and Unspecified are connected
+    ; warning
+    @(113.0300 mm, 171.4500 mm): Symbol C4 Pin 2 [Passive, Line]
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+[duplicate_reference]: Duplicate items R2
+
+    ; error
+    @(133.3500 mm, 90.1700 mm): Symbol R2 [R]
+    @(436.8800 mm, 162.5600 mm): Symbol R2 [R_US]
+[duplicate_reference]: Duplicate items H5
+
+    ; error
+    @(38.1000 mm, 30.4800 mm): Symbol H5 [MountingHole_Pad]
+    @(74.9300 mm, 237.4900 mm): Symbol H5 [MountingHole_Pad]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(163.8300 mm, 109.2200 mm): Symbol L5 Pin 1 [1, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(123.1900 mm, 104.1400 mm): Symbol Q1 Pin 3 [S, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(143.5100 mm, 104.1400 mm): Symbol Q2 Pin 3 [S, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(74.9300 mm, 171.4500 mm): Symbol R5 Pin 1 [Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(113.0300 mm, 106.6800 mm): Symbol D1 Pin 2 [A, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(133.3500 mm, 106.6800 mm): Symbol D2 Pin 2 [A, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(153.6700 mm, 106.6800 mm): Symbol D3 Pin 2 [A, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(181.6100 mm, 85.0900 mm): Symbol CR2 Pin 1 [1, Unspecified, Line]
+    @(186.6900 mm, 85.0900 mm): Symbol CR2 Pin 3 [3, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(186.6900 mm, 106.6800 mm): Symbol CR1 Pin 3 [3, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(173.9900 mm, 105.4100 mm): Symbol D6 Pin 2 [A2, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(123.1900 mm, 109.2200 mm): Symbol L1 Pin 1 [1, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(143.5100 mm, 109.2200 mm): Symbol L3 Pin 1 [1, Passive, Line]
+[pin_to_pin]: Pins of type Unspecified and Passive are connected
+    ; warning
+    @(181.6100 mm, 106.6800 mm): Symbol CR1 Pin 1 [1, Unspecified, Line]
+    @(163.8300 mm, 104.1400 mm): Symbol Q3 Pin 3 [S, Passive, Line]
+
+ ** ERC messages: 62  Errors 19  Warnings 43
