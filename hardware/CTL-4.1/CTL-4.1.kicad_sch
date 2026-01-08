@@ -12127,7 +12127,7 @@
 		)
 		(uuid "bd522cea-1835-4d1e-a134-ee81bede0237")
 	)
-	(label "+12V"
+	(label "+5V"
 		(at 354.33 83.82 0)
 		(fields_autoplaced yes)
 		(effects
