@@ -5,7 +5,7 @@
 #include <driver/rmt.h>
 #include <driver/adc.h>
 
-#define DEBUG_2_SERIAL    true
+#define DEBUG_2_SERIAL    false
 #define LITTLEFS_EN       false
 
 // RMT Channel definitions
@@ -17,7 +17,17 @@
 #define SENS_COAG         5
 #define OPTO              6
 #define REM               7
-#define REM_UPPER_LIMIT   694
+#define REM_LOWER_LIMIT   2218 // short
+// 3210 200 ohm
+// 3250 High-Z
+#define REM_UPPER_LIMIT   3210
+
+// alpha = 1 / 2^SHIFT
+// SHIFT=2 => alpha=0.25 (less smoothing, more responsiveness)
+// SHIFT=3 => alpha=0.125 (more smoothing)
+// SHIFT=4 => alpha=0.0625 (even more smoothing, more delay)
+#define REM_SHIFT_FILTER  5
+
 #define MSD1              16
 #define MSD2              15
 #define CTL_RLY_1         8

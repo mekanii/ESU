@@ -35,6 +35,6 @@ void fire(uint8_t mode);
 void setupRelay();
 void setupButtons();
 bool updateButtonState(uint8_t buttonIndex, uint8_t buttonPin);
-void readButtons();
+bool readButtons(bool remFault = false);
 
 #endif // HARDWARE_CONTROL_H

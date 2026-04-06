@@ -1121,7 +1121,7 @@
 				(pin power_in line
 					(at 0 0 0)
 					(length 2.54)
-					(name "5V"
+					(name "12V"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1313,7 +1313,7 @@
 				(pin power_in line
 					(at 0 0 0)
 					(length 2.54)
-					(name "5V"
+					(name "12V"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -7555,7 +7555,7 @@
 		)
 		(uuid "336482fe-4f5d-479a-9e9a-3ab0efe70094")
 	)
-	(label "RLY-K"
+	(label "+12V"
 		(at 24.13 50.8 0)
 		(fields_autoplaced yes)
 		(effects
@@ -11074,7 +11074,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Custom:ESU-MSD-1.0"
+		(property "Footprint" "Custom:ESU-REM-4.0"
 			(at 83.82 214.63 0)
 			(effects
 				(font

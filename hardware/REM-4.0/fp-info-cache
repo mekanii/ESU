@@ -1,4 +1,4 @@
-23826360328329666
+23843735379207785
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -95,7 +95,7 @@ BatteryHolder_Keystone_1042_1x18650
 Battery holder for 18650 cylindrical cells http://www.keyelco.com/product.cfm/product_id/918
 18650 Keystone 1042 Li-ion
 0
-2
+6
 2
 Battery
 BatteryHolder_Keystone_1057_1x2032
@@ -249,7 +249,14 @@ BatteryHolder_MPD_BH-18650-PC2
 18650 Battery Holder (http://www.memoryprotectiondevices.com/datasheets/BK-18650-PC2-datasheet.pdf)
 18650 Battery Holder
 0
+6
 2
+Battery
+BatteryHolder_MPD_BH-18650-PC2_Top
+18650 Battery Holder (http://www.memoryprotectiondevices.com/datasheets/BK-18650-PC2-datasheet.pdf)
+18650 Battery Holder
+0
+30
 2
 Battery
 BatteryHolder_Multicomp_BC-2001_1x2032
@@ -17575,6 +17582,13 @@ JST XH series connector, S3B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pd
 connector JST XH horizontal
 0
 3
+3
+Connector_JST
+JST_XH_S3B-XH-SM4-TB_1x03_P2.50mm_Horizontal
+http://www.jst-mfg.com/product/pdf/eng/eXH.pdf
+JST XH
+0
+5
 3
 Connector_JST
 JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal
@@ -48817,6 +48831,20 @@ conn samtec ultra-mirco-power terminal
 0
 10
 10
+Connector_Scondar
+SCT2501WVS-02_1x02-1MP_P2.50mm_Vertical
+
+
+0
+4
+3
+Connector_Scondar
+SCT2501WVS-03_1x03-1MP_P2.50mm_Vertical
+
+
+0
+5
+4
 Connector_Stocko
 Stocko_MKS_1651-6-0-202_1x2_P2.50mm_Vertical
 Stocko MKS 16xx series connector, (https://www.stocko-contact.com/downloads/steckverbindersystem-raster-2,5-mm.pdf#page=15), generated with kicad-footprint-generator
@@ -74820,7 +74848,7 @@ Texas_VQFN-RHL-20_ThermalVias
 http://www.ti.com/lit/ds/symlink/bq51050b.pdf
 RHL0020A
 0
-41
+40
 21
 Package_DFN_QFN
 Texas_VQFN-RNR0011A-11
@@ -79895,7 +79923,7 @@ SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm
 SOIC, 8 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/ada4898-1_4898-2.pdf#page=29), generated with kicad-footprint-generator ipc_gullwing_generator.py
 SOIC SO
 0
-13
+14
 9
 Package_SO
 SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm_ThermalVias
@@ -80371,7 +80399,7 @@ SSOP-10-1EP_3.9x4.9mm_P1mm_EP2.1x3.3mm_ThermalVias
 SSOP, 10 Pin (http://download.py32.org/%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C/zh-CN/PY32F002A%20%E7%B3%BB%E5%88%97%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C_Rev1.0.pdf#page=44), generated with kicad-footprint-generator ipc_gullwing_generator.py
 SSOP SO ESSOP-10
 0
-15
+17
 11
 Package_SO
 SSOP-10_3.9x4.9mm_P1.00mm
@@ -82863,7 +82891,7 @@ TO-263-5_TabPin3
 TO-263/D2PAK/DDPAK SMD package, http://www.infineon.com/cms/en/product/packages/PG-TO263/PG-TO263-5-1/
 D2PAK DDPAK TO-263 D2PAK-5 TO-263-5 SOT-426
 0
-6
+33
 5
 Package_TO_SOT_SMD
 TO-263-5_TabPin6
@@ -90769,6 +90797,13 @@ CONN_726386-2_TEC
 2
 1
 TerminalBlock
+KF7.62-3Pole
+
+
+0
+3
+3
+TerminalBlock
 KF7.62-4Pole
 
 
@@ -91003,6 +91038,20 @@ TerminalBlock
 TerminalBlock_bornier-8_P5.08mm
 simple 8pin terminal block, pitch 5.08mm, revamped version of bornier8
 terminal block bornier8
+0
+8
+8
+TerminalBlock
+WJ25C-4
+
+
+0
+4
+4
+TerminalBlock
+WJ25C-8
+
+
 0
 8
 8
@@ -95268,6 +95317,13 @@ THT pad as test Point, diameter 4.0mm, hole diameter 2.0mm
 test point THT pad
 0
 1
+1
+TestPoint
+Via_4Hole_Pitch0.953_Drill0.635mm
+
+
+0
+4
 1
 Transformer_SMD
 Pulse_P0926NL

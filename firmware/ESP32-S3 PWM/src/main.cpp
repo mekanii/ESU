@@ -12,6 +12,8 @@
 #include "hardware_control.h"
 #include "buzzer.h"
 
+static bool remBuzzed = false;
+
 void setup() {
   setupRelay();
   setupADC();
@@ -67,16 +69,18 @@ void setup() {
 }
 
 void loop() {
-  static bool errorREM = false;
   readSerialData();  // Keep serial input functionality
 
-  if(readREM() < REM_UPPER_LIMIT) {
-    errorREM = false;
-    readButtons();   // Add button input functionality
-  } else {
-    if (!errorREM) {
+  bool remFault = (readREM() >= (REM_UPPER_LIMIT - 5)) || (readREM() <= (REM_LOWER_LIMIT + 5 ));
+  readButtons(remFault);
+  
+  if (remFault) {
+    if (!remBuzzed) {
       buzzerError();
-      errorREM = true;
+      remBuzzed = true;
     }
+  } else {
+    remBuzzed = false;
   }
+  
 }
