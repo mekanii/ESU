@@ -3048,7 +3048,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "20kΩ"
 			(at 93.472 80.01 0)
 			(effects
 				(font
