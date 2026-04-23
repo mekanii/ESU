@@ -1198,12 +1198,6 @@
 		(uuid "021ba687-7bda-4eab-8c17-d5b46d828e68")
 	)
 	(junction
-		(at 31.75 140.97)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0a9a1afc-3ddf-47fe-8338-47ed5e075e56")
-	)
-	(junction
 		(at 76.2 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1587,16 +1581,6 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 140.97) (xy 31.75 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43a265c5-20ca-4dda-b1c4-da8a4b4b6354")
-	)
-	(wire
-		(pts
 			(xy 45.72 40.64) (xy 45.72 43.18)
 		)
 		(stroke
@@ -1614,6 +1598,16 @@
 			(type default)
 		)
 		(uuid "47364f5f-9dd4-4d87-aecf-0b26e12d8569")
+	)
+	(wire
+		(pts
+			(xy 55.88 38.1) (xy 55.88 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4860963b-6bf5-48fb-a071-1da0d70c97f6")
 	)
 	(wire
 		(pts
@@ -1707,16 +1701,6 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 135.89) (xy 31.75 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7008a633-5ce9-49e3-af03-3fbbb30a22d0")
-	)
-	(wire
-		(pts
 			(xy 66.04 45.72) (xy 66.04 49.53)
 		)
 		(stroke
@@ -1787,7 +1771,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 140.97) (xy 31.75 146.05)
+			(xy 31.75 135.89) (xy 31.75 146.05)
 		)
 		(stroke
 			(width 0)
@@ -2037,13 +2021,13 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 138.43) (xy 39.37 138.43)
+			(xy 29.21 140.97) (xy 39.37 140.97)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d96ed525-c4bb-4cde-aae3-639f0c888f34")
+		(uuid "d956b0ba-67f5-4cc5-a75c-e7e805c98bb0")
 	)
 	(wire
 		(pts
@@ -2135,6 +2119,17 @@
 		)
 		(uuid "fe49c2c2-ac18-43b6-8273-a2d1bd819554")
 	)
+	(label "IN"
+		(at 35.56 140.97 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "07aa2700-100f-42d6-8409-ed535624ec15")
+	)
 	(label "OUT"
 		(at 121.92 55.88 0)
 		(fields_autoplaced yes)
@@ -2145,17 +2140,6 @@
 			(justify left bottom)
 		)
 		(uuid "3346a2a6-50a4-45a0-8faf-736b0fb6f122")
-	)
-	(label "IN"
-		(at 35.56 138.43 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "4058e31f-0ae0-438a-a464-50972b7c81a5")
 	)
 	(label "IN"
 		(at 36.83 71.12 0)
@@ -3586,6 +3570,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 55.88 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "996c1025-f9b8-4eee-a95d-7ae3b5d1ab50")
+		(property "Reference" "#PWR09"
+			(at 55.88 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "1V8"
+			(at 55.88 34.544 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 55.88 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4a314bcc-16df-4df6-91c9-18f26b345be1")
+		)
+		(instances
+			(project "INA-3.1"
+				(path "/012ecf8f-e59d-4b86-a3cc-27fec600e7df"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Amplifier_Operational:OPA365xxDBV")
 		(at 76.2 68.58 0)
 		(mirror x)
@@ -3898,7 +3947,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "470pF"
 			(at 56.134 79.502 0)
 			(effects
 				(font
