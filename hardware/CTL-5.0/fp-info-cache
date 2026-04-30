@@ -1,4 +1,4 @@
-23843380148050130
+23847590361703274
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -34900,6 +34900,13 @@ Through hole angled pin header, 1x05, 2.54mm pitch, 6mm pin length, single row
 Through hole angled pin header THT 1x05 2.54mm single row
 0
 5
+5
+Connector_PinHeader_2.54mm
+PinHeader_1x05_P2.54mm_Horizontal_2
+
+
+0
+10
 5
 Connector_PinHeader_2.54mm
 PinHeader_1x05_P2.54mm_Vertical
@@ -91041,6 +91048,13 @@ terminal block bornier8
 0
 8
 8
+TerminalBlock
+WJ25C-2
+
+
+0
+2
+2
 TerminalBlock
 WJ25C-4
 

@@ -1258,6 +1258,12 @@
 		(uuid "65bed111-0f23-4ec6-ae15-a564ccd51be7")
 	)
 	(junction
+		(at 132.08 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6aee58f3-1f5d-48ef-adc1-cb7a58a67fc4")
+	)
+	(junction
 		(at 66.04 62.23)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1461,7 +1467,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 55.88) (xy 127 55.88)
+			(xy 119.38 55.88) (xy 121.92 55.88)
 		)
 		(stroke
 			(width 0)
@@ -1478,6 +1484,16 @@
 			(type default)
 		)
 		(uuid "2cd653e6-3551-4bda-b5b1-5c85c5e5f86d")
+	)
+	(wire
+		(pts
+			(xy 129.54 55.88) (xy 132.08 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e185e0f-2cac-464c-a045-0e98ed479e9d")
 	)
 	(wire
 		(pts
@@ -1618,6 +1634,16 @@
 			(type default)
 		)
 		(uuid "4d5a368d-edbb-4f0c-8766-a0dc9c13e6e2")
+	)
+	(wire
+		(pts
+			(xy 132.08 55.88) (xy 132.08 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e656ebc-0133-4548-bbd3-8b879ab0ef30")
 	)
 	(wire
 		(pts
@@ -2061,6 +2087,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 55.88) (xy 139.7 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea8a1674-b2b0-4526-a316-a9100b0348e0")
+	)
+	(wire
+		(pts
 			(xy 68.58 124.46) (xy 63.5 124.46)
 		)
 		(stroke
@@ -2119,6 +2155,17 @@
 		)
 		(uuid "fe49c2c2-ac18-43b6-8273-a2d1bd819554")
 	)
+	(label "OUT"
+		(at 138.43 55.88 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify right bottom)
+		)
+		(uuid "017b86d9-f403-420e-bb6c-422e8dfb1533")
+	)
 	(label "IN"
 		(at 35.56 140.97 0)
 		(fields_autoplaced yes)
@@ -2129,17 +2176,6 @@
 			(justify left bottom)
 		)
 		(uuid "07aa2700-100f-42d6-8409-ed535624ec15")
-	)
-	(label "OUT"
-		(at 121.92 55.88 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "3346a2a6-50a4-45a0-8faf-736b0fb6f122")
 	)
 	(label "IN"
 		(at 36.83 71.12 0)
@@ -2947,7 +2983,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "6.8kΩ"
+		(property "Value" "5.1kΩ"
 			(at 67.818 56.896 0)
 			(effects
 				(font
@@ -3564,6 +3600,142 @@
 			(project "INA-3"
 				(path "/012ecf8f-e59d-4b86-a3cc-27fec600e7df"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 125.73 55.88 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "860856ed-5cb7-4295-a23c-840a8dfe3a4a")
+		(property "Reference" "R9"
+			(at 125.73 53.594 90)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 125.73 58.166 90)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 125.73 57.658 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 125.73 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 125.73 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c96d7abf-b81c-4610-9cbd-735c483ae3cf")
+		)
+		(pin "1"
+			(uuid "e9020020-e206-4500-a02b-7346d30c2a67")
+		)
+		(instances
+			(project "INA-3.1"
+				(path "/012ecf8f-e59d-4b86-a3cc-27fec600e7df"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 132.08 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8edc32d9-7291-4eba-bf06-36eafd503a08")
+		(property "Reference" "C8"
+			(at 132.334 60.198 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 132.334 64.262 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 133.0452 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 132.08 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 132.08 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cd023e4c-8539-408d-8809-d0b334da02c2")
+		)
+		(pin "2"
+			(uuid "6b9e5446-622e-4a89-941d-8cfa363ca551")
+		)
+		(instances
+			(project "INA-3.1"
+				(path "/012ecf8f-e59d-4b86-a3cc-27fec600e7df"
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -4194,6 +4366,73 @@
 			(project "INA-3"
 				(path "/012ecf8f-e59d-4b86-a3cc-27fec600e7df"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 132.08 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee97a9c0-4071-4397-8347-383490bbefe5")
+		(property "Reference" "#PWR010"
+			(at 132.08 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 132.08 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 132.08 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ab442074-128f-47bf-b396-72ff17b86332")
+		)
+		(instances
+			(project "INA-3.1"
+				(path "/012ecf8f-e59d-4b86-a3cc-27fec600e7df"
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)

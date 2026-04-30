@@ -30,25 +30,27 @@ void setupADC() {
 }
 
 int readREM() {
-  // ---------------------------------------------- //
-  // int adc_value = adc1_get_raw(ADC_CHANNEL);
-  // Serial.print("REM: ");
-  // Serial.println(adc_value);
-  // return adc_value;
-  // ---------------------------------------------- //
-  
-  int x = adc1_get_raw(ADC_CHANNEL);
   static bool initialized = false;
-  static int filtered = 0;
-  if (!initialized) {
-    filtered = x;
-    initialized = true;
-    return filtered;
+  static long scaledVal = 0;
+  static int val = 0;
+
+  long sum = 0;
+  for (int i = 0; i < REM_SAMPLES; i++) {
+    sum += adc1_get_raw(ADC_CHANNEL);
   }
-  filtered += (x - filtered) >> REM_SHIFT_FILTER;
-  // Serial.print("REM: ");
-  Serial.println(filtered);
-  return filtered;
+  int raw_avg = (int)(sum >> REM_SHIFT_SAMPLES);
+  
+  if (!initialized) {
+    scaledVal = (long)raw_avg << REM_SHIFT_FILTER;
+    initialized = true;
+    return raw_avg;
+  }
+
+  scaledVal += ( ((long)raw_avg << REM_SHIFT_FILTER) - scaledVal ) >> REM_SHIFT_FILTER;
+
+  val = (int)(scaledVal >> REM_SHIFT_FILTER);
+  // Serial.println(val);
+  return val;
 }
 
 void rmtStart(uint8_t signalType) {
@@ -88,15 +90,15 @@ void rmtStop() {
 }
 
 bool setRelay(uint8_t mode) {
-  Serial.println(mode);
+  // Serial.println(mode);
   if (mode == 0 || mode == 1 || mode == 2) {
-    digitalWrite(CTL_RLY_1, LOW);
+    digitalWrite(CTL_RLY_1, HIGH);
     // digitalWrite(CTL_RLY_2, LOW);
   } else if (mode == 3 || mode == 4) {
-    digitalWrite(CTL_RLY_1, LOW);
+    digitalWrite(CTL_RLY_1, HIGH);
     // digitalWrite(CTL_RLY_2, HIGH);
   } else if (mode == 5){
-    digitalWrite(CTL_RLY_1, HIGH);
+    digitalWrite(CTL_RLY_1, LOW);
     // digitalWrite(CTL_RLY_2, HIGH);
   }
 
@@ -202,8 +204,8 @@ bool updateButtonState(uint8_t buttonIndex, uint8_t buttonPin) {
 }
 
 bool readButtons(bool remFault) {
-  // Check if mode 1 button (SENS_CUT) was just pressed
-  if (updateButtonState(0, SENS_CUT) || updateButtonState(2, MSD2)) {
+  // Check if SENS_CUT (FOOT SW) OR MSD1 (CAUTER) was just pressed
+  if (updateButtonState(0, SENS_CUT) || updateButtonState(2, MSD1)) {
     if (!getVp51()) {
       buttonReadyOnPress[0] = false;
       buttonReadyOnPress[2] = false;
@@ -228,7 +230,8 @@ bool readButtons(bool remFault) {
     buttonReadyOnPress[0] = true;
     buttonReadyOnPress[2] = true;
     
-    if (remFault) {
+    if (remFault || ((vp51[1] + 3) == 5)) {
+      // REM Fault or MONOPOLAR SW (CUT) Triggered on BIPOLAR MODE
       buzzerError();
       return false;
     } else {
@@ -239,8 +242,46 @@ bool readButtons(bool remFault) {
     }
   }
 
-  // Check if mode 3 button (SENS_COAG) was just pressed
-  if (updateButtonState(1, SENS_COAG) || updateButtonState(3, MSD1)) {
+  // Check if MSD2 (CAUTER) was just pressed
+  if (updateButtonState(3, MSD2)) {
+    if (!getVp51()) {
+      buttonReadyOnPress[1] = false;
+      buttonReadyOnPress[3] = false;
+      buzzerError();
+      return false;
+    }
+
+    if (!getVp52()) {
+      buttonReadyOnPress[1] = false;
+      buttonReadyOnPress[3] = false;
+      buzzerError();
+      return false;
+    }
+
+    if (!fireSignalState(1)) {
+      buttonReadyOnPress[1] = false;
+      buttonReadyOnPress[3] = false;
+      buzzerError();
+      return false;
+    }
+
+    buttonReadyOnPress[1] = true;
+    buttonReadyOnPress[3] = true;
+
+    if (remFault || ((vp51[1] + 3) == 5)) {
+      // REM Fault or MONOPOLAR SW (COAG) Triggered on BIPOLAR MODE
+      buzzerError();
+      return false;
+    } else {
+      // Fire update once when button is first pressed (RMT will auto-loop)
+      fire(vp51[1] + 3);
+      buzzerCoag();
+      return true;
+    }
+  }
+
+  // Check if SENS_COAG (FOOT SW) was just pressed
+  if (updateButtonState(1, SENS_COAG)) {
     if (!getVp51()) {
       buttonReadyOnPress[1] = false;
       buttonReadyOnPress[3] = false;
