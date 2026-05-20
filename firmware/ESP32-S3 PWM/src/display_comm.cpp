@@ -1,3 +1,27 @@
+/*  =========================================================================================
+    display_comm.cpp — UART Display Protocol and Data Synchronization
+    
+    Context (ESU firmware):
+    This module handles Serial1 communication between ESP32-S3 and the HMI display
+    using framed packets with header 0x5A 0xA5.
+    
+    Main responsibilities:
+    - Switch display pages according to current operating modes (`vp51`)
+    - Validate fire-state transitions with display acknowledgment
+    - Read `vp51` / `vp52` from display and parse them into runtime arrays
+    - Push runtime values back to display
+    - Process display commands for dataset load/save operations
+    
+    Frame basics:
+    - TX buffer: `dataFrameTx`
+    - RX buffer: `rxBuffer`
+    - Typical format: [HDR][LEN][INST][VAR_H][VAR_L][DATA...]
+    
+    Reliability behavior:
+    - Request/response functions use short timeout windows (100 ms)
+    - Return false on timeout, incomplete frame, or invalid response
+========================================================================================= */
+
 #include "config.h"
 #include "display_comm.h"
 #include "data_manager.h"

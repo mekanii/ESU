@@ -1,16 +1,34 @@
+/*  =========================================================================================
+    hardware_control.cpp — Trigger Handling, Relay Routing, and RMT Output
+
+    Context (ESU firmware):
+    This module is the execution layer that connects physical triggers (footswitch/handpiece)
+    with display parameters (`vp51`, `vp52`) to produce hardware output:
+    - relay routing
+    - RMT waveform generation
+    - buzzer feedback
+
+    Main responsibilities:
+    - Read and debounce 4 active-low trigger inputs
+    - Validate fire permission and safety interlocks
+    - Start/stop relay + RMT output based on selected mode
+
+    Input index mapping:
+    - [0] SENS_CUT   (footswitch CUT)
+    - [1] SENS_COAG  (footswitch COAG)
+    - [2] MSD1       (handpiece CUT)
+    - [3] MSD2       (handpiece COAG)
+
+    Mode index convention:
+    - 0..2: CUT family
+    - 3..5: COAG family (commonly derived from `vp51[1] + 3`)
+========================================================================================= */
+
 #include "hardware_control.h"
 #include "config.h"
 #include "data_manager.h"
 #include "display_comm.h"
 #include "buzzer.h"
-
-/* =========================================================================================
-  hardware_control.cpp
-  Role:
-  - Read physical triggers (footswitch + handpiece buttons)
-  - Validate firing permission/safety from display state + REM fault
-  - Control relay routing + RMT PWM output + buzzer feedback
-========================================================================================= */
 
 // Button state arrays for 4 inputs:
 // [0]=SENS_CUT, [1]=SENS_COAG, [2]=MSD1, [3]=MSD2
@@ -51,7 +69,7 @@ void setupADC() {
   adc1_config_channel_atten(ADC_CHANNEL, ADC_ATTEN);
 }
 
-// Read REM ADC, average samples, and return filtered value.
+// Read REM ADC, average samples, apply fixed-point IIR filtering, and return the filtered value.
 int readREM() {
   // REM reading pipeline:
   // 1) Oversample and average raw ADC
@@ -78,7 +96,7 @@ int readREM() {
   scaledVal += ( ((long)raw_avg << REM_SHIFT_FILTER) - scaledVal ) >> REM_SHIFT_FILTER;
 
   val = (int)(scaledVal >> REM_SHIFT_FILTER);
-  // Serial.println(val);
+  Serial.println(val);
   return val;
 }
 
@@ -130,7 +148,7 @@ void rmtStop() {
   buzzerOff();
 }
 
-// Set relay path according to mode before firing.
+// Configure relay path for the selected mode before starting waveform output.
 bool setRelay(uint8_t mode) {
   // Select output path according to mode family.
   // NOTE: CTL_RLY_2 control is currently disabled/commented.
@@ -152,7 +170,7 @@ bool setRelay(uint8_t mode) {
   return true;
 }
 
-// Safely restart output: stop previous signal, set relay, start RMT.
+// Safely restart firing: stop previous output, set relay route, then start RMT waveform.
 void fire(uint8_t mode) {
   // Always stop previous firing first to avoid overlap/glitch.
   rmtStop();
@@ -163,7 +181,7 @@ void fire(uint8_t mode) {
   }
 }
 
-// Configure relay/PWM enable pins and perform startup sequence.
+// Configure relay/PWM control pins and execute startup enable sequence.
 void setupRelay() {
   // Relay/PWM enable initialization sequence.
   pinMode(CTL_RLY_1, OUTPUT);
@@ -179,7 +197,7 @@ void setupRelay() {
   digitalWrite(CTL_PWM_EN, HIGH);
 }
 
-// Configure button input pins and capture initial stable states.
+// Configure trigger input pins and capture initial stable states to avoid false startup edges.
 void setupButtons() {
   // Configure all trigger inputs.
   pinMode(SENS_CUT, INPUT);
@@ -200,7 +218,7 @@ void setupButtons() {
   currentButtonState[3] = lastButtonState[3];
 }
 
-// Debounce one button and detect valid press/release transitions.
+// Debounce one input and detect valid press/release transitions with single-button lockout.
 bool updateButtonState(uint8_t buttonIndex, uint8_t buttonPin) {
   // Debounced edge detector with mutual-exclusion firing lock.
   bool reading = digitalRead(buttonPin);
@@ -256,7 +274,7 @@ bool updateButtonState(uint8_t buttonIndex, uint8_t buttonPin) {
   return buttonJustPressed;
 }
 
-// Main trigger handler: validate state/safety and start CUT/COAG firing.
+// Main trigger gate: validate display state + safety conditions, then start CUT/COAG firing.
 bool readButtons(bool remFault) {
   // Main trigger gate:
   // 1) Detect new press
