@@ -2861,7 +2861,7 @@
 				)
 			)
 		)
-		(property "Value" "1kΩ"
+		(property "Value" "~"
 			(at 0 1.65 0)
 			(layer "F.Fab")
 			(uuid "2f064849-791b-493b-b1db-abd94b09e0e4")
@@ -6946,8 +6946,8 @@
 		)
 		(pad "1" thru_hole circle
 			(at -5.079999 0 90)
-			(size 3.81 3.81)
-			(drill 2)
+			(size 1.905 3.81)
+			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 5 "Net-(C3-Pad1)")
@@ -6956,8 +6956,8 @@
 		)
 		(pad "2" thru_hole circle
 			(at 5.079999 0 90)
-			(size 3.81 3.81)
-			(drill 2)
+			(size 1.905 3.81)
+			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 4 "Net-(Q1-D)")
@@ -7417,7 +7417,7 @@
 				)
 			)
 		)
-		(property "Value" "1kΩ"
+		(property "Value" "~"
 			(at 0 1.65 0)
 			(layer "F.Fab")
 			(uuid "d913485c-4145-4042-8122-bc099a5c4a6f")
@@ -9043,7 +9043,7 @@
 				)
 			)
 		)
-		(property "Value" "1kΩ"
+		(property "Value" "~"
 			(at 0 1.65 0)
 			(layer "F.Fab")
 			(uuid "f46b4a55-ea9b-44d9-ba33-f6978c19e4e8")
@@ -9456,7 +9456,7 @@
 		(descr "Potentiometer, vertical, Bourns 3296W, https://www.bourns.com/pdfs/3296.pdf")
 		(tags "Potentiometer vertical Bourns 3296W")
 		(property "Reference" "RV1"
-			(at 0 -3.66 0)
+			(at 0 -3.66 360)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "17c8c1f6-76c2-4231-9f29-dc11f7cefaf3")
@@ -9468,7 +9468,7 @@
 			)
 		)
 		(property "Value" "5kΩ"
-			(at 0 3.67 0)
+			(at 0 3.67 360)
 			(layer "F.Fab")
 			(uuid "f163a9bc-05b8-4eb2-9d8a-707451dff84f")
 			(effects
@@ -9674,7 +9674,7 @@
 			(uuid "87bd242d-c15f-4b87-9d75-118609e92914")
 		)
 		(fp_text user "${REFERENCE}"
-			(at -0.635 0.005 0)
+			(at -0.635 0.005 360)
 			(layer "F.Fab")
 			(uuid "3badd354-76a3-4790-940c-f035bd37a344")
 			(effects
@@ -9747,7 +9747,7 @@
 				)
 			)
 		)
-		(property "Value" "1kΩ"
+		(property "Value" "~"
 			(at 0 1.65 0)
 			(layer "F.Fab")
 			(uuid "9f6f6ccf-1c5b-44ff-99ab-5ef13927e124")
@@ -10246,12 +10246,20 @@
 		(uuid "dbb240aa-b233-4b32-a4c4-4e0c8e27e5c3")
 	)
 	(segment
-		(start 128.42875 84.455)
+		(start 132.08 79.375001)
+		(end 132.08 80.80375)
+		(width 1.905)
+		(layer "B.Cu")
+		(net 4)
+		(uuid "0d642a44-e977-46b7-92d9-fa3c8812628f")
+	)
+	(segment
+		(start 132.08 80.80375)
 		(end 133.50875 79.375)
 		(width 1.905)
 		(layer "B.Cu")
 		(net 4)
-		(uuid "10dafbca-8476-4d0e-a153-8dc6ce9a7e98")
+		(uuid "149d454c-0f4b-4a1d-ad5a-20719c9f6ac8")
 	)
 	(segment
 		(start 136.207499 79.375)
@@ -10276,6 +10284,30 @@
 		(layer "B.Cu")
 		(net 4)
 		(uuid "628a2b92-43c1-4f8d-8cdd-48042cd0e3b0")
+	)
+	(segment
+		(start 128.42875 84.455)
+		(end 132.08 80.80375)
+		(width 1.905)
+		(layer "B.Cu")
+		(net 4)
+		(uuid "694cf8dd-6d86-4e9d-965f-9c6ab6ae1d56")
+	)
+	(segment
+		(start 133.50875 79.375)
+		(end 132.080001 79.375)
+		(width 1.905)
+		(layer "B.Cu")
+		(net 4)
+		(uuid "7a39aad0-85b1-49ec-abc5-584d0f67566a")
+	)
+	(segment
+		(start 132.080001 79.375)
+		(end 132.08 79.375001)
+		(width 1.905)
+		(layer "B.Cu")
+		(net 4)
+		(uuid "9bb50c76-662f-42af-956c-7e0a080e3782")
 	)
 	(segment
 		(start 136.842499 89.534999)

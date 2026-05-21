@@ -6049,7 +6049,7 @@
 				)
 			)
 		)
-		(property "Value" "1kΩ"
+		(property "Value" "~"
 			(at 136.398 90.17 90)
 			(effects
 				(font
@@ -6118,7 +6118,7 @@
 				)
 			)
 		)
-		(property "Value" "1kΩ"
+		(property "Value" "~"
 			(at 158.75 103.632 90)
 			(effects
 				(font
@@ -6913,7 +6913,7 @@
 				)
 			)
 		)
-		(property "Value" "1kΩ"
+		(property "Value" "~"
 			(at 103.632 54.61 90)
 			(effects
 				(font
@@ -7963,7 +7963,7 @@
 				)
 			)
 		)
-		(property "Value" "1kΩ"
+		(property "Value" "~"
 			(at 136.398 97.79 90)
 			(effects
 				(font
