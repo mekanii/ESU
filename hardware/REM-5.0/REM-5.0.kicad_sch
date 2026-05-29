@@ -3660,12 +3660,6 @@
 		(uuid "914a4b8f-1555-4c9a-b1b4-bb7de3e64b44")
 	)
 	(junction
-		(at 279.4 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9b20127a-5acb-4fb1-86de-fb0cbbed52dc")
-	)
-	(junction
 		(at 132.08 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3736,12 +3730,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "efa8caa2-3856-4cdf-8226-730a4b4078f0")
-	)
-	(junction
-		(at 279.4 86.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f6598376-6549-4840-bf82-c804752bb846")
 	)
 	(wire
 		(pts
@@ -3865,7 +3853,7 @@
 	)
 	(wire
 		(pts
-			(xy 276.86 81.28) (xy 276.86 114.3)
+			(xy 276.86 88.9) (xy 276.86 114.3)
 		)
 		(stroke
 			(width 0)
@@ -4025,16 +4013,6 @@
 	)
 	(wire
 		(pts
-			(xy 279.4 81.28) (xy 279.4 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2b292ded-5eea-487e-84ae-ec30fdf181ac")
-	)
-	(wire
-		(pts
 			(xy 187.96 96.52) (xy 190.5 96.52)
 		)
 		(stroke
@@ -4042,16 +4020,6 @@
 			(type default)
 		)
 		(uuid "2b9a31cd-c1be-48c4-a2ac-26ef235f0794")
-	)
-	(wire
-		(pts
-			(xy 279.4 86.36) (xy 279.4 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3195f128-ef76-41ad-bd15-5583b72cbba2")
 	)
 	(wire
 		(pts
@@ -4255,7 +4223,7 @@
 	)
 	(wire
 		(pts
-			(xy 279.4 81.28) (xy 276.86 81.28)
+			(xy 279.4 88.9) (xy 276.86 88.9)
 		)
 		(stroke
 			(width 0)
@@ -4762,16 +4730,6 @@
 			(type default)
 		)
 		(uuid "b94eca48-5292-43b7-99e8-d85488330dc7")
-	)
-	(wire
-		(pts
-			(xy 279.4 83.82) (xy 279.4 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb347117-4bbf-45c9-82ba-0c8b6c192489")
 	)
 	(wire
 		(pts
@@ -7740,7 +7698,6 @@
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 284.48 86.36 0)
-		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7757,7 +7714,7 @@
 			)
 		)
 		(property "Value" "PinHeader_2.54mm 02x05 Horizontal"
-			(at 287.02 85.0901 0)
+			(at 287.02 87.6299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8032,7 +7989,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470uF 50V"
+		(property "Value" "470uF 16V"
 			(at 95.758 119.38 90)
 			(effects
 				(font
@@ -8040,7 +7997,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-7343-15_Kemet-W_Pad2.25x2.55mm_HandSolder"
 			(at 100.0252 123.19 0)
 			(effects
 				(font
@@ -8058,7 +8015,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
+		(property "Description" "Tantalum capacitor"
 			(at 99.06 119.38 0)
 			(effects
 				(font

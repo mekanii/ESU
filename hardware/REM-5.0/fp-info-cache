@@ -1,4 +1,4 @@
-23855460883885268
+23857479123084391
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -8586,7 +8586,7 @@ SMA_Molex_73251-1153_EdgeMount_Horizontal
 Molex SMA RF Connectors, Edge Mount, (http://www.molex.com/pdm_docs/sd/732511150_sd.pdf)
 sma edge
 0
-11
+7
 2
 Connector_Coaxial
 SMA_Molex_73251-2120_EdgeMount_Horizontal
@@ -52268,6 +52268,13 @@ MesurementPoint Square SMDPad 5mmx10mm
 0
 1
 1
+Connector_Wire
+SolderWirePad_1x08_SMD_1.27x1.905_P1.746mm
+Wire Pad, Square, SMD Pad,  1mm x 2mm,
+MesurementPoint Square SMDPad 1mmx2mm 
+0
+8
+8
 Connector_Wire
 SolderWirePad_1x08_SMD_1.905x1.905_P2.54mm
 Wire Pad, Square, SMD Pad,  1mm x 2mm,
