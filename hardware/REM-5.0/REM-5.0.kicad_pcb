@@ -348,7 +348,7 @@
 			)
 		)
 		(property "Value" "0.01µF 1000"
-			(at 4.999999 3.75 360)
+			(at 4.999999 3.75 0)
 			(layer "F.Fab")
 			(uuid "4f7a2122-9257-490f-8b94-522766cb89fc")
 			(effects
@@ -523,7 +523,7 @@
 			(uuid "faaa1c57-5535-4c67-a0b6-8d634e739be1")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5 0 360)
+			(at 5 0 0)
 			(layer "F.Fab")
 			(uuid "4f25fc7d-f48f-4340-87fd-e51511be4e4b")
 			(effects
@@ -566,6 +566,7 @@
 		)
 	)
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P5.08mm_Horizontal_2"
+		(locked yes)
 		(layer "F.Cu")
 		(uuid "12b91c60-75c0-4de2-b25b-85d626e92ead")
 		(at 180.0225 104.29875 -90)
@@ -3065,7 +3066,7 @@
 		(descr "Resistor, Axial_DIN0414 series, Axial, Horizontal, pin pitch=20.32mm, 2W, length*diameter=11.9*4.5mm^2, http://www.vishay.com/docs/20128/wkxwrx.pdf")
 		(tags "Resistor Axial_DIN0414 series Axial Horizontal pin pitch 20.32mm 2W length 11.9mm diameter 4.5mm")
 		(property "Reference" "R9"
-			(at 0 -3.37 360)
+			(at 0 -3.37 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "f497280b-4580-479d-8c80-e7dc136fc3ed")
@@ -3077,7 +3078,7 @@
 			)
 		)
 		(property "Value" "33Ω 2W"
-			(at 0 3.37 360)
+			(at 0 3.37 0)
 			(layer "F.Fab")
 			(uuid "3eb4b48d-f828-4301-9202-133b91cde778")
 			(effects
@@ -3292,7 +3293,7 @@
 			(uuid "33845a77-a4bf-45a0-abdc-b6998db9c717")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "178c47a8-3831-4a55-9270-eb26dbc5acbc")
 			(effects
@@ -5665,7 +5666,7 @@
 			)
 		)
 		(property "Value" "0.01µF 1000"
-			(at 4.999999 3.75 360)
+			(at 4.999999 3.75 0)
 			(layer "F.Fab")
 			(uuid "9d45f795-5945-4bf0-8218-5a29f86c0398")
 			(effects
@@ -5840,7 +5841,7 @@
 			(uuid "75575d62-12c3-4f9f-a11f-7d835d8eab94")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5 0 360)
+			(at 5 0 0)
 			(layer "F.Fab")
 			(uuid "99e1aad2-2c6d-4ae9-adf3-eac0ebaf0100")
 			(effects
@@ -6986,7 +6987,7 @@
 		(descr "Tantalum Capacitor SMD Kemet-W (7343-15 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor tantalum")
 		(property "Reference" "C7"
-			(at 0 -3.1 360)
+			(at 0 -3.1 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "810a5e2e-1644-41e3-b537-584c63d5774a")
@@ -6998,7 +6999,7 @@
 			)
 		)
 		(property "Value" "470uF 16V"
-			(at 0 3.1 360)
+			(at 0 3.1 0)
 			(layer "F.Fab")
 			(uuid "3c2f568c-8cbb-46ed-9fa4-440dda39e0c0")
 			(effects
@@ -7173,7 +7174,7 @@
 			(uuid "c30d8099-27fe-4be7-b757-e9f27c61062a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "100d2b6c-bc47-4c3a-86f6-f49c0ce51be0")
 			(effects
@@ -10335,19 +10336,19 @@
 	)
 	(segment
 		(start 169.2275 79.375001)
-		(end 166.0525 79.375001)
+		(end 165.1 79.375001)
 		(width 2.8575)
 		(layer "B.Cu")
 		(net 9)
-		(uuid "657f0ee4-2858-49ec-b231-ae5cb029dd8e")
+		(uuid "d262eb05-ea13-4b0c-9882-d35a5e8c9d23")
 	)
 	(segment
 		(start 169.2275 89.535001)
-		(end 166.0525 89.535001)
+		(end 165.1 89.535001)
 		(width 2.8575)
 		(layer "B.Cu")
 		(net 10)
-		(uuid "fc9242c4-3add-489a-b13f-c26a790a0698")
+		(uuid "2b0a8561-5524-449b-889d-317a4fe5e917")
 	)
 	(segment
 		(start 127.15875 95.25)
