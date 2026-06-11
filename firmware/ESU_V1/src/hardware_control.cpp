@@ -96,8 +96,13 @@ int readREM() {
   scaledVal += ( ((long)raw_avg << REM_SHIFT_FILTER) - scaledVal ) >> REM_SHIFT_FILTER;
 
   val = (int)(scaledVal >> REM_SHIFT_FILTER);
-  Serial.println(val);
+  // Serial.println(val);
   return val;
+}
+
+bool isRemFault(int remValue, uint8_t modeIndex) {
+  int offset = modeIndex == 99 ? 0 : vp52[modeIndex];
+  return (remValue >= REM_UPPER_LIMIT + offset || remValue <= REM_LOWER_LIMIT + offset);
 }
 
 // Build and start RMT waveform based on selected signal type.
@@ -275,51 +280,45 @@ bool updateButtonState(uint8_t buttonIndex, uint8_t buttonPin) {
 }
 
 // Main trigger gate: validate display state + safety conditions, then start CUT/COAG firing.
-bool readButtons(bool remFault) {
-  // Main trigger gate:
-  // 1) Detect new press
-  // 2) Refresh VP config from display
-  // 3) Validate fire state
-  // 4) Safety check (REM / mode mismatch)
-  // 5) Fire + buzzer feedback
-  // 6) Stop handled in updateButtonState() on release
-  
+ReadButtonsResult readButtons() {
+  int remValue = readREM();
+
   // CUT trigger source: foot switch CUT or handpiece CUT
   if (updateButtonState(0, SENS_CUT) || updateButtonState(2, MSD1)) {
     if (!getVp51()) {
       buttonReadyOnPress[0] = false;
       buttonReadyOnPress[2] = false;
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     }
 
     if (!getVp52()) {
       buttonReadyOnPress[0] = false;
       buttonReadyOnPress[2] = false;
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     }
 
     if (!fireSignalState(0)) {
       buttonReadyOnPress[0] = false;
       buttonReadyOnPress[2] = false;
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     }
 
     buttonReadyOnPress[0] = true;
     buttonReadyOnPress[2] = true;
     
     // Reject CUT fire when REM fault or bipolar mismatch condition is detected.
-    if (remFault || ((vp51[1] + 3) == 5)) {
+    if (isRemFault(remValue, vp51[0]) || ((vp51[1] + 3) == 5)) {
       // REM Fault or MONOPOLAR SW (CUT) Triggered on BIPOLAR MODE
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     } else {
       // Fire update once when button is first pressed (RMT will auto-loop)
       fire(vp51[0]); // CUT mode index (0..2)
       buzzerCut();
-      return true;
+      return {RESULT_OK, remValue};
     }
   }
 
@@ -329,36 +328,36 @@ bool readButtons(bool remFault) {
       buttonReadyOnPress[1] = false;
       buttonReadyOnPress[3] = false;
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     }
 
     if (!getVp52()) {
       buttonReadyOnPress[1] = false;
       buttonReadyOnPress[3] = false;
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     }
 
     if (!fireSignalState(1)) {
       buttonReadyOnPress[1] = false;
       buttonReadyOnPress[3] = false;
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     }
 
     buttonReadyOnPress[1] = true;
     buttonReadyOnPress[3] = true;
 
     // Reject COAG fire when REM fault or bipolar mismatch condition is detected.
-    if (remFault || ((vp51[1] + 3) == 5)) {
+    if (isRemFault(remValue, vp51[1] + 3) || ((vp51[1] + 3) == 5)) {
       // REM Fault or MONOPOLAR SW (COAG) Triggered on BIPOLAR MODE
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     } else {
       // Fire update once when button is first pressed (RMT will auto-loop)
       fire(vp51[1] + 3); // COAG mode index (3..5)
       buzzerCoag();
-      return true;
+      return {RESULT_OK, remValue};
     }
   }
 
@@ -368,37 +367,37 @@ bool readButtons(bool remFault) {
       buttonReadyOnPress[1] = false;
       buttonReadyOnPress[3] = false;
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     }
 
     if (!getVp52()) {
       buttonReadyOnPress[1] = false;
       buttonReadyOnPress[3] = false;
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     }
 
     if (!fireSignalState(1)) {
       buttonReadyOnPress[1] = false;
       buttonReadyOnPress[3] = false;
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     }
 
     buttonReadyOnPress[1] = true;
     buttonReadyOnPress[3] = true;
 
     // Reject COAG fire when REM fault is detected.
-    if (remFault) {
+    if (isRemFault(remValue, vp51[1] + 3)) {
       buzzerError();
-      return false;
+      return {RESULT_NG, remValue};
     } else {
       // Fire update once when button is first pressed (RMT will auto-loop)
       fire(vp51[1] + 3); // COAG mode index (3..5)
       buzzerCoag();
-      return true;
+      return {RESULT_OK, remValue};
     }
   }
 
-  return true;
+  return {RESULT_NO_ACTION, remValue};
 }

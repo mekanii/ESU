@@ -71,16 +71,24 @@ void setup() {
 void loop() {
   readSerialData();  // Keep serial input functionality
 
-  bool remFault = (readREM() >= (REM_UPPER_LIMIT - 5)) || (readREM() <= (REM_LOWER_LIMIT + 5 ));
-  readButtons(remFault);
-  
-  if (remFault) {
-    if (!remBuzzed) {
-      buzzerError();
-      remBuzzed = true;
-    }
-  } else {
+  // bool remFault = (readREM() >= (REM_UPPER_LIMIT - 5)) || (readREM() <= (REM_LOWER_LIMIT + 5 ));
+  // readButtons(remFault);
+
+  ReadButtonsResult result = readButtons();
+  if (result.status == RESULT_OK) {
     remBuzzed = false;
+
+  } else if (result.status == RESULT_NG) {
+    remBuzzed = true;
+
+  } else {
+    if (isRemFault(result.remValue)) {
+      if (!remBuzzed) {
+        buzzerError();
+        remBuzzed = true;
+      }
+    } else {
+      remBuzzed = false;
+    }
   }
-  
 }

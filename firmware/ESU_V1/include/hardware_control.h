@@ -28,6 +28,7 @@ extern uint16_t duration1;
 // Function declarations
 void setupADC();
 int readREM();
+bool isRemFault(int remValue, uint8_t modeIndex = 99);
 void rmtStart(uint8_t signalType);
 void rmtStop();
 bool setRelay(uint8_t mode);
@@ -35,6 +36,18 @@ void fire(uint8_t mode);
 void setupRelay();
 void setupButtons();
 bool updateButtonState(uint8_t buttonIndex, uint8_t buttonPin);
-bool readButtons(bool remFault = false);
+
+enum ActionResult {
+  RESULT_NO_ACTION = 0,
+  RESULT_OK = 1,
+  RESULT_NG = 2,
+};
+
+struct ReadButtonsResult {
+  ActionResult status;
+  int remValue;
+};
+
+ReadButtonsResult readButtons();
 
 #endif // HARDWARE_CONTROL_H
