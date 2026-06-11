@@ -60,7 +60,7 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.15875,
+          "min_clearance": 0.3175,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
           "pad_connection": 1,
@@ -149,7 +149,7 @@
         "max_error": 0.001,
         "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.15875,
+        "min_copper_edge_clearance": 0.254,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.3175,
         "min_hole_to_hole": 0.635,
@@ -159,8 +159,8 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.15875,
+        "min_through_hole_diameter": 0.635,
+        "min_track_width": 0.254,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 1.27,
         "solder_mask_to_copper_clearance": 0.0,
@@ -212,7 +212,6 @@
       ],
       "track_widths": [
         0.0,
-        0.15875,
         0.254,
         0.3175,
         0.508,
@@ -528,7 +527,7 @@
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
-        "microvia_diameter": 0.3,
+        "microvia_diameter": 0.3175,
         "microvia_drill": 0.1,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
@@ -536,7 +535,7 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.15875,
         "tuning_profile": "",
-        "via_diameter": 0.6,
+        "via_diameter": 0.635,
         "via_drill": 0.3,
         "wire_width": 6
       }
@@ -556,7 +555,7 @@
       "plot": "fabrication-output/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "CTL-6.1.step",
+      "step": "CTL-6.0.step",
       "svg": "",
       "vrml": ""
     },
@@ -672,7 +671,7 @@
       {
         "filename": "CTL-6.1.kicad_sch",
         "name": "CTL-6.1",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "6b19d318-fbab-46b0-b882-d3538e8b12f1"
       }
     ],
     "used_designators": "",
@@ -681,7 +680,7 @@
   "sheets": [
     [
       "6b19d318-fbab-46b0-b882-d3538e8b12f1",
-      "Root"
+      "CTL-6.1"
     ]
   ],
   "text_variables": {},
