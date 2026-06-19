@@ -537,7 +537,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "fabrication-output/negative/",
       "specctra_dsn": "",
       "vrml": ""
     },
