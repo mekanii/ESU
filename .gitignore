@@ -63,3 +63,7 @@ ehthumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# KIcad specific files
+*.history
+*.lck
