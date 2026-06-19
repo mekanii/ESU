@@ -96,7 +96,7 @@ int readREM() {
   scaledVal += ( ((long)raw_avg << REM_SHIFT_FILTER) - scaledVal ) >> REM_SHIFT_FILTER;
 
   val = (int)(scaledVal >> REM_SHIFT_FILTER);
-  // Serial.println(val);
+  Serial.println(val);
   return val;
 }
 

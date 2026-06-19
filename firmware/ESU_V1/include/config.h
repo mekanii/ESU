@@ -17,7 +17,7 @@
 #define SENS_COAG         5
 #define OPTO              6
 #define REM               7
-#define REM_LOWER_LIMIT   131 // short
+#define REM_LOWER_LIMIT   20 // short
 // 3210 200 ohm
 // 3250 High-Z
 #define REM_UPPER_LIMIT   3608
