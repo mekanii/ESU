@@ -69,4 +69,4 @@ ehthumbs.db
 hardware/**/~*.kicad_sch.lck
 hardware/**/~*.kicad_pcb.lck
 hardware/**/~*.kicad_pro.lck
-hardware/**/*_backups/
+hardware/**/*-backups/
