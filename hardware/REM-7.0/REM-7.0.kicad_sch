@@ -2639,16 +2639,6 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 58.42) (xy 114.3 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3fed4b39-ab5f-44c5-a31a-261f71e841f9")
-	)
-	(wire
-		(pts
 			(xy 139.7 35.56) (xy 139.7 38.1)
 		)
 		(stroke
@@ -3662,7 +3652,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R_Potentiometer"
+		(property "Value" "20k"
 			(at 73.66 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
