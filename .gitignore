@@ -50,9 +50,6 @@ lib_deps/
 *.sublime-workspace
 *.sublime-project
 
-# MacOS specific files
-.DS_Store
-
 # Windows specific files
 Thumbs.db
 ehthumbs.db
