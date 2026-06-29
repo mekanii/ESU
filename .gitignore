@@ -13,11 +13,6 @@
 hardware/~$*.xlsx
 ~$*.xlsx
 
-# Ignore temporary Kicad files
-hardware/**/~*.kicad_sch.lck
-hardware/**/~*.kicad_pcb.lck
-hardware/**/~*.kicad_pro.lck
-
 # Ignore dot-tilde files (temporary/backup files like .~Request PO 20250807.xlsx)
 .~*
 
@@ -71,3 +66,7 @@ ehthumbs.db
 
 # KIcad specific files
 **/.history/
+hardware/**/~*.kicad_sch.lck
+hardware/**/~*.kicad_pcb.lck
+hardware/**/~*.kicad_pro.lck
+hardware/**/*_backups/
