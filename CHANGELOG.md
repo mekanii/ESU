@@ -22,13 +22,13 @@ Format ini berbasis pada [Keep a Changelog](https://keepachangelog.com/en/1.0.0/
 
 ---
 
-## 2026-01-01
-### Added
+### 2026-01-01
+#### Added
 -   Firmware controller `firmware/ESU_V1`
 
 ---
-## 2026-01-01
-### Added
+### 2026-01-01
+#### Added
 -   PCB Design file `hardware/PS-`
 -   PCB Design file `hardware/MSD-`
 -   PCB Design file `hardware/REM-`
