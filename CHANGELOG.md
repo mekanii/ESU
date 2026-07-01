@@ -9,10 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.3] 2026-06-25
 ### Stack
 -   Hardware
-    - PS-5.0
-    - CTL-4.0
-    - MSD-1.1
-    - REM-7.0
+    - `PS-5.0`
+    - `CTL-4.0`
+    - `MSD-1.1`
+    - `REM-7.0`
 -   Firmware `ESU_V1`
 -   UI
 
@@ -29,10 +29,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] 2026-01-01
 ### Stack
 -   Hardware
-    - PS-5.0
-    - CTL-4.0
-    - MSD-1.1
-    - REM-4.0
+    - `PS-5.0`
+    - `CTL-4.0`
+    - `MSD-1.1`
+    - `REM-4.0`
 -   Firmware `ESU_V1`
 -   UI
 
