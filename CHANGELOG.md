@@ -6,8 +6,8 @@ Format ini berbasis pada [Keep a Changelog](https://keepachangelog.com/en/1.0.0/
 ### Added
 -   File PCB `hardware/REM-7.0`, reverse engineering dari REM board `TAKTVOLL v1.0 230927`
     - Versi sebelumnya terkendala pada stabilitas pembacaan saat trigger monopolar aktif di power tinggi (EMI effect).
-    - Versi ini menerapkan desain double layer dengan top-bottom ground plane serta ruang soldering untuk can-style copper plate untuk Faraday Cage.
--   File .pdf .dxf `hardware/REM-7.0`
+    - Versi ini menerapkan komponen SMD pada sisi primer, desain double layer dengan top-bottom ground plane serta ruang soldering untuk can-style copper plate sebagai Faraday Cage.
+-   File .pdf .dxf `hardware/REM-7.0`, untuk membuat trace pada copper board menggunakan laser.
 
 ## 2026-01-01
 -   Firmware controller `firmware/ESU_V1`
