@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/2.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+-   Perbaikan code `readREM()` (average samples, fixed-point IIR filtering) untuk stabilitas pembacaan REM saat trigger monopolar di power tinggi (EMI effect)
+
+### Fixed
+-   Masalah noise yang ditimbulkan EMI yang mempengaruhi pembacaan REM saat trigger monopolar aktif
 
 ## [1.0.3] 2026-06-25
 ### Stack
