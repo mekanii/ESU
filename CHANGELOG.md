@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   `hardware/PSU-1.0`, board Power Supply (Buck Converter 12V dan 5V) yang dipisahkan dari CTL-4.0
 -   `hardware/PS-6.0`, penyesuaian letak edge connector karena perubahan board yang digunakan: CTL, PSU, MSD, dan REM.
 -   Firmware `ESU_V1`: `feat/adaptive-REM-Lower-upper-limit`, fungsi `calculateREMLimit()` dengan metode Map-based Control untuk menentukan `REM_LOWER_LIMIT` dan `REM_UPPER_LIMIT` berdasarkan power setting pada output monopolar.
--   Firmware `ESU_V1`: `feat/adaptive-rmt-output`, fungsi `setDuration()` untuk rmt output dengan metode Map-based Control berdasarkan Power Setting yang terbaca oleh controller.
+-   Firmware `ESU_V1`: `feat/adaptive-rmt-output`, fungsi `setDuration()` untuk `rmt output` dengan metode Map-based Control berdasarkan Power Setting.
 
 ### Changed
 -   Perbaikan code `readREM()` pada average samples dan fixed-point IIR filtering untuk stabilitas pembacaan REM saat trigger monopolar aktif di power tinggi (EMI effect)
