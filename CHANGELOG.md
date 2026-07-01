@@ -2,6 +2,8 @@
 Semua perubahan penting pada proyek **ESU** akan dicatat di file ini.
 Format ini berbasis pada [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+---
+
 ## 2026-06-25
 ### Stack
 -   Hardware
@@ -18,10 +20,13 @@ Format ini berbasis pada [Keep a Changelog](https://keepachangelog.com/en/1.0.0/
     - Versi ini menerapkan komponen SMD pada sisi primer, desain double layer dengan top-bottom ground plane serta ruang soldering untuk can-style copper plate sebagai Faraday Cage.
 -   File .pdf .dxf `hardware/REM-7.0`, untuk membuat trace pada copper board menggunakan laser.
 
+---
+
 ## 2026-01-01
 ### Added
 -   Firmware controller `firmware/ESU_V1`
 
+---
 ## 2026-01-01
 ### Added
 -   PCB Design file `hardware/PS-`
