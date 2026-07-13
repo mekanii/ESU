@@ -57,3 +57,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   PCB Design file `hardware/REM-4.0`
 -   Firmware display `ui`
 -   Firmware controller `firmware/ESP32-S3 PWM`
+

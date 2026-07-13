@@ -661,7 +661,7 @@
         "uuid": "17c3600d-8355-46a2-9621-93cd471aba8c"
       }
     ],
-    "used_designators": "C11-12,R8-9,J2",
+    "used_designators": "RV_ALT1,C11-12,R8-9,J2",
     "variants": []
   },
   "sheets": [
