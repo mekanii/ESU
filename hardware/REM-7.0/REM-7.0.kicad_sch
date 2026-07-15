@@ -2378,6 +2378,12 @@
 		(uuid "5d26f173-edb3-4c94-8ac8-6d0079596753")
 	)
 	(junction
+		(at 146.05 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "67cc98b6-d2d9-4609-a5e4-a384eff5feaa")
+	)
+	(junction
 		(at 120.65 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2394,12 +2400,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7b755a51-c67b-4ef1-bc9f-e8fa67902920")
-	)
-	(junction
-		(at 146.05 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b9901682-5e59-4dcf-bd8f-36b97ec073f9")
 	)
 	(junction
 		(at 152.4 101.6)
@@ -2581,7 +2581,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 88.9) (xy 146.05 88.9)
+			(xy 139.7 88.9) (xy 152.4 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2608,6 +2608,16 @@
 			(type default)
 		)
 		(uuid "409e3dac-933d-4dee-a870-b580f8955619")
+	)
+	(wire
+		(pts
+			(xy 139.7 101.6) (xy 146.05 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42d60563-c07a-4236-880d-cdc2a15458e8")
 	)
 	(wire
 		(pts
@@ -2671,6 +2681,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.05 101.6) (xy 152.4 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "578eb2b0-4ff3-46e5-a409-54ca1ca05f46")
+	)
+	(wire
+		(pts
 			(xy 165.1 60.96) (xy 165.1 63.5)
 		)
 		(stroke
@@ -2708,16 +2728,6 @@
 			(type default)
 		)
 		(uuid "6d42b241-e97d-42da-bb2c-00f9471f7a9f")
-	)
-	(wire
-		(pts
-			(xy 146.05 88.9) (xy 152.4 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7252ef1a-f0d1-4861-bed4-096eb58a1d98")
 	)
 	(wire
 		(pts
@@ -2841,16 +2851,6 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 95.25) (xy 146.05 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d9a231c-f44d-43c3-9056-97c9a49e98c8")
-	)
-	(wire
-		(pts
 			(xy 177.8 50.8) (xy 190.5 50.8)
 		)
 		(stroke
@@ -2898,6 +2898,16 @@
 			(type default)
 		)
 		(uuid "9ec1308d-69d8-4200-a09d-0390940069ae")
+	)
+	(wire
+		(pts
+			(xy 146.05 95.25) (xy 146.05 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a098d79c-0ba6-4ea8-b4f0-0d0cb8baf273")
 	)
 	(wire
 		(pts
@@ -3161,16 +3171,6 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 101.6) (xy 152.4 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e3f46693-5b47-4ef3-8fe1-ccd0e49175cb")
-	)
-	(wire
-		(pts
 			(xy 228.6 50.8) (xy 228.6 55.88)
 		)
 		(stroke
@@ -3208,6 +3208,16 @@
 			(type default)
 		)
 		(uuid "eb500a54-8d5d-4fe3-9254-edc0831df336")
+	)
+	(wire
+		(pts
+			(xy 143.51 95.25) (xy 146.05 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebc6c08d-9c49-454b-87c8-a85a236b0f8d")
 	)
 	(wire
 		(pts
@@ -3308,16 +3318,6 @@
 			(type default)
 		)
 		(uuid "fac0242f-728e-4af1-86c4-e94b6e9922f9")
-	)
-	(wire
-		(pts
-			(xy 143.51 95.25) (xy 146.05 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd914a46-0785-4e84-a8f4-9d8536da5bb9")
 	)
 	(label "REM"
 		(at 115.57 88.9 0)
@@ -3734,6 +3734,7 @@
 	(symbol
 		(lib_id "Device:R_Potentiometer")
 		(at 139.7 95.25 0)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3741,10 +3742,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4755856b-b4ab-4a10-969f-193b315f3cf2")
 		(property "Reference" "RV1"
-			(at 137.16 93.98 0)
+			(at 137.16 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3755,7 +3755,7 @@
 			)
 		)
 		(property "Value" "20k"
-			(at 137.16 96.52 0)
+			(at 137.16 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
