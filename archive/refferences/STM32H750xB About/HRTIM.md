@@ -225,7 +225,7 @@ The HRTIM must be supplied by the tHRTIM system clock to offer a full resolution
     <tr>
         <td>f<sub>1STPW</sub></td>
         <td>
-            clock source defining the length of the initial pulse in chopper mode. For convenience, only the t1STPW period (t1STPW = 1/f1STPW) is used in this document.
+            clock source defining the length of the initial pulse in chopper mode. For convenience, only the t<sub>1STPW</sub> period (t<sub>1STPW</sub> = 1/f<sub>1STPW</sub>) is used in this document.
         </td>
     </tr>
     <tr>
