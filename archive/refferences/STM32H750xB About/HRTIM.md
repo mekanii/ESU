@@ -108,16 +108,95 @@ The table here below summarizes the HRTIM inputs and outputs, both on-chip and o
     <td>
         HRTIM_CHA1,<br>HRTIM_CHA2,<br>HRTIM_CHB1,<br>HRTIM_CHB2,<br>HRTIM_CHC1,<br>HRTIM_CHC2,<br>HRTIM_CHD1,<br>HRTIM_CHD2,<br>HRTIM_CHE1,<br>HRTIM_CHE2
     </td>
+    <td>Output</td>
+    <td>Main HRTIM timer outputs. They can be coupled by pairs (HRTIM_CHx1 & HRTIM_CHx2) with deadtime insertion or work independently.</td>
+  </tr>
+  <tr>
+    <td>HRTIM_FLT[5:1],<br>hrtim_in_flt[5:1]</td>
+    <td>Digital input</td>
+    <td>Fault inputs: immediately disable the HRTIM outputs when asserted (5 on-chip inputs and 5 off-chip HRTIM_FLTx inputs).</td>
+  </tr>
+  <tr>
+    <td>hrtim_sys_flt</td>
+    <td>Digital input</td>
+    <td>System fault gathering MCU internal fault events (Clock security system, SRAM parity error, Cortex®-M7 lockup (HardFault), PVD output).</td>
+  </tr>
+  <tr>
+    <td>hrtim_in_sync[3:1]</td>
+    <td>Digital Input</td>
     <td>
-        Output
-    </td>
-    <td>
-        Main HRTIM timer outputs. They can be coupled by pairs (HRTIM_CHx1 & HRTIM_CHx2) with deadtime insertion or work independently.
+        <p>Synchronization inputs to synchronize the whole HRTIM with other internal or external timer resources:</p>
+        <ul>
+            <li>hrtim_in_sync1: reserved</li>
+            <li>hrtim_in_sync2: the source is a regular TIMx timer (via on-chip interconnect)</li>
+            <li>hrtim_in_sync3: the source is an external HRTIM (via the HRTIM_SCIN input pins)</li>
+        </ul>
     </td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>hrtim_out_sync[2:1]</td>
+    <td>Digital output</td>
+    <td>
+        <p>The purpose of this output is to cascade or synchronize several HRTIM instances, either on-chip or off-chip:</p>
+        <ul>
+            <li>hrtim_out_sync1: reserved</li>
+            <li>hrtim_out_sync2: the destination is an off-chip HRTIM or peripheral (via HRTIM_SCOUT output pins)</li>
+        </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        hrtim_evt1[4:1]<br>hrtim_evt2[4:1]<br>hrtim_evt3[4:1]<br>hrtim_evt4[4:1]<br>hrtim_evt5[4:1]hrtim_evt6[4:1]<br>hrtim_evt7[4:1]<br>hrtim_evt8[4:1]<br>hrtim_evt9[4:1]<br>hrtim_evt10[4:1]
+    </td>
+    <td>Digital input</td>
+    <td>
+        External events. Each of the 10 events can be selected among 4 sources, either on-chip (from other built-in peripherals: comparator, ADC analog watchdog, TIMx timers, trigger outputs) or off-chip (HRTIM_EEVx input pins)
+    </td>
+  </tr>
+  <tr>
+    <td>hrtim_upd_en[3:1]</td>
+    <td>Digital input</td>
+    <td>HRTIM register update enable inputs (on-chip interconnect) trigger the transfer from shadow to active registers</td>
+  </tr>
+
+  <tr>
+    <td>hrtim_bm_trg</td>
+    <td>Digital input</td>
+    <td>Burst mode trigger event (on-chip interconnect)</td>
+  </tr>
+  <tr>
+    <td>hrtim_bm_ck[4:1]</td>
+    <td>Digital input</td>
+    <td>Burst mode clock (on-chip interconnect)</td>
+  </tr>
+  <tr>
+    <td>hrtim_adc_trg[4:1]</td>
+    <td>Digital output</td>
+    <td>ADC start of conversion triggers</td>
+  </tr>
+  <tr>
+    <td>hrtim_dac_trg[3:1]</td>
+    <td>Digital output</td>
+    <td>DAC conversion update triggers</td>
+  </tr>
+  <tr>
+    <td>hrtim_mst_it[7:1]</td>
+    <td>Digital output</td>
+    <td>Interrupt requests</td>
+  </tr>
+  <tr>
+    <td>hrtim_dma[6:1]</td>
+    <td>Digital output</td>
+    <td>DMA requests</td>
+  </tr>
+  <tr>
+    <td>hrtim_pclk</td>
+    <td>Digital input</td>
+    <td>APB clock</td>
+  </tr>
+  <tr>
+    <td>hrtim_ker_ck</td>
+    <td>Digital input</td>
+    <td>HRTIM kernel clock (hereafter mentioned as f<sub>HRTIM)</sub>.</td>
   </tr>
 </table>
