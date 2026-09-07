@@ -200,3 +200,54 @@ The table here below summarizes the HRTIM inputs and outputs, both on-chip and o
     <td>HRTIM&nbsp;kernel&nbsp;clock&nbsp;(hereafter&nbsp;mentioned&nbsp;as&nbsp;f<sub>HRTIM)</sub></td>
   </tr>
 </table>
+
+#### 37.3.3 HRTIM pins and internal signals
+The HRTIM must be supplied by the tHRTIM system clock to offer a full resolution. All clocks present in the HRTIM are derived from this reference clock.
+
+##### Definition of terms
+<table>
+    <tr>
+        <td>f<sub>HRTIM</sub></td>
+        <td>
+            main HRTIM clock (hrtim_ker_ck). All subsequent clocks are derived and synchronous with this source.
+        </td>
+    </tr>
+    <tr>
+        <td>f<sub>DTG</sub></td>
+        <td>
+            deadtime generator clock. For convenience, only the tDTG period (tDTG = 1/fDTG) is used in this document.
+        </td>
+    </tr> 
+    <tr>
+        <td>f<sub>CHPFRQ</sub></td>
+        <td>chopper stage clock source.</td>
+    </tr>
+    <tr>
+        <td>f<sub>1STPW</sub></td>
+        <td>
+            clock source defining the length of the initial pulse in chopper mode. For convenience, only the t1STPW period (t1STPW = 1/f1STPW) is used in this document.
+        </td>
+    </tr>
+    <tr>
+        <td>f<sub>BRST</sub></td>
+        <td>burst mode controller counter clock.</td>
+    </tr>
+    <tr>
+        <td>f<sub>SAMPLING</sub></td>
+        <td>clock needed to sample the fault or the external events inputs.</td>
+    </tr>
+    <tr>
+        <td>f<sub>FLTS</sub></td>
+        <td>clock derived from fHRTIM which is used as a source for fSAMPLING to filter fault events.</td>
+    </tr>
+    <tr>
+        <td>f<sub>EEVS</sub></td>
+        <td>clock derived from fHRTIM which is used as a source for fSAMPLING to filter external events.</td>
+    </tr>
+    <tr>
+        <td>f<sub>pclk</sub> (hrtim_pclk)</td>
+        <td>APB bus clock, needed for register read/write accesses</td>
+    </tr>
+</table>
+
+
