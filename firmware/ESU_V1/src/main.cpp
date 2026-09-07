@@ -80,7 +80,7 @@ void loop() {
 
   } else if (result.status == RESULT_NG) {
     remBuzzed = true;
-
+    // Serial.println("REM Fault Detected: " + String(result.remValue));
   } else {
     if (isRemFault(result.remValue)) {
       if (!remBuzzed) {

@@ -101,7 +101,7 @@ int readREM() {
 }
 
 bool isRemFault(int remValue, uint8_t modeIndex) {
-  int offset = modeIndex == 99 ? 0 : vp52[modeIndex];
+  int offset = modeIndex == 99 ? 0 : (vp52[modeIndex]*0);
   return (remValue >= REM_UPPER_LIMIT + offset || remValue <= REM_LOWER_LIMIT + offset);
 }
 
