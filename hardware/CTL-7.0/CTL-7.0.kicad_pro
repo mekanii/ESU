@@ -51,7 +51,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "border_display_style": 0,
+          "border_display_style": 2,
           "border_hatch_pitch": 0.15875,
           "corner_radius": 0.0,
           "corner_smoothing": 0,
@@ -61,7 +61,7 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.15875,
+          "min_clearance": 0.0,
           "min_island_area": 10.0,
           "min_thickness": 0.15875,
           "pad_connection": 2,
@@ -685,7 +685,7 @@
         "uuid": "d0cd3d3b-d42f-4a0d-9317-17db4a7f672b"
       }
     ],
-    "used_designators": "Y1-3,#PWR16-22,C1-8,U1-3",
+    "used_designators": "U1-2",
     "variants": []
   },
   "sheets": [

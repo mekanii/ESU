@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "Core") (type "KiCad") (uri "/Users/margabudi/Documents/KiCad/10.0/footprints/Core.pretty") (options "") (descr ""))
+)
