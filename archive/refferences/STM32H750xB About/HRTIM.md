@@ -162,7 +162,7 @@ The table here below summarizes the HRTIM inputs and outputs, both on-chip and o
   <tr>
     <td>hrtim_bm_trg</td>
     <td>Digital input</td>
-    <td>Burst&nbsp;mode&nbsp;trigger&nbsp;event&nbsp;(on&#8209;chip&nbsp;interconnect)</td>
+    <td>Burst mode trigger event (on-chip interconnect)</td>
   </tr>
   <tr>
     <td>hrtim_bm_ck[4:1]</td>
@@ -197,6 +197,6 @@ The table here below summarizes the HRTIM inputs and outputs, both on-chip and o
   <tr>
     <td>hrtim_ker_ck</td>
     <td>Digital input</td>
-    <td>HRTIM kernel clock (hereafter mentioned as f<sub>HRTIM)</sub>.</td>
+    <td>HRTIM&nbsp;kernel&nbsp;clock&nbsp;(hereafter&nbsp;mentioned&nbsp;as&nbsp;f<sub>HRTIM)</sub></td>
   </tr>
 </table>
