@@ -146,7 +146,7 @@ The table here below summarizes the HRTIM inputs and outputs, both on-chip and o
   </tr>
   <tr>
     <td>
-        hrtim_evt1[4:1]<br>hrtim_evt2[4:1]<br>hrtim_evt3[4:1]<br>hrtim_evt4[4:1]<br>hrtim_evt5[4:1]hrtim_evt6[4:1]<br>hrtim_evt7[4:1]<br>hrtim_evt8[4:1]<br>hrtim_evt9[4:1]<br>hrtim_evt10[4:1]
+        hrtim_evt1[4:1]<br>hrtim_evt2[4:1]<br>hrtim_evt3[4:1]<br>hrtim_evt4[4:1]<br>hrtim_evt5[4:1]<br>hrtim_evt6[4:1]<br>hrtim_evt7[4:1]<br>hrtim_evt8[4:1]<br>hrtim_evt9[4:1]<br>hrtim_evt10[4:1]
     </td>
     <td>Digital input</td>
     <td>
