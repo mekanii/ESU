@@ -101,7 +101,7 @@ The table here below summarizes the HRTIM inputs and outputs, both on-chip and o
 <table>
   <tr>
     <th>Signal name</th>
-    <th style="white-space: nowrap;">Signal type</th>
+    <th><nobr>Signal type</nobr></th>
     <th>Description</th>
   </tr>
   <tr>
