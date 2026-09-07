@@ -245,7 +245,7 @@ The HRTIM must be supplied by the tHRTIM system clock to offer a full resolution
         <td>clock derived from fHRTIM which is used as a source for fSAMPLING to filter external events.</td>
     </tr>
     <tr>
-        <td>f<sub>pclk</sub> (hrtim_pclk)</td>
+        <td>f<sub>pclk</sub>(hrtim_pclk)</td>
         <td>APB bus clock, needed for register read/write accesses</td>
     </tr>
 </table>
