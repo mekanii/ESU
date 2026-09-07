@@ -101,7 +101,7 @@ The table here below summarizes the HRTIM inputs and outputs, both on-chip and o
 <table>
   <tr>
     <th>Signal name</th>
-    <th>Signal&nbsp;type</th>
+    <th>Signal type</th>
     <th>Description</th>
   </tr>
   <tr>
@@ -135,7 +135,7 @@ The table here below summarizes the HRTIM inputs and outputs, both on-chip and o
   </tr>
   <tr>
     <td>hrtim_out_sync[2:1]</td>
-    <td>Digital output</td>
+    <td>Digital&nbsp;output</td>
     <td>
         <p>The purpose of this output is to cascade or synchronize several HRTIM instances, either on-chip or off-chip:</p>
         <ul>
