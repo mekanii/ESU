@@ -267,7 +267,7 @@ Table 304. Timer resolution and min. PWM frequency for fHRTIM = 400 MHz
     <td>101</td>
     <td>1</td>
     <td>400 MHz</td>
-    <td>2.5 ns</td>
+    <td align="right">2.5 ns</td>
     <td>6.1 kHz</td>
   <tr>
   <tr>
