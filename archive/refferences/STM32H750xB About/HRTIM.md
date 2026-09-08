@@ -287,7 +287,7 @@ Table 304. Timer resolution and min. PWM frequency for fHRTIM = 400 MHz
 </table>
 </div>
 
-<small>1. CKPSC[2:0] values from 000 to 100 are reserved.</small>
+<sup>1. CKPSC[2:0] values from 000 to 100 are reserved.</sup>
 
 The Full-resolution is available for edge positioning, PWM period adjustment and externally
 triggered pulse duration.
