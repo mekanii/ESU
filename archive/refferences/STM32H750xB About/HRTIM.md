@@ -256,13 +256,13 @@ Each timer in the HRTIM has its own individual clock prescaler, which allows you
 Table 304. Timer resolution and min. PWM frequency for fHRTIM = 400 MHz
 
 <table>
-  <th>
-    <td>CKPSC[2:0]<sup>(1)</sup></td>
-    <td>Prescaling ratio</td>
-    <td>f<sub>COUNTER</sub></td>
-    <td>Resolution</td>
-    <td>Min PWM frequency</td>
-  </th>
+  <tr>
+    <th>CKPSC[2:0]<sup>(1)</sup></th>
+    <th>Prescaling ratio</th>
+    <th>f<sub>COUNTER</sub></th>
+    <th>Resolution</th>
+    <th>Min PWM frequency</th>
+  </tr>
   <tr>
     <td>101</td>
     <td>1</td>
