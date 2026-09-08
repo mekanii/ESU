@@ -253,7 +253,7 @@ The HRTIM must be supplied by the tHRTIM system clock to offer a full resolution
 ##### Timer clock and prescaler
 Each timer in the HRTIM has its own individual clock prescaler, which allows you to adjust the timer resolution. (See Table 304).
 
-<div align="center" style="width: 100%;">
+<!-- <div align="center" style="width: 100%;"> -->
 Table 304. Timer resolution and min. PWM frequency for fHRTIM = 400 MHz
 <table width="100%">
   <tr>
@@ -285,7 +285,7 @@ Table 304. Timer resolution and min. PWM frequency for fHRTIM = 400 MHz
     <td align="right">1.5 kHz</td>
   <tr>
 </table>
-</div>
+<!-- </div> -->
 1. CKPSC[2:0] values from 000 to 100 are reserved.
 
 The Full-resolution is available for edge positioning, PWM period adjustment and externally
