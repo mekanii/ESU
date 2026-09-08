@@ -292,3 +292,10 @@ Table 304. Timer resolution and min. PWM frequency for fHRTIM = 400 MHz
 The Full-resolution is available for edge positioning, PWM period adjustment and externally
 triggered pulse duration.
 
+##### Initialization
+At start-up, it is mandatory to initialize first the prescaler bitfields before writing the compare and period registers. Once the timer is enabled (MCEN or TxCEN bit set in the HRTIM_MCR register), the prescaler cannot be modified.
+
+When multiple timers are enabled, the prescalers are synchronized with the prescaler of the timer that was started first.
+
+> [!WARNING]
+> It is possible to have different prescaling ratios in the master and TIMA..E timers only if the counter and output behavior does not depend on other timers’ information and signals. It is mandatory to configure identical prescaling ratios in these timers when one of the following events is propagated from one timing unit (or master timer) to another: output set/reset event, counter reset event, update event, external event filter or capture triggers. Prescaler factors not equal will yield to unpredictable results.
