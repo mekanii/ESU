@@ -299,3 +299,9 @@ When multiple timers are enabled, the prescalers are synchronized with the presc
 
 > [!WARNING]
 > It is possible to have different prescaling ratios in the master and TIMA..E timers only if the counter and output behavior does not depend on other timers’ information and signals. It is mandatory to configure identical prescaling ratios in these timers when one of the following events is propagated from one timing unit (or master timer) to another: output set/reset event, counter reset event, update event, external event filter or capture triggers. Prescaler factors not equal will yield to unpredictable results.
+
+##### Deadtime generator clock
+The deadtime prescaler is supplied by f<sub>HRTIM</sub> / 8 / 2<sup>(DTPRSC[2:0])</sup>, programmed with
+DTPRSC[2:0] bits in the HRTIM_DTxR register.
+
+t<sub>DTG</sub> ranges from 2.5 ns to 20 ns for f<sub>HRTIM</sub> = 400 MHz.
