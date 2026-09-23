@@ -11,6 +11,8 @@ PWM_1           IO.2        RMT_TX_CHANNEL_1 20MHz (clk_div=4)      PA9         
 PWM_EN          IO.38       Digital Output                          PD2	        GPIO Output (Push-Pull)
 CTL_BUZZ        IO.36       LEDC                                    PB8         TIM4_CH3
 
+==========================================================================================================
+
 PA0     22      SENS_CUT
 PA1     23      SENS_COAG
 PA2     24      MSD1
@@ -30,10 +32,14 @@ PD12    59      QSPI_BK1_IO1
 PD13    60      QSPI_BK1_IO3
 PE2     1       QSPI_BK1_IO2
 PB2     36      QSPI_CLK
-PB6     92      QSPI_CS             PB10    46
+PB6     92      QSPI_BK1_NCS
 
-PE7     37      QSPI_BK2_IO0
-PE8     38      QSPI_BK2_IO1
-PE9     39      QSPI_BK2_IO2
-PE19    40      QSPI_BK2_IO3
-PC11    79      QSPI_CS
+PD6     87      FLASH_CS
+PD7     88      FLASH_DI        SPI1_MOSI
+PB3     89      FLASH_CLK       SPI1_SCK
+PB4     90      FLASH_DO        SPI1_MISO
+
+Pin assignment [In Review]
+FLASH QSPI      OK
+FLASH SPI       OK
+

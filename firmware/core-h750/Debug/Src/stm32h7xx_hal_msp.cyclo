@@ -1,0 +1,4 @@
+../Src/stm32h7xx_hal_msp.c:64:6:HAL_MspInit	1
+../Src/stm32h7xx_hal_msp.c:86:6:HAL_HRTIM_MspInit	3
+../Src/stm32h7xx_hal_msp.c:114:6:HAL_HRTIM_MspPostInit	2
+../Src/stm32h7xx_hal_msp.c:147:6:HAL_HRTIM_MspDeInit	2

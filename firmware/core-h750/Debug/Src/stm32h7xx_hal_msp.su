@@ -1,0 +1,4 @@
+../Src/stm32h7xx_hal_msp.c:64:6:HAL_MspInit	16	static
+../Src/stm32h7xx_hal_msp.c:86:6:HAL_HRTIM_MspInit	216	static
+../Src/stm32h7xx_hal_msp.c:114:6:HAL_HRTIM_MspPostInit	40	static
+../Src/stm32h7xx_hal_msp.c:147:6:HAL_HRTIM_MspDeInit	16	static
