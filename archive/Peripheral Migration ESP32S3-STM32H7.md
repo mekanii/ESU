@@ -21,8 +21,9 @@ PA4     28      OPTO
 PA5     29      CTL_RLY1
 PA6     30      CTL_RLY2
 PA7     31      PWM_EN
-PA8     67      PWM0
-PA10    69      PWM1
+
+PC6     63      PWM0            HRTIM_CHA1
+PA8     65      PWM1            HRTIM_CHB1
 
 PC2_C   17      GND
 PC3_C   18      REM
@@ -40,6 +41,8 @@ PB3     89      FLASH_CLK       SPI1_SCK
 PB4     90      FLASH_DO        SPI1_MISO
 
 Pin assignment [In Review]
+PWM0            OK
+PWM1            OK
 FLASH QSPI      OK
 FLASH SPI       OK
 
